@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PNU Scholar</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <div id="wrap" class="p-10 flex flex-col items-center gap-8">
+      <!-- 작동1 -->
+      <div
+        class="h-search flex items-center relative h-12 w-[428px] bg-[#F3F5F9] rounded-lg"
+      >
+        <div class="relative w-[120px] h-full border-r border-r-[#E4E8F1]">
+          <select id="realSelect" class="hidden">
+            <option value="">All</option>
+            <option value="option1">All</option>
+            <option value="option2">Journal</option>
+            <option value="option3">Resource</option>
+            <option value="option3">Scholar</option>
+          </select>
+
+          <!-- 커스텀 셀렉트 버튼 -->
+          <button
+            id="customSelectBtn"
+            type="button"
+            class="w-full h-full px-5 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer"
+          >
+            <span id="selectedText">All</span>
+          </button>
+
+          <!-- 드롭다운 목록 -->
+          <ul
+            id="customOptions"
+            class="absolute left-0 right-0 bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px]"
+          >
+            <li class="px-4 py-2 cursor-pointer" data-value="option1">All</li>
+            <li class="px-4 py-2 cursor-pointer" data-value="option2">
+              Journal
+            </li>
+            <li class="px-4 py-2 cursor-pointer" data-value="option3">
+              Resource
+            </li>
+            <li class="px-4 py-2 cursor-pointer" data-value="option3">
+              Scholar
+            </li>
+          </ul>
+        </div>
+
+        <div class="search-wrap w-[calc(100%-120px)] h-full pl-[14px] pr-10">
+          <input
+            type="text"
+            class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]"
+            placeholder="Search for journals, resources, scholars"
+          />
+        </div>
+        <!-- .search-wrap -->
+
+        <button
+          class="btn-search absolute right-5 top-[50%] w-4 translate-y-[-50%] cursor-pointer"
+        >
+          <img src="images/search-ico-bl.png" alt="search" />
+        </button>
+      </div>
+      <!-- .h-search -->
+
+      <!-- 작동2 -->
+      <div href="#" class="h-profile after-log relative">
+        <button class="profile flex items-center">
+          <div
+            class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2"
+          >
+            <img src="images/profile.png" alt="profile" />
+          </div>
+          <p class="name text-sm text-[#555555]">Kim, Minjun</p>
+          <span
+            class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"
+          ></span>
+        </button>
+        <!-- .profile -->
+
+        <div
+          class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200"
+        >
+          <a
+            href="#"
+            class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+            >My Profile</a
+          >
+          <a
+            href="#"
+            class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+            >My Resources</a
+          >
+          <a
+            href="#"
+            class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+            >Saved Researcher</a
+          >
+        </div>
+        <!-- .profile-mybox -->
+      </div>
+      <!-- h-profile -->
+
+      <!-- 작동3 -->
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      // 작동1
+      const selectBtn = document.getElementById("customSelectBtn");
+      const optionsList = document.getElementById("customOptions");
+      const selectedText = document.getElementById("selectedText");
+      const arrowIcon = document.getElementById("arrowIcon");
+      const realSelect = document.getElementById("realSelect");
+
+      // 클릭 시 드롭다운 열기/닫기
+      selectBtn.addEventListener("click", () => {
+        optionsList.classList.toggle("hidden");
+        arrowIcon.classList.toggle("rotate-180");
+      });
+
+      // 옵션 선택 시 텍스트 변경
+      optionsList.querySelectorAll("li").forEach((option) => {
+        option.addEventListener("click", () => {
+          const value = option.getAttribute("data-value");
+          const text = option.textContent;
+
+          selectedText.textContent = text;
+          realSelect.value = value;
+
+          optionsList.classList.add("hidden");
+          arrowIcon.classList.remove("rotate-180");
+        });
+      });
+
+      // 외부 클릭 시 닫기
+      document.addEventListener("click", (e) => {
+        if (!selectBtn.contains(e.target) && !optionsList.contains(e.target)) {
+          optionsList.classList.add("hidden");
+          arrowIcon.classList.remove("rotate-180");
+        }
+      });
+
+      // 작동2
+      const hProfile = document.querySelector(".h-profile");
+      const profileBox = document.querySelector(".h-profile .profile-mybox");
+
+      hProfile.addEventListener("mouseenter", () => {
+        profileBox.classList.remove("hidden");
+      });
+
+      hProfile.addEventListener("mouseleave", () => {
+        profileBox.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

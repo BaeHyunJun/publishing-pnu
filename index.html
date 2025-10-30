@@ -1,73 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PNU Scholar</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PNU Scholar</title>
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
 
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  </head>
 
-</head>
-
-<body>
-
-  <div id="wrap">
-
-    <header>
-      <div class="hTop">
-        <div class="inner">
-          <a href="#">Notice</a>
-          <a href="#">Q&A</a>
-          <a href="#">Research Guide <img src="images/launch-ico-gr.png" alt="launch icon"></a>
+  <body>
+    <div id="wrap">
+      <header class="h-[120px] bg-white">
+        <div
+          class="hTop h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px]"
+        >
+          <div class="inner flex justify-end items-center gap-5">
+            <a href="#">Notice</a>
+            <a href="#">Q&A</a>
+            <a href="#" class="flex items-center"
+              >Research Guide<img
+                src="images/launch-ico-gr.png"
+                alt="launch icon"
+                class="w-[12px] h-[12px] ml-[4px]"
+            /></a>
+          </div>
         </div>
-      </div> <!-- .hTop -->
+        <!-- .hTop -->
 
-      <div class="hBotton">
-        <h1 id="logo">
-          <a href="/">
-            <img src="images/logo.png" alt="logo-go to main">
-          </a>
-        </h1>
+        <div class="inner w-full h-[78px] flex justify-between items-center">
+          <div class="h-left flex items-center gap-20">
+            <h1 id="logo">
+              <a href="/">
+                <img
+                  src="images/logo.png"
+                  alt="logo-go to main"
+                  class="w-[140px]"
+                />
+              </a>
+            </h1>
 
-        <div class="gnb">
-          <ul class="d1">
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Researcher</a></li>
-            <li><a href="#">Journals</a></li>
-            <li><a href="#">Departments</a></li>
-            <li><a href="#">Highlights</a></li>
-          </ul> <!-- .d1 -->
-        </div> <!-- .gnb -->
-      </div> <!-- .hBottom -->
-    </header>
+            <nav>
+              <ul class="flex items-center gap-8 text-lg font-bold">
+                <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
+                <li class="hover:text-[#4B4DFF]">
+                  <a href="#">Departments</a>
+                </li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Highlights</a></li>
+              </ul>
+              <!-- .d1 -->
+            </nav>
+          </div>
+          <!-- .h-left -->
 
-    <div id="sideM">
+          <div class="h-right flex items-center gap-9">
+            <div
+              class="h-search flex items-center relative h-12 w-[428px] bg-[#F3F5F9] rounded-lg"
+            >
+              <div
+                class="relative w-[120px] h-full border-r border-r-[#E4E8F1]"
+              >
+                <select id="realSelect" class="hidden">
+                  <option value="">All</option>
+                  <option value="option1">All</option>
+                  <option value="option2">Journal</option>
+                  <option value="option3">Resource</option>
+                  <option value="option3">Scholar</option>
+                </select>
 
-      <div class="side-header">
+                <!-- 커스텀 셀렉트 버튼 -->
+                <button
+                  id="customSelectBtn"
+                  type="button"
+                  class="w-full h-full px-5 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer"
+                >
+                  <span id="selectedText">All</span>
+                </button>
 
-      </div> <!-- .side-header -->
-    </div> <!-- #sideM -->
+                <!-- 드롭다운 목록 -->
+                <ul
+                  id="customOptions"
+                  class="absolute left-0 right-0 bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px]"
+                >
+                  <li class="px-4 py-2 cursor-pointer" data-value="option1">
+                    All
+                  </li>
+                  <li class="px-4 py-2 cursor-pointer" data-value="option2">
+                    Journal
+                  </li>
+                  <li class="px-4 py-2 cursor-pointer" data-value="option3">
+                    Resource
+                  </li>
+                  <li class="px-4 py-2 cursor-pointer" data-value="option3">
+                    Scholar
+                  </li>
+                </ul>
+              </div>
 
-    <div id="container">
+              <div
+                class="search-wrap w-[calc(100%-120px)] h-full pl-[14px] pr-10"
+              >
+                <input
+                  type="text"
+                  class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]"
+                  placeholder="Search for journals, resources, scholars"
+                />
+              </div>
+              <!-- .search-wrap -->
 
-    </div> <!-- #container -->
+              <button
+                class="btn-search absolute right-5 top-[50%] w-4 translate-y-[-50%] cursor-pointer"
+              >
+                <img src="images/search-ico-bl.png" alt="search" />
+              </button>
+            </div>
+            <!-- .h-search -->
 
-    <footer>
-      <div class="inner">
-        
+            <a
+              href="#"
+              class="btn-login group flex items-center gap-2 hover:text-[#4B4DFF]"
+            >
+              <span
+                class="w-5 h-5 bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')]"
+              ></span>
+              Login
+            </a>
+
+            <div href="#" class="h-profile after-log relative hidden">
+              <button class="profile flex items-center">
+                <div
+                  class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2"
+                >
+                  <img src="images/profile.png" alt="profile" />
+                </div>
+                <p class="name text-sm text-[#555555]">Kim, Minjun</p>
+                <span
+                  class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"
+                ></span>
+              </button>
+              <!-- .profile -->
+
+              <div
+                class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200"
+              >
+                <a
+                  href="#"
+                  class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Profile</a
+                >
+                <a
+                  href="#"
+                  class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Resources</a
+                >
+                <a
+                  href="#"
+                  class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >Saved Researcher</a
+                >
+              </div>
+              <!-- .profile-mybox -->
+            </div>
+            <!-- h-profile -->
+          </div>
+          <!-- .h-right -->
+        </div>
+        <!-- .hBottom -->
+      </header>
+
+      <div id="sideM">
+        <div class="side-header"></div>
+        <!-- .side-header -->
       </div>
-    </footer>
+      <!-- #sideM -->
 
-  </div>
-  
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/jquery-ui.min.js"></script>
-  <script src="js/main.js"></script>
-  
+      <div class="container"></div>
+      <!-- #container -->
 
-</body>
+      <footer class="inner text-sm">
+        <div
+          class="border-t border-t-[#D1D5DF] flex items-start gap-[66px] pt-7"
+        >
+          <div class="flogo">
+            <img src="images/logo-gr.png" alt="logo" class="w-[178px]" />
+          </div>
+          <!-- .flogo -->
+
+          <div class="fcont">
+            <div class="fmenu text-sm text-[#333] flex items-center">
+              <a href="#">Privacy Policy</a>
+              <span
+                class="w-[2px] h-[2px] mx-[14px] bg-[#333] inline-block"
+              ></span>
+              <a href="#">Notice</a>
+              <span
+                class="w-[2px] h-[2px] mx-[14px] bg-[#333] inline-block"
+              ></span>
+              <a href="#">FAQ</a>
+              <span
+                class="w-[2px] h-[2px] mx-[14px] bg-[#333] inline-block"
+              ></span>
+              <a href="#">Need Help?</a>
+            </div>
+
+            <address class="mt-9 text-[#6C7687] not-italic">
+              <div class="mb-[10px]">
+                (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
+              </div>
+              <div>Tel. 051-510-1817, 1040 <span></span> Fax. 051-513-9733</div>
+            </address>
+
+            <div class="copy mt-4 text-[#6C7687]">
+              <p class="mb-[10px]">
+                Copyright 2025 Pusan National University Library. All Rights
+                Reserved.
+              </p>
+              <p>
+                PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
+                저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
+                형사 상의 책임을 질 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <!-- .fcont -->
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script></script>
+  </body>
 </html>
