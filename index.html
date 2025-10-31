@@ -18,12 +18,14 @@
   </head>
 
   <body>
-    <div id="wrap">
-      <header class="h-[120px] bg-white">
+    <div id="wrap" class="bg-[#F3F5F9]">
+      <header class="h-[63px] bg-white xl:h-[120px]">
         <div
-          class="hTop h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px]"
+          class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] xl:block"
         >
-          <div class="inner flex justify-end items-center gap-5">
+          <div
+            class="px-6 h-full flex justify-end items-center gap-5 xl:px-[100px]"
+          >
             <a href="#">Notice</a>
             <a href="#">Q&A</a>
             <a href="#" class="flex items-center"
@@ -36,20 +38,22 @@
         </div>
         <!-- .hTop -->
 
-        <div class="inner w-full h-[78px] flex justify-between items-center">
-          <div class="h-left flex items-center gap-20">
-            <h1 id="logo">
+        <div
+          class="hBottom px-6 w-full h-full flex justify-between items-center xl:h-[78px] xl:px-[100px]"
+        >
+          <div class="h-left flex items-center gap-10 2xl:gap-20">
+            <h1 id="logo" class="shrink-0">
               <a href="/">
                 <img
                   src="images/logo.png"
                   alt="logo-go to main"
-                  class="w-[140px]"
+                  class="w-[136px] h-auto xl:w-[140px]"
                 />
               </a>
             </h1>
 
-            <nav>
-              <ul class="flex items-center gap-8 text-lg font-bold">
+            <nav class="hidden xl:block">
+              <ul class="flex items-center gap-5 text-lg font-bold 2xl:gap-8">
                 <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
                 <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
                 <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
@@ -63,12 +67,12 @@
           </div>
           <!-- .h-left -->
 
-          <div class="h-right flex items-center gap-9">
+          <div class="h-right hidden items-center gap-4 xl:flex 2xl:gap-9">
             <div
-              class="h-search flex items-center relative h-12 w-[428px] bg-[#F3F5F9] rounded-lg"
+              class="h-search flex items-center relative h-12 w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
             >
               <div
-                class="relative w-[120px] h-full border-r border-r-[#E4E8F1]"
+                class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] 2xl:w-[120px]"
               >
                 <select id="realSelect" class="hidden">
                   <option value="">All</option>
@@ -82,7 +86,7 @@
                 <button
                   id="customSelectBtn"
                   type="button"
-                  class="w-full h-full px-5 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer"
+                  class="w-full h-full px-3 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer 2xl:px-5"
                 >
                   <span id="selectedText">All</span>
                 </button>
@@ -90,25 +94,37 @@
                 <!-- 드롭다운 목록 -->
                 <ul
                   id="customOptions"
-                  class="absolute left-0 right-0 bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px]"
+                  class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px] 2xl:p-2"
                 >
-                  <li class="px-4 py-2 cursor-pointer" data-value="option1">
+                  <li
+                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                    data-value="option1"
+                  >
                     All
                   </li>
-                  <li class="px-4 py-2 cursor-pointer" data-value="option2">
+                  <li
+                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                    data-value="option2"
+                  >
                     Journal
                   </li>
-                  <li class="px-4 py-2 cursor-pointer" data-value="option3">
+                  <li
+                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                    data-value="option3"
+                  >
                     Resource
                   </li>
-                  <li class="px-4 py-2 cursor-pointer" data-value="option3">
+                  <li
+                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                    data-value="option3"
+                  >
                     Scholar
                   </li>
                 </ul>
               </div>
 
               <div
-                class="search-wrap w-[calc(100%-120px)] h-full pl-[14px] pr-10"
+                class="search-wrap w-[254px] h-full pl-[10px] pr-8 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
               >
                 <input
                   type="text"
@@ -119,7 +135,7 @@
               <!-- .search-wrap -->
 
               <button
-                class="btn-search absolute right-5 top-[50%] w-4 translate-y-[-50%] cursor-pointer"
+                class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5"
               >
                 <img src="images/search-ico-bl.png" alt="search" />
               </button>
@@ -174,58 +190,219 @@
             <!-- h-profile -->
           </div>
           <!-- .h-right -->
+
+          <button class="btnM w-6 h-6 relative cursor-pointer xl:hidden">
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"
+            ></span>
+          </button>
         </div>
         <!-- .hBottom -->
       </header>
 
-      <div id="sideM">
-        <div class="side-header"></div>
+      <div
+        class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"
+      ></div>
+
+      <div
+        id="sideM"
+        class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300"
+      >
+        <div class="side-header flex justify-between mb-[60px]">
+          <a href="/" class="gomain">
+            <img src="images/home-icon.png" alt="go main" class="w-6" />
+          </a>
+
+          <button class="close-side cursor-pointer">
+            <img src="images/clear-icon.png" alt="close" class="w-[16px]" />
+          </button>
+        </div>
         <!-- .side-header -->
+
+        <nav>
+          <ul class="text-[22px] font-bold space-y-8">
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Researcher</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Highlights</a></li>
+          </ul>
+        </nav>
+
+        <div
+          class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3"
+        >
+          <a
+            href="#"
+            class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl"
+          >
+            <img
+              src="images/header-login-ico-wh.png"
+              class="w-4 mr-1"
+              alt="login icon"
+            />
+            Login
+          </a>
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Notice</a
+          >
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Q&A</a
+          >
+          <a
+            href="#"
+            class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Research Guide
+            <img
+              src="images/launch-ico-gr.png"
+              class="w-3 ml-1"
+              alt="launch icon"
+          /></a>
+        </div>
       </div>
       <!-- #sideM -->
 
-      <div class="container"></div>
+      <div id="container">
+        <div class="search-sec w-full max-w-[820px] mx-auto px-6">
+          <h2
+            class="text-[28px] font-black leading-[100%] text-center mt-[52px] mb-6 min-[800px]:text-4xl min-[800px]:mt-[106px] min-[800px]:mb-[30px]"
+          >
+            Search for Journals,<br class="min-[800px]:hidden" />
+            Resources, Scholars
+          </h2>
+
+          <div
+            class="search-cont relative w-full bg-white rounded-xl border border-[#E4E8F1] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] overflow-hidden min-[800px]:shadow-none"
+          >
+            <div
+              class="search-wrap w-full h-[68px] px-5 py-2 border-b border-b-[#E4E8F1] min-[800px]:h-[65px] min-[800px]:px-[30px] min-[800px]:py-[10px] min-[800px]:pr-[70px]"
+            >
+              <input
+                type="text"
+                class="w-full h-full text-[15px] outline-none placeholder-[#AFAFAF] min-[800px]:text-base"
+                placeholder="Search for journals, resources, scholars"
+              />
+            </div>
+            <!-- .search-wrap -->
+
+            <div
+              class="relative w-[138px] h-14 p-[6px] min-[800px]:w-full min-[800px]:h-[50px] min-[800px]:bg-[#F3F5F9] min-[800px]:p-0"
+            >
+              <select id="realSelect" class="hidden">
+                <option value="">All</option>
+                <option value="option1">All</option>
+                <option value="option2">Journal</option>
+                <option value="option3">Resource</option>
+                <option value="option3">Scholar</option>
+              </select>
+
+              <!-- 커스텀 셀렉트 버튼 -->
+              <button
+                id="customSelectBtn"
+                type="button"
+                class="w-full h-full px-[20px] border border-[#EEF1F8] focus:outline-none text-left text-[#333] text-sm rounded-lg bg-[url('/images/expand_more_333.png')] bg-no-repeat bg-size-[18px] bg-position-[90%] cursor-pointer min-[800px]:hidden"
+              >
+                <span id="selectedText">All</span>
+              </button>
+
+              <!-- 드롭다운 목록 -->
+              <ul
+                id="customOptions"
+                class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#8D9AAF] text-[14px] 2xl:p-2 min-[800px]:flex min-[800px]:h-full min-[800px]:bg-transparent min-[800px]:shadow-none min-[800px]:text-[15px] min-[800px]:gap-[5px]"
+              >
+                <li
+                  class="active px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg min-[800px]:w-[104px] min-[800px]:text-center min-[800px]:leading-[38px] min-[800px]:px-0 min-[800px]:py-0 min-[800px]:hover:bg-white"
+                  data-value="option1"
+                >
+                  All
+                </li>
+                <li
+                  class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg min-[800px]:w-[104px] min-[800px]:text-center min-[800px]:leading-[38px] min-[800px]:px-0 min-[800px]:py-0 min-[800px]:hover:bg-white"
+                  data-value="option2"
+                >
+                  Journal
+                </li>
+                <li
+                  class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg min-[800px]:w-[104px] min-[800px]:text-center min-[800px]:leading-[38px] min-[800px]:px-0 min-[800px]:py-0 min-[800px]:hover:bg-white"
+                  data-value="option3"
+                >
+                  Resource
+                </li>
+                <li
+                  class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg min-[800px]:w-[104px] min-[800px]:text-center min-[800px]:leading-[38px] min-[800px]:px-0 min-[800px]:py-0 min-[800px]:hover:bg-white"
+                  data-value="option3"
+                >
+                  Scholar
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="btn-search flex items-center justify-center absolute right-[6px] bottom-[6px] w-11 h-11 bg-[#4B4DFF] rounded-xl cursor-pointer min-[800px]:w-[45px] min-[800px]:h-[45px] min-[800px]:bottom-auto min-[800px]:top-[10px] min-[800px]:right-[10px]"
+            >
+              <img
+                src="images/search-ico-wh.png"
+                class="w-[18.5px]"
+                alt="search"
+              />
+            </button>
+          </div>
+          <!-- search-cont -->
+        </div>
+        <!-- search-sec -->
+      </div>
       <!-- #container -->
 
-      <footer class="inner text-sm">
+      <footer class="px-6 text-sm pb-10 min-[800px]:pb-[34px] 2xl:px-[100px]">
         <div
-          class="border-t border-t-[#D1D5DF] flex items-start gap-[66px] pt-7"
+          class="border-t border-t-[#D1D5DF] pt-7 min-[800px]:flex min-[800px]:items-start min-[800px]:gap-[66px]"
         >
-          <div class="flogo">
+          <div class="flogo mb-10 shrink-0">
             <img src="images/logo-gr.png" alt="logo" class="w-[178px]" />
           </div>
           <!-- .flogo -->
 
-          <div class="fcont">
-            <div class="fmenu text-sm text-[#333] flex items-center">
+          <div class="fcont min-[800px]:pt-[14px]">
+            <div class="fmenu text-sm text-[#333] flex items-center gap-4">
               <a href="#">Privacy Policy</a>
-              <span
-                class="w-[2px] h-[2px] mx-[14px] bg-[#333] inline-block"
-              ></span>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
               <a href="#">Notice</a>
-              <span
-                class="w-[2px] h-[2px] mx-[14px] bg-[#333] inline-block"
-              ></span>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
               <a href="#">FAQ</a>
-              <span
-                class="w-[2px] h-[2px] mx-[14px] bg-[#333] inline-block"
-              ></span>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
               <a href="#">Need Help?</a>
             </div>
 
-            <address class="mt-9 text-[#6C7687] not-italic">
+            <address class="mt-7 text-[#6C7687] not-italic min-[800px]:mt-9">
               <div class="mb-[10px]">
                 (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
               </div>
-              <div>Tel. 051-510-1817, 1040 <span></span> Fax. 051-513-9733</div>
+              <div class="min-[800px]:flex">
+                <p
+                  class="mb-[10px] min-[800px]:after:content-[''] min-[800px]:after:inline-block min-[800px]:after:w-[1px] min-[800px]:after:h-[11px] min-[800px]:after:bg-[#888888] min-[800px]:after:ml-[8px] min-[800px]:after:mr-[10px]"
+                >
+                  Tel. 051-510-1817, 1040
+                </p>
+                <p>Fax. 051-513-9733</p>
+              </div>
             </address>
 
-            <div class="copy mt-4 text-[#6C7687]">
-              <p class="mb-[10px]">
+            <div class="copy mt-7 text-[#6C7687] min-[800px]:mt-4">
+              <p>
                 Copyright 2025 Pusan National University Library. All Rights
                 Reserved.
               </p>
-              <p>
+              <p class="mt-7 min-[800px]:mt-[10px]">
                 PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
                 저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
                 형사 상의 책임을 질 수 있습니다.
@@ -238,8 +415,6 @@
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/main.js"></script>
 
     <script></script>
   </body>

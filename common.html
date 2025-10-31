@@ -21,9 +21,11 @@
     <div id="wrap" class="p-10 flex flex-col items-center gap-8">
       <!-- 작동1 -->
       <div
-        class="h-search flex items-center relative h-12 w-[428px] bg-[#F3F5F9] rounded-lg"
+        class="h-search flex items-center relative h-12 w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
       >
-        <div class="relative w-[120px] h-full border-r border-r-[#E4E8F1]">
+        <div
+          class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] 2xl:w-[120px]"
+        >
           <select id="realSelect" class="hidden">
             <option value="">All</option>
             <option value="option1">All</option>
@@ -36,7 +38,7 @@
           <button
             id="customSelectBtn"
             type="button"
-            class="w-full h-full px-5 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer"
+            class="w-full h-full px-3 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer 2xl:px-5"
           >
             <span id="selectedText">All</span>
           </button>
@@ -44,22 +46,38 @@
           <!-- 드롭다운 목록 -->
           <ul
             id="customOptions"
-            class="absolute left-0 right-0 bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px]"
+            class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px] 2xl:p-2"
           >
-            <li class="px-4 py-2 cursor-pointer" data-value="option1">All</li>
-            <li class="px-4 py-2 cursor-pointer" data-value="option2">
+            <li
+              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+              data-value="option1"
+            >
+              All
+            </li>
+            <li
+              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+              data-value="option2"
+            >
               Journal
             </li>
-            <li class="px-4 py-2 cursor-pointer" data-value="option3">
+            <li
+              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+              data-value="option3"
+            >
               Resource
             </li>
-            <li class="px-4 py-2 cursor-pointer" data-value="option3">
+            <li
+              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+              data-value="option3"
+            >
               Scholar
             </li>
           </ul>
         </div>
 
-        <div class="search-wrap w-[calc(100%-120px)] h-full pl-[14px] pr-10">
+        <div
+          class="search-wrap w-[254px] h-full pl-[10px] pr-8 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
+        >
           <input
             type="text"
             class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]"
@@ -69,7 +87,7 @@
         <!-- .search-wrap -->
 
         <button
-          class="btn-search absolute right-5 top-[50%] w-4 translate-y-[-50%] cursor-pointer"
+          class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5"
         >
           <img src="images/search-ico-bl.png" alt="search" />
         </button>
@@ -115,11 +133,117 @@
       <!-- h-profile -->
 
       <!-- 작동3 -->
+      <button class="btnM w-6 h-6 relative cursor-pointer">
+        <span
+          class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
+        ></span>
+        <span
+          class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"
+        ></span>
+        <span
+          class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"
+        ></span>
+      </button>
+
+      <div
+        class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"
+      ></div>
+
+      <div
+        id="sideM"
+        class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300"
+      >
+        <div class="side-header flex justify-between mb-[60px]">
+          <a href="/" class="gomain">
+            <img src="images/home-icon.png" alt="go main" class="w-6" />
+          </a>
+
+          <button class="close-side cursor-pointer">
+            <img src="images/clear-icon.png" alt="close" class="w-[16px]" />
+          </button>
+        </div>
+        <!-- .side-header -->
+
+        <nav>
+          <ul class="text-[22px] font-bold space-y-8">
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Researcher</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Highlights</a></li>
+          </ul>
+        </nav>
+
+        <div
+          class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3"
+        >
+          <a
+            href="#"
+            class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl"
+          >
+            <img
+              src="images/header-login-ico-wh.png"
+              class="w-4 mr-1"
+              alt="login icon"
+            />
+            Login
+          </a>
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Notice</a
+          >
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Q&A</a
+          >
+          <a
+            href="#"
+            class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Research Guide
+            <img
+              src="images/launch-ico-gr.png"
+              class="w-3 ml-1"
+              alt="launch icon"
+          /></a>
+        </div>
+      </div>
+      <!-- #sideM -->
+
+      <!-- 작동4 -->
+      <ul
+        id="customOptions"
+        class="p-[6px] bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] flex text-[15px] gap-[5px]"
+      >
+        <li
+          class="active w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+          data-value="option1"
+        >
+          All
+        </li>
+        <li
+          class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+          data-value="option2"
+        >
+          Journal
+        </li>
+        <li
+          class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+          data-value="option3"
+        >
+          Resource
+        </li>
+        <li
+          class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+          data-value="option3"
+        >
+          Scholar
+        </li>
+      </ul>
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/main.js"></script>
 
     <script>
       // 작동1
@@ -167,6 +291,44 @@
 
       hProfile.addEventListener("mouseleave", () => {
         profileBox.classList.add("hidden");
+      });
+
+      // 작동3
+      let btnM = document.querySelector(".btnM");
+      let sideM = document.getElementById("sideM");
+      let btnSideClose = document.querySelector(".close-side");
+      let bkbg = document.querySelector(".bkbg");
+
+      btnM.addEventListener("click", function () {
+        sideM.classList.add("open");
+        bkbg.classList.add("open");
+      });
+
+      btnSideClose.addEventListener("click", function () {
+        sideM.classList.remove("open");
+        bkbg.classList.remove("open");
+      });
+
+      bkbg.addEventListener("click", function () {
+        sideM.classList.remove("open");
+        this.classList.remove("open");
+      });
+
+      // 작동4
+      document.addEventListener("DOMContentLoaded", () => {
+        const realSelect = document.getElementById("realSelect");
+
+        // 이벤트 위임 방식
+        document.body.addEventListener("click", (e) => {
+          const option = e.target.closest("#customOptions li");
+          if (!option) return;
+
+          const options = document.querySelectorAll("#customOptions li");
+          options.forEach((opt) => opt.classList.remove("active"));
+          option.classList.add("active");
+
+          realSelect.value = option.getAttribute("data-value");
+        });
       });
     </script>
   </body>
