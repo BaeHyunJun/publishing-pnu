@@ -45,6 +45,36 @@
   --key-light1: #6fa5f3;
   --key-light2: #ecf2ff;
 }
+.bg1 {
+  background-color: var(--bg1-color);
+}
+.bg2 {
+  background-color: var(--bg2-color);
+}
+.txt-color {
+  color: var(--txt-color);
+}
+.txt-gray1 {
+  color: var(--txt-gray1);
+}
+.txt-gray2 {
+  color: var(--txt-gray2);
+}
+.txt-gray3 {
+  color: var(--txt-gray3);
+}
+.txt-blue {
+  color: var(--txt-blue);
+}
+.key-color {
+  color: var(--key-color);
+}
+.key-light1 {
+  color: var(--key-light1);
+}
+.key-light2 {
+  color: var(--key-light2);
+}
 
 /* MOBILE부터 작업 */
 
@@ -110,4 +140,42 @@ th {
   color: #333;
   background-color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 공통버튼 */
+.btn-common {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 38px;
+  color: #215bd8;
+  font-size: 14px;
+  background-color: #ecf2ff;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+.btn-common:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-common .arr {
+  width: 11px;
+  margin-left: 8px;
+}
+
+/* 2줄 말줄임 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 800px) {
+  .research-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
