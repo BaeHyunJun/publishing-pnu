@@ -179,3 +179,26 @@ th {
     overflow: hidden;
   }
 }
+
+.reserch-highlight-swiper .swiper-slide {
+  opacity: 0.5;
+}
+.reserch-highlight-swiper .swiper-slide-active {
+  opacity: 1;
+}
+.reserch-highlight-pagination span {
+  width: 10px;
+  height: 10px;
+  background: #e4e8f1;
+  opacity: 1;
+}
+.reserch-highlight-pagination .swiper-pagination-bullet-active {
+  background: #4b4dff;
+}
+
+@media screen and (min-width: 1440px) {
+  .reserch-highlight-pagination span {
+    width: 11px;
+    height: 11px;
+  }
+}
