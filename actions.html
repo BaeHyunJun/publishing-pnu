@@ -153,7 +153,7 @@
         id="sideM"
         class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300"
       >
-        <div class="side-header flex justify-between mb-[60px]">
+        <div class="side-header flex justify-between mb-[30px]">
           <a href="/" class="gomain">
             <img src="images/home-icon.png" alt="go main" class="w-6" />
           </a>
@@ -164,9 +164,68 @@
         </div>
         <!-- .side-header -->
 
-        <nav>
+        <!-- 로그인 후 회원정보 -->
+        <div class="member">
+          <div class="profile flex items-center gap-[10px]">
+            <div
+              class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]"
+            >
+              <img src="images/profile.png" alt="photo" />
+            </div>
+
+            <div class="name">
+              <a
+                href="#"
+                class="flex items-center gap-2 text-[20px] font-bold leading-[140%]"
+                >Park, Minjun
+                <img
+                  src="images/chevron_right.png"
+                  class="w-[20px] h-[20px]"
+                  alt="arr"
+              /></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2"
+                >Department of Medicine</span
+              >
+            </div>
+          </div>
+          <!-- pfofile -->
+
+          <ul
+            class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]"
+          >
+            <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-myresources.png"
+                  class="w-[20px]"
+                  alt="resource icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">My Resources</span>
+              </a>
+            </li>
+            <li class="w-1/2 py-[16px]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-savedresearcher.png"
+                  class="w-[20px]"
+                  alt="saved researcher icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- .member -->
+
+        <nav class="pt-[38px]">
           <ul class="text-[22px] font-bold space-y-8">
-            <li><a href="#">Resources</a></li>
+            <li class="active"><a href="#">Resources</a></li>
             <li><a href="#">Researcher</a></li>
             <li><a href="#">Journals</a></li>
             <li><a href="#">Departments</a></li>
@@ -777,6 +836,94 @@
       <div
         class="reserch-highlight-pagination static flex justify-center mt-6 min-[800px]:mt[22px]"
       ></div>
+
+      <!-- 작동6 -->
+      <div
+        class="num-data px-6 mt-[46px] flex flex-wrap gap-4 min-[800px]:px-[100px] min-[800px]:flex-nowrap min-[800px]:gap-0 min-[800px]:mt-[60px] min-[1440px]:px-[240px]"
+      >
+        <div
+          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 min-[800px]:mr-[20px] min-[800px]:h-[200px] min-[800px]:py-8 min-[800px]:w-[25%] min-[1440px]:px-10 min-[1440px]:mr-[30px]"
+        >
+          <div
+            class="tit leading-[100%] min-[800px]:flex flex-wrap items-center gap-x-3"
+          >
+            <p class="mb-1 text-[17px] font-bold min-[800px]:text-[18px]">
+              Publications
+            </p>
+            <span class="text-[13px] text-[#8D9AAF] min-[800px]:text-[15px]"
+              >2010 ~ 2025</span
+            >
+          </div>
+          <div
+            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] min-[800px]:bottom-[56px] min-[800px]:text-[36px]"
+            data-target="23456"
+          >
+            0
+          </div>
+        </div>
+        <!-- .num-data-cont -->
+
+        <div
+          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 min-[800px]:rounded-[12px_0_0_12px] min-[800px]:border-r border-r-[#EEF1F8] min-[800px]:w-[25%] min-[800px]:h-[200px] min-[800px]:py-8 min-[1440px]:px-10"
+        >
+          <div
+            class="tit leading-[100%] min-[800px]:flex flex-wrap items-center gap-x-3"
+          >
+            <p class="mb-1 text-[17px] font-bold min-[800px]:text-[18px]">
+              Researcher
+            </p>
+          </div>
+          <div
+            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] min-[800px]:bottom-[56px] min-[800px]:text-[36px]"
+            data-target="23456"
+          >
+            0
+          </div>
+        </div>
+        <!-- .num-data-cont -->
+
+        <div
+          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 min-[800px]:rounded-none min-[800px]:border-r border-r-[#EEF1F8] min-[800px]:w-[25%] min-[800px]:h-[200px] min-[800px]:py-8 min-[1440px]:px-10"
+        >
+          <div
+            class="tit leading-[100%] min-[800px]:flex flex-wrap items-center gap-x-3"
+          >
+            <p class="mb-1 text-[17px] font-bold min-[800px]:text-[18px]">
+              Cited Count
+            </p>
+          </div>
+          <div
+            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] min-[800px]:bottom-[56px] min-[800px]:text-[36px]"
+            data-target="123456"
+          >
+            0
+          </div>
+        </div>
+        <!-- .num-data-cont -->
+
+        <div
+          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 min-[800px]:rounded-[0_12px_12px_0] min-[800px]:w-[25%] min-[800px]:h-[200px] min-[800px]:py-8 min-[1440px]:px-10"
+        >
+          <div
+            class="tit leading-[100%] min-[800px]:flex flex-wrap items-center gap-x-3"
+          >
+            <p class="mb-1 text-[17px] font-bold min-[800px]:text-[18px]">
+              QS Ranking
+            </p>
+            <span class="text-[13px] text-[#8D9AAF] min-[800px]:text-[15px]"
+              >in the world</span
+            >
+          </div>
+          <div
+            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] min-[800px]:bottom-[56px] min-[800px]:text-[36px]"
+            data-target="400"
+          >
+            0
+          </div>
+        </div>
+        <!-- .num-data-cont -->
+      </div>
+      <!-- .num-data -->
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
@@ -887,6 +1034,49 @@
           },
         },
       });
+
+      // 작동6
+      // 숫자 카운트 애니메이션
+      function animateCount(el) {
+        const target = +el.dataset.target;
+        const duration = 500; // 속도
+        const startTime = performance.now();
+
+        function update(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const value = Math.floor(progress * target);
+          el.textContent = value.toLocaleString();
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+
+        requestAnimationFrame(update);
+      }
+
+      const numDataSection = document.querySelector(".num-data");
+
+      if (numDataSection) {
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counts = entry.target.querySelectorAll(".count");
+                counts.forEach((el) => animateCount(el));
+                observer.unobserve(entry.target); // 한번만
+              }
+            });
+          },
+          {
+            threshold: 0.3, // 섹션의 30%가 보이면 실행
+            rootMargin: "0px 0px -100px 0px", // 화면 하단 100px 전에 미리 실행
+          }
+        );
+
+        observer.observe(numDataSection);
+      }
     </script>
   </body>
 </html>
