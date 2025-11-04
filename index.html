@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   </head>
 
-  <body>
+  <body class="font-sans">
     <div id="wrap" class="bg-[#F3F5F9]">
       <header class="h-[127px] bg-white xl:h-[120px]">
         <div
@@ -42,7 +42,7 @@
           class="hBottom px-6 w-full h-full flex justify-between items-center flex-wrap xl:flex-nowrap xl:h-[78px] xl:px-[100px]"
         >
           <div
-            class="h-left flex items-center gap-10 order-1 pt-3 xl:pt-0 2xl:gap-20"
+            class="h-left flex items-center gap-10 order-1 pt-3 min-[800px]:pt-0 2xl:gap-20"
           >
             <h1 id="logo" class="shrink-0">
               <a href="/">
@@ -70,13 +70,13 @@
           <!-- .h-left -->
 
           <div
-            class="h-right items-center gap-4 flex order-3 pb-3 w-full xl:w-auto xl:pt-0 2xl:gap-9"
+            class="h-right items-center gap-4 flex order-3 pb-3 w-full min-[800px]:pb-0 xl:w-auto 2xl:gap-9"
           >
             <div
               class="h-search flex items-center relative h-12 w-full xl:w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
             >
               <div
-                class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] 2xl:w-[120px]"
+                class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] min-[800px]:w-[120px] 2xl:w-[120px]"
               >
                 <select id="realSelect" class="hidden">
                   <option value="">All</option>
@@ -128,7 +128,7 @@
               </div>
 
               <div
-                class="search-wrap w-[254px] h-full pl-[10px] pr-8 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
+                class="search-wrap w-full h-full pl-[10px] pr-9 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
               >
                 <input
                   type="text"

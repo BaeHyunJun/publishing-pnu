@@ -7,6 +7,12 @@
     <title>PNU Scholar</title>
 
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+
+    <link
       rel="stylesheet"
       as="style"
       crossorigin
@@ -19,12 +25,78 @@
 
   <body>
     <div id="wrap" class="p-10 flex flex-col items-center gap-8">
+      <h1 class="text-[40px] font-bold mt-[100px]">컴포넌트</h1>
+
+      <!-- input 컴포넌트 -->
+      <input
+        type="text"
+        placeholder="placeholder"
+        class="w-full h-[44px] px-4 border border-[#E4E8F1] outline-none rounded-lg text-[13px] text-[#333] placeholder:text-[#B4BCCC] hover:border-[#8D9AAF] focus:border-[#8D9AAF] disabled:border-[#E4E8F1] disabled:bg-[#F3F5F9] disabled:text-[#B4BCCC] disabled:cursor-not-allowed"
+      />
+
+      <!-- 검색 컴포넌트 -->
+      <div class="search relative w-full">
+        <input
+          type="text"
+          placeholder="Search within result..."
+          class="w-full h-[46px] px-4 pr-[46px] border border-[#E4E8F1] outline-none rounded-lg text-[13px] text-[#333] placeholder:text-[#B4BCCC] hover:border-[#8D9AAF] focus:border-[#8D9AAF] disabled:border-[#E4E8F1] disabled:bg-[#F3F5F9] disabled:text-[#B4BCCC] disabled:cursor-not-allowed"
+        />
+        <button class="absolute top-1/2 right-[18px] -translate-y-1/2">
+          <img
+            src="../images/search-ico-8D9AAF.png"
+            class="w-[18px]"
+            alt="search icon"
+          />
+        </button>
+      </div>
+
+      <!-- 체크박스 컴포넌트 -->
+      <label
+        class="checkbox-wrap group inline-flex items-center cursor-pointer select-none"
+      >
+        <input type="checkbox" class="peer hidden" />
+        <span
+          class="w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+        >
+        </span>
+        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+          >Scopus (10,220)</span
+        >
+      </label>
+
+      <!-- 라디오 컴포넌트 - 완성전 -->
+      <label
+        class="form-wrap group inline-flex items-center cursor-pointer select-none"
+      >
+        <input type="radio" name="example" class="peer hidden" />
+        <span
+          class="w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-full group-hover:border-[#4B4DFF] peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] transition-colors duration-200"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity duration-200"
+          ></span>
+        </span>
+        <span class="ml-[10px] text-[14px] text-[#6C7687]">Radio Label</span>
+      </label>
+
+      <!-- 토글버튼 컴포넌트 -->
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" class="sr-only peer" />
+        <div
+          class="w-[25px] h-[15px] bg-[#B4BCCC] rounded-full peer peer-checked:bg-[#4B4DFF] transition-colors duration-200"
+        ></div>
+        <div
+          class="absolute left-[2px] top-[2px] w-[11px] h-[11px] bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-[10px]"
+        ></div>
+      </label>
+
+      <h1 class="text-[40px] font-bold mt-[100px]">동작</h1>
       <!-- 작동1 -->
       <div
-        class="h-search flex items-center relative h-12 w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
+        class="h-search flex items-center relative h-12 w-full xl:w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
       >
         <div
-          class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] 2xl:w-[120px]"
+          class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] min-[800px]:w-[120px] 2xl:w-[120px]"
         >
           <select id="realSelect" class="hidden">
             <option value="">All</option>
@@ -38,7 +110,7 @@
           <button
             id="customSelectBtn"
             type="button"
-            class="w-full h-full px-3 hover:border-gray-400 focus:outline-none text-left txt-gray2 text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer 2xl:px-5"
+            class="w-full h-full px-3 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer 2xl:px-5"
           >
             <span id="selectedText">All</span>
           </button>
@@ -76,7 +148,7 @@
         </div>
 
         <div
-          class="search-wrap w-[254px] h-full pl-[10px] pr-8 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
+          class="search-wrap w-full h-full pl-[10px] pr-9 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
         >
           <input
             type="text"
@@ -924,6 +996,997 @@
         <!-- .num-data-cont -->
       </div>
       <!-- .num-data -->
+
+      <!-- 작동7 -->
+      <div class="relative w-[400px] mx-auto mt-10">
+        <!-- 그래프 배경 -->
+        <svg
+          viewBox="0 0 400 80"
+          class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
+        >
+          <path
+            d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
+            fill="#4B4DFF1A"
+            stroke="none"
+          />
+        </svg>
+
+        <!-- 슬라이더 -->
+        <div id="rangeSlider" class="relative z-10"></div>
+
+        <!-- 입력값 -->
+        <div class="flex items-center gap-2 mt-6">
+          <input
+            id="input-min"
+            type="number"
+            class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+          />
+          <span class="text-[#8D9AAF]">~</span>
+          <input
+            id="input-max"
+            type="number"
+            class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+          />
+        </div>
+      </div>
+
+      <!-- 작동8 -->
+      <button
+        class="btn-filter flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer"
+      >
+        <img src="../images/filter-ico.png" class="w-[20px]" alt="filter" />
+      </button>
+
+      <div
+        class="filter fixed top-[100%] right-0 z-[100] w-full h-full px-6 py-[30px] bg-[#fff] overflow-y-auto transition-top duration-300"
+      >
+        <div class="filter-top flex items-center gap-[10px] relative">
+          <h3 class="text-[18px] font-bold">Journal Search</h3>
+          <button
+            href="Reset all"
+            class="btn-resetAll text-[13px] text-[#6C7687] font-semibold cursor-pointer"
+          >
+            Reset all
+          </button>
+          <button
+            class="filter-close absolute top-0 right-0 w-[25px] h-[25px] cursor-pointer"
+          >
+            <img src="../images/clear-icon.png" class="w-[18px]" alt="close" />
+          </button>
+        </div>
+        <!-- filter-top -->
+
+        <div class="filter-search relative mt-[20px]">
+          <input
+            type="text"
+            placeholder="Search within result..."
+            class="w-full h-[46px] px-4 pr-[46px] border border-[#E4E8F1] outline-none rounded-lg text-[13px] text-[#333] placeholder:text-[#B4BCCC] hover:border-[#8D9AAF] focus:border-[#8D9AAF] disabled:border-[#E4E8F1] disabled:bg-[#F3F5F9] disabled:text-[#B4BCCC] disabled:cursor-not-allowed"
+          />
+          <button class="absolute top-1/2 right-[18px] -translate-y-1/2">
+            <img
+              src="../images/search-ico-8D9AAF.png"
+              class="w-[18px]"
+              alt="search icon"
+            />
+          </button>
+        </div>
+
+        <div class="filter-cont mt-10">
+          <div class="filter-item-wrap">
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">Registered DB</h4>
+
+              <ul
+                class="flex flex-wrap gap-x-4 gap-y-[10px] min-[800px]:flex-col"
+              >
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Scopus (<span>10,220</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >SCIE (<span>9,447</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >ESCI (<span>8,971</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >SSCI (<span>3,537</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >KCI (<span>2,679</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >AHCI (<span>1,810</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >KCI후보 (<span>217</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Nature Index (<span>1,441</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >KCI우수 (<span>70</span>)</span
+                    >
+                  </label>
+                </li>
+              </ul>
+
+              <div
+                class="and flex justify-between items-center mt-[18px] px-[12px] py-[8px] bg-[#F3F5F9] rounded-md text-[#8D9AAF] text-[14px]"
+              >
+                <span>And condition search</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer" />
+                  <div
+                    class="w-[25px] h-[15px] bg-[#B4BCCC] rounded-full peer peer-checked:bg-[#4B4DFF] transition-colors duration-200"
+                  ></div>
+                  <div
+                    class="absolute left-[2px] top-[2px] w-[11px] h-[11px] bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-[10px]"
+                  ></div>
+                </label>
+              </div>
+              <!-- .and -->
+
+              <button
+                class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+              >
+                <img
+                  src="../images/search-ico-333.png"
+                  class="w-[12px]"
+                  alt="search"
+                />
+                Refine
+              </button>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">Open Access</h4>
+
+              <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Y (<span>29,099</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >N (<span>9,901</span>)</span
+                    >
+                  </label>
+                </li>
+              </ul>
+
+              <button
+                class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+              >
+                <img
+                  src="../images/search-ico-333.png"
+                  class="w-[12px]"
+                  alt="search"
+                />
+                Refine
+              </button>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">JCR Category</h4>
+
+              <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >CELL BIOLOGY (<span>127</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >BIO CHEMISTRY & MOLECULAR BIOLOGY
+                      (<span>321</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >CELL TISSHUE ENGINEERING (<span>20</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >ONCOLOGY (<span>11</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >BIOTECHNOLOGY & APPLIED MICROBIOLOGY
+                      (<span>10</span>)</span
+                    >
+                  </label>
+                </li>
+              </ul>
+
+              <div
+                class="btn-wrap flex items-center justify-between gap-[16px]"
+              >
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/more-ico-bk.png"
+                    class="w-[14px]"
+                    alt="more"
+                  />
+                  More
+                </button>
+
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/search-ico-333.png"
+                    class="w-[12px]"
+                    alt="search"
+                  />
+                  Refine
+                </button>
+              </div>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">KCI Category</h4>
+
+              <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >사회과학 (<span>131</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >인문학 (<span>221</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >의약학 (<span>378</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >공학 (<span>110</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >복합학 (<span>112</span>)</span
+                    >
+                  </label>
+                </li>
+              </ul>
+
+              <div
+                class="btn-wrap flex items-center justify-between gap-[16px]"
+              >
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/more-ico-bk.png"
+                    class="w-[14px]"
+                    alt="more"
+                  />
+                  More
+                </button>
+
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/search-ico-333.png"
+                    class="w-[12px]"
+                    alt="search"
+                  />
+                  Refine
+                </button>
+              </div>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">Department</h4>
+
+              <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >기계공학부 (<span>1,694</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >의학과 (<span>1,508</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >재료공학부 (<span>844</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >치의학과 (<span>691</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >대학병원 (<span>686</span>)</span
+                    >
+                  </label>
+                </li>
+              </ul>
+
+              <div
+                class="btn-wrap flex items-center justify-between gap-[16px]"
+              >
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/more-ico-bk.png"
+                    class="w-[14px]"
+                    alt="more"
+                  />
+                  More
+                </button>
+
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/search-ico-333.png"
+                    class="w-[12px]"
+                    alt="search"
+                  />
+                  Refine
+                </button>
+              </div>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">Publisher</h4>
+
+              <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Taylor and Francis Ltd. (<span>1,740</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Elsvier B.V. (<span>1,503</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Routledge (<span>746</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Brill Academic Publishers (<span>679</span>)</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Elsvier Ltd. (<span>112</span>)</span
+                    >
+                  </label>
+                </li>
+              </ul>
+
+              <div
+                class="btn-wrap flex items-center justify-between gap-[16px]"
+              >
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/more-ico-bk.png"
+                    class="w-[14px]"
+                    alt="more"
+                  />
+                  More
+                </button>
+
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/search-ico-333.png"
+                    class="w-[12px]"
+                    alt="search"
+                  />
+                  Refine
+                </button>
+              </div>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">Journal Ranking</h4>
+
+              <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Scopus Top 1%</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Scopus Top 3%</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Scopus Top 10%</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Scopus Top 25%</span
+                    >
+                  </label>
+                </li>
+
+                <li class="w-full">
+                  <label
+                    class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                  >
+                    <input type="checkbox" class="peer hidden" />
+                    <span
+                      class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                    >
+                    </span>
+                    <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                      >Scopus Top 50%</span
+                    >
+                  </label>
+                </li>
+              </ul>
+
+              <div
+                class="btn-wrap flex items-center justify-between gap-[16px]"
+              >
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/more-ico-bk.png"
+                    class="w-[14px]"
+                    alt="more"
+                  />
+                  More
+                </button>
+
+                <button
+                  class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                >
+                  <img
+                    src="../images/search-ico-333.png"
+                    class="w-[12px]"
+                    alt="search"
+                  />
+                  Refine
+                </button>
+              </div>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">JCR JIF Range</h4>
+
+              <div class="relative w-full mx-auto mt-20">
+                <!-- 그래프 배경 -->
+                <svg
+                  viewBox="0 0 400 80"
+                  class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
+                >
+                  <path
+                    d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
+                    fill="#4B4DFF1A"
+                    stroke="none"
+                  />
+                </svg>
+
+                <!-- 슬라이더 -->
+                <div id="rangeSlider" class="relative z-10"></div>
+
+                <!-- 입력값 -->
+                <div class="flex items-center gap-2 mt-6">
+                  <input
+                    id="input-min"
+                    type="number"
+                    class="w-full h-[34px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                  />
+                  <span class="text-[#8D9AAF]">~</span>
+                  <input
+                    id="input-max"
+                    type="number"
+                    class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+              >
+                <img
+                  src="../images/search-ico-333.png"
+                  class="w-[12px]"
+                  alt="search"
+                />
+                Refine
+              </button>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">
+                Scopus CiteScore Range
+              </h4>
+
+              <div class="relative w-full mx-auto mt-20">
+                <!-- 그래프 배경 -->
+                <svg
+                  viewBox="0 0 400 80"
+                  class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
+                >
+                  <path
+                    d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
+                    fill="#4B4DFF1A"
+                    stroke="none"
+                  />
+                </svg>
+
+                <!-- 슬라이더 -->
+                <div id="rangeSlider" class="relative z-10"></div>
+
+                <!-- 입력값 -->
+                <div class="flex items-center gap-2 mt-6">
+                  <input
+                    id="input-min"
+                    type="number"
+                    class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                  />
+                  <span class="text-[#8D9AAF]">~</span>
+                  <input
+                    id="input-max"
+                    type="number"
+                    class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+              >
+                <img
+                  src="../images/search-ico-333.png"
+                  class="w-[12px]"
+                  alt="search"
+                />
+                Refine
+              </button>
+            </div>
+            <!-- .filter-item -->
+
+            <div class="filter-item mb-9">
+              <h4 class="mb-[18px] text-[14px] font-bold">KCI JIF Range</h4>
+
+              <div class="relative w-full mx-auto mt-20">
+                <!-- 그래프 배경 -->
+                <svg
+                  viewBox="0 0 400 80"
+                  class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
+                >
+                  <path
+                    d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
+                    fill="#4B4DFF1A"
+                    stroke="none"
+                  />
+                </svg>
+
+                <!-- 슬라이더 -->
+                <div id="rangeSlider" class="relative z-10"></div>
+
+                <!-- 입력값 -->
+                <div class="flex items-center gap-2 mt-6">
+                  <input
+                    id="input-min"
+                    type="number"
+                    class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                  />
+                  <span class="text-[#8D9AAF]">~</span>
+                  <input
+                    id="input-max"
+                    type="number"
+                    class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+              >
+                <img
+                  src="../images/search-ico-333.png"
+                  class="w-[12px]"
+                  alt="search"
+                />
+                Refine
+              </button>
+            </div>
+            <!-- .filter-item -->
+          </div>
+          <!-- filter-item-wrap -->
+        </div>
+        <!-- filter-cont -->
+      </div>
+      <!-- .filter -->
+
+      <!-- 작동9 -->
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
@@ -1077,6 +2140,66 @@
 
         observer.observe(numDataSection);
       }
+
+      // 작동7
+      const slider = document.getElementById("rangeSlider");
+      noUiSlider.create(slider, {
+        start: [0, 510],
+        connect: true,
+        range: {
+          min: 0,
+          max: 1000,
+        },
+        step: 1,
+      });
+
+      const inputMin = document.getElementById("input-min");
+      const inputMax = document.getElementById("input-max");
+
+      // 슬라이더 → 인풋 반영
+      slider.noUiSlider.on("update", function (values, handle) {
+        const value = Math.round(values[handle]);
+        if (handle) inputMax.value = value;
+        else inputMin.value = value;
+      });
+
+      // 인풋 → 슬라이더 반영
+      inputMin.addEventListener("change", () =>
+        slider.noUiSlider.set([inputMin.value, null])
+      );
+      inputMax.addEventListener("change", () =>
+        slider.noUiSlider.set([null, inputMax.value])
+      );
+
+      // 작동8
+      document.addEventListener("DOMContentLoaded", function () {
+        const btnFilter = document.querySelector(".btn-filter");
+        const filterPanel = document.querySelector(".filter");
+        const btnClose = document.querySelector(".filter-close");
+        const btnResetAll = document.querySelector(".btn-resetAll");
+
+        // 필터 열기
+        btnFilter.addEventListener("click", function () {
+          filterPanel.style.top = "0";
+          document.body.style.overflow = "hidden";
+        });
+
+        // 필터 닫기
+        btnClose.addEventListener("click", function () {
+          filterPanel.style.top = "100%";
+          document.body.style.overflow = "";
+        });
+
+        //  전체 리셋 버튼
+        btnResetAll.addEventListener("click", function () {
+          const checkboxes = filterPanel.querySelectorAll(
+            '.filter-item input[type="checkbox"]'
+          );
+          checkboxes.forEach((checkbox) => {
+            checkbox.checked = false;
+          });
+        });
+      });
     </script>
   </body>
 </html>

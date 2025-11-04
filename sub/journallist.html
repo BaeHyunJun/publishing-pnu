@@ -6,20 +6,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>PNU Scholar</title>
 
+    <link rel="stylesheet" href="../css/custom.css" />
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
     />
-    <link rel="stylesheet" href="css/custom.css" />
-
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   </head>
 
-  <body>
+  <body class="font-sans">
     <div id="wrap" class="bg-[#F3F5F9]">
-      <header class="h-[63px] bg-white xl:h-[120px]">
+      <header class="h-[127px] bg-white xl:h-[120px]">
         <div
           class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] xl:block"
         >
@@ -39,9 +37,11 @@
         <!-- .hTop -->
 
         <div
-          class="hBottom px-6 w-full h-full flex justify-between items-center flex-wrap xl:h-[78px] xl:px-[100px]"
+          class="hBottom px-6 w-full h-full flex justify-between items-center flex-wrap xl:flex-nowrap xl:h-[78px] xl:px-[100px]"
         >
-          <div class="h-left flex items-center gap-10 2xl:gap-20">
+          <div
+            class="h-left flex items-center gap-10 order-1 pt-3 min-[800px]:pt-0 2xl:gap-20"
+          >
             <h1 id="logo" class="shrink-0">
               <a href="/">
                 <img
@@ -67,12 +67,14 @@
           </div>
           <!-- .h-left -->
 
-          <div class="h-right items-center gap-4 xl:flex 2xl:gap-9">
+          <div
+            class="h-right items-center gap-4 flex order-3 pb-3 w-full min-[800px]:pb-0 xl:w-auto 2xl:gap-9"
+          >
             <div
-              class="h-search flex items-center relative h-12 w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
+              class="h-search flex items-center relative h-12 w-full xl:w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
             >
               <div
-                class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] 2xl:w-[120px]"
+                class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] min-[800px]:w-[120px] 2xl:w-[120px]"
               >
                 <select id="realSelect" class="hidden">
                   <option value="">All</option>
@@ -124,7 +126,7 @@
               </div>
 
               <div
-                class="search-wrap w-[254px] h-full pl-[10px] pr-8 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
+                class="search-wrap w-full h-full pl-[10px] pr-9 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
               >
                 <input
                   type="text"
@@ -144,7 +146,7 @@
 
             <a
               href="#"
-              class="btn-login hidden group flex items-center gap-2 hover:text-[#4B4DFF]"
+              class="hidden btn-login group items-center gap-2 hover:text-[#4B4DFF] xl:flex"
             >
               <span
                 class="w-5 h-5 bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')]"
@@ -152,7 +154,8 @@
               Login
             </a>
 
-            <div href="#" class="h-profile after-log relative hidden">
+            <!-- 로그인시 xl사이즈에서 block로 보여져야함! 모바일에서는 무조건 안보이게 -->
+            <div href="#" class="h-profile after-log relative hidden xl:hidden">
               <button class="profile flex items-center">
                 <div
                   class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2"
@@ -191,7 +194,9 @@
           </div>
           <!-- .h-right -->
 
-          <button class="btnM w-6 h-6 relative cursor-pointer xl:hidden">
+          <button
+            class="btnM w-6 h-6 relative cursor-pointer order-2 xl:hidden"
+          >
             <span
               class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
             ></span>
@@ -332,11 +337,2919 @@
       <!-- #sideM -->
 
       <div id="container">
-        <div class="journallistPage listPage flexPage">
-          <div class="filter w-[310px] fixed top-0 right-0 z-[100]"></div>
+        <div class="journallistPage listPage flexPage xl:px-[100px]">
+          <!-- filter -->
+          <div
+            class="filter fixed top-[100%] right-0 z-[100] w-full h-full px-6 py-[30px] bg-[#fff] overflow-y-auto transition-top duration-300 min-[800px]:w-[310px] min-[800px]:static min-[800px]:mt-[45px] min-[800px]:rounded-xl"
+          >
+            <div
+              class="filter-top flex items-center gap-[10px] relative min-[800px]:justify-between"
+            >
+              <h3 class="text-[18px] font-bold">Journal Search</h3>
+              <button
+                href="Reset all"
+                class="btn-resetAll text-[13px] text-[#6C7687] font-semibold cursor-pointer"
+              >
+                Reset all
+              </button>
+              <button
+                class="filter-close absolute top-0 right-0 w-[25px] h-[25px] cursor-pointer min-[800px]:hidden"
+              >
+                <img
+                  src="../images/clear-icon.png"
+                  class="w-[18px]"
+                  alt="close"
+                />
+              </button>
+            </div>
+            <!-- filter-top -->
+
+            <div class="filter-search relative mt-[20px]">
+              <input
+                type="text"
+                placeholder="Search within result..."
+                class="w-full h-[46px] px-4 pr-[46px] border border-[#E4E8F1] outline-none rounded-lg text-[13px] text-[#333] placeholder:text-[#B4BCCC] hover:border-[#8D9AAF] focus:border-[#8D9AAF] disabled:border-[#E4E8F1] disabled:bg-[#F3F5F9] disabled:text-[#B4BCCC] disabled:cursor-not-allowed"
+              />
+              <button class="absolute top-1/2 right-[18px] -translate-y-1/2">
+                <img
+                  src="../images/search-ico-8D9AAF.png"
+                  class="w-[18px]"
+                  alt="search icon"
+                />
+              </button>
+            </div>
+
+            <div class="filter-cont mt-10">
+              <div class="filter-item-wrap">
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">Registered DB</h4>
+
+                  <ul
+                    class="flex flex-wrap gap-x-4 gap-y-[10px] min-[800px]:flex-col"
+                  >
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Scopus (<span>10,220</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >SCIE (<span>9,447</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >ESCI (<span>8,971</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >SSCI (<span>3,537</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >KCI (<span>2,679</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >AHCI (<span>1,810</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >KCI후보 (<span>217</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Nature Index (<span>1,441</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >KCI우수 (<span>70</span>)</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="and flex justify-between items-center mt-[18px] px-[12px] py-[8px] bg-[#F3F5F9] rounded-md text-[#8D9AAF] text-[14px]"
+                  >
+                    <span>And condition search</span>
+                    <label
+                      class="relative inline-flex items-center cursor-pointer"
+                    >
+                      <input type="checkbox" class="sr-only peer" />
+                      <div
+                        class="w-[25px] h-[15px] bg-[#B4BCCC] rounded-full peer peer-checked:bg-[#4B4DFF] transition-colors duration-200"
+                      ></div>
+                      <div
+                        class="absolute left-[2px] top-[2px] w-[11px] h-[11px] bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-[10px]"
+                      ></div>
+                    </label>
+                  </div>
+                  <!-- .and -->
+
+                  <button
+                    class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                  >
+                    <img
+                      src="../images/search-ico-333.png"
+                      class="w-[12px]"
+                      alt="search"
+                    />
+                    Refine
+                  </button>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">Open Access</h4>
+
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Y (<span>29,099</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-[calc(50%-8px)] min-[800px]:w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >N (<span>9,901</span>)</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+
+                  <button
+                    class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                  >
+                    <img
+                      src="../images/search-ico-333.png"
+                      class="w-[12px]"
+                      alt="search"
+                    />
+                    Refine
+                  </button>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">JCR Category</h4>
+
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >CELL BIOLOGY (<span>127</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >BIO CHEMISTRY & MOLECULAR BIOLOGY
+                          (<span>321</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >CELL TISSHUE ENGINEERING (<span>20</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >ONCOLOGY (<span>11</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >BIOTECHNOLOGY & APPLIED MICROBIOLOGY
+                          (<span>10</span>)</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                  >
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/more-ico-bk.png"
+                        class="w-[14px]"
+                        alt="more"
+                      />
+                      More
+                    </button>
+
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/search-ico-333.png"
+                        class="w-[12px]"
+                        alt="search"
+                      />
+                      Refine
+                    </button>
+                  </div>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">KCI Category</h4>
+
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >사회과학 (<span>131</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >인문학 (<span>221</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >의약학 (<span>378</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >공학 (<span>110</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >복합학 (<span>112</span>)</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                  >
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/more-ico-bk.png"
+                        class="w-[14px]"
+                        alt="more"
+                      />
+                      More
+                    </button>
+
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/search-ico-333.png"
+                        class="w-[12px]"
+                        alt="search"
+                      />
+                      Refine
+                    </button>
+                  </div>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">Department</h4>
+
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >기계공학부 (<span>1,694</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >의학과 (<span>1,508</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >재료공학부 (<span>844</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >치의학과 (<span>691</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >대학병원 (<span>686</span>)</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                  >
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/more-ico-bk.png"
+                        class="w-[14px]"
+                        alt="more"
+                      />
+                      More
+                    </button>
+
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/search-ico-333.png"
+                        class="w-[12px]"
+                        alt="search"
+                      />
+                      Refine
+                    </button>
+                  </div>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">Publisher</h4>
+
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Taylor and Francis Ltd. (<span>1,740</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Elsvier B.V. (<span>1,503</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Routledge (<span>746</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Brill Academic Publishers (<span>679</span>)</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Elsvier Ltd. (<span>112</span>)</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                  >
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/more-ico-bk.png"
+                        class="w-[14px]"
+                        alt="more"
+                      />
+                      More
+                    </button>
+
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/search-ico-333.png"
+                        class="w-[12px]"
+                        alt="search"
+                      />
+                      Refine
+                    </button>
+                  </div>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">
+                    Journal Ranking
+                  </h4>
+
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Scopus Top 1%</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Scopus Top 3%</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Scopus Top 10%</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Scopus Top 25%</span
+                        >
+                      </label>
+                    </li>
+
+                    <li class="w-full">
+                      <label
+                        class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 shrink-0 flex items-center justify-center mt-[3px] border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Scopus Top 50%</span
+                        >
+                      </label>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                  >
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/more-ico-bk.png"
+                        class="w-[14px]"
+                        alt="more"
+                      />
+                      More
+                    </button>
+
+                    <button
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                    >
+                      <img
+                        src="../images/search-ico-333.png"
+                        class="w-[12px]"
+                        alt="search"
+                      />
+                      Refine
+                    </button>
+                  </div>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">JCR JIF Range</h4>
+
+                  <div class="relative w-full mx-auto mt-20">
+                    <!-- 그래프 배경 -->
+                    <svg
+                      viewBox="0 0 400 80"
+                      class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
+                    >
+                      <path
+                        d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
+                        fill="#4B4DFF1A"
+                        stroke="none"
+                      />
+                    </svg>
+
+                    <!-- 슬라이더 -->
+                    <div id="rangeSlider" class="relative z-10"></div>
+
+                    <!-- 입력값 -->
+                    <div class="flex items-center gap-2 mt-6">
+                      <input
+                        id="input-min"
+                        type="number"
+                        class="w-full h-[34px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                      />
+                      <span class="text-[#8D9AAF]">~</span>
+                      <input
+                        id="input-max"
+                        type="number"
+                        class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                  >
+                    <img
+                      src="../images/search-ico-333.png"
+                      class="w-[12px]"
+                      alt="search"
+                    />
+                    Refine
+                  </button>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">
+                    Scopus CiteScore Range
+                  </h4>
+
+                  <div class="relative w-full mx-auto mt-20">
+                    <!-- 그래프 배경 -->
+                    <svg
+                      viewBox="0 0 400 80"
+                      class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
+                    >
+                      <path
+                        d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
+                        fill="#4B4DFF1A"
+                        stroke="none"
+                      />
+                    </svg>
+
+                    <!-- 슬라이더 -->
+                    <div id="rangeSlider" class="relative z-10"></div>
+
+                    <!-- 입력값 -->
+                    <div class="flex items-center gap-2 mt-6">
+                      <input
+                        id="input-min"
+                        type="number"
+                        class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                      />
+                      <span class="text-[#8D9AAF]">~</span>
+                      <input
+                        id="input-max"
+                        type="number"
+                        class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                  >
+                    <img
+                      src="../images/search-ico-333.png"
+                      class="w-[12px]"
+                      alt="search"
+                    />
+                    Refine
+                  </button>
+                </div>
+                <!-- .filter-item -->
+
+                <div class="filter-item mb-9">
+                  <h4 class="mb-[18px] text-[14px] font-bold">KCI JIF Range</h4>
+
+                  <div class="relative w-full mx-auto mt-20">
+                    <!-- 그래프 배경 -->
+                    <svg
+                      viewBox="0 0 400 80"
+                      class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
+                    >
+                      <path
+                        d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
+                        fill="#4B4DFF1A"
+                        stroke="none"
+                      />
+                    </svg>
+
+                    <!-- 슬라이더 -->
+                    <div id="rangeSlider" class="relative z-10"></div>
+
+                    <!-- 입력값 -->
+                    <div class="flex items-center gap-2 mt-6">
+                      <input
+                        id="input-min"
+                        type="number"
+                        class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                      />
+                      <span class="text-[#8D9AAF]">~</span>
+                      <input
+                        id="input-max"
+                        type="number"
+                        class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    class="w-full flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                  >
+                    <img
+                      src="../images/search-ico-333.png"
+                      class="w-[12px]"
+                      alt="search"
+                    />
+                    Refine
+                  </button>
+                </div>
+                <!-- .filter-item -->
+              </div>
+              <!-- filter-item-wrap -->
+            </div>
+            <!-- filter-cont -->
+          </div>
           <!-- .filter -->
 
-          <div class="journal-list-cont"></div>
+          <div
+            class="journal-list-cont w-full px-6 pt-[30px] min-[800px]:w-[calc(100%-360px)] min-[800px]:px-[0] min-[800px]:pt-[23px] min-[800px]:mt-[50px]"
+          >
+            <div
+              class="bread mb-[27px] text-[#8D9AAF] text-[13px] flex items-center gap-1 min-[800px]:mb-[20px]"
+            >
+              <a href="/" class="flex items-center gap-[2px]"
+                ><img
+                  src="../images/home-ico.png"
+                  class="w-[13px]"
+                  alt="home"
+                />Home</a
+              >
+              <img
+                src="../images/chevron_right_8D9AAF.png"
+                class="w-[12px]"
+                alt="right"
+              />
+              <span class="current font-bold">Journals</span>
+            </div>
+            <!-- bread -->
+
+            <div class="tit-area w-full flex justify-between">
+              <h2
+                class="text-[26px] leading-[130%] font-black min-[800px]:text-[32px]"
+              >
+                Journals
+              </h2>
+              <button
+                class="btn-filter flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer min-[800px]:hidden"
+              >
+                <img
+                  src="../images/filter-ico.png"
+                  class="w-[20px]"
+                  alt="filter"
+                />
+              </button>
+            </div>
+            <!-- .tit-area -->
+
+            <div
+              class="journal-graph mt-[18px] py-[24px] bg-white rounded-xl border border-[#E4E8F1] min-[800px]:mt-[37px] min-[800px]:pt-[20px] min-[800px]:pb-[36px]"
+            >
+              <div
+                class="journal-graph-toggle relative px-[20px] cursor-pointer min-[800px]:px-[25px]"
+              >
+                <div
+                  class="flex items-center gap-3 pr-[30px] text-[15px] font-bold leading-[130%] min-[800px]:text-[18px] min-[800px]:gap-[6px]"
+                >
+                  <div
+                    class="flex shrink-0 justify-center items-center w-[38px] h-[38px] rounded-lg bg-[#E4E8F1] min-[800px]:w-auto min-[800px]:h-auto min-[800px]:bg-transparent"
+                  >
+                    <img
+                      src="../images/bar_chart_ico.png"
+                      class="w-[22px]"
+                      alt="chart icon"
+                    />
+                  </div>
+                  Exploring Our Journal Publishing Trends
+                </div>
+                <img
+                  src="../images/expand_more_333.png"
+                  class="absolute right-[20px] top-1/2 w-[20px] -translate-y-1/2 rotate-180 transition-transform duration-300 min-[800px]:w-[24px]"
+                  alt="toggle"
+                />
+              </div>
+              <!-- .journal-graph-toggle -->
+
+              <div
+                class="journal-graph-cont border-t border-t-[#E4E8F1] mt-6 pt-5 px-[20px] min-[800px]:mt-5 min-[800px]:pt-[32px] min-[800px]:flex gap-[20px]"
+              >
+                <div
+                  class="chart-area p-4 border border-[#E4E8F1] rounded-xl mb-[20px] min-[800px]:w-[392px] min-[800px]:bg-[#F3F5F9] min-[800px]:p-8 min-[800px]:mb-0"
+                >
+                  <h3
+                    class="mb-4 text-[15px] font-bold leading-[150%] text-[#6C7687] text-center min-[800px]:text-[16px]"
+                  >
+                    Journal Quartiles
+                  </h3>
+                </div>
+                <!-- .chart-area -->
+
+                <div
+                  class="chart-area p-4 border border-[#E4E8F1] rounded-xl mb-[20px] min-[800px]:w-[calc(100%-402px)] min-[800px]:bg-[#F3F5F9] min-[800px]:p-8 min-[800px]:mb-0"
+                >
+                  <h3
+                    class="mb-4 text-[15px] font-bold leading-[150%] text-[#6C7687] text-center"
+                  >
+                    Top 5 most published categories
+                    <br class="min-[800px]:hidden" />by DB in PNU
+                  </h3>
+                </div>
+                <!-- .chart-area -->
+
+                <div class="flex justify-center min-[800px]:hidden">
+                  <button
+                    class="flex items-center gap-[2px] px-[10px] py-1 text-[13px] font-semibold text-[#8D9AAF]"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180"
+                      alt="hide"
+                    />
+                    Hide Chart
+                  </button>
+                </div>
+              </div>
+              <!-- .journal-graph-cont -->
+            </div>
+
+            <div
+              class="listUtil mt-10 min-[800px]:flex items-center justify-between"
+            >
+              <div class="mb-3 text-[14px] text-[#6C7687]">
+                Found <strong>53,583</strong> results
+              </div>
+
+              <div
+                class="sort min-[800px]:flex items-center gap-3 text-[13px] text-[#6C7687] font-medium"
+              >
+                <p class="hidden min-[800px]:flex items-center gap-1">
+                  <img
+                    src="../images/filter_list_ico.png"
+                    class="w-4 h-4"
+                    alt="sort icon"
+                  />
+                  Sort by
+                </p>
+
+                <div
+                  class="relative shrink-0 w-full h-full py-[12px] border border-[#E4E8F1] bg-white rounded-lg min-[800px]:w-[188px] min-[800px]:py-2"
+                >
+                  <select id="realSelect" class="hidden">
+                    <option value="">Ranking : highest first</option>
+                    <option value="option1">Ranking : highest first</option>
+                    <option value="option2">Ranking : lowest first</option>
+                    <option value="option3">Journal Title : A to Z</option>
+                    <option value="option3">Journal Title : Z to A</option>
+                  </select>
+
+                  <!-- 커스텀 셀렉트 버튼 -->
+                  <button
+                    id="customSelectBtn2"
+                    type="button"
+                    class="w-full h-full flex items-center gap-[6px] px-3 hover:border-gray-400 focus:outline-none text-left text-[#6C7687] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[98%] cursor-pointer min-[800px]:text-[13px]"
+                  >
+                    <img
+                      src="../images/filter_list_ico.png"
+                      class="w-4 min-[800px]:hidden"
+                      alt="sort icon"
+                    />
+                    <span id="selectedText">Ranking : highest first</span>
+                  </button>
+
+                  <!-- 드롭다운 목록 -->
+                  <ul
+                    id="customOptions"
+                    class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px] 2xl:p-2"
+                  >
+                    <li
+                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                      data-value="option1"
+                    >
+                      Ranking : highest first
+                    </li>
+                    <li
+                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                      data-value="option2"
+                    >
+                      Ranking : lowest first
+                    </li>
+                    <li
+                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                      data-value="option3"
+                    >
+                      Journal Title : A to Z
+                    </li>
+                    <li
+                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
+                      data-value="option3"
+                    >
+                      Journal Title : Z to A
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- .listUtil -->
+
+            <ul class="journal-list-wrap mt-4 flex flex-col gap-3">
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+
+              <li
+                class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
+              >
+                <div
+                  class="order-3 flex flex-col items-start text-[#6C7687] min-[800px]:flex-row flex-wrap min-[800px]:order-1 min-[800px]:gap-[6px] min-[800px]:mb-3"
+                >
+                  <p
+                    class="text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                  >
+                    Journal Ranking
+                  </p>
+                  <span
+                    class="type-jcr mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus mb-[6px] bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span
+                    class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+
+                <div
+                  class="order-1 text-[18px] font-bold leading-[130%] mb-3 min-[800px]:order-2 min-[800px]:mb-[10px]"
+                >
+                  TRANSACTIONS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS
+                </div>
+
+                <div
+                  class="order-2 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-[#6C7687] font-semibold leading-[100%] mb-4 pb-4 border-b border-b-[#E4E8F1] min-[800px]:order-3 min-[800px]:border-none min-[800px]:pb-0 min-[800px]:mb-6"
+                >
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >ISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >eISSN</span
+                    >
+                    <span>1234-5678</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div>
+                    <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                      >Publisher</span
+                    >
+                    <span>Institute of Economic Research</span>
+                  </div>
+                  <span
+                    class="hidden w-[1px] h-[10px] bg-[#B4BCCC] translate-y-[4px] min-[800px]:inline-block"
+                  ></span>
+                  <div
+                    class="hidden text-[14px] font-semibold min-[800px]:flex flex-wrap items-center gap-[4px]"
+                  >
+                    <span
+                      class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                      >Registered DB</span
+                    >
+                    <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                      >SCIE</span
+                    >
+                    <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                      >Scopus</span
+                    >
+                    <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                      >KCI</span
+                    >
+                    <a
+                      href="#"
+                      class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                      >PNU Articles (<span>2</span>)</a
+                    >
+                  </div>
+                </div>
+
+                <span></span>
+
+                <div
+                  class="order-4 mt-4 flex flex-wrap items-center gap-[4px] text-[14px] font-semibold min-[800px]:hidden"
+                >
+                  <span
+                    class="w-full text-[14px] text-[#B4BCCC] font-medium mb-2 min-[800px]:hidden"
+                    >Registered DB</span
+                  >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+
+                <div
+                  class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
+                >
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span
+                        >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
+                      >
+                    </li>
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>WOS</strong>
+                      -
+                      <span>EDUCATION & EDUCATIONAL RESEARCH</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] transition-transform duration-200"
+                      alt="show"
+                    />Show All Categories
+                  </button>
+                </div>
+
+                <div
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 transition-transform duration-200"
+                      alt="show"
+                    />Hide Categories
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <!-- .journal-list-wrap -->
+          </div>
           <!-- .journal-list-cont -->
         </div>
       </div>
@@ -349,7 +3262,7 @@
           class="border-t border-t-[#D1D5DF] pt-7 min-[800px]:flex min-[800px]:items-start min-[800px]:gap-[66px]"
         >
           <div class="flogo mb-10 shrink-0">
-            <img src="images/logo-gr.png" alt="logo" class="w-[178px]" />
+            <img src="../images/logo-gr.png" alt="logo" class="w-[178px]" />
           </div>
           <!-- .flogo -->
 
