@@ -6061,6 +6061,77 @@
 
       <!-- 작동9 - 5개페이지씩 보이게 -->
       <div id="pager" class="flex justify-center mt-6"></div>
+
+      <!-- 작동10 -->
+      <div
+        class="journal-graph mt-[18px] bg-white rounded-xl border border-[#E4E8F1] min-[800px]:mt-[37px]"
+      >
+        <div
+          class="journal-graph-toggle relative pt-[24px] pb-6 px-[20px] cursor-pointer min-[800px]:px-[25px] min-[800px]:pb-5 min-[800px]:pt-[20px]"
+        >
+          <div
+            class="flex items-center gap-3 pr-[30px] text-[15px] font-bold leading-[130%] min-[800px]:text-[18px] min-[800px]:gap-[6px]"
+          >
+            <div
+              class="flex shrink-0 justify-center items-center w-[38px] h-[38px] rounded-lg bg-[#E4E8F1] min-[800px]:w-auto min-[800px]:h-auto min-[800px]:bg-transparent"
+            >
+              <img
+                src="../images/bar_chart_ico.png"
+                class="w-[22px]"
+                alt="chart icon"
+              />
+            </div>
+            Exploring Our Journal Publishing Trends
+          </div>
+          <img
+            src="../images/expand_more_333.png"
+            class="absolute right-[20px] top-[50%] w-[20px] translate-y-[-50%] rotate-180 transition-transform duration-300 min-[800px]:w-[24px]"
+            alt="toggle"
+          />
+        </div>
+        <!-- .journal-graph-toggle -->
+
+        <div
+          class="journal-graph-cont border-t border-t-[#E4E8F1] pt-5 px-[20px] min-[800px]:pt-[32px] min-[800px]:flex gap-[20px] min-[800px]:pb-[36px]"
+        >
+          <div
+            class="chart-area p-4 border border-[#E4E8F1] rounded-xl mb-[20px] min-[800px]:w-[392px] min-[800px]:bg-[#F3F5F9] min-[800px]:p-8 min-[800px]:mb-0"
+          >
+            <h3
+              class="mb-4 text-[15px] font-bold leading-[150%] text-[#6C7687] text-center min-[800px]:text-[16px]"
+            >
+              Journal Quartiles
+            </h3>
+          </div>
+          <!-- .chart-area -->
+
+          <div
+            class="chart-area p-4 border border-[#E4E8F1] rounded-xl mb-[20px] min-[800px]:w-[calc(100%-402px)] min-[800px]:bg-[#F3F5F9] min-[800px]:p-8 min-[800px]:mb-0"
+          >
+            <h3
+              class="mb-4 text-[15px] font-bold leading-[150%] text-[#6C7687] text-center"
+            >
+              Top 5 most published categories
+              <br class="min-[800px]:hidden" />by DB in PNU
+            </h3>
+          </div>
+          <!-- .chart-area -->
+
+          <div class="flex justify-center pb-5 min-[800px]:hidden">
+            <button
+              class="flex items-center gap-[2px] px-[10px] py-1 text-[13px] font-semibold text-[#8D9AAF]"
+            >
+              <img
+                src="../images/expand_more_8D9AAF.png"
+                class="w-[14px] rotate-180 cursor-pointer"
+                alt="hide"
+              />
+              Hide Chart
+            </button>
+          </div>
+        </div>
+        <!-- .journal-graph-cont -->
+      </div>
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
@@ -6434,6 +6505,74 @@
       });
 
       renderPagination();
+
+      // 작동10
+      document.addEventListener("DOMContentLoaded", function () {
+        const graphs = document.querySelectorAll(".journal-graph");
+
+        graphs.forEach((graph) => {
+          const toggle = graph.querySelector(".journal-graph-toggle");
+          const content = graph.querySelector(".journal-graph-cont");
+          const arrow = toggle.querySelector("img[alt='toggle']");
+          const hideBtn = graph.querySelector("button"); // 모바일 Hide Chart 버튼
+
+          // 초기 상태: 열림
+          content.classList.add("open");
+          content.style.height = "auto";
+          arrow.style.transform = "rotate(0deg)";
+
+          function toggleGraph() {
+            const isOpen = content.classList.contains("open");
+
+            if (isOpen) {
+              // 닫기
+              const currentHeight = content.scrollHeight;
+              content.style.height = currentHeight + "px"; // 현재 높이 기준
+              content.offsetHeight; // reflow 강제 (transition 시작 안정화)
+              content.style.height = "0px";
+              content.style.paddingTop = "0px";
+              content.style.paddingBottom = "0px";
+              content.style.borderTopWidth = "0px";
+              content.classList.remove("open");
+              arrow.style.transform = "rotate(180deg)";
+            } else {
+              // 열기
+              // 우선 초기 스타일
+              content.classList.add("open");
+              content.style.borderTopWidth = "";
+              content.style.paddingTop = "";
+              content.style.paddingBottom = "";
+
+              // 1️⃣ height:auto로 일단 내용 계산용 세팅
+              content.style.height = "auto";
+              const fullHeight = content.scrollHeight;
+
+              // 2️⃣ 다시 0으로 돌리고
+              content.style.height = "0px";
+              content.offsetHeight; // reflow 강제 (브라우저 안정화)
+
+              // 3️⃣ 다음 프레임에 높이 설정 (transition 발동)
+              requestAnimationFrame(() => {
+                content.style.height = fullHeight + "px";
+              });
+
+              arrow.style.transform = "rotate(0deg)";
+            }
+          }
+
+          // transition 끝나면 auto 복귀
+          content.addEventListener("transitionend", (e) => {
+            if (e.propertyName === "height") {
+              if (content.classList.contains("open")) {
+                content.style.height = "auto";
+              }
+            }
+          });
+
+          toggle.addEventListener("click", toggleGraph);
+          if (hideBtn) hideBtn.addEventListener("click", toggleGraph);
+        });
+      });
     </script>
   </body>
 </html>

@@ -271,3 +271,12 @@
   color: #8d6de2;
   background-color: #ede7ff;
 }
+
+/* 저널리스트 그래프 열고닫기 */
+.journal-graph-cont {
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.journal-graph-cont.open {
+}
