@@ -28,7 +28,7 @@
             <a href="#">Q&A</a>
             <a href="#" class="flex items-center"
               >Research Guide<img
-                src="images/launch-ico-gr.png"
+                src="../images/launch-ico-gr.png"
                 alt="launch icon"
                 class="w-[12px] h-[12px] ml-[4px]"
             /></a>
@@ -340,7 +340,7 @@
         <div class="journallistPage listPage flexPage xl:px-[100px]">
           <!-- filter -->
           <div
-            class="filter fixed top-[100%] right-0 z-[100] w-full h-full px-6 py-[30px] bg-[#fff] overflow-y-auto transition-top duration-300 min-[800px]:w-[310px] min-[800px]:static min-[800px]:mt-[45px] min-[800px]:rounded-xl"
+            class="filter fixed top-[100%] right-0 z-[97] w-full h-full px-6 py-[30px] bg-[#fff] overflow-y-auto transition-top duration-300 min-[800px]:w-[310px] min-[800px]:static min-[800px]:mt-[45px] min-[800px]:rounded-xl"
           >
             <div
               class="filter-top flex items-center gap-[10px] relative min-[800px]:justify-between"
@@ -385,7 +385,7 @@
                   <h4 class="mb-[18px] text-[14px] font-bold">Registered DB</h4>
 
                   <ul
-                    class="flex flex-wrap gap-x-4 gap-y-[10px] min-[800px]:flex-col"
+                    class="flex flex-wrap gap-x-4 gap-y-[6px] min-[800px]:flex-col"
                   >
                     <li class="w-[calc(50%-8px)] min-[800px]:w-full">
                       <label
@@ -557,7 +557,7 @@
                 <div class="filter-item mb-9">
                   <h4 class="mb-[18px] text-[14px] font-bold">Open Access</h4>
 
-                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[6px]">
                     <li class="w-[calc(50%-8px)] min-[800px]:w-full">
                       <label
                         class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
@@ -605,7 +605,7 @@
                 <div class="filter-item mb-9">
                   <h4 class="mb-[18px] text-[14px] font-bold">JCR Category</h4>
 
-                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[6px]">
                     <li class="w-full">
                       <label
                         class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
@@ -685,21 +685,26 @@
                   </ul>
 
                   <div
-                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                    class="btn-wrap flex items-center justify-between gap-[16px] mt-[10px] min-[800px]:flex-col min-[800px]:gap-y-3 min-[800px]:items-start min-[800px]:mt-1"
                   >
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="btn-filter-more w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-auto min-[800px]:py-[2px] min-[800px]:border-none min-[800px]:px-[10px] min-[800px]:bg-[#F3F5F9] min-[800px]:text-[13px] min-[800px]:text-[#8D9AAF] min-[800px]:gap-[2px]"
                     >
                       <img
                         src="../images/more-ico-bk.png"
-                        class="w-[14px]"
+                        class="w-[14px] min-[800px]:hidden"
+                        alt="more"
+                      />
+                      <img
+                        src="../images/more-ico-gr.png"
+                        class="w-[14px] hidden min-[800px]:block"
                         alt="more"
                       />
                       More
                     </button>
 
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-full"
                     >
                       <img
                         src="../images/search-ico-333.png"
@@ -709,13 +714,805 @@
                       Refine
                     </button>
                   </div>
+
+                  <div
+                    class="morebkbg hidden fixed top-0 left-0 w-full h-full z-[100] bg-[rgba(0,0,0,0.4)]"
+                  ></div>
+
+                  <!-- more 눌렀을때 -->
+                  <div
+                    class="more-modal-jcr-category hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px] w-[calc(100%-80px)] h-[550px] z-[100] bg-white rounded-xl p-6 shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] overflow-hidden min-[800px]:h-[757px] min-[800px]:p-10"
+                  >
+                    <div class="more-header flex justify-between">
+                      <h4 class="text-[16px] font-bold min-[800px]:text-[18px]">
+                        JCR Category
+                      </h4>
+                      <button>
+                        <img
+                          src="../images/clear-icon-333.png"
+                          class="w-3"
+                          alt="close"
+                        />
+                      </button>
+                    </div>
+                    <!-- more-header -->
+
+                    <div class="more-search mt-5 min-[800px]:mt-6">
+                      <div class="search relative w-full">
+                        <input
+                          type="text"
+                          placeholder="Search for JCR Category"
+                          class="w-full h-[44px] px-4 pr-[40px] border border-[#E4E8F1] outline-none rounded-lg text-[13px] text-[#333] placeholder:text-[#B4BCCC] hover:border-[#8D9AAF] focus:border-[#8D9AAF] disabled:border-[#E4E8F1] disabled:bg-[#F3F5F9] disabled:text-[#B4BCCC] disabled:cursor-not-allowed"
+                        />
+                        <button
+                          class="absolute top-1/2 right-[14px] -translate-y-1/2"
+                        >
+                          <img
+                            src="../images/search-ico-8D9AAF.png"
+                            class="w-[16px]"
+                            alt="search icon"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    <!-- more-search -->
+
+                    <div class="more-cont-wrap">
+                      <label
+                        class="checkbox-wrap group items-center cursor-pointer select-none mt-6 hidden min-[800px]:inline-flex"
+                      >
+                        <input type="checkbox" class="peer hidden" />
+                        <span
+                          class="w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                        >
+                        </span>
+                        <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                          >Select All</span
+                        >
+                      </label>
+                      <!-- select all -->
+
+                      <ul
+                        class="flex flex-col gap-y-[10px] h-[300px] overflow-y-auto -mx-6 px-6 mt-4 pt-4 pb-4 border-t border-t-[#F5F5F5] min-[800px]:mt-2 min-[800px]:flex-row min-[800px]:flex-wrap gap-x-[24px] min-[800px]:mx-0 min-[800px]:px-0 min-[800px]:pr-3 min-[800px]:py-6 min-[800px]:max-h-[470px] min-[800px]:h-auto"
+                      >
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >EDUCATION & EDUCATIONAL RESEARCH</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >ECONOMICS</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >HISTORY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >MATHEMATICS</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >MATERIALS SCIENCE, MULTIDISCIPLINARY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >LAW</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >PUBLIC, ENVIRONMENTAL & OCCUPATIONAL HEALTH</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >HUMANITIES, MULTIDISCIPLINARY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >MANAGEMENT</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >12</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >ENGINEERING, ELECTRICAL & ELECTRONIC</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >438</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >PHARMACOLOGY & PHARMACY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >420</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >LANGUAGE & LINGUISTICS</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >419
+                          </span>
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >ENVIRONMENTAL SCIENCES</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >406</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >MEDICINE, GENERAL & INTERNAL</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >388</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >BIOCHEMISTRY & MOLECULAR BIOLOGY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >374</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >MATHEMATICS, APPLIED</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >373</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >RELIGION</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >368</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >PHILOSOPHY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >367</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >ONCOLOGY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >364</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >SURGERY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >364</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >NEUROSCIENCES</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >358</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >POLITICAL SCIENCE</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >351</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >BUSINESS</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >342</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >PSYCHIATRY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >327</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >LINGUISTICS</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >322</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >CLINICAL NEUROLOGY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >317</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >PLANT SCIENCES</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >300</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >SOCIAL SCIENCES, INTERDISCIPLINARY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >300</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >COMPUTER SCIENCE, INFORMATION SYSTEMS</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >295</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >SOCIAL SCIENCES, INTERDISCIPLINARY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >300</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >GEOSCIENCES, MULTIDISCIPLINARY</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >281</span
+                          >
+                        </li>
+
+                        <li
+                          class="flex justify-between min-[800px]:w-[calc(50%-12px)]"
+                        >
+                          <label
+                            class="checkbox-wrap group inline-flex cursor-pointer select-none"
+                          >
+                            <input type="checkbox" class="peer hidden" />
+                            <span
+                              class="shrink-0 w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200 translate-y-[3px]"
+                            >
+                            </span>
+                            <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                              >CARDIAC & CARDIOVASCULAR SYSTEMS</span
+                            >
+                          </label>
+                          <span
+                            class="shrink-0 w-[34px] text-right text-[14px] text-[#6C7687] min-[800px]:w-10"
+                            >356</span
+                          >
+                        </li>
+                      </ul>
+
+                      <div
+                        class="hidden no-cont border-t border-t-[#E4E8F1] mt-4 pt-4 min-[800px]:mt-2"
+                      >
+                        <div
+                          class="w-full py-[36px] bg-[#F3F5F9] rounded-xl text-[13px] text-center font-semibold"
+                        >
+                          ‘<span>APF Cell</span>’ 검색 결과가 없습니다.
+                        </div>
+                      </div>
+                    </div>
+                    <!-- .more-cont-wrap -->
+
+                    <div
+                      class="more-bottom absolute left-0 bottom-0 w-full h-[125px] bg-white px-6 pt-5 pb-6 border-t border-t-[#F5F5F5] min-[800px]:h-[96px] min-[800px]:flex items-center justify-end gap-6"
+                    >
+                      <div
+                        class="opt-cks flex gap-4 items-center min-[800px]:gap-5"
+                      >
+                        <label
+                          class="checkbox-wrap group inline-flex items-center cursor-pointer select-none"
+                        >
+                          <input type="checkbox" class="peer hidden" />
+                          <span
+                            class="w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                          >
+                          </span>
+                          <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                            >AND Condition</span
+                          >
+                        </label>
+                        <label
+                          class="checkbox-wrap group inline-flex items-center cursor-pointer select-none"
+                        >
+                          <input type="checkbox" class="peer hidden" />
+                          <span
+                            class="w-4 h-4 flex items-center justify-center border border-[#B4BCCC] rounded-sm peer-checked:border-[#4B4DFF] peer-checked:bg-[#4B4DFF] peer-checked:bg-[url('/images/checked.png')] bg-no-repeat bg-size-[cover] bg-position-[center] group-hover:border-[#4B4DFF] transition-colors duration-200"
+                          >
+                          </span>
+                          <span class="ml-[10px] text-[14px] text-[#6C7687]"
+                            >Exclude</span
+                          >
+                        </label>
+                      </div>
+
+                      <div class="btns mt-4 flex gap-2 min-[800px]:mt-0">
+                        <button
+                          class="btn-more-cancel w-[calc(50%-4px)] h-12 flex items-center justify-center text-center text-[14px] font-semibold text-[#6C7687] bg-[#F3F5F9] rounded-lg min-[800px]:w-auto min-[800px]:px-6"
+                        >
+                          Cancle
+                        </button>
+                        <button
+                          class="w-[calc(50%-4px)] h-12 flex items-center justify-center text-center text-[14px] font-semibold text-[#fff] bg-[#4B4DFF] rounded-lg min-[800px]:w-auto min-[800px]:px-6"
+                        >
+                          Refine
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- .filter-item -->
 
                 <div class="filter-item mb-9">
                   <h4 class="mb-[18px] text-[14px] font-bold">KCI Category</h4>
 
-                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[6px]">
                     <li class="w-full">
                       <label
                         class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
@@ -793,21 +1590,26 @@
                   </ul>
 
                   <div
-                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                    class="btn-wrap flex items-center justify-between gap-[16px] mt-[10px] min-[800px]:flex-col min-[800px]:gap-y-3 min-[800px]:items-start min-[800px]:mt-1"
                   >
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="btn-filter-more w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-auto min-[800px]:py-[2px] min-[800px]:border-none min-[800px]:px-[10px] min-[800px]:bg-[#F3F5F9] min-[800px]:text-[13px] min-[800px]:text-[#8D9AAF] min-[800px]:gap-[2px]"
                     >
                       <img
                         src="../images/more-ico-bk.png"
-                        class="w-[14px]"
+                        class="w-[14px] min-[800px]:hidden"
+                        alt="more"
+                      />
+                      <img
+                        src="../images/more-ico-gr.png"
+                        class="w-[14px] hidden min-[800px]:block"
                         alt="more"
                       />
                       More
                     </button>
 
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-full"
                     >
                       <img
                         src="../images/search-ico-333.png"
@@ -823,7 +1625,7 @@
                 <div class="filter-item mb-9">
                   <h4 class="mb-[18px] text-[14px] font-bold">Department</h4>
 
-                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[6px]">
                     <li class="w-full">
                       <label
                         class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
@@ -901,21 +1703,26 @@
                   </ul>
 
                   <div
-                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                    class="btn-wrap flex items-center justify-between gap-[16px] mt-[10px] min-[800px]:flex-col min-[800px]:gap-y-3 min-[800px]:items-start min-[800px]:mt-1"
                   >
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="btn-filter-more w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-auto min-[800px]:py-[2px] min-[800px]:border-none min-[800px]:px-[10px] min-[800px]:bg-[#F3F5F9] min-[800px]:text-[13px] min-[800px]:text-[#8D9AAF] min-[800px]:gap-[2px]"
                     >
                       <img
                         src="../images/more-ico-bk.png"
-                        class="w-[14px]"
+                        class="w-[14px] min-[800px]:hidden"
+                        alt="more"
+                      />
+                      <img
+                        src="../images/more-ico-gr.png"
+                        class="w-[14px] hidden min-[800px]:block"
                         alt="more"
                       />
                       More
                     </button>
 
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-full"
                     >
                       <img
                         src="../images/search-ico-333.png"
@@ -931,7 +1738,7 @@
                 <div class="filter-item mb-9">
                   <h4 class="mb-[18px] text-[14px] font-bold">Publisher</h4>
 
-                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[6px]">
                     <li class="w-full">
                       <label
                         class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
@@ -1009,21 +1816,26 @@
                   </ul>
 
                   <div
-                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                    class="btn-wrap flex items-center justify-between gap-[16px] mt-[10px] min-[800px]:flex-col min-[800px]:gap-y-3 min-[800px]:items-start min-[800px]:mt-1"
                   >
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="btn-filter-more w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-auto min-[800px]:py-[2px] min-[800px]:border-none min-[800px]:px-[10px] min-[800px]:bg-[#F3F5F9] min-[800px]:text-[13px] min-[800px]:text-[#8D9AAF] min-[800px]:gap-[2px]"
                     >
                       <img
                         src="../images/more-ico-bk.png"
-                        class="w-[14px]"
+                        class="w-[14px] min-[800px]:hidden"
+                        alt="more"
+                      />
+                      <img
+                        src="../images/more-ico-gr.png"
+                        class="w-[14px] hidden min-[800px]:block"
                         alt="more"
                       />
                       More
                     </button>
 
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-full"
                     >
                       <img
                         src="../images/search-ico-333.png"
@@ -1041,7 +1853,7 @@
                     Journal Ranking
                   </h4>
 
-                  <ul class="flex flex-wrap gap-x-4 gap-y-[10px]">
+                  <ul class="flex flex-wrap gap-x-4 gap-y-[6px]">
                     <li class="w-full">
                       <label
                         class="checkbox-wrap group inline-flex items-start cursor-pointer select-none"
@@ -1119,21 +1931,26 @@
                   </ul>
 
                   <div
-                    class="btn-wrap flex items-center justify-between gap-[16px]"
+                    class="btn-wrap flex items-center justify-between gap-[16px] mt-[10px] min-[800px]:flex-col min-[800px]:gap-y-3 min-[800px]:items-start min-[800px]:mt-1"
                   >
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="btn-filter-more w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-auto min-[800px]:py-[2px] min-[800px]:border-none min-[800px]:px-[10px] min-[800px]:bg-[#F3F5F9] min-[800px]:text-[13px] min-[800px]:text-[#8D9AAF] min-[800px]:gap-[2px]"
                     >
                       <img
                         src="../images/more-ico-bk.png"
-                        class="w-[14px]"
+                        class="w-[14px] min-[800px]:hidden"
+                        alt="more"
+                      />
+                      <img
+                        src="../images/more-ico-gr.png"
+                        class="w-[14px] hidden min-[800px]:block"
                         alt="more"
                       />
                       More
                     </button>
 
                     <button
-                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] mt-[8px] text-[14px] border border-[#B4BCCC] rounded-md cursor-pointer"
+                      class="w-[calc(50%-8px)] flex items-center justify-center gap-[6px] py-[8px] text-[14px] font-semibold border border-[#B4BCCC] rounded-md cursor-pointer min-[800px]:w-full"
                     >
                       <img
                         src="../images/search-ico-333.png"
@@ -1411,7 +2228,7 @@
             <div
               class="listUtil mt-10 min-[800px]:flex items-center justify-between"
             >
-              <div class="mb-3 text-[14px] text-[#6C7687]">
+              <div class="mb-3 text-[14px] text-[#6C7687] min-[800px]:mb-0">
                 Found <strong>53,583</strong> results
               </div>
 
@@ -1427,67 +2244,32 @@
                   Sort by
                 </p>
 
-                <div
-                  class="relative shrink-0 w-full h-full py-[12px] border border-[#E4E8F1] bg-white rounded-lg min-[800px]:w-[188px] min-[800px]:py-2"
+                <select
+                  class="w-full py-2 px-3 bg-white border border-[#E4E8F1] rounded-lg appearance-none bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[98%] text-[13px] text-[#6C7687] outline-none min-[800px]:w-[184px]"
                 >
-                  <select id="realSelect" class="hidden">
-                    <option value="">Ranking : highest first</option>
-                    <option value="option1">Ranking : highest first</option>
-                    <option value="option2">Ranking : lowest first</option>
-                    <option value="option3">Journal Title : A to Z</option>
-                    <option value="option3">Journal Title : Z to A</option>
-                  </select>
-
-                  <!-- 커스텀 셀렉트 버튼 -->
-                  <button
-                    id="customSelectBtn2"
-                    type="button"
-                    class="w-full h-full flex items-center gap-[6px] px-3 hover:border-gray-400 focus:outline-none text-left text-[#6C7687] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[98%] cursor-pointer min-[800px]:text-[13px]"
-                  >
-                    <img
-                      src="../images/filter_list_ico.png"
-                      class="w-4 min-[800px]:hidden"
-                      alt="sort icon"
-                    />
-                    <span id="selectedText">Ranking : highest first</span>
-                  </button>
-
-                  <!-- 드롭다운 목록 -->
-                  <ul
-                    id="customOptions"
-                    class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px] 2xl:p-2"
-                  >
-                    <li
-                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                      data-value="option1"
-                    >
-                      Ranking : highest first
-                    </li>
-                    <li
-                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                      data-value="option2"
-                    >
-                      Ranking : lowest first
-                    </li>
-                    <li
-                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                      data-value="option3"
-                    >
-                      Journal Title : A to Z
-                    </li>
-                    <li
-                      class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                      data-value="option3"
-                    >
-                      Journal Title : Z to A
-                    </li>
-                  </ul>
-                </div>
+                  <option class="bg-white" value="">
+                    Ranking : highest first
+                  </option>
+                  <option class="bg-white" value="option1">
+                    Ranking : highest first
+                  </option>
+                  <option class="bg-white" value="option2">
+                    Ranking : lowest first
+                  </option>
+                  <option class="bg-white" value="option3">
+                    Journal Title : A to Z
+                  </option>
+                  <option class="bg-white" value="option3">
+                    Journal Title : Z to A
+                  </option>
+                </select>
               </div>
             </div>
             <!-- .listUtil -->
 
-            <ul class="journal-list-wrap mt-4 flex flex-col gap-3">
+            <ul
+              class="journal-list-wrap mt-4 flex flex-col gap-3 min-[800px]:mt-3"
+            >
               <li
                 class="flex flex-col p-6 bg-white border border-[#E4E8F1] rounded-xl min-[800px]:p-8"
               >
@@ -1602,14 +2384,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -1617,7 +2403,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -1625,7 +2413,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -1636,7 +2426,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -1650,7 +2440,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -1778,14 +2568,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -1793,7 +2587,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -1801,7 +2597,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -1812,7 +2610,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -1826,7 +2624,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -1954,14 +2752,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -1969,7 +2771,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -1977,18 +2781,72 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
                       >
                       <span>Education</span>
                     </li>
+
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>Education</span>
+                    </li>
+
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
+                      <strong>Scopus</strong>
+                      -
+                      <span>Social Sciences</span>
+                      >
+                      <span>General Computer Science</span>
+                    </li>
+                  </ul>
+
+                  <ul class="flex flex-wrap gap-1">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
+                      <strong>KCI</strong>
+                      -
+                      <span>의약학</span>
+                      >
+                      <span>기타의약학</span>
+                    </li>
                   </ul>
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2002,7 +2860,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2130,14 +2988,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -2145,7 +3007,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2153,7 +3017,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2164,7 +3030,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2178,7 +3044,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2306,14 +3172,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -2321,7 +3191,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2329,7 +3201,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2340,7 +3214,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2354,7 +3228,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2482,14 +3356,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -2497,7 +3375,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2505,7 +3385,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2516,7 +3398,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2530,7 +3412,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2658,14 +3540,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -2673,7 +3559,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2681,7 +3569,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2692,7 +3582,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2706,7 +3596,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2834,14 +3724,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -2849,7 +3743,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2857,7 +3753,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -2868,7 +3766,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -2882,7 +3780,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -3010,14 +3908,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -3025,7 +3927,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -3033,7 +3937,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -3044,7 +3950,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -3058,7 +3964,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -3186,14 +4092,18 @@
                   class="hidden text-[#6C7687] text-[12px] min-[800px]:flex min-[800px]:order-3 flex-col gap-y-1"
                 >
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span
                         >COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS</span
                       >
                     </li>
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>WOS</strong>
                       -
                       <span>EDUCATION & EDUCATIONAL RESEARCH</span>
@@ -3201,7 +4111,9 @@
                   </ul>
 
                   <ul class="flex flex-wrap gap-1">
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -3209,7 +4121,9 @@
                       <span>General Computer Science</span>
                     </li>
 
-                    <li class="px-[10px] py-[6px] bg-[#F3F5F9] rounded-full">
+                    <li
+                      class="flex items-center gap-[2px] px-[10px] py-[6px] bg-[#F3F5F9] rounded-[4px] leading-[100%]"
+                    >
                       <strong>Scopus</strong>
                       -
                       <span>Social Sciences</span>
@@ -3220,7 +4134,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -3234,7 +4148,7 @@
                 </div>
 
                 <div
-                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-[52px]"
+                  class="order-10 hidden text-[#828293] text-[13px] font-semibold text-center mt-4"
                 >
                   <button
                     class="inline-flex items-center justify-center gap-1 cursor-pointer"
@@ -3249,6 +4163,76 @@
               </li>
             </ul>
             <!-- .journal-list-wrap -->
+
+            <div class="no-journal-list hidden mt-4 min-[800px]:mt-3">
+              <div
+                class="text-[13px] font-semibold text-center bg-white py-[72px] rounded-xl"
+              >
+                조건에 맞는 검색 결과가 없습니다.
+              </div>
+            </div>
+
+            <!-- 페이저 -->
+            <div
+              class="flex items-center justify-center gap-2 font-[Pretendard] text-[15px] mt-[50px] min-[800px]:mt-[40px]"
+            >
+              <!-- 이전 버튼 -->
+              <button
+                class="shrink-0 p-2 rounded-md cursor-pointer"
+                aria-label="prev"
+              >
+                <img
+                  src="../images/pager_prev.png"
+                  alt="prev"
+                  class="w-4 h-4"
+                />
+              </button>
+
+              <!-- 페이지 숫자 -->
+              <button
+                class="px-[15px] py-2 rounded-md text-[#215BD8] bg-[#D7E2F9] font-medium cursor-pointer"
+              >
+                1
+              </button>
+              <button
+                class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#F3F5F9] font-medium cursor-pointer"
+              >
+                2
+              </button>
+              <button
+                class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#F3F5F9] font-medium cursor-pointer"
+              >
+                3
+              </button>
+              <button
+                class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#F3F5F9] font-medium cursor-pointer hidden min-[800px]:block"
+              >
+                4
+              </button>
+              <button
+                class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#F3F5F9] font-medium cursor-pointer hidden min-[800px]:block"
+              >
+                5
+              </button>
+              <button class="text-[#6C7687] select-none px-1">...</button>
+              <button
+                class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#F3F5F9] font-medium cursor-pointer"
+              >
+                1235
+              </button>
+
+              <!-- 다음 버튼 -->
+              <button
+                class="shrink-0 p-2 rounded-md cursor-pointer"
+                aria-label="next"
+              >
+                <img
+                  src="../images/pager_next.png"
+                  alt="next"
+                  class="w-4 h-4"
+                />
+              </button>
+            </div>
           </div>
           <!-- .journal-list-cont -->
         </div>
