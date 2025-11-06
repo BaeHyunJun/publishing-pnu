@@ -7,6 +7,9 @@ module.exports = {
         sans: ["Pretendard Variable", "Pretendard", "system-ui", "sans-serif"],
       },
     },
+    screens: {
+      xxl: "1530px",
+    },
   },
   plugins: [],
 };

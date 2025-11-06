@@ -180,7 +180,7 @@
       </div>
 
       <h1 class="text-[40px] font-bold mt-[100px]">동작</h1>
-      <!-- 작동1 -->
+      <!-- 작동1 - 헤더 검색바 -->
       <div
         class="h-search flex items-center relative h-12 w-full xl:w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
       >
@@ -255,7 +255,7 @@
       </div>
       <!-- .h-search -->
 
-      <!-- 작동2 -->
+      <!-- 작동2 - 로그인후 프로필호버 -->
       <div href="#" class="h-profile after-log relative">
         <button class="profile flex items-center">
           <div
@@ -293,7 +293,7 @@
       </div>
       <!-- h-profile -->
 
-      <!-- 작동3 -->
+      <!-- 작동3 - 모바일 사이드메뉴 열기 -->
       <button class="btnM w-6 h-6 relative cursor-pointer">
         <span
           class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
@@ -431,7 +431,7 @@
       </div>
       <!-- #sideM -->
 
-      <!-- 작동4 -->
+      <!-- 작동4 - 탭메뉴 -->
       <ul
         id="customOptions"
         class="p-[6px] bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] flex text-[15px] gap-[5px]"
@@ -6132,6 +6132,25 @@
         </div>
         <!-- .journal-graph-cont -->
       </div>
+
+      <!-- 작동11 - 관심버튼 -->
+      <div class="intrest w-[38px] h-[38px] cursor-pointer group">
+        <img
+          src="../images/intrest-default.png"
+          class="interest-default group-hover:hidden"
+          alt="interest-default"
+        />
+        <img
+          src="../images/intrest-hover.png"
+          class="interest-hover hidden group-hover:block"
+          alt="interest-hover"
+        />
+        <img
+          src="../images/intrest-active.png"
+          class="interest-active hidden"
+          alt="interest-active"
+        />
+      </div>
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
@@ -6572,6 +6591,13 @@
           toggle.addEventListener("click", toggleGraph);
           if (hideBtn) hideBtn.addEventListener("click", toggleGraph);
         });
+      });
+
+      // 작동11 - 관심버튼
+      let btn_intrest = document.querySelector(".intrest");
+
+      btn_intrest.addEventListener("click", function () {
+        btn_intrest.classList.toggle("active");
       });
     </script>
   </body>
