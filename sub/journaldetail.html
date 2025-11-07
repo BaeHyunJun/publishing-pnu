@@ -18,13 +18,13 @@
   <body>
     <div id="wrap" class="bg-transparent lg:bg-[#F3F5F9]">
       <header
-        class="h-[127px] bg-white border-b border-b-[#E4E8F1] xl:h-[120px]"
+        class="h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]"
       >
         <div
-          class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] xl:block"
+          class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block"
         >
           <div
-            class="px-6 h-full flex justify-end items-center gap-5 xl:px-[100px]"
+            class="px-6 lg:px-[30px] 2xl:px-[100px] h-full flex justify-end items-center gap-5"
           >
             <a href="#">Notice</a>
             <a href="#">Q&A</a>
@@ -39,23 +39,30 @@
         <!-- .hTop -->
 
         <div
-          class="hBottom px-6 w-full h-full flex justify-between items-center flex-wrap xl:flex-nowrap xl:h-[78px] xl:px-[100px]"
+          class="hBottom px-6 lg:px-[30px] 2xl:px-[100px] w-full h-full flex justify-between items-center flex-wrap lg:flex-nowrap lg:h-[78px]"
         >
           <div
-            class="h-left flex items-center gap-10 order-1 pt-3 min-[800px]:pt-0 2xl:gap-20"
+            class="h-left flex items-center gap-10 order-1 pt-3 lg:pt-0 lg:gap-6 2xl:gap-[30px]"
           >
             <h1 id="logo" class="shrink-0">
               <a href="/">
                 <img
                   src="../images/logo.png"
                   alt="logo-go to main"
-                  class="w-[136px] h-auto xl:w-[140px]"
+                  class="w-[136px] h-auto lg:hidden 2xl:block 2xl:h-10 2xl:w-auto"
+                />
+                <img
+                  src="../images/logo_symbol.png"
+                  class="hidden w-10 lg:block 2xl:hidden"
+                  alt="symbol logo"
                 />
               </a>
             </h1>
 
-            <nav class="hidden xl:block">
-              <ul class="flex items-center gap-5 text-lg font-bold 2xl:gap-8">
+            <nav class="hidden lg:block">
+              <ul
+                class="flex items-center gap-[23px] text-[15px] font-bold 2xl:gap-8 2xl:text-[18px]"
+              >
                 <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
                 <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
                 <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
@@ -70,57 +77,47 @@
           <!-- .h-left -->
 
           <div
-            class="h-right items-center gap-4 flex order-3 pb-3 w-full min-[800px]:pb-0 xl:w-auto 2xl:gap-9"
+            class="h-right items-center gap-4 flex order-3 pb-3 w-full lg:w-auto lg:pb-0 lg:gap-[30px] 2xl:gap-6"
           >
             <div
-              class="h-search flex items-center relative h-12 w-full xl:w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
+              class="h-search flex items-center relative h-12 w-full bg-[#F3F5F9] rounded-lg lg:w-[286px] 2xl:w-[428px]"
             >
-              <div
-                class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] min-[800px]:w-[120px] 2xl:w-[120px]"
-              >
-                <select id="realSelect" class="hidden">
-                  <option value="">All</option>
-                  <option value="option1">All</option>
-                  <option value="option2">Journal</option>
-                  <option value="option3">Resource</option>
-                  <option value="option3">Scholar</option>
-                </select>
-
-                <!-- 커스텀 셀렉트 버튼 -->
+              <div class="relative inline-block h-full">
+                <!-- 버튼 -->
                 <button
-                  id="customSelectBtn"
-                  type="button"
-                  class="w-full h-full px-3 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer 2xl:px-5"
+                  id="dropdownButton"
+                  class="flex items-center justify-between w-[120px] h-full text-[13px] text-[#6C7687] px-3 py-2 cursor-pointer relative z-[1] lg:w-[92px] lg:border-r lg:border-r-[#E4E8F1] 2xl:w-[109px]"
                 >
-                  <span id="selectedText">All</span>
+                  <span id="dropdownText">All</span>
+                  <img
+                    src="../images/expand_more_8D9AAF.png"
+                    class="w-4 ml-2"
+                    alt="arr"
+                  />
                 </button>
 
-                <!-- 드롭다운 목록 -->
+                <!-- 옵션 목록 -->
                 <ul
-                  id="customOptions"
-                  class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px] 2xl:p-2"
+                  id="dropdownMenu"
+                  class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden"
                 >
                   <li
-                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                    data-value="option1"
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
                   >
                     All
                   </li>
                   <li
-                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                    data-value="option2"
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
                   >
                     Journal
                   </li>
                   <li
-                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                    data-value="option3"
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
                   >
                     Resource
                   </li>
                   <li
-                    class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-                    data-value="option3"
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
                   >
                     Scholar
                   </li>
@@ -128,7 +125,7 @@
               </div>
 
               <div
-                class="search-wrap w-full h-full pl-[10px] pr-9 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
+                class="search-wrap w-[calc(100%-95px)] h-full pl-[10px] pr-9 lg:pr-7 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-9"
               >
                 <input
                   type="text"
@@ -148,10 +145,10 @@
 
             <a
               href="#"
-              class="hidden btn-login group items-center gap-2 hover:text-[#4B4DFF] xl:flex"
+              class="hidden btn-login group items-center gap-2 text-[16px] hover:text-[#4B4DFF] lg:flex"
             >
               <span
-                class="w-5 h-5 bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')]"
+                class="w-[18px] h-[18px] bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')] 2xl:w-[19px] 2xl:h-[19px]"
               ></span>
               Login
             </a>
@@ -197,7 +194,7 @@
           <!-- .h-right -->
 
           <button
-            class="btnM w-6 h-6 relative cursor-pointer order-2 xl:hidden"
+            class="btnM w-6 h-6 relative cursor-pointer order-2 lg:hidden"
           >
             <span
               class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
@@ -1833,17 +1830,17 @@
       <!-- #container -->
 
       <footer
-        class="mt-[120px] px-6 text-sm pb-10 min-[800px]:pb-[34px] min-[800px]:px-[100px] min-[800px]:mt-40 min-[1440px]:px-[240px]"
+        class="mt-[120px] px-6 text-sm pb-10 lg:pb-[34px] lg:px-[100px] lg:mt-40"
       >
         <div
-          class="border-t border-t-[#D1D5DF] pt-7 min-[800px]:flex min-[800px]:items-start min-[800px]:gap-[66px]"
+          class="border-t border-t-[#D1D5DF] pt-7 lg:flex lg:items-start lg:gap-[66px]"
         >
           <div class="flogo mb-10 shrink-0">
             <img src="../images/logo-gr.png" alt="logo" class="w-[178px]" />
           </div>
           <!-- .flogo -->
 
-          <div class="fcont min-[800px]:pt-[14px]">
+          <div class="fcont lg:pt-[14px]">
             <div class="fmenu text-sm text-[#333] flex items-center gap-4">
               <a href="#">Privacy Policy</a>
               <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
@@ -1854,13 +1851,13 @@
               <a href="#">Need Help?</a>
             </div>
 
-            <address class="mt-7 text-[#6C7687] not-italic min-[800px]:mt-9">
+            <address class="mt-7 text-[#6C7687] not-italic lg:mt-9">
               <div class="mb-[10px]">
                 (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
               </div>
-              <div class="min-[800px]:flex">
+              <div class="lg:flex">
                 <p
-                  class="mb-[10px] min-[800px]:after:content-[''] min-[800px]:after:inline-block min-[800px]:after:w-[1px] min-[800px]:after:h-[11px] min-[800px]:after:bg-[#888888] min-[800px]:after:ml-[8px] min-[800px]:after:mr-[10px]"
+                  class="mb-[10px] lg:after:content-[''] lg:after:inline-block lg:after:w-[1px] lg:after:h-[11px] lg:after:bg-[#888888] lg:after:ml-[8px] lg:after:mr-[10px]"
                 >
                   Tel. 051-510-1817, 1040
                 </p>
@@ -1868,12 +1865,12 @@
               </div>
             </address>
 
-            <div class="copy mt-7 text-[#6C7687] min-[800px]:mt-4">
+            <div class="copy mt-7 text-[#6C7687] lg:mt-4">
               <p>
                 Copyright 2025 Pusan National University Library. All Rights
                 Reserved.
               </p>
-              <p class="mt-7 min-[800px]:mt-[10px]">
+              <p class="mt-7 lg:mt-[10px]">
                 PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
                 저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
                 형사 상의 책임을 질 수 있습니다.
