@@ -170,7 +170,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1440px) {
   .research-content {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -179,7 +179,7 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .reserch-highlight-swiper .swiper-slide {
     opacity: 0.5;
   }
