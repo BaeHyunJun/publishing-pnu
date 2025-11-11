@@ -20,7 +20,7 @@
   <body>
     <div id="wrap" class="bg-[#F3F5F9]">
       <header
-        class="h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]"
+        class="fixed top-0 left-0 right-0 z-100 h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]"
       >
         <div
           class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block"
@@ -338,9 +338,11 @@
       <!-- #sideM -->
 
       <div id="container">
-        <div class="search-sec w-full max-w-[820px] mx-auto px-6">
+        <div
+          class="search-sec w-full max-w-[820px] mx-auto px-6 mt-[127px] pt-[52px] lg:mt-[120px] lg:pt-[106px]"
+        >
           <h2
-            class="text-[28px] font-black leading-[100%] text-center mt-[52px] mb-6 lg:text-4xl lg:mt-[106px] lg:mb-[30px]"
+            class="text-[28px] font-black leading-[100%] text-center mb-6 lg:text-4xl lg:mb-[30px]"
           >
             Search for Journals,<br class="lg:hidden" />
             Resources, Scholars
@@ -440,17 +442,17 @@
           <div class="swiper reserch-highlight-swiper w-full">
             <div class="swiper-wrapper px-6 lg:px-0">
               <div
-                class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-160px)] 2xl:p-10"
+                class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
               >
                 <div class="slide-inner lg:flex lg:justify-between">
-                  <div class="txt-info mb-3 lg:w-[28%] lg:mb-0">
+                  <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
                     <p
                       class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
                     >
                       2025-09-04
                     </p>
                     <div
-                      class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] min-[1340px]:text-[18px]"
+                      class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
                     >
                       How Uneven Ocean Warming is Altering Propagation of the
                       Madden-Julian Oscillation
@@ -462,10 +464,22 @@
                       Oscillation, altering rainfall patterns and challenging
                       climate prediction
                     </div>
+
+                    <a
+                      href="#"
+                      class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
+                    >
+                      View Highlights
+                      <img
+                        src="images/arr-right-bar-bl.png"
+                        class="arr"
+                        alt="arr"
+                      />
+                    </a>
                   </div>
                   <!-- .txt-info -->
 
-                  <div class="img-info mb-3 lg:w-[36%] lg:mb-0">
+                  <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
                     <img
                       src="images/research01.png"
                       class="w-full rounded-xl"
@@ -473,10 +487,7 @@
                     />
                   </div>
 
-                  <a
-                    href="#"
-                    class="btn-view btn-common lg:absolute lg:bottom-10 lg:w-[26%!important]"
-                  >
+                  <a href="#" class="btn-view btn-common lg:!hidden">
                     View Highlights
                     <img
                       src="images/arr-right-bar-bl.png"
@@ -486,10 +497,10 @@
                   </a>
 
                   <div
-                    class="researcher px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[32%] lg:mt-0 lg:p-6 2xl:p-8"
+                    class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
                   >
                     <h3
-                      class="text-xs leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-lg 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
+                      class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
                     >
                       Featured Researcher
                     </h3>
@@ -497,7 +508,7 @@
                       class="researcher-cont flex items-center lg:items-start"
                     >
                       <div
-                        class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden lg:w-[78px] lg:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
+                        class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
                       >
                         <img src="images/profile.png" alt="profile photo" />
                       </div>
@@ -506,24 +517,476 @@
                         class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
                       >
                         <p
-                          class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2"
+                          class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
                         >
                           Park, Min Jun
                         </p>
                         <p
-                          class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium]"
+                          class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
                         >
                           COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
                         </p>
                         <div
-                          class="research-content hidden text-sm leading-[140%] text-[#8D9AAF]"
+                          class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
                         >
                           Characterization of Fatigue Properties of
                           Fiber-Reinforced the one...
                         </div>
                         <a
                           href="#"
-                          class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:w-full lg:mt-5 lg:h-[38px]"
+                          class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
+                        >
+                          <span class="hidden lg:block mr-2"
+                            >View Researcher</span
+                          >
+                          <img
+                            src="images/arr-right-bar-gr.png"
+                            class="w-[11px]"
+                            alt="arr"
+                        /></a>
+                      </div>
+                      <!-- .researcher-profile-txt -->
+                    </div>
+                    <!-- .researcher-cont -->
+                  </div>
+                  <!-- .researcher -->
+                </div>
+              </div>
+              <!-- swiper-slide -->
+
+              <div
+                class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
+              >
+                <div class="slide-inner lg:flex lg:justify-between">
+                  <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                    <p
+                      class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
+                    >
+                      2025-09-04
+                    </p>
+                    <div
+                      class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
+                    >
+                      How Uneven Ocean Warming is Altering Propagation of the
+                      Madden-Julian Oscillation
+                    </div>
+                    <div
+                      class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
+                    >
+                      Uneven ocean warming reshapes the Madden-Julian
+                      Oscillation, altering rainfall patterns and challenging
+                      climate prediction
+                    </div>
+
+                    <a
+                      href="#"
+                      class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
+                    >
+                      View Highlights
+                      <img
+                        src="images/arr-right-bar-bl.png"
+                        class="arr"
+                        alt="arr"
+                      />
+                    </a>
+                  </div>
+                  <!-- .txt-info -->
+
+                  <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                    <img
+                      src="images/research01.png"
+                      class="w-full rounded-xl"
+                      alt="research img"
+                    />
+                  </div>
+
+                  <a href="#" class="btn-view btn-common lg:!hidden">
+                    View Highlights
+                    <img
+                      src="images/arr-right-bar-bl.png"
+                      class="arr"
+                      alt="arr"
+                    />
+                  </a>
+
+                  <div
+                    class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
+                  >
+                    <h3
+                      class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
+                    >
+                      Featured Researcher
+                    </h3>
+                    <div
+                      class="researcher-cont flex items-center lg:items-start"
+                    >
+                      <div
+                        class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
+                      >
+                        <img src="images/profile.png" alt="profile photo" />
+                      </div>
+                      <!-- .researcher-photo -->
+                      <div
+                        class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
+                      >
+                        <p
+                          class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
+                        >
+                          Park, Min Jun
+                        </p>
+                        <p
+                          class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
+                        >
+                          COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                        </p>
+                        <div
+                          class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
+                        >
+                          Characterization of Fatigue Properties of
+                          Fiber-Reinforced the one...
+                        </div>
+                        <a
+                          href="#"
+                          class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
+                        >
+                          <span class="hidden lg:block mr-2"
+                            >View Researcher</span
+                          >
+                          <img
+                            src="images/arr-right-bar-gr.png"
+                            class="w-[11px]"
+                            alt="arr"
+                        /></a>
+                      </div>
+                      <!-- .researcher-profile-txt -->
+                    </div>
+                    <!-- .researcher-cont -->
+                  </div>
+                  <!-- .researcher -->
+                </div>
+              </div>
+              <!-- swiper-slide -->
+
+              <div
+                class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
+              >
+                <div class="slide-inner lg:flex lg:justify-between">
+                  <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                    <p
+                      class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
+                    >
+                      2025-09-04
+                    </p>
+                    <div
+                      class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
+                    >
+                      How Uneven Ocean Warming is Altering Propagation of the
+                      Madden-Julian Oscillation
+                    </div>
+                    <div
+                      class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
+                    >
+                      Uneven ocean warming reshapes the Madden-Julian
+                      Oscillation, altering rainfall patterns and challenging
+                      climate prediction
+                    </div>
+
+                    <a
+                      href="#"
+                      class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
+                    >
+                      View Highlights
+                      <img
+                        src="images/arr-right-bar-bl.png"
+                        class="arr"
+                        alt="arr"
+                      />
+                    </a>
+                  </div>
+                  <!-- .txt-info -->
+
+                  <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                    <img
+                      src="images/research01.png"
+                      class="w-full rounded-xl"
+                      alt="research img"
+                    />
+                  </div>
+
+                  <a href="#" class="btn-view btn-common lg:!hidden">
+                    View Highlights
+                    <img
+                      src="images/arr-right-bar-bl.png"
+                      class="arr"
+                      alt="arr"
+                    />
+                  </a>
+
+                  <div
+                    class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
+                  >
+                    <h3
+                      class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
+                    >
+                      Featured Researcher
+                    </h3>
+                    <div
+                      class="researcher-cont flex items-center lg:items-start"
+                    >
+                      <div
+                        class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
+                      >
+                        <img src="images/profile.png" alt="profile photo" />
+                      </div>
+                      <!-- .researcher-photo -->
+                      <div
+                        class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
+                      >
+                        <p
+                          class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
+                        >
+                          Park, Min Jun
+                        </p>
+                        <p
+                          class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
+                        >
+                          COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                        </p>
+                        <div
+                          class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
+                        >
+                          Characterization of Fatigue Properties of
+                          Fiber-Reinforced the one...
+                        </div>
+                        <a
+                          href="#"
+                          class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
+                        >
+                          <span class="hidden lg:block mr-2"
+                            >View Researcher</span
+                          >
+                          <img
+                            src="images/arr-right-bar-gr.png"
+                            class="w-[11px]"
+                            alt="arr"
+                        /></a>
+                      </div>
+                      <!-- .researcher-profile-txt -->
+                    </div>
+                    <!-- .researcher-cont -->
+                  </div>
+                  <!-- .researcher -->
+                </div>
+              </div>
+              <!-- swiper-slide -->
+
+              <div
+                class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
+              >
+                <div class="slide-inner lg:flex lg:justify-between">
+                  <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                    <p
+                      class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
+                    >
+                      2025-09-04
+                    </p>
+                    <div
+                      class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
+                    >
+                      How Uneven Ocean Warming is Altering Propagation of the
+                      Madden-Julian Oscillation
+                    </div>
+                    <div
+                      class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
+                    >
+                      Uneven ocean warming reshapes the Madden-Julian
+                      Oscillation, altering rainfall patterns and challenging
+                      climate prediction
+                    </div>
+
+                    <a
+                      href="#"
+                      class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
+                    >
+                      View Highlights
+                      <img
+                        src="images/arr-right-bar-bl.png"
+                        class="arr"
+                        alt="arr"
+                      />
+                    </a>
+                  </div>
+                  <!-- .txt-info -->
+
+                  <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                    <img
+                      src="images/research01.png"
+                      class="w-full rounded-xl"
+                      alt="research img"
+                    />
+                  </div>
+
+                  <a href="#" class="btn-view btn-common lg:!hidden">
+                    View Highlights
+                    <img
+                      src="images/arr-right-bar-bl.png"
+                      class="arr"
+                      alt="arr"
+                    />
+                  </a>
+
+                  <div
+                    class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
+                  >
+                    <h3
+                      class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
+                    >
+                      Featured Researcher
+                    </h3>
+                    <div
+                      class="researcher-cont flex items-center lg:items-start"
+                    >
+                      <div
+                        class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
+                      >
+                        <img src="images/profile.png" alt="profile photo" />
+                      </div>
+                      <!-- .researcher-photo -->
+                      <div
+                        class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
+                      >
+                        <p
+                          class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
+                        >
+                          Park, Min Jun
+                        </p>
+                        <p
+                          class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
+                        >
+                          COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                        </p>
+                        <div
+                          class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
+                        >
+                          Characterization of Fatigue Properties of
+                          Fiber-Reinforced the one...
+                        </div>
+                        <a
+                          href="#"
+                          class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
+                        >
+                          <span class="hidden lg:block mr-2"
+                            >View Researcher</span
+                          >
+                          <img
+                            src="images/arr-right-bar-gr.png"
+                            class="w-[11px]"
+                            alt="arr"
+                        /></a>
+                      </div>
+                      <!-- .researcher-profile-txt -->
+                    </div>
+                    <!-- .researcher-cont -->
+                  </div>
+                  <!-- .researcher -->
+                </div>
+              </div>
+              <!-- swiper-slide -->
+
+              <div
+                class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
+              >
+                <div class="slide-inner lg:flex lg:justify-between">
+                  <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                    <p
+                      class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
+                    >
+                      2025-09-04
+                    </p>
+                    <div
+                      class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
+                    >
+                      How Uneven Ocean Warming is Altering Propagation of the
+                      Madden-Julian Oscillation
+                    </div>
+                    <div
+                      class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
+                    >
+                      Uneven ocean warming reshapes the Madden-Julian
+                      Oscillation, altering rainfall patterns and challenging
+                      climate prediction
+                    </div>
+
+                    <a
+                      href="#"
+                      class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
+                    >
+                      View Highlights
+                      <img
+                        src="images/arr-right-bar-bl.png"
+                        class="arr"
+                        alt="arr"
+                      />
+                    </a>
+                  </div>
+                  <!-- .txt-info -->
+
+                  <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                    <img
+                      src="images/research01.png"
+                      class="w-full rounded-xl"
+                      alt="research img"
+                    />
+                  </div>
+
+                  <a href="#" class="btn-view btn-common lg:!hidden">
+                    View Highlights
+                    <img
+                      src="images/arr-right-bar-bl.png"
+                      class="arr"
+                      alt="arr"
+                    />
+                  </a>
+
+                  <div
+                    class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
+                  >
+                    <h3
+                      class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
+                    >
+                      Featured Researcher
+                    </h3>
+                    <div
+                      class="researcher-cont flex items-center lg:items-start"
+                    >
+                      <div
+                        class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
+                      >
+                        <img src="images/profile.png" alt="profile photo" />
+                      </div>
+                      <!-- .researcher-photo -->
+                      <div
+                        class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
+                      >
+                        <p
+                          class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
+                        >
+                          Park, Min Jun
+                        </p>
+                        <p
+                          class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
+                        >
+                          COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                        </p>
+                        <div
+                          class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
+                        >
+                          Characterization of Fatigue Properties of
+                          Fiber-Reinforced the one...
+                        </div>
+                        <a
+                          href="#"
+                          class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
                         >
                           <span class="hidden lg:block mr-2"
                             >View Researcher</span
@@ -545,12 +1008,12 @@
             </div>
 
             <div
-              class="reserch-highlight-prev hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] left-[73px] z-10 2xl:left-[213px]"
+              class="reserch-highlight-prev hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] left-[73px] z-10 2xl:left-[133px]"
             >
               <img src="images/chevron_left.png" class="w-6" alt="prev btn" />
             </div>
             <div
-              class="reserch-highlight-next hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] right-[73px] z-10 2xl:right-[213px]"
+              class="reserch-highlight-next hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] right-[73px] z-10 2xl:right-[133px]"
             >
               <img src="images/chevron_right.png" class="w-6" alt="next btn" />
             </div>
@@ -685,7 +1148,9 @@
             </div>
             <!-- .zoom -->
 
-            <div class="map relative flex flex-col items-center lg:h-full">
+            <div
+              class="map relative flex flex-col items-center overflow-hidden lg:h-full"
+            >
               <div class="map-bg w-[130%] lg:ml-[76px] lg:w-auto lg:h-full">
                 <img src="images/map.png" class="h-full" alt="map" />
               </div>
@@ -776,7 +1241,7 @@
             <!-- map -->
 
             <div
-              class="topten mt-[17px] p-[32px] text-[15px] text-[#6C7687] bg-[#F3F5F9] rounded-xl lg:mt-0 lg:w-[308px]"
+              class="topten mt-[17px] p-[32px] text-[15px] text-[#6C7687] bg-[#F3F5F9] rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] lg:mt-0 lg:w-[308px]"
             >
               <h3 class="font-bold mb-[20px]">Top 10 Contries</h3>
 

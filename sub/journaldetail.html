@@ -18,7 +18,7 @@
   <body>
     <div id="wrap" class="bg-transparent lg:bg-[#F3F5F9]">
       <header
-        class="h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]"
+        class="fixed top-0 left-0 right-0 z-100 h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]"
       >
         <div
           class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block"
@@ -336,29 +336,29 @@
       <!-- #sideM -->
 
       <div id="container">
-        <a
-          href="#"
-          class="inline-flex items-center gap-[6px] bg-[#F3F5F9] ml-6 py-[10px] pl-[10px] pr-[16px] rounded-md mt-6 lg:pl-0 lg:pr-0 lg:py-0 lg:mt-[62px] xl:ml-[100px]"
-        >
-          <img
-            src="../images/chevron_right_8D9AAF.png"
-            class="w-3 rotate-180"
-            alt="back"
-          />
-          <span
-            class="text-[14px] text-[#6C7687] font-medium leading-[100%] xxl:text-red-500"
-            >Back<span class="hidden lg:inline lg:text-[16px]">
-              to Journal list</span
-            ></span
-          >
-        </a>
-
         <div
-          class="journaldetailPage detailPage flexPage lg:px-6 xl:px-[100px]"
+          class="journaldetailPage detailPage flexPage mt-[127px] lg:mt-[120px] lg:px-6 xl:px-[100px]"
         >
           <div
-            class="journal-detail-cont w-full px-6 pt-[24px] lg:w-[calc(100%-360px)] lg:px-[0] lg:pt-[23px] lg:mt-[24px] lg:bg-white lg:rounded-xl lg:px-[60px] lg:py-[60px] lg:pt-[60px]"
+            class="journal-detail-cont w-full px-6 pt-[24px] lg:relative lg:w-[calc(100%-360px)] lg:px-[0] lg:pt-[23px] lg:mt-[105px] lg:bg-white lg:rounded-xl lg:px-[60px] lg:py-[60px] lg:pt-[60px]"
           >
+            <a
+              href="#"
+              class="inline-flex items-center gap-[6px] bg-[#F3F5F9] mb-6 py-[10px] pl-[10px] pr-[16px] rounded-md lg:pl-0 lg:pr-0 lg:py-0 lg:bg-transparent lg:absolute lg:-top-[44px] lg:left-0 xl:ml-[100px]"
+            >
+              <img
+                src="../images/chevron_right_8D9AAF.png"
+                class="w-3 rotate-180"
+                alt="back"
+              />
+              <span
+                class="text-[14px] text-[#6C7687] font-medium leading-[100%] xxl:text-red-500"
+                >Back<span class="hidden lg:inline lg:text-[16px]">
+                  to Journal list</span
+                ></span
+              >
+            </a>
+
             <div
               class="bread hidden mb-[27px] text-[#8D9AAF] text-[13px] items-center gap-1 lg:flex lg:mb-[20px]"
             >
@@ -960,9 +960,9 @@
                 Major Published Authors
               </h2>
 
-              <ul class="flex flex-wrap gap-4 lg:gap-[30px]">
+              <ul class="flex flex-wrap gap-4 2xl:gap-[30px]">
                 <li
-                  class="relative w-[calc(50%-8px)] py-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 lg:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] lg:p-[30px]"
+                  class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
@@ -1035,7 +1035,7 @@
                 </li>
 
                 <li
-                  class="relative w-[calc(50%-8px)] py-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 lg:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] lg:p-[30px]"
+                  class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
@@ -1108,7 +1108,7 @@
                 </li>
 
                 <li
-                  class="relative w-[calc(50%-8px)] py-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 lg:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] lg:p-[30px]"
+                  class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
@@ -1181,7 +1181,7 @@
                 </li>
 
                 <li
-                  class="relative w-[calc(50%-8px)] py-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 lg:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] lg:p-[30px]"
+                  class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
@@ -1745,7 +1745,9 @@
           </div>
           <!-- .journal-list-cont -->
 
-          <div class="right-box mt-6 w-[310px]">
+          <div
+            class="right-box hidden mt-[105px] w-[310px] lg:block sticky top-[140px]"
+          >
             <div class="w-full p-8 bg-white rounded-xl">
               <h2 class="flex items-center gap-[6px] mb-5">
                 <img

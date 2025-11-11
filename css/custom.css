@@ -170,7 +170,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .research-content {
     display: -webkit-box;
     -webkit-line-clamp: 2;
