@@ -20,5 +20,8 @@
   "homepage": "https://github.com/BaeHyunJun/publishing-pnu#readme",
   "devDependencies": {
     "tailwindcss": "^4.1.17"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.17"
   }
 }
