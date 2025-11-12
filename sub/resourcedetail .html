@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PNU Scholar</title>
+
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="wrap" class="bg-transparent lg:bg-[#F3F5F9]">
+      <header
+        class="fixed top-0 left-0 right-0 z-100 h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]"
+      >
+        <div
+          class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block"
+        >
+          <div
+            class="px-6 lg:px-[30px] 2xl:px-[100px] h-full flex justify-end items-center gap-5"
+          >
+            <a href="#">Notice</a>
+            <a href="#">Q&A</a>
+            <a href="#" class="flex items-center"
+              >Research Guide<img
+                src="../images/launch-ico-gr.png"
+                alt="launch icon"
+                class="w-[12px] h-[12px] ml-[4px]"
+            /></a>
+          </div>
+        </div>
+        <!-- .hTop -->
+
+        <div
+          class="hBottom px-6 lg:px-[30px] 2xl:px-[100px] w-full h-full flex justify-between items-center flex-wrap lg:flex-nowrap lg:h-[78px]"
+        >
+          <div
+            class="h-left flex items-center gap-10 order-1 pt-3 lg:pt-0 lg:gap-6 2xl:gap-[30px]"
+          >
+            <h1 id="logo" class="shrink-0">
+              <a href="/">
+                <img
+                  src="../images/logo.png"
+                  alt="logo-go to main"
+                  class="w-[136px] h-auto lg:hidden 2xl:block 2xl:h-10 2xl:w-auto"
+                />
+                <img
+                  src="../images/logo_symbol.png"
+                  class="hidden w-10 lg:block 2xl:hidden"
+                  alt="symbol logo"
+                />
+              </a>
+            </h1>
+
+            <nav class="hidden lg:block">
+              <ul
+                class="flex items-center gap-[23px] text-[15px] font-bold 2xl:gap-8 2xl:text-[18px]"
+              >
+                <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
+                <li class="hover:text-[#4B4DFF]">
+                  <a href="#">Departments</a>
+                </li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Highlights</a></li>
+              </ul>
+              <!-- .d1 -->
+            </nav>
+          </div>
+          <!-- .h-left -->
+
+          <div
+            class="h-right items-center gap-4 flex order-3 pb-3 w-full lg:w-auto lg:pb-0 lg:gap-[30px] 2xl:gap-6"
+          >
+            <div
+              class="h-search flex items-center relative h-12 w-full bg-[#F3F5F9] rounded-lg lg:w-[286px] 2xl:w-[428px]"
+            >
+              <div class="relative inline-block h-full">
+                <!-- 버튼 -->
+                <button
+                  id="dropdownButton"
+                  class="flex items-center justify-between w-[120px] h-full text-[13px] text-[#6C7687] px-3 py-2 cursor-pointer relative z-[1] lg:w-[92px] lg:border-r lg:border-r-[#E4E8F1] 2xl:w-[109px]"
+                >
+                  <span id="dropdownText">All</span>
+                  <img
+                    src="../images/expand_more_8D9AAF.png"
+                    class="w-4 ml-2"
+                    alt="arr"
+                  />
+                </button>
+
+                <!-- 옵션 목록 -->
+                <ul
+                  id="dropdownMenu"
+                  class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden"
+                >
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    All
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Journal
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Resource
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Scholar
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="search-wrap w-[calc(100%-95px)] h-full pl-[10px] pr-9 lg:pr-7 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-9"
+              >
+                <input
+                  type="text"
+                  class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]"
+                  placeholder="Search for journals, resources, scholars"
+                />
+              </div>
+              <!-- .search-wrap -->
+
+              <button
+                class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5"
+              >
+                <img src="../images/search-ico-bl.png" alt="search" />
+              </button>
+            </div>
+            <!-- .h-search -->
+
+            <a
+              href="#"
+              class="hidden btn-login group items-center gap-2 text-[16px] hover:text-[#4B4DFF] lg:flex"
+            >
+              <span
+                class="w-[18px] h-[18px] bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')] 2xl:w-[19px] 2xl:h-[19px]"
+              ></span>
+              Login
+            </a>
+
+            <!-- 로그인시 xl사이즈에서 block로 보여져야함! 모바일에서는 무조건 안보이게 -->
+            <div href="#" class="h-profile after-log relative hidden xl:hidden">
+              <button class="profile flex items-center">
+                <div
+                  class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2"
+                >
+                  <img src="images/profile.png" alt="profile" />
+                </div>
+                <p class="name text-sm text-[#555555]">Kim, Minjun</p>
+                <span
+                  class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"
+                ></span>
+              </button>
+              <!-- .profile -->
+
+              <div
+                class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200"
+              >
+                <a
+                  href="#"
+                  class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Profile</a
+                >
+                <a
+                  href="#"
+                  class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Resources</a
+                >
+                <a
+                  href="#"
+                  class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >Saved Researcher</a
+                >
+              </div>
+              <!-- .profile-mybox -->
+            </div>
+            <!-- h-profile -->
+          </div>
+          <!-- .h-right -->
+
+          <button
+            class="btnM w-6 h-6 relative cursor-pointer order-2 lg:hidden"
+          >
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"
+            ></span>
+          </button>
+        </div>
+        <!-- .hBottom -->
+      </header>
+
+      <div
+        class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"
+      ></div>
+
+      <div
+        id="sideM"
+        class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300"
+      >
+        <div class="side-header flex justify-between mb-[30px]">
+          <a href="/" class="gomain">
+            <img src="images/home-icon.png" alt="go main" class="w-6" />
+          </a>
+
+          <button class="close-side cursor-pointer">
+            <img src="images/clear-icon.png" alt="close" class="w-[16px]" />
+          </button>
+        </div>
+        <!-- .side-header -->
+
+        <!-- 로그인 후 회원정보 -->
+        <div class="member">
+          <div class="profile flex items-center gap-[10px]">
+            <div
+              class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]"
+            >
+              <img src="images/profile.png" alt="photo" />
+            </div>
+
+            <div class="name">
+              <a
+                href="#"
+                class="flex items-center gap-2 text-[20px] font-bold leading-[140%]"
+                >Park, Minjun
+                <img
+                  src="images/chevron_right.png"
+                  class="w-[20px] h-[20px]"
+                  alt="arr"
+              /></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2"
+                >Department of Medicine</span
+              >
+            </div>
+          </div>
+          <!-- pfofile -->
+
+          <ul
+            class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]"
+          >
+            <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-myresources.png"
+                  class="w-[20px]"
+                  alt="resource icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">My Resources</span>
+              </a>
+            </li>
+            <li class="w-1/2 py-[16px]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-savedresearcher.png"
+                  class="w-[20px]"
+                  alt="saved researcher icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- .member -->
+
+        <nav class="pt-[38px]">
+          <ul class="text-[22px] font-bold space-y-8">
+            <li class="active"><a href="#">Resources</a></li>
+            <li><a href="#">Researcher</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Highlights</a></li>
+          </ul>
+        </nav>
+
+        <div
+          class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3"
+        >
+          <a
+            href="#"
+            class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl"
+          >
+            <img
+              src="images/header-login-ico-wh.png"
+              class="w-4 mr-1"
+              alt="login icon"
+            />
+            Login
+          </a>
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Notice</a
+          >
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Q&A</a
+          >
+          <a
+            href="#"
+            class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Research Guide
+            <img
+              src="images/launch-ico-gr.png"
+              class="w-3 ml-1"
+              alt="launch icon"
+          /></a>
+        </div>
+      </div>
+      <!-- #sideM -->
+
+      <div id="container">
+        <div
+          class="journaldetailPage detailPage flexPage mt-[127px] lg:mt-[120px] lg:px-6 xl:px-[100px]"
+        >
+          <div
+            class="journal-detail-cont w-full px-6 pt-[24px] lg:relative lg:w-[calc(100%-360px)] lg:px-[0] lg:pt-[23px] lg:mt-[105px] lg:bg-white lg:rounded-xl lg:px-[60px] lg:py-[60px] lg:pt-[60px]"
+          >
+            <a
+              href="#"
+              class="inline-flex items-center gap-[6px] bg-[#F3F5F9] mb-6 py-[10px] pl-[10px] pr-[16px] rounded-md lg:pl-0 lg:pr-0 lg:py-0 lg:bg-transparent lg:absolute lg:-top-[44px] lg:left-0 xl:ml-[100px]"
+            >
+              <img
+                src="../images/chevron_right_8D9AAF.png"
+                class="w-3 rotate-180"
+                alt="back"
+              />
+              <span
+                class="text-[14px] text-[#6C7687] font-medium leading-[100%] xxl:text-red-500"
+                >Back<span class="hidden lg:inline lg:text-[16px]">
+                  to Resource list</span
+                ></span
+              >
+            </a>
+
+            <div
+              class="bread hidden mb-[27px] text-[#8D9AAF] text-[13px] items-center gap-1 lg:flex lg:mb-[20px]"
+            >
+              <a href="/" class="flex items-center gap-[2px]"
+                ><img
+                  src="../images/home-ico.png"
+                  class="w-[13px]"
+                  alt="home"
+                />Home</a
+              >
+              <img
+                src="../images/chevron_right_8D9AAF.png"
+                class="w-[12px]"
+                alt="right"
+              />
+              <a href="#" class="">Resources</a>
+              <img
+                src="../images/chevron_right_8D9AAF.png"
+                class="w-[12px]"
+                alt="right"
+              />
+              <span class="current font-bold"
+                >GHz CMOS power amplifier using a current source to enhance its
+                dynamic enhance its dynamic range</span
+              >
+            </div>
+            <!-- bread -->
+
+            <div
+              class="tit-area w-full flex justify-between items-center lg:mb"
+            >
+              <h2
+                class="mb-5 text-[22px] leading-[130%] font-black lg:text-[26px] lg:mb-6"
+              >
+                GHz CMOS power amplifier using a current source to enhance its
+                dynamic enhance its dynamic range
+              </h2>
+              <button
+                class="btn-print hidden px-3 py-[6px] items-center gap-[6px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:flex"
+              >
+                <img
+                  src="../images/print-ico.png"
+                  class="w-[24px] h-[24px]"
+                  alt="filter"
+                />
+                <span
+                  class="text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                  >Print</span
+                >
+              </button>
+            </div>
+            <!-- .tit-area -->
+
+            <div
+              class="pb-6 text-[14px] font-semibold text-[#8D9AAF] leading-[140%] lg:pb-[30px]"
+            >
+              MW급 RDF용 순환유동층보일러에서 유동사 입도가 연소가스 온도에
+              미치는 영향
+            </div>
+
+            <div
+              class="pt-6 flex flex-col gap-y-6 lg:gap-y-5 lg:border-b lg:border-b-[#E6E8EC] lg:pb-[26px]"
+            >
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
+                >
+                  Document Type
+                </p>
+                <div
+                  class="flex flex-col gap-[6px] text-[13px] lg:flex-row lg:flex-wrap"
+                >
+                  <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
+                    >Article</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
+                >
+                  Open Access
+                </p>
+                <div
+                  class="flex flex-col gap-[6px] text-[13px] lg:flex-row lg:flex-wrap"
+                >
+                  <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
+                    ><img src="../images/oa-gold-ico.png" alt="gold" /> Gold
+                    OA</span
+                  >
+                  <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
+                    ><img src="../images/oa-green-ico.png" alt="green" /> Green
+                    OA</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
+                >
+                  Journal Ranking
+                </p>
+                <div
+                  class="flex flex-col gap-[6px] text-[13px] lg:flex-row lg:flex-wrap"
+                >
+                  <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
+                    >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                  <span
+                    class="type-scopus bg-[#F3F5F9] px-[8px] py-[6px] rounded"
+                    >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                  >
+                  <span class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] rounded"
+                    >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                >
+                  Registered DB
+                </p>
+                <div
+                  class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
+                >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >SCIE</span
+                  >
+                  <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                    >Scopus</span
+                  >
+                  <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                    >KCI</span
+                  >
+                  <a
+                    href="#"
+                    class="w-full ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium lg:w-auto lg:ml-2"
+                    >PNU Articles (<span>2</span>)</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                >
+                  Collaboration
+                </p>
+                <div
+                  class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
+                >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >International</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                >
+                  Citation
+                </p>
+                <div
+                  class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
+                >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >Web of Science</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                >
+                  FWCI <img src="../images/error-ico-8D9AAF.png" alt="info" />
+                </p>
+                <div
+                  class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
+                >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >Scopus 1.4</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-x-2 lg:gap-x-3">
+                <p
+                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                >
+                  Journal I/F
+                </p>
+                <div
+                  class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
+                >
+                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                    >Journal 2023 (7.1)</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-[50px] lg:mt-[80px]">
+              <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                Authors
+              </h2>
+
+              <ul
+                id="customOptions"
+                class="mb-4 p-[6px] bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] inline-flex text-[15px] gap-[5px]"
+              >
+                <li
+                  class="active w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+                  data-value="option1"
+                >
+                  List
+                </li>
+                <li
+                  class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+                  data-value="option2"
+                >
+                  Only PNU
+                </li>
+                <li
+                  class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+                  data-value="option3"
+                >
+                  Institution
+                </li>
+              </ul>
+
+              <div class="overflow-x-auto">
+                <table class="min-w-[800px]">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Author Name</th>
+                      <th>Institution Name</th>
+                      <th>Affiliation</th>
+                      <th>Author Role</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>An, Song eui</td>
+                      <td>KAIST</td>
+                      <td></td>
+                      <td>first Author</td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>Ryu, Min-Su</td>
+                      <td>Pusan National University</td>
+                      <td>Dept of Engineering</td>
+                      <td>Conrresponding Author</td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>Kim, daeho</td>
+                      <td>Pusan National University</td>
+                      <td>School of BioMedical Convergence Engineering</td>
+                      <td>co-author</td>
+                    </tr>
+
+                    <tr>
+                      <td>4</td>
+                      <td>Kim, daeho</td>
+                      <td>Beijing Institute of Technology</td>
+                      <td></td>
+                      <td>co-author</td>
+                    </tr>
+
+                    <tr>
+                      <td>5</td>
+                      <td>Ryu, Min-Su</td>
+                      <td>Pusan National University</td>
+                      <td>Dept of Engineering</td>
+                      <td>Conrresponding Author</td>
+                    </tr>
+
+                    <tr>
+                      <td>6</td>
+                      <td>Kim, daeho</td>
+                      <td>Pusan National University</td>
+                      <td>School of BioMedical Convergence Engineering</td>
+                      <td>co-author</td>
+                    </tr>
+
+                    <tr>
+                      <td>7</td>
+                      <td>Kim, daeho</td>
+                      <td>Beijing Institute of Technology</td>
+                      <td></td>
+                      <td>co-author</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="mt-[50px] lg:mt-[80px]">
+              <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                Source
+              </h2>
+
+              <div>
+                <p>Journal of high Energy Physics</p>
+                <div>
+                  <div>
+                    <span>ISSN</span>
+                    <span>1234-5678</span>
+                  </div>
+
+                  <span
+                    class="inline-block w-[1px] h-[10px] bg-[#B4BCCC]"
+                  ></span>
+
+                  <div>
+                    <span>eISSN</span>
+                    <span>1234-5678</span>
+                  </div>
+
+                  <span
+                    class="inline-block w-[1px] h-[10px] bg-[#B4BCCC]"
+                  ></span>
+
+                  <div>
+                    <span>Publisher</span>
+                    <span>Institute of Economic Research</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-[60px] lg:mt-[80px]">
+              <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                Ranking Information by Category
+              </h2>
+
+              <ul
+                class="flex flex-col gap-y-[8px] mb-4 p-6 pl-[34px] bg-[#F3F5F9] text-[14px] text-[#6C7687] font-medium rounded-xl list-disc lg:mb-6"
+              >
+                <li>
+                  If the ranking information or top percentile appears
+                  questionable, please contact the library for assistance.
+                </li>
+              </ul>
+
+              <div class="overflow-x-auto">
+                <table class="w-full min-w-[800px]">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>DB</th>
+                      <th>Category</th>
+                      <th>Num of Journal</th>
+                      <th>Ranking</th>
+                      <th>Percent</th>
+                      <th>Percentile</th>
+                      <th>Quartile</th>
+                      <th>Year</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>JCR</td>
+                      <td>SCIE - PHYSICS, PARTICLES & FIELDS</td>
+                      <td>31<br />(29)*</td>
+                      <td>5<br />(5)*</td>
+                      <td>16.14%<br />(17.24%)*</td>
+                      <td>85.5</td>
+                      <td>1</td>
+                      <td>2023</td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>SCOPUS</td>
+                      <td>Nuclear and High Energy Physics</td>
+                      <td>87</td>
+                      <td>5</td>
+                      <td>5.75%</td>
+                      <td>94</td>
+                      <td>1</td>
+                      <td>2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="hidden lg:block mt-[80px]">
+              <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                Abstract
+              </h2>
+              <div class="text-[16px] text-[#6C7687] leading-[150%]">
+                The production cross section of inclusive isolated photons has
+                been measured by the ALICE experiment at the CERN LHC in pp
+                collisions at centre-of-momentum energy of root s = 13 TeV
+                collected during the LHC Run 2 data-taking period. The
+                measurement is performed by combining the measurements of the
+                electromagnetic calorimeter EMCal and the central tracking
+                detectors ITS and TPC, covering a pseudorapidity range of
+                vertical bar eta(gamma)vertical bar < 0.67 and a transverse
+                momentum range of 7 < 200 GeV/c. The result extends to lower
+                p(T)(gamma) and x(T)(gamma) = 2p(T)(gamma)/root s ranges, the
+                lowest x(T)(gamma) of any isolated photon measurements to date,
+                extending significantly those measured by the ATLAS and CMS
+                experiments towards lower p(T)(gamma) at the same collision
+                energy with a small overlap between the measurements. The
+                measurement is compared with next-to-leading order perturbative
+                QCD calculations and the results from the ATLAS and CMS
+                experiments as well as with measurements at other collision
+                energies. The measurement and theory prediction are in agreement
+                with each other within the experimental and theoretical
+                uncertainties.
+              </div>
+
+              <div>
+                <p>Keywords</p>
+                <div>
+                  <span>3D printing</span>
+                  <span>Digital Light Processing</span>
+                  <span>LiDAR</span>
+                  <span>Scanning micromirror</span>
+                  <span>Thermal improvement</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-[60px] lg:mt-[80px]">
+              <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                References
+              </h2>
+
+              <div class="overflow-x-auto">
+                <table class="w-full min-w-[800px]">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>참고문헌 정보</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        Stenqvist A, Bungum M, Pinborg AB, Bogstad J, Englund
+                        AL, Grøndahl ML, et al. High sperm deoxyribonucleic acid
+                        fragmentation index is associated with an increased risk
+                        of preeclampsia following assisted reproduction
+                        treatment. Fertil Steril 2025;123:97-104.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>
+                        Inversetti A, Bossi A, Cristodoro M, Larcher A, Busnelli
+                        A, Grande G, et al. Recurrent pregnancy loss: a male
+                        crucial factor-A systematic review and meta-analysis.
+                        Andrology 2025;13:130-45.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>
+                        Pozzi E, Fallara G, Belladelli F, Corsini C, Raffo M,
+                        Candela L, et al. Clinical parameters associated with
+                        altered sperm DNA fragmentation index among primary
+                        infertile men: Findings from a real-life cross-sectional
+                        study. Andrology 2023;11:1694-701.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- 페이저 -->
+              <div
+                class="flex items-center justify-center gap-2 font-[Pretendard] text-[15px] mt-[50px] lg:mt-[40px]"
+              >
+                <!-- 이전 버튼 -->
+                <button
+                  class="shrink-0 p-2 rounded-md cursor-pointer"
+                  aria-label="prev"
+                >
+                  <img
+                    src="../images/pager_prev.png"
+                    alt="prev"
+                    class="w-4 h-4"
+                  />
+                </button>
+
+                <!-- 페이지 숫자 -->
+                <button
+                  class="px-[15px] py-2 rounded-md text-[#215BD8] bg-[#D7E2F9] font-medium cursor-pointer"
+                >
+                  1
+                </button>
+                <button
+                  class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer"
+                >
+                  2
+                </button>
+
+                <!-- 다음 버튼 -->
+                <button
+                  class="shrink-0 p-2 rounded-md cursor-pointer"
+                  aria-label="next"
+                >
+                  <img
+                    src="../images/pager_next.png"
+                    alt="next"
+                    class="w-4 h-4"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="hidden mt-[60px] lg:block lg:mt-[80px]">
+              <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                Other papers published by the author
+              </h2>
+
+              <ul class="flex flex-col gap-4">
+                <li
+                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounsded-xl"
+                >
+                  <div class="w-[calc(100%-288px)]">
+                    <div
+                      class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
+                    >
+                      <span
+                        class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                      <span
+                        class="type-scopus bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                      >
+                      <span
+                        class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                    </div>
+
+                    <div class="text-[18px] font-bold leading-[130%] mb-3">
+                      Performance test of prototype LAMPS Start Counter using
+                      proton beams at 100 MeV
+                    </div>
+
+                    <div class="text-[14px] text-[#B4BCCC] mb-[14px]">
+                      MW급 RDF용 순환유동층보일러에서 유동사 입도가 연소가스
+                      온도에 미치는 영향
+                    </div>
+
+                    <div class="text-[14px] text-[#6C7687] mb-[27px] space-x-3">
+                      <span>Yoon, Heijin(윤혜진)</span>
+                      <span>Tae-jin, Ahn(안태진)</span>
+                      <span>Kim, Su-jin(김수진)</span>
+                    </div>
+
+                    <div
+                      class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                    >
+                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                      <span>NANO LETTERS</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>26(5)</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>pp.99~109</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>2020.12</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Publisher</span
+                      >
+                      <span>한국정보처리학회</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Citation Count</span
+                      >
+                      <span>5</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span
+                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                        >Registered DB</span
+                      >
+                      <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                        >SCIE</span
+                      >
+                      <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                        >Scopus</span
+                      >
+                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                        >KCI</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="shrink-0 w-[258px]">
+                    <img src="../images/thum01.png" alt="thum" />
+                  </div>
+                </li>
+
+                <li
+                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                >
+                  <div class="w-[calc(100%-288px)]">
+                    <div
+                      class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
+                    >
+                      <span
+                        class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                    </div>
+
+                    <div class="text-[18px] font-bold leading-[130%] mb-3">
+                      GHz CMOS power amplifier using a current source to enhance
+                      its dynamic enhance its dynamic range
+                    </div>
+
+                    <div class="text-[14px] text-[#B4BCCC] mb-[14px]">
+                      MW급 RDF용 순환유동층보일러에서 유동사 입도가 연소가스
+                      온도에 미치는 영향
+                    </div>
+
+                    <div class="text-[14px] text-[#6C7687] mb-[27px] space-x-3">
+                      <span
+                        >Yoon, Heijin(윤혜진)
+                        <img
+                          src="../images/id-mark.png"
+                          class="w-[18px] inline-block ml-1"
+                          alt="id"
+                      /></span>
+                      <span>Tae-jin, Ahn(안태진)</span>
+                      <span>Kim, Su-jin(김수진)</span>
+                    </div>
+
+                    <div
+                      class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                    >
+                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                      <span>Integrative Medicine Research</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>26(5)</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>pp.99~109</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>2020.12</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Publisher</span
+                      >
+                      <span>한국정보처리학회</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Citation Count</span
+                      >
+                      <span>5</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span
+                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                        >Registered DB</span
+                      >
+                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                        >KCI</span
+                      >
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                >
+                  <div class="w-[calc(100%-288px)]">
+                    <div
+                      class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
+                    >
+                      <span
+                        class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                      <span
+                        class="type-scopus bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                      >
+                      <span
+                        class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                    </div>
+
+                    <div class="text-[18px] font-bold leading-[130%] mb-3">
+                      Performance test of prototype LAMPS Start Counter using
+                      proton beams at 100 MeV
+                    </div>
+
+                    <div class="text-[14px] text-[#B4BCCC] mb-[14px]">
+                      MW급 RDF용 순환유동층보일러에서 유동사 입도가 연소가스
+                      온도에 미치는 영향
+                    </div>
+
+                    <div class="text-[14px] text-[#6C7687] mb-[27px] space-x-3">
+                      <span>Yoon, Heijin(윤혜진)</span>
+                      <span>Tae-jin, Ahn(안태진)</span>
+                      <span>Kim, Su-jin(김수진)</span>
+                    </div>
+
+                    <div
+                      class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                    >
+                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                      <span>NANO LETTERS</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>26(5)</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>pp.99~109</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>2020.12</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Publisher</span
+                      >
+                      <span>한국정보처리학회</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Citation Count</span
+                      >
+                      <span>5</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span
+                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                        >Registered DB</span
+                      >
+                      <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                        >SCIE</span
+                      >
+                      <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                        >Scopus</span
+                      >
+                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                        >KCI</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="shrink-0 w-[258px]">
+                    <img src="../images/thum01.png" alt="thum" />
+                  </div>
+                </li>
+
+                <li
+                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                >
+                  <div class="w-[calc(100%-288px)]">
+                    <div
+                      class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
+                    >
+                      <span
+                        class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                    </div>
+
+                    <div class="text-[18px] font-bold leading-[130%] mb-3">
+                      GHz CMOS power amplifier using a current source to enhance
+                      its dynamic enhance its dynamic range
+                    </div>
+
+                    <div class="text-[14px] text-[#B4BCCC] mb-[14px]">
+                      MW급 RDF용 순환유동층보일러에서 유동사 입도가 연소가스
+                      온도에 미치는 영향
+                    </div>
+
+                    <div class="text-[14px] text-[#6C7687] mb-[27px] space-x-3">
+                      <span
+                        >Yoon, Heijin(윤혜진)
+                        <img
+                          src="../images/id-mark.png"
+                          class="w-[18px] inline-block ml-1"
+                          alt="id"
+                      /></span>
+                      <span>Tae-jin, Ahn(안태진)</span>
+                      <span>Kim, Su-jin(김수진)</span>
+                    </div>
+
+                    <div
+                      class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                    >
+                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                      <span>Integrative Medicine Research</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>26(5)</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>pp.99~109</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>2020.12</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Publisher</span
+                      >
+                      <span>한국정보처리학회</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Citation Count</span
+                      >
+                      <span>5</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span
+                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                        >Registered DB</span
+                      >
+                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                        >KCI</span
+                      >
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                >
+                  <div class="w-[calc(100%-288px)]">
+                    <div
+                      class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
+                    >
+                      <span
+                        class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >JCR 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                      <span
+                        class="type-scopus bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >Scopus 2023 <strong>Top 0.97% / Q1</strong></span
+                      >
+                      <span
+                        class="type-kci bg-[#F3F5F9] px-[8px] py-[6px] text-[13px] rounded"
+                        >KCI 2023 <strong>Top 2.33% / Q1</strong></span
+                      >
+                    </div>
+
+                    <div class="text-[18px] font-bold leading-[130%] mb-3">
+                      Performance test of prototype LAMPS Start Counter using
+                      proton beams at 100 MeV
+                    </div>
+
+                    <div class="text-[14px] text-[#B4BCCC] mb-[14px]">
+                      MW급 RDF용 순환유동층보일러에서 유동사 입도가 연소가스
+                      온도에 미치는 영향
+                    </div>
+
+                    <div class="text-[14px] text-[#6C7687] mb-[27px] space-x-3">
+                      <span>Yoon, Heijin(윤혜진)</span>
+                      <span>Tae-jin, Ahn(안태진)</span>
+                      <span>Kim, Su-jin(김수진)</span>
+                    </div>
+
+                    <div
+                      class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                    >
+                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                      <span>NANO LETTERS</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>26(5)</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>pp.99~109</span>
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+                      <span>2020.12</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Publisher</span
+                      >
+                      <span>한국정보처리학회</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                        >Citation Count</span
+                      >
+                      <span>5</span>
+
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <span
+                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                        >Registered DB</span
+                      >
+                      <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                        >SCIE</span
+                      >
+                      <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                        >Scopus</span
+                      >
+                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                        >KCI</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="shrink-0 w-[258px]">
+                    <img src="../images/thum01.png" alt="thum" />
+                  </div>
+                </li>
+              </ul>
+
+              <div class="text-center mt-10">
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center gap-1 py-3 px-8 bg-[#F3F5F9] border border-[#E4E8F1] rounded-xl"
+                >
+                  <span class="text-[14px] text-[#6C7687]">More</span>
+                  <img
+                    src="../images/launch-ico-6C7687.png"
+                    class="w-[16px]"
+                    alt="link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- .journal-list-cont -->
+
+          <div
+            class="right-box hidden mt-[105px] w-[310px] lg:block sticky top-[140px]"
+          >
+            <div class="w-full p-8 bg-white rounded-xl">
+              <h2 class="flex items-center gap-[6px] mb-5">
+                <img
+                  src="../images/link-ico.png"
+                  class="w-[22px]"
+                  alt="link icon"
+                />
+                <span class="text-[18px] font-bold">Extra Link</span>
+              </h2>
+
+              <div class="flex flex-col gap-1">
+                <a
+                  href="#"
+                  class="flex justify-between items-center px-[14px] py-[10px] bg-[#F3F5F9] rounded-md"
+                >
+                  <span class="text-[#376BDB] text-[14px] font-semibold"
+                    >JCR Journal</span
+                  >
+                  <img
+                    src="../images/launch-ico-bl.png"
+                    class="w-[18px]"
+                    alt="launch"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  class="flex justify-between items-center px-[14px] py-[10px] bg-[#F3F5F9] rounded-md"
+                >
+                  <span class="text-[#376BDB] text-[14px] font-semibold"
+                    >SCOPUS Journal</span
+                  >
+                  <img
+                    src="../images/launch-ico-bl.png"
+                    class="w-[18px]"
+                    alt="launch"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  class="flex justify-between items-center px-[14px] py-[10px] bg-[#F3F5F9] rounded-md"
+                >
+                  <span class="text-[#376BDB] text-[14px] font-semibold"
+                    >e-Journal</span
+                  >
+                  <img
+                    src="../images/launch-ico-bl.png"
+                    class="w-[18px]"
+                    alt="launch"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full p-8 mt-8 bg-white rounded-xl">
+              <h2 class="flex items-center gap-[6px] mb-5">
+                <img
+                  src="../images/notice-ico.png"
+                  class="w-[22px]"
+                  alt="link icon"
+                />
+                <span class="text-[18px] font-bold">Notice</span>
+              </h2>
+
+              <p class="text-[14px] leading-[150%] text-[#6C7687] mb-4">
+                저널 페이지 내 정보는 업데이트 시점에 따라 차이가 발생될 수 있음
+              </p>
+
+              <ul
+                class="flex flex-col gap-2 text-[14px] text-[#6C7687] leading-[100%] list-disc pl-4"
+              >
+                <li>JCR : 2025.6.10</li>
+                <li>Scopus : 2025.6.1</li>
+                <li>KCI : 2025.6.1</li>
+              </ul>
+            </div>
+          </div>
+          <!-- .right-box -->
+        </div>
+      </div>
+      <!-- #container -->
+
+      <footer
+        class="mt-[120px] px-6 text-sm pb-10 lg:pb-[34px] lg:px-[100px] lg:mt-40"
+      >
+        <div
+          class="border-t border-t-[#D1D5DF] pt-7 lg:flex lg:items-start lg:gap-[66px]"
+        >
+          <div class="flogo mb-10 shrink-0">
+            <img src="../images/logo-gr.png" alt="logo" class="w-[178px]" />
+          </div>
+          <!-- .flogo -->
+
+          <div class="fcont lg:pt-[14px]">
+            <div class="fmenu text-sm text-[#333] flex items-center gap-4">
+              <a href="#">Privacy Policy</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Notice</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">FAQ</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Need Help?</a>
+            </div>
+
+            <address class="mt-7 text-[#6C7687] not-italic lg:mt-9">
+              <div class="mb-[10px]">
+                (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
+              </div>
+              <div class="lg:flex">
+                <p
+                  class="mb-[10px] lg:after:content-[''] lg:after:inline-block lg:after:w-[1px] lg:after:h-[11px] lg:after:bg-[#888888] lg:after:ml-[8px] lg:after:mr-[10px]"
+                >
+                  Tel. 051-510-1817, 1040
+                </p>
+                <p>Fax. 051-513-9733</p>
+              </div>
+            </address>
+
+            <div class="copy mt-7 text-[#6C7687] lg:mt-4">
+              <p>
+                Copyright 2025 Pusan National University Library. All Rights
+                Reserved.
+              </p>
+              <p class="mt-7 lg:mt-[10px]">
+                PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
+                저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
+                형사 상의 책임을 질 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <!-- .fcont -->
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script></script>
+  </body>
+</html>
