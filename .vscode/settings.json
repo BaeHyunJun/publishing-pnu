@@ -1,11 +1,11 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "tailwindCSS.includeLanguages": {
-    "html": "html",
-    "javascript": "javascript",
-    "javascriptreact": "javascript",
-    "typescriptreact": "javascript"
-  }
+  "editor.tabSize": 2
+  // "tailwindCSS.includeLanguages": {
+  //   "html": "html",
+  //   "javascript": "javascript",
+  //   "javascriptreact": "javascript",
+  //   "typescriptreact": "javascript"
+  // }
 }

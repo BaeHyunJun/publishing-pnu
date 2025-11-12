@@ -238,6 +238,7 @@
   border-radius: 50%;
   box-shadow: none;
   top: -6px; /* 트랙 중앙 정렬 */
+  transform: translateX(-8px);
 }
 .noUi-handle:after,
 .noUi-handle:before {
