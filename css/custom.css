@@ -237,8 +237,9 @@
   background: #fff !important;
   border-radius: 50%;
   box-shadow: none;
-  top: -6px; /* 트랙 중앙 정렬 */
-  transform: translateX(-9px);
+  top: -6px;
+  transform: translateX(-50%);
+  cursor: pointer;
 }
 .noUi-handle:after,
 .noUi-handle:before {
