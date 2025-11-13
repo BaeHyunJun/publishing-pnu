@@ -5854,7 +5854,6 @@
       </div>
 
       <h2 class="font-bold">작동11 : 관심버튼</h2>
-      <!-- 작동11 - 관심버튼 -->
       <div class="intrest w-[38px] h-[38px] cursor-pointer group">
         <img
           src="../images/intrest-default.png"
@@ -5871,6 +5870,62 @@
           class="interest-active hidden"
           alt="interest-active"
         />
+      </div>
+
+      <h2 class="font-bold">작동12 : FWCI버튼(Resource Detail 페이지)</h2>
+      <div class="flex items-start gap-x-2 lg:gap-x-3">
+        <p
+          class="fwci-pop flex items-center gap-1 shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium cursor-pointer lg:w-[110px]"
+        >
+          FWCI
+          <img src="../images/error-ico-8D9AAF.png" class="w-4" alt="info" />
+        </p>
+        <div
+          class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
+        >
+          <span class="font-semibold">Scopus 1.4</span>
+        </div>
+
+        <div
+          class="fwci-bkbg fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] z-100 hidden"
+        ></div>
+
+        <div
+          class="fwci-box fixed top-[122px] left-[50%] w-[calc(100%-80px)] p-10 translate-x-[-50%] z-100 bg-white rounded-[12px] lg:w-[600px] lg:top-[176px] hidden"
+        >
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-[18px] font-bold">JCR Category</h3>
+            <button class="fwci-close">
+              <img
+                src="../images/clear-icon-333.png"
+                class="w-[16px] cursor-pointer"
+                alt="close"
+              />
+            </button>
+          </div>
+
+          <div class="text-[14px] leading-[140%] font-medium">
+            <p class="mb-[10px]">
+              Field-Weighted Citation Impact (FWCI) in SciVal indicates how the
+              number of citations received by an entity’s publications compares
+              with the average number of citations received by all other similar
+              publications in the data universe
+            </p>
+
+            <ul class="flex flex-col gap-[12px] list-disc pl-[20px]">
+              <li>
+                A FWCI of 1.00 indicates that the entity’s publications have
+                been cited exactly as would be expected based on the global
+                average for similar publications
+              </li>
+              <li>
+                A FWCI of more than 1.00 indicates above the global average for
+                similar publications; for example, 2.11 means 111% more than the
+                world average.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -6336,6 +6391,39 @@
 
       btn_intrest.addEventListener("click", function () {
         btn_intrest.classList.toggle("active");
+      });
+
+      // 작동12
+      document.addEventListener("DOMContentLoaded", function () {
+        const openBtn = document.querySelector(".fwci-pop");
+        const bg = document.querySelector(".fwci-bkbg");
+        const box = document.querySelector(".fwci-box");
+        const closeBtn = document.querySelector(".fwci-close");
+
+        if (!openBtn || !bg || !box) return; // 안전 체크
+
+        // 열기
+        openBtn.addEventListener("click", () => {
+          bg.classList.remove("hidden");
+          box.classList.remove("hidden");
+          document.body.style.overflow = "hidden"; // 스크롤 잠금 (선택사항)
+        });
+
+        // 닫기 (배경 클릭)
+        bg.addEventListener("click", () => {
+          bg.classList.add("hidden");
+          box.classList.add("hidden");
+          document.body.style.overflow = ""; // 스크롤 복원
+        });
+
+        // 닫기 (버튼 클릭)
+        if (closeBtn) {
+          closeBtn.addEventListener("click", () => {
+            bg.classList.add("hidden");
+            box.classList.add("hidden");
+            document.body.style.overflow = "";
+          });
+        }
       });
     </script>
   </body>

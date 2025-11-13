@@ -352,8 +352,8 @@
                 alt="back"
               />
               <span
-                class="text-[14px] text-[#6C7687] font-medium leading-[100%] xxl:text-red-500"
-                >Back<span class="hidden lg:inline lg:text-[16px]">
+                class="text-[14px] text-[#6C7687] font-medium leading-[100%] lg:text-[16px] xxl:text-red-500"
+                >Back<span class="hidden lg:inline">
                   to Resource list</span
                 ></span
               >
@@ -391,7 +391,7 @@
               class="tit-area w-full flex justify-between items-center lg:mb"
             >
               <h2
-                class="mb-5 text-[22px] leading-[130%] font-black lg:text-[26px] lg:mb-6"
+                class="mb-5 text-[22px] leading-[130%] font-black lg:text-[26px] lg:mb-6 lg:w-[calc(100%-100px)]"
               >
                 GHz CMOS power amplifier using a current source to enhance its
                 dynamic enhance its dynamic range
@@ -420,18 +420,19 @@
             </div>
 
             <div
-              class="pt-6 flex flex-col gap-y-6 lg:gap-y-5 lg:border-b lg:border-b-[#E6E8EC] lg:pb-[26px]"
+              class="py-6 flex flex-col gap-y-5 border-y border-y-[#E6E8EC] lg:pb-[32px]"
             >
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
+                  class="shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
                 >
                   Document Type
                 </p>
                 <div
                   class="flex flex-col gap-[6px] text-[13px] lg:flex-row lg:flex-wrap"
                 >
-                  <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
+                  <span
+                    class="text-[#6C7687] bg-[#F3F5F9] px-[8px] py-[6px] rounded"
                     >Article</span
                   >
                 </div>
@@ -439,32 +440,40 @@
 
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
+                  class="shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
                 >
                   Open Access
                 </p>
-                <div
-                  class="flex flex-col gap-[6px] text-[13px] lg:flex-row lg:flex-wrap"
-                >
-                  <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
-                    ><img src="../images/oa-gold-ico.png" alt="gold" /> Gold
-                    OA</span
+                <div class="flex flex-wrap gap-[6px] text-[13px]">
+                  <span
+                    class="flex items-center gap-[3px] text-[#F68212] font-semibold"
+                    ><img
+                      src="../images/oa-gold-ico.png"
+                      class="w-[11px]"
+                      alt="gold"
+                    />
+                    Gold OA</span
                   >
-                  <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
-                    ><img src="../images/oa-green-ico.png" alt="green" /> Green
-                    OA</span
+                  <span
+                    class="flex items-center gap-[3px] text-[#398023] font-semibold"
+                    ><img
+                      src="../images/oa-green-ico.png"
+                      class="w-[11px]"
+                      alt="green"
+                    />
+                    Green OA</span
                   >
                 </div>
               </div>
 
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
+                  class="shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium pt-1 lg:w-[110px]"
                 >
                   Journal Ranking
                 </p>
                 <div
-                  class="flex flex-col gap-[6px] text-[13px] lg:flex-row lg:flex-wrap"
+                  class="flex flex-col items-start gap-[6px] text-[13px] lg:flex-row lg:flex-wrap"
                 >
                   <span class="type-jcr bg-[#F3F5F9] px-[8px] py-[6px] rounded"
                     >JCR 2023 <strong>Top 2.33% / Q1</strong></span
@@ -481,7 +490,7 @@
 
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                  class="shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
                 >
                   Registered DB
                 </p>
@@ -499,7 +508,7 @@
                   >
                   <a
                     href="#"
-                    class="w-full ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium lg:w-auto lg:ml-2"
+                    class="ml-[6px] text-[13px] text-[#B4BCCC] underline underline-offset-2 font-medium lg:w-auto lg:ml-2"
                     >PNU Articles (<span>2</span>)</a
                   >
                 </div>
@@ -507,61 +516,100 @@
 
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                  class="shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
                 >
                   Collaboration
                 </p>
                 <div
                   class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
                 >
-                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
-                    >International</span
-                  >
+                  <span class="font-semibold">International</span>
                 </div>
               </div>
 
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                  class="shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
                 >
                   Citation
                 </p>
                 <div
                   class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
                 >
-                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
-                    >Web of Science</span
-                  >
+                  <span class="font-semibold">Web of Science</span>
                 </div>
               </div>
 
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                  class="fwci-pop flex items-center gap-1 shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium cursor-pointer lg:w-[110px]"
                 >
-                  FWCI <img src="../images/error-ico-8D9AAF.png" alt="info" />
+                  FWCI
+                  <img
+                    src="../images/error-ico-8D9AAF.png"
+                    class="w-4"
+                    alt="info"
+                  />
                 </p>
                 <div
                   class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
                 >
-                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
-                    >Scopus 1.4</span
-                  >
+                  <span class="font-semibold">Scopus 1.4</span>
+                </div>
+
+                <div
+                  class="fwci-bkbg fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] z-100 hidden"
+                ></div>
+
+                <div
+                  class="fwci-box fixed top-[122px] left-[50%] w-[calc(100%-80px)] p-10 translate-x-[-50%] z-100 bg-white rounded-[12px] lg:w-[600px] lg:top-[176px] hidden"
+                >
+                  <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-[18px] font-bold">JCR Category</h3>
+                    <button class="fwci-close">
+                      <img
+                        src="../images/clear-icon-333.png"
+                        class="w-[16px] cursor-pointer"
+                        alt="close"
+                      />
+                    </button>
+                  </div>
+
+                  <div class="text-[14px] leading-[140%] font-medium">
+                    <p class="mb-[10px]">
+                      Field-Weighted Citation Impact (FWCI) in SciVal indicates
+                      how the number of citations received by an entity’s
+                      publications compares with the average number of citations
+                      received by all other similar publications in the data
+                      universe
+                    </p>
+
+                    <ul class="flex flex-col gap-[12px] list-disc pl-[20px]">
+                      <li>
+                        A FWCI of 1.00 indicates that the entity’s publications
+                        have been cited exactly as would be expected based on
+                        the global average for similar publications
+                      </li>
+                      <li>
+                        A FWCI of more than 1.00 indicates above the global
+                        average for similar publications; for example, 2.11
+                        means 111% more than the world average.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <div class="flex items-start gap-x-2 lg:gap-x-3">
                 <p
-                  class="shrink-0 w-[100px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
+                  class="shrink-0 w-[110px] text-[14px] leading-[150%] text-[#8D9AAF] font-medium lg:w-[110px]"
                 >
                   Journal I/F
                 </p>
                 <div
                   class="flex flex-wrap items-center gap-y-[10px] gap-x-[2px] text-[14px]"
                 >
-                  <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
-                    >Journal 2023 (7.1)</span
-                  >
+                  <span class="font-semibold">Journal 2023 (7.1)</span>
                 </div>
               </div>
             </div>
@@ -573,22 +621,22 @@
 
               <ul
                 id="customOptions"
-                class="mb-4 p-[6px] bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] inline-flex text-[15px] gap-[5px]"
+                class="mb-4 p-1 bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] inline-flex text-[14px] gap-[5px]"
               >
                 <li
-                  class="active w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+                  class="active px-[15px] py-[6px] text-center hover:bg-white rounded-lg cursor-pointer"
                   data-value="option1"
                 >
                   List
                 </li>
                 <li
-                  class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+                  class="text-center px-[15px] py-[6px] hover:bg-white rounded-lg cursor-pointer"
                   data-value="option2"
                 >
                   Only PNU
                 </li>
                 <li
-                  class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
+                  class="text-center px-[15px] py-[6px] hover:bg-white rounded-lg cursor-pointer"
                   data-value="option3"
                 >
                   Institution
@@ -601,8 +649,8 @@
                     <tr>
                       <th>No.</th>
                       <th>Author Name</th>
-                      <th>Institution Name</th>
-                      <th>Affiliation</th>
+                      <th class="w-[180px] xl:w-auto">Institution Name</th>
+                      <th class="w-[180px] xl:w-auto">Affiliation</th>
                       <th>Author Role</th>
                     </tr>
                   </thead>
@@ -610,57 +658,79 @@
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>An, Song eui</td>
-                      <td>KAIST</td>
-                      <td></td>
+                      <td class="text-[#376BDB]">An, Song eui</td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        KAIST
+                      </td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto"></td>
                       <td>first Author</td>
                     </tr>
 
                     <tr>
                       <td>2</td>
-                      <td>Ryu, Min-Su</td>
-                      <td>Pusan National University</td>
-                      <td>Dept of Engineering</td>
+                      <td class="text-[#376BDB]">Ryu, Min-Su</td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Pusan National University
+                      </td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Dept of Engineering
+                      </td>
                       <td>Conrresponding Author</td>
                     </tr>
 
                     <tr>
                       <td>3</td>
-                      <td>Kim, daeho</td>
-                      <td>Pusan National University</td>
-                      <td>School of BioMedical Convergence Engineering</td>
+                      <td class="text-[#376BDB]">Kim, daeho</td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Pusan National University
+                      </td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        School of BioMedical Convergence Engineering
+                      </td>
                       <td>co-author</td>
                     </tr>
 
                     <tr>
                       <td>4</td>
-                      <td>Kim, daeho</td>
-                      <td>Beijing Institute of Technology</td>
-                      <td></td>
+                      <td class="text-[#376BDB]">Kim, daeho</td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Beijing Institute of Technology
+                      </td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto"></td>
                       <td>co-author</td>
                     </tr>
 
                     <tr>
                       <td>5</td>
-                      <td>Ryu, Min-Su</td>
-                      <td>Pusan National University</td>
-                      <td>Dept of Engineering</td>
+                      <td class="text-[#376BDB]">Ryu, Min-Su</td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Pusan National University
+                      </td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Dept of Engineering
+                      </td>
                       <td>Conrresponding Author</td>
                     </tr>
 
                     <tr>
                       <td>6</td>
-                      <td>Kim, daeho</td>
-                      <td>Pusan National University</td>
-                      <td>School of BioMedical Convergence Engineering</td>
+                      <td class="text-[#376BDB]">Kim, daeho</td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Pusan National University
+                      </td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        School of BioMedical Convergence Engineering
+                      </td>
                       <td>co-author</td>
                     </tr>
 
                     <tr>
                       <td>7</td>
-                      <td>Kim, daeho</td>
-                      <td>Beijing Institute of Technology</td>
-                      <td></td>
+                      <td class="text-[#376BDB]">Kim, daeho</td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto">
+                        Beijing Institute of Technology
+                      </td>
+                      <td class="w-[180px] !whitespace-normal xl:w-auto"></td>
                       <td>co-author</td>
                     </tr>
                   </tbody>
@@ -673,30 +743,47 @@
                 Source
               </h2>
 
-              <div>
-                <p>Journal of high Energy Physics</p>
-                <div>
+              <div
+                class="p-[22px] border border-[#E4E8F1] rounded-[12px] lg:p-8"
+              >
+                <p
+                  class="mb-4 text-15px font-bold leading-[130%] lg:text-[18px] lg:leading-[150%] lg:mb-3"
+                >
+                  JOURNAL OF HIGH ENERGY PHYSICS
+                </p>
+                <div
+                  class="flex flex-wrap items-center gap-x-4 gap-y-[6px] text-[14px] text-[#B4BCCC] leading-[100%]"
+                >
                   <div>
                     <span>ISSN</span>
-                    <span>1234-5678</span>
+                    <span
+                      class="ml-[6px] font-semibold text-[#6C7687] lg:ml-[10px]"
+                      >1234-5678</span
+                    >
                   </div>
 
                   <span
-                    class="inline-block w-[1px] h-[10px] bg-[#B4BCCC]"
+                    class="hidden lg:inline-block w-[1px] h-[10px] bg-[#E4E8F1]"
                   ></span>
 
                   <div>
                     <span>eISSN</span>
-                    <span>1234-5678</span>
+                    <span
+                      class="ml-[6px] font-semibold text-[#6C7687] lg:ml-[10px]"
+                      >1234-5678</span
+                    >
                   </div>
 
                   <span
-                    class="inline-block w-[1px] h-[10px] bg-[#B4BCCC]"
+                    class="hidden lg:inline-block w-[1px] h-[10px] bg-[#E4E8F1]"
                   ></span>
 
                   <div>
                     <span>Publisher</span>
-                    <span>Institute of Economic Research</span>
+                    <span
+                      class="ml-[6px] font-semibold text-[#6C7687] lg:ml-[10px]"
+                      >Institute of Economic Research</span
+                    >
                   </div>
                 </div>
               </div>
@@ -717,10 +804,23 @@
               </ul>
 
               <div class="overflow-x-auto">
-                <table class="w-full min-w-[800px]">
+                <table class="w-full min-w-[800px] table-fixed">
+                  <colgroup>
+                    <col class="w-[60px] !p-[10px]" />
+                    <col class="w-[120px]" />
+                    <col class="w-[200px] lg:w-[260px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[120px]" />
+                    <col class="w-[120px]" />
+                    <col class="w-[120px]" />
+                    <col class="w-[100px]" />
+                    <col class="w-[100px]" />
+                    <!-- Year -->
+                  </colgroup>
+
                   <thead>
                     <tr>
-                      <th>No.</th>
+                      <th class="!p-[10px]">No.</th>
                       <th>DB</th>
                       <th>Category</th>
                       <th>Num of Journal</th>
@@ -734,21 +834,25 @@
 
                   <tbody>
                     <tr>
-                      <td>1</td>
+                      <td class="!p-[10px]">1</td>
                       <td>JCR</td>
-                      <td>SCIE - PHYSICS, PARTICLES & FIELDS</td>
-                      <td>31<br />(29)*</td>
-                      <td>5<br />(5)*</td>
-                      <td>16.14%<br />(17.24%)*</td>
+                      <td class="!whitespace-normal">
+                        SCIE - PHYSICS, PARTICLES & FIELDS
+                      </td>
+                      <td>31<br /><span>(29)*</span></td>
+                      <td>5<br /><span>(5)*</span></td>
+                      <td>16.14%<br /><span>(17.24%)*</span></td>
                       <td>85.5</td>
                       <td>1</td>
                       <td>2023</td>
                     </tr>
 
                     <tr>
-                      <td>2</td>
+                      <td class="!p-[10px]">2</td>
                       <td>SCOPUS</td>
-                      <td>Nuclear and High Energy Physics</td>
+                      <td class="!whitespace-normal">
+                        Nuclear and High Energy Physics
+                      </td>
                       <td>87</td>
                       <td>5</td>
                       <td>5.75%</td>
@@ -761,11 +865,13 @@
               </div>
             </div>
 
-            <div class="hidden lg:block mt-[80px]">
+            <div class="mt-[50px]">
               <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
                 Abstract
               </h2>
-              <div class="text-[16px] text-[#6C7687] leading-[150%]">
+              <div
+                class="text-[14px] text-[#6C7687] leading-[140%] lg:text-[15px] lg:leading-[150%]"
+              >
                 The production cross section of inclusive isolated photons has
                 been measured by the ALICE experiment at the CERN LHC in pp
                 collisions at centre-of-momentum energy of root s = 13 TeV
@@ -773,8 +879,8 @@
                 measurement is performed by combining the measurements of the
                 electromagnetic calorimeter EMCal and the central tracking
                 detectors ITS and TPC, covering a pseudorapidity range of
-                vertical bar eta(gamma)vertical bar < 0.67 and a transverse
-                momentum range of 7 < 200 GeV/c. The result extends to lower
+                vertical bar eta(gamma)vertical bar &lt; 0.67 and a transverse
+                momentum range of 7 &lt; 200 GeV/c. The result extends to lower
                 p(T)(gamma) and x(T)(gamma) = 2p(T)(gamma)/root s ranges, the
                 lowest x(T)(gamma) of any isolated photon measurements to date,
                 extending significantly those measured by the ATLAS and CMS
@@ -788,14 +894,32 @@
                 uncertainties.
               </div>
 
-              <div>
-                <p>Keywords</p>
-                <div>
-                  <span>3D printing</span>
-                  <span>Digital Light Processing</span>
-                  <span>LiDAR</span>
-                  <span>Scanning micromirror</span>
-                  <span>Thermal improvement</span>
+              <div
+                class="p-[18px] mt-5 border border-[#E4E8F1] rounded-[12px] lg:mt-4"
+              >
+                <p
+                  class="mb-3 text-[14px] font-semibold leading-[100%] lg:mb-4"
+                >
+                  Keywords
+                </p>
+                <div
+                  class="flex flex-wrap items-center gap-[6px] text-[13px] text-[#6C7687] leading-[100%]] lg:text-[15px]"
+                >
+                  <span class="px-3 py-[6px] bg-[#F3F5F9] rounded-full"
+                    >3D printing</span
+                  >
+                  <span class="px-3 py-[6px] bg-[#F3F5F9] rounded-full"
+                    >Digital Light Processing</span
+                  >
+                  <span class="px-3 py-[6px] bg-[#F3F5F9] rounded-full"
+                    >LiDAR</span
+                  >
+                  <span class="px-3 py-[6px] bg-[#F3F5F9] rounded-full"
+                    >Scanning micromirror</span
+                  >
+                  <span class="px-3 py-[6px] bg-[#F3F5F9] rounded-full"
+                    >Thermal improvement</span
+                  >
                 </div>
               </div>
             </div>
@@ -805,19 +929,19 @@
                 References
               </h2>
 
-              <div class="overflow-x-auto">
-                <table class="w-full min-w-[800px]">
+              <div>
+                <table class="w-full table-fixed">
                   <thead>
                     <tr>
-                      <th>No.</th>
-                      <th>참고문헌 정보</th>
+                      <th class="w-[60px] p-[10px]">No.</th>
+                      <th class="w-[calc(100%-60px)]">참고문헌 정보</th>
                     </tr>
                   </thead>
 
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>
+                      <td class="!p-[10px]">1</td>
+                      <td class="!whitespace-normal text-left">
                         Stenqvist A, Bungum M, Pinborg AB, Bogstad J, Englund
                         AL, Grøndahl ML, et al. High sperm deoxyribonucleic acid
                         fragmentation index is associated with an increased risk
@@ -827,8 +951,8 @@
                     </tr>
 
                     <tr>
-                      <td>2</td>
-                      <td>
+                      <td class="!p-[10px]">2</td>
+                      <td class="!whitespace-normal text-left">
                         Inversetti A, Bossi A, Cristodoro M, Larcher A, Busnelli
                         A, Grande G, et al. Recurrent pregnancy loss: a male
                         crucial factor-A systematic review and meta-analysis.
@@ -837,8 +961,8 @@
                     </tr>
 
                     <tr>
-                      <td>3</td>
-                      <td>
+                      <td class="!p-[10px]">3</td>
+                      <td class="!whitespace-normal text-left">
                         Pozzi E, Fallara G, Belladelli F, Corsini C, Raffo M,
                         Candela L, et al. Clinical parameters associated with
                         altered sperm DNA fragmentation index among primary
@@ -852,7 +976,7 @@
 
               <!-- 페이저 -->
               <div
-                class="flex items-center justify-center gap-2 font-[Pretendard] text-[15px] mt-[50px] lg:mt-[40px]"
+                class="hidden items-center justify-center gap-2 font-[Pretendard] text-[15px] mt-[50px] lg:flex lg:mt-[40px]"
               >
                 <!-- 이전 버튼 -->
                 <button
@@ -1379,12 +1503,153 @@
                 </a>
               </div>
             </div>
+
+            <div class="hidden mt-[60px] lg:block lg:mt-[80px]">
+              <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                Citing papers
+              </h2>
+
+              <ul
+                class="flex flex-col px-[32px] border border-[#E4E8F1] rounded-[12px]"
+              >
+                <li class="py-[32px] border-b border-b-[#E4E8F1]">
+                  <h3 class="mb-4 text-[16px] font-bold leading-[150%]">
+                    GHz CMOS power amplifier using a current source to enhance
+                    its dynamic enhance its dynamic range
+                  </h3>
+
+                  <div
+                    class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                  >
+                    <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                    <span>NANO LETTERS</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>Vol 23(5)</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>pp.99~109</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>2020.12</span>
+                  </div>
+                </li>
+
+                <li class="py-[32px] border-b border-b-[#E4E8F1]">
+                  <h3 class="mb-4 text-[16px] font-bold leading-[150%]">
+                    SNR analysis of multi-aperture ultrasound and photoacoustic
+                    imaging systems
+                  </h3>
+
+                  <div
+                    class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                  >
+                    <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                    <span>Journal of the Acoustical Society of America</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>Vol 23(5)</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>pp.99~109</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>2020.12</span>
+                  </div>
+                </li>
+
+                <li class="py-[32px] border-b border-b-[#E4E8F1]">
+                  <h3 class="mb-4 text-[16px] font-bold leading-[150%]">
+                    UPE-Net: A Spatial Information Enhanced Network for Ulva
+                    Prolifera Extraction from GF-1 WFV Images
+                  </h3>
+
+                  <div
+                    class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                  >
+                    <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                    <span
+                      >IEEE Journal of Selected Topics in Applied Earth
+                      Observations and Remote Sensing</span
+                    >
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>Vol 23(5)</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>pp.99~109</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>2020.12</span>
+                  </div>
+                </li>
+
+                <li class="py-[32px] border-b border-b-[#E4E8F1]">
+                  <h3 class="mb-4 text-[16px] font-bold leading-[150%]">
+                    Navigating challenges and solutions in quantitative
+                    photoacoustic imaging
+                  </h3>
+
+                  <div
+                    class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                  >
+                    <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                    <span>Applied Physics Reviews</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>Vol 23(5)</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>pp.99~109</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>2020.12</span>
+                  </div>
+                </li>
+
+                <li class="py-[32px]">
+                  <h3 class="mb-4 text-[16px] font-bold leading-[150%]">
+                    Joint segmentation and image reconstruction with error
+                    prediction in photoacoustic imaging using deep learning
+                  </h3>
+
+                  <div
+                    class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
+                  >
+                    <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                    <span>Applied Physics Reviews</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>Vol 23(5)</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>pp.99~109</span>
+                    <span
+                      class="w-[1px] h-[10px] bg-[#B4BCCC] inline-block"
+                    ></span>
+                    <span>2020.12</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           <!-- .journal-list-cont -->
 
-          <div
-            class="right-box hidden mt-[105px] w-[310px] lg:block sticky top-[140px]"
-          >
+          <div class="right-box hidden mt-[105px] w-[310px] lg:block">
             <div class="w-full p-8 bg-white rounded-xl">
               <h2 class="flex items-center gap-[6px] mb-5">
                 <img
@@ -1401,7 +1666,7 @@
                   class="flex justify-between items-center px-[14px] py-[10px] bg-[#F3F5F9] rounded-md"
                 >
                   <span class="text-[#376BDB] text-[14px] font-semibold"
-                    >JCR Journal</span
+                    >Web of Science</span
                   >
                   <img
                     src="../images/launch-ico-bl.png"
@@ -1415,7 +1680,35 @@
                   class="flex justify-between items-center px-[14px] py-[10px] bg-[#F3F5F9] rounded-md"
                 >
                   <span class="text-[#376BDB] text-[14px] font-semibold"
-                    >SCOPUS Journal</span
+                    >Scopus</span
+                  >
+                  <img
+                    src="../images/launch-ico-bl.png"
+                    class="w-[18px]"
+                    alt="launch"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  class="flex justify-between items-center px-[14px] py-[10px] bg-[#F3F5F9] rounded-md"
+                >
+                  <span class="text-[#376BDB] text-[14px] font-semibold"
+                    >DOI article</span
+                  >
+                  <img
+                    src="../images/launch-ico-bl.png"
+                    class="w-[18px]"
+                    alt="launch"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  class="flex justify-between items-center px-[14px] py-[10px] bg-[#F3F5F9] rounded-md"
+                >
+                  <span class="text-[#376BDB] text-[14px] font-semibold"
+                    >Fulltext</span
                   >
                   <img
                     src="../images/launch-ico-bl.png"
@@ -1442,25 +1735,46 @@
 
             <div class="w-full p-8 mt-8 bg-white rounded-xl">
               <h2 class="flex items-center gap-[6px] mb-5">
-                <img
-                  src="../images/notice-ico.png"
-                  class="w-[22px]"
-                  alt="link icon"
-                />
-                <span class="text-[18px] font-bold">Notice</span>
+                <span class="text-[18px] font-bold">Altmetric</span>
               </h2>
 
-              <p class="text-[14px] leading-[150%] text-[#6C7687] mb-4">
-                저널 페이지 내 정보는 업데이트 시점에 따라 차이가 발생될 수 있음
-              </p>
+              <div class="">
+                <div>
+                  <img
+                    src="../images/altmetric01.png"
+                    class="w-[166px] mx-auto"
+                    alt="altmetric img"
+                  />
+                </div>
 
-              <ul
-                class="flex flex-col gap-2 text-[14px] text-[#6C7687] leading-[100%] list-disc pl-4"
-              >
-                <li>JCR : 2025.6.10</li>
-                <li>Scopus : 2025.6.1</li>
-                <li>KCI : 2025.6.1</li>
-              </ul>
+                <div class="mt-8 pt-8 border-t border-t-[#E4E8F1]">
+                  <img
+                    src="../images/altmetric02.png"
+                    class="w-[166px] mx-auto"
+                    alt="altmetric img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full p-8 mt-8 bg-white rounded-xl">
+              <h2 class="flex items-center gap-[6px] mb-5">
+                <span class="text-[18px] font-bold"
+                  >Number of Authors by Country</span
+                >
+              </h2>
+
+              <div class="graph-area"></div>
+            </div>
+
+            <div class="w-full p-8 mt-8 bg-white rounded-xl">
+              <h2 class="flex items-center gap-[6px] mb-5">
+                <span class="text-[18px] font-bold"
+                  >Number of Authors by Institution</span
+                >
+              </h2>
+
+              <div class="graph-area"></div>
             </div>
           </div>
           <!-- .right-box -->
