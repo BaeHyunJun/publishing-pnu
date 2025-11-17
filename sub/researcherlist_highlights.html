@@ -4071,9 +4071,9 @@
             class="resource-list-cont w-full px-6 pt-[30px] lg:w-[calc(100%-360px)] lg:px-[0] lg:pt-[23px] lg:mt-[50px]"
           >
             <div
-              class="bread mb-[27px] text-[#8D9AAF] text-[13px] flex items-center gap-1 lg:mb-[20px]"
+              class="bread mb-[27px] text-[#8D9AAF] text-[13px] flex items-center gap-1 lg:mb-[20px] lg:items-start"
             >
-              <a href="/" class="flex items-center gap-[2px]"
+              <a href="/" class="flex items-center gap-[2px] shrink-0"
                 ><img
                   src="../images/home-ico.png"
                   class="w-[13px]"
@@ -4082,7 +4082,7 @@
               >
               <img
                 src="../images/chevron_right_8D9AAF.png"
-                class="w-[12px]"
+                class="w-[12px] shrink-0 lg:translate-y-[4px]"
                 alt="right"
               />
               <span class="current font-bold">World Top 2%</span>
@@ -4159,969 +4159,1171 @@
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
-
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
-
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
-
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                </a>
               </li>
 
               <li
                 class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
               >
-                <div
-                  class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
-                >
-                  <img src="../images/profile03.png" alt="photo" />
-                </div>
-
-                <div class="text-[15px] font-bold leading-[140%]">
-                  Kim, Kanghwa(김광하)
-                </div>
-                <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
-                  Department of Organic Material Science and Engineering
-                </p>
-
-                <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                <a href="#">
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
                   >
                     <img
-                      src="../images/world-top-ico.png"
-                      class="w-3"
-                      alt="world top"
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
                     />
-                    <span>World Top 2%</span>
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
                   </div>
 
                   <div
-                    class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
                   >
-                    <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                    <span>HCR</span>
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
                   </div>
-                </div>
+                </a>
+              </li>
 
-                <ul
-                  class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
-                >
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+              <li
+                class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
+              >
+                <a href="#">
+                  <div
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
                   >
-                    <span>Scholarly Output</span>
-                    <span class="text-[#333]">3</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
-                  >
-                    <span>Citation Count</span>
-                    <span class="text-[#333]">82</span>
-                  </li>
-                  <li
-                    class="flex justify-between items-center py-[10px] xl:py-[14px]"
-                  >
-                    <span>H-Index</span>
-                    <span class="text-[#333]">1</span>
-                  </li>
-                </ul>
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
 
-                <div
-                  class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
-                >
-                  <img
-                    src="../images/intrest-default.png"
-                    class="interest-default group-hover:hidden"
-                    alt="interest-default"
-                  />
-                  <img
-                    src="../images/intrest-hover.png"
-                    class="interest-hover hidden group-hover:block"
-                    alt="interest-hover"
-                  />
-                  <img
-                    src="../images/intrest-active.png"
-                    class="interest-active hidden"
-                    alt="interest-active"
-                  />
-                </div>
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
 
-                <div
-                  class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
-                >
-                  <div>2020</div>
-                  <div class="graph-area"></div>
-                  <div>2024</div>
-                </div>
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
+                  >
+                    <img
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
+                    />
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
+                  </div>
+
+                  <div
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
+                  >
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
+                  </div>
+                </a>
+              </li>
+
+              <li
+                class="relative p-8 pb-[14px] bg-white border border-[#E4E8F1] rounded-xl min-[800px]:w-[calc((100%-28px)/2)] xl:w-[calc((100%-56px)/3)] xl:px-[30px] xl:pt-[26px] xl:pb-4 2xl:w-[calc((100%-84px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer"
+              >
+                <a href="#">
+                  <div
+                    class="w-[61px] h-[61px] rounded-full overflow-hidden border border-[#E4E8F1] mb-3"
+                  >
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[15px] font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+                  <p class="mt-1 text-[12px] text-[#8D9AAF] leading-[140%]">
+                    Department of Organic Material Science and Engineering
+                  </p>
+
+                  <div class="flex items-center flex-wrap gap-1 mt-[10px]">
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                    >
+                      <img
+                        src="../images/world-top-ico.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
+                    </div>
+
+                    <div
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
+                    >
+                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+                  </div>
+
+                  <ul
+                    class="mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]"
+                  >
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]"
+                    >
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-center py-[10px] xl:py-[14px]"
+                    >
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div
+                    class="intrest w-[38px] h-[38px] cursor-pointer group absolute top-8 right-9"
+                  >
+                    <img
+                      src="../images/intrest-default.png"
+                      class="interest-default group-hover:hidden"
+                      alt="interest-default"
+                    />
+                    <img
+                      src="../images/intrest-hover.png"
+                      class="interest-hover hidden group-hover:block"
+                      alt="interest-hover"
+                    />
+                    <img
+                      src="../images/intrest-active.png"
+                      class="interest-active hidden"
+                      alt="interest-active"
+                    />
+                  </div>
+
+                  <div
+                    class="mt-6 flex justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]"
+                  >
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
+                  </div>
+                </a>
               </li>
             </ul>
             <!-- .journal-list-wrap -->

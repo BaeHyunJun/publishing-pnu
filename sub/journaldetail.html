@@ -344,7 +344,7 @@
           >
             <a
               href="#"
-              class="inline-flex items-center gap-[6px] bg-[#F3F5F9] mb-6 py-[10px] pl-[10px] pr-[16px] rounded-md lg:pl-0 lg:pr-0 lg:py-0 lg:bg-transparent lg:absolute lg:-top-[44px] lg:left-0 xl:ml-[100px]"
+              class="inline-flex items-center gap-[6px] bg-[#F3F5F9] mb-6 py-[10px] pl-[10px] pr-[16px] rounded-md lg:pl-0 lg:pr-0 lg:py-0 lg:bg-transparent lg:absolute lg:-top-[44px] lg:left-0"
             >
               <img
                 src="../images/chevron_right_8D9AAF.png"
@@ -360,9 +360,9 @@
             </a>
 
             <div
-              class="bread hidden mb-[27px] text-[#8D9AAF] text-[13px] items-center gap-1 lg:flex lg:mb-[20px]"
+              class="bread hidden mb-[27px] text-[#8D9AAF] text-[13px] items-center gap-1 lg:flex lg:mb-[20px] lg:items-start"
             >
-              <a href="/" class="flex items-center gap-[2px]"
+              <a href="/" class="flex items-center gap-[2px] shrink-0"
                 ><img
                   src="../images/home-ico.png"
                   class="w-[13px]"
@@ -371,13 +371,13 @@
               >
               <img
                 src="../images/chevron_right_8D9AAF.png"
-                class="w-[12px]"
+                class="w-[12px] shrink-0 lg:translate-y-[4px]"
                 alt="right"
               />
-              <a href="#" class="">Journals</a>
+              <a href="#" class="shrink-0">Journals</a>
               <img
                 src="../images/chevron_right_8D9AAF.png"
-                class="w-[12px]"
+                class="w-[12px] shrink-0 lg:translate-y-[4px]"
                 alt="right"
               />
               <span class="current font-bold"
@@ -964,6 +964,7 @@
                 <li
                   class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
+                <a href="#">
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
                   >
@@ -1032,11 +1033,13 @@
                       alt="interest-active"
                     />
                   </div>
+                  </a>
                 </li>
 
                 <li
                   class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
+                <a href="#">
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
                   >
@@ -1105,11 +1108,13 @@
                       alt="interest-active"
                     />
                   </div>
+                  </a>
                 </li>
 
                 <li
                   class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
+                <a href="#">
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
                   >
@@ -1178,11 +1183,13 @@
                       alt="interest-active"
                     />
                   </div>
+                  </a>
                 </li>
 
                 <li
                   class="relative w-[calc(50%-8px)] p-[18px] border border-[#E4E8F1] rounded-xl transition duration-300 2xl:w-[calc((100%-90px)/4)] hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] 2xl:p-[30px]"
                 >
+                <a href="#">
                   <div
                     class="w-[55px] h-[55px] mx-auto mb-[10px] overflow-hidden rounded-full border border-[#E4E8F1] lg:mx-0 lg:w-[72px] lg:h-[72px] lg:mb-[14px]"
                   >
@@ -1251,6 +1258,7 @@
                       alt="interest-active"
                     />
                   </div>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -1262,8 +1270,9 @@
 
               <ul class="flex flex-col gap-4">
                 <li
-                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                  class=" p-8 bg-white border border-[#E4E8F1] rounded-xl hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] transition duration-300"
                 >
+                <a href="#" class="flex justify-between">
                   <div class="w-[calc(100%-288px)]">
                     <div
                       class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
@@ -1301,67 +1310,63 @@
                     <div
                       class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
                     >
-                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
-                      <span>NANO LETTERS</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>26(5)</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>pp.99~109</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>2020.12</span>
+                      <div class="flex items-center gap-x-2">
+                        <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                        <span>NANO LETTERS</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>26(5)</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>pp.99~109</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>2020.12</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Publisher</span
-                      >
-                      <span>한국정보처리학회</span>
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]">Publisher</span>
+                        <span>한국정보처리학회</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Citation Count</span
-                      >
-                      <span>5</span>
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]">Citation Count</span>
+                        <span>5</span>
+                      </div>
 
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
+                      <span class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"></span>
 
-                      <span
-                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
-                        >Registered DB</span
-                      >
-                      <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
-                        >SCIE</span
-                      >
-                      <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
-                        >Scopus</span
-                      >
-                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
-                        >KCI</span
-                      >
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]">Registered DB</span>
+                        <span class="regist-tpye-scie px-[5px] py-[2px] rounded">SCIE</span>
+                        <span class="regist-tpye-scopus px-[5px] py-[2px] rounded">Scopus</span>
+                        <span class="regist-tpye-kci px-[5px] py-[2px] rounded">KCI</span>
+                      </div>
+                      
                     </div>
                   </div>
 
                   <div class="shrink-0 w-[258px]">
                     <img src="../images/thum01.png" alt="thum" />
                   </div>
+                  </a>
                 </li>
 
                 <li
-                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                  class=" p-8 bg-white border border-[#E4E8F1] rounded-xl hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] transition duration-300"
                 >
+                <a href="#" class="flex justify-between">
                   <div class="w-[calc(100%-288px)]">
                     <div
                       class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
@@ -1397,6 +1402,7 @@
                     <div
                       class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
                     >
+                    <div class="flex items-center gap-x-2">
                       <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
                       <span>Integrative Medicine Research</span>
                       <span
@@ -1411,43 +1417,43 @@
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
                       <span>2020.12</span>
+                    </div>
+                      
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]">Publisher</span>
+                        <span>한국정보처리학회</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Publisher</span
-                      >
-                      <span>한국정보처리학회</span>
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]">Citation Count</span>
+                        <span>5</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Citation Count</span
-                      >
-                      <span>5</span>
-
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-
-                      <span
-                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
-                        >Registered DB</span
-                      >
-                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
-                        >KCI</span
-                      >
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]">Registered DB</span>
+                        <span class="regist-tpye-kci px-[5px] py-[2px] rounded">KCI</span>
+                      </div>
                     </div>
                   </div>
+                  </a>
                 </li>
 
                 <li
-                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                  class=" p-8 bg-white border border-[#E4E8F1] rounded-xl hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] transition duration-300"
                 >
+                <a href="#" class="flex justify-between">
                   <div class="w-[calc(100%-288px)]">
                     <div
                       class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
@@ -1485,67 +1491,64 @@
                     <div
                       class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
                     >
-                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
-                      <span>NANO LETTERS</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>26(5)</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>pp.99~109</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>2020.12</span>
+                      <div class="flex items-center gap-x-2">
+                        <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                        <span>NANO LETTERS</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>26(5)</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>pp.99~109</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>2020.12</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Publisher</span
-                      >
-                      <span>한국정보처리학회</span>
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]">Publisher</span>
+                        <span>한국정보처리학회</span>
+                      </div>
+                      
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]">Citation Count</span>
+                        <span>5</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Citation Count</span
-                      >
-                      <span>5</span>
-
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-
-                      <span
-                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
-                        >Registered DB</span
-                      >
-                      <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
-                        >SCIE</span
-                      >
-                      <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
-                        >Scopus</span
-                      >
-                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
-                        >KCI</span
-                      >
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]">Registered DB</span>
+                        <span class="regist-tpye-scie px-[5px] py-[2px] rounded">SCIE</span>
+                        <span class="regist-tpye-scopus px-[5px] py-[2px] rounded">Scopus</span>
+                        <span class="regist-tpye-kci px-[5px] py-[2px] rounded">KCI</span>
+                      </div>
                     </div>
                   </div>
 
                   <div class="shrink-0 w-[258px]">
                     <img src="../images/thum01.png" alt="thum" />
                   </div>
+                  </a>
                 </li>
 
                 <li
-                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                  class=" p-8 bg-white border border-[#E4E8F1] rounded-xl hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] transition duration-300"
                 >
+                <a href="#" class="flex justify-between">
                   <div class="w-[calc(100%-288px)]">
                     <div
                       class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
@@ -1581,57 +1584,67 @@
                     <div
                       class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
                     >
-                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
-                      <span>Integrative Medicine Research</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>26(5)</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>pp.99~109</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>2020.12</span>
+                      <div class="flex items-center gap-x-2">
+                        <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                        <span>Integrative Medicine Research</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>26(5)</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>pp.99~109</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>2020.12</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Publisher</span
-                      >
-                      <span>한국정보처리학회</span>
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                          >Publisher</span
+                        >
+                        <span>한국정보처리학회</span>
+                      </div>
+                      
+                      <span
+                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                      ></span>
+
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                          >Citation Count</span
+                        >
+                        <span>5</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Citation Count</span
-                      >
-                      <span>5</span>
-
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-
-                      <span
-                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
-                        >Registered DB</span
-                      >
-                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
-                        >KCI</span
-                      >
+                      <div class="flex items-center gap-x-[2px]">
+                        <span
+                          class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                          >Registered DB</span
+                        >
+                        <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                          >KCI</span
+                        >
+                      </div>
                     </div>
                   </div>
+                  </a>
                 </li>
 
                 <li
-                  class="flex justify-between p-8 bg-white border border-[#E4E8F1] rounded-xl"
+                  class=" p-8 bg-white border border-[#E4E8F1] rounded-xl hover:shadow-[0px_4px_20px_rgba(0,0,0,.05)] transition duration-300"
                 >
+                <a href="#" class="flex justify-between">
                   <div class="w-[calc(100%-288px)]">
                     <div
                       class="flex items-start text-[#6C7687] flex-wrap gap-[6px] mb-[8px]"
@@ -1669,62 +1682,71 @@
                     <div
                       class="flex flex-wrap gap-x-2 gap-y-3 items-center text-[14px] text-[#6C7687] font-semibold leading-[100%]"
                     >
-                      <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
-                      <span>NANO LETTERS</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>26(5)</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>pp.99~109</span>
-                      <span
-                        class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
-                      ></span>
-                      <span>2020.12</span>
+                      <div class="flex items-center gap-x-2">
+                        <p class="text-[#B4BCCC] font-medium mr-[5px]">Source</p>
+                        <span>NANO LETTERS</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>26(5)</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>pp.99~109</span>
+                        <span
+                          class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
+                        ></span>
+                        <span>2020.12</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Publisher</span
-                      >
-                      <span>한국정보처리학회</span>
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                          >Publisher</span
+                        >
+                        <span>한국정보처리학회</span>
+                      </div>
 
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span class="text-[#B4BCCC] font-medium mr-[5px]"
-                        >Citation Count</span
-                      >
-                      <span>5</span>
-
+                      <div class="flex items-center gap-x-[2px]">
+                        <span class="text-[#B4BCCC] font-medium mr-[5px]"
+                          >Citation Count</span
+                        >
+                        <span>5</span>
+                      </div>
+                      
                       <span
                         class="hidden w-[1px] h-[10px] bg-[#B4BCCC] lg:inline-block"
                       ></span>
 
-                      <span
-                        class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
-                        >Registered DB</span
-                      >
-                      <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
-                        >SCIE</span
-                      >
-                      <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
-                        >Scopus</span
-                      >
-                      <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
-                        >KCI</span
-                      >
+                      <div class="flex items-center gap-x-[2px]">
+                        <span
+                          class="text-[14px] text-[#B4BCCC] font-medium mr-[5px]"
+                          >Registered DB</span
+                        >
+                        <span class="regist-tpye-scie px-[5px] py-[2px] rounded"
+                          >SCIE</span
+                        >
+                        <span class="regist-tpye-scopus px-[5px] py-[2px] rounded"
+                          >Scopus</span
+                        >
+                        <span class="regist-tpye-kci px-[5px] py-[2px] rounded"
+                          >KCI</span
+                        >
+                      </div>
                     </div>
                   </div>
 
                   <div class="shrink-0 w-[258px]">
                     <img src="../images/thum01.png" alt="thum" />
                   </div>
+                  </a>
                 </li>
               </ul>
 
