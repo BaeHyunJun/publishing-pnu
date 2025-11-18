@@ -341,14 +341,24 @@
         >
           <!-- filter -->
           <div
-            class="filter fixed top-[100%] right-0 z-[97] w-full h-full transition-top duration-300 overflow-y-auto lg:w-[310px] lg:static lg:mt-[45px]"
+            class="lg:w-[310px] lg:mt-[45px]"
           >
-            <div class="hidden w-full mb-8 p-8 bg-white rounded-xl lg:block">
+            <div class="highlight-resource-box fixed top-[100%] right-0 z-[101] w-full h-full transition-top duration-300 w-full mb-8 p-8 bg-white rounded-xl lg:static">
               <h2 class="flex items-center gap-[6px] mb-5">
                 <span class="text-[18px] font-bold">Highlights Resource</span>
               </h2>
+              
+              <button
+                class="highlight-resource-box-close absolute top-8 right-8 w-[25px] h-[25px] cursor-pointer lg:hidden"
+              >
+                <img
+                  src="../images/clear-icon.png"
+                  class="w-[18px]"
+                  alt="close"
+                />
+              </button>
 
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 lg:gap-1">
                 <a href="#" class="px-[14px] py-[10px] bg-[#F3F5F9] rounded-md">
                   <span class="text-[#376BDB] text-[14px] font-semibold"
                     >World Top 2%</span
@@ -381,7 +391,7 @@
               </div>
             </div>
 
-            <div class="px-6 py-[30px] bg-[#fff] overflow-y-auto lg:rounded-xl">
+            <div class="filter fixed top-[100%] right-0 z-[101] w-full h-full transition-top duration-300 overflow-y-auto px-6 py-[30px] bg-[#fff] overflow-y-auto lg:rounded-xl lg:static">
               <div
                 class="filter-top flex items-center gap-[10px] relative lg:justify-between"
               >
@@ -4089,28 +4099,41 @@
             </div>
             <!-- bread -->
 
-            <div class="year-filter">
-              <button class="active">All</button>
-              <button>2022</button>
-              <button>2023</button>
-              <button>2024</button>
-            </div>
-
-            <div class="tit-area w-full flex justify-between">
+            <div class="tit-area w-full flex justify-between gap-3">
               <h2 class="text-[26px] leading-[130%] font-black lg:text-[32px]">
                 World Top 2%
               </h2>
-              <button
-                class="btn-filter flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:hidden"
-              >
-                <img
-                  src="../images/filter-ico.png"
-                  class="w-[20px]"
-                  alt="filter"
-                />
-              </button>
+              
+              <div class="flex items-center gap-2 shrink-0">
+                <button
+                  class="btn-highlight-resource flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:hidden"
+                >
+                  <img
+                    src="../images/link-ico-6C7687.png"
+                    class="w-[20px]"
+                    alt="filter"
+                  />
+                </button>
+                
+                <button
+                  class="btn-filter flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:hidden"
+                >
+                  <img
+                    src="../images/filter-ico.png"
+                    class="w-[20px]"
+                    alt="filter"
+                  />
+                </button>
+              </div>
             </div>
             <!-- .tit-area -->
+
+            <div class="year-filter flex flex-wrap items-center gap-x-2 gap-y-1 mt-[25px] text-[14px] leading-[100%] text-[#6C7687] rounded-full lg:mt-8">
+              <button class="active h-[27px] px-3 bg-[#E4E8F1] rounded-full cursor-pointer">All</button>
+              <button class="h-[27px] px-3 bg-[#E4E8F1] rounded-full cursor-pointer">2022</button>
+              <button class="h-[27px] px-3 bg-[#E4E8F1] rounded-full cursor-pointer">2023</button>
+              <button class="h-[27px] px-3 bg-[#E4E8F1] rounded-full cursor-pointer">2024</button>
+            </div>
 
             <div class="listUtil mt-10 lg:flex items-center justify-between">
               <div class="mb-3 text-[14px] text-[#6C7687] lg:mb-0">
@@ -4175,21 +4198,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4265,21 +4292,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4355,21 +4386,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4445,21 +4480,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4535,21 +4574,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4625,21 +4668,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4715,21 +4762,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4805,21 +4856,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4895,21 +4950,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -4985,21 +5044,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -5075,21 +5138,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -5165,21 +5232,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
@@ -5255,21 +5326,25 @@
 
                   <div class="flex items-center flex-wrap gap-1 mt-[10px]">
                     <div
-                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full"
+                      class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE6FF] rounded-full"
                     >
                       <img
-                        src="../images/world-top-ico.png"
+                        src="../images/hcr-ico-purple.png"
                         class="w-3"
-                        alt="world top"
+                        alt="hcr"
                       />
-                      <span>World Top 2%</span>
+                      <span>HCR</span>
                     </div>
 
                     <div
                       class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full"
                     >
-                      <img src="../images/hcr-ico.png" class="w-3" alt="hcr" />
-                      <span>HCR</span>
+                      <img
+                        src="../images/world-top-ico-orange.png"
+                        class="w-3"
+                        alt="world top"
+                      />
+                      <span>World Top 2%</span>
                     </div>
                   </div>
 
