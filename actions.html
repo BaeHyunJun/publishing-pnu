@@ -5815,6 +5815,42 @@
         <button class="h-[27px] px-3 bg-[#E4E8F1] rounded-full cursor-pointer">2023</button>
         <button class="h-[27px] px-3 bg-[#E4E8F1] rounded-full cursor-pointer">2024</button>
       </div>
+
+      <h2 class="font-bold">작동15 : 탭메뉴</h2>
+      <div class="tabM mt-[30px] mx-[-24px] text-[15px] font-medium text-[#8D9AAF] text-center overflow-x-auto sm:overflow-x-hidden lg:overflow-x-auto lg:mx-[-60px] lg:mt-[52px] xl:overflow-x-hidden">
+        <div class="tab-wrapper w-max sm:w-full lg:w-max xl:w-full">
+          <div class="tab-intro active relative border-b border-b-[#E4E8F1] sm:w-[25%] lg:w-auto xl:w-[25%]">
+            <button id="introBtn" class="h-[52px] px-6 cursor-pointer">Introduction</button>
+          </div>
+          
+          <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:w-auto xl:w-[25%]">
+            <button class="h-[52px] px-6 cursor-pointer">Scholar Metrics</button>
+          </div>
+          
+          <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:w-auto xl:w-[25%]">
+            <button class="h-[52px] px-6 cursor-pointer">Co-Researchers</button>
+          </div>
+          
+          <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:w-auto xl:w-[25%]">
+            <button class="h-[52px] px-6 cursor-pointer">Resources</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabM-cont">
+        <div class="active pt-[50px] lg:pt-[60px]">Introduction</div>
+        <!-- Introduction -->
+
+        <div class=" pt-[50px] lg:pt-[60px]">Scholar Metrics</div>
+        <!-- Scholar Metrics -->
+
+        <div class=" pt-[50px] lg:pt-[60px]">Co-Researchers</div>
+        <!-- Co-Researchers -->
+
+        <div class=" pt-[50px] lg:pt-[60px]">Resources</div>
+        <!-- Resources -->
+      </div>
+
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
@@ -6406,6 +6442,27 @@
             btn.classList.add('active');
           });
         });
+      });
+
+      // 작동15
+      document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab-wrapper > div');
+        const tabContents = document.querySelectorAll('.tabM-cont > div');
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            tabContents.forEach(content => content.classList.remove('active'));
+            tabContents[index].classList.add('active');
+
+            if (window.innerWidth <= 768) {
+              tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            }
+          });
+        });
+
       });
     </script>
   </body>

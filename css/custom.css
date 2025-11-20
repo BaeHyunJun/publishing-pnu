@@ -359,9 +359,31 @@ td {
   background-color: #fff;
 }
 
-/* Research Detail 탭활성화 */
-.researcher-cont-tabM .active {
+/* 탭활성화 */
+.tabM .active {
   color: #333;
   font-weight: bold;
   border-bottom: 1px solid #333;
+}
+.tab-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.tabM-cont > div {
+  display: none;
+}
+.tabM-cont .active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .tab-wrapper {
+    scroll-snap-type: x mandatory;
+  }
+
+  .tab-wrapper > div {
+    scroll-snap-align: start;
+  }
 }
