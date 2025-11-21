@@ -387,3 +387,10 @@ td {
     scroll-snap-align: start;
   }
 }
+
+/* Departments List - 단대별로 찾기 활성화 */
+.college-find .active {
+  font-weight: bold;
+  color: #fff;
+  background-color: #555;
+}

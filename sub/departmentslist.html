@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PNU Scholar</title>
+
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="wrap" class="bg-[#F3F5F9]">
+      <header
+        class="fixed top-0 left-0 right-0 z-100 h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]"
+      >
+        <div
+          class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block"
+        >
+          <div
+            class="px-6 lg:px-[30px] 2xl:px-[100px] h-full flex justify-end items-center gap-5"
+          >
+            <a href="#">Notice</a>
+            <a href="#">Q&A</a>
+            <a href="#" class="flex items-center"
+              >Research Guide<img
+                src="../images/launch-ico-gr.png"
+                alt="launch icon"
+                class="w-[12px] h-[12px] ml-[4px]"
+            /></a>
+          </div>
+        </div>
+        <!-- .hTop -->
+
+        <div
+          class="hBottom px-6 lg:px-[30px] 2xl:px-[100px] w-full h-full flex justify-between items-center flex-wrap lg:flex-nowrap lg:h-[78px]"
+        >
+          <div
+            class="h-left flex items-center gap-10 order-1 pt-3 lg:pt-0 lg:gap-6 2xl:gap-[30px]"
+          >
+            <h1 id="logo" class="shrink-0">
+              <a href="/">
+                <img
+                  src="../images/logo.png"
+                  alt="logo-go to main"
+                  class="w-[136px] h-auto lg:hidden 2xl:block 2xl:h-10 2xl:w-auto"
+                />
+                <img
+                  src="../images/logo_symbol.png"
+                  class="hidden w-10 lg:block 2xl:hidden"
+                  alt="symbol logo"
+                />
+              </a>
+            </h1>
+
+            <nav class="hidden lg:block">
+              <ul
+                class="flex items-center gap-[23px] text-[15px] font-bold 2xl:gap-8 2xl:text-[18px]"
+              >
+                <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
+                <li class="hover:text-[#4B4DFF]">
+                  <a href="#">Departments</a>
+                </li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Highlights</a></li>
+              </ul>
+              <!-- .d1 -->
+            </nav>
+          </div>
+          <!-- .h-left -->
+
+          <div
+            class="h-right items-center gap-4 flex order-3 pb-3 w-full lg:w-auto lg:pb-0 lg:gap-[30px] 2xl:gap-6"
+          >
+            <div
+              class="h-search flex items-center relative h-12 w-full bg-[#F3F5F9] rounded-lg lg:w-[286px] 2xl:w-[428px]"
+            >
+              <div class="relative inline-block h-full">
+                <!-- 버튼 -->
+                <button
+                  id="dropdownButton"
+                  class="flex items-center justify-between w-[120px] h-full text-[13px] text-[#6C7687] px-3 py-2 cursor-pointer relative z-[1] lg:w-[92px] lg:border-r lg:border-r-[#E4E8F1] 2xl:w-[109px]"
+                >
+                  <span id="dropdownText">All</span>
+                  <img
+                    src="../images/expand_more_8D9AAF.png"
+                    class="w-4 ml-2"
+                    alt="arr"
+                  />
+                </button>
+
+                <!-- 옵션 목록 -->
+                <ul
+                  id="dropdownMenu"
+                  class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden"
+                >
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    All
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Journal
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Resource
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Scholar
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="search-wrap w-[calc(100%-95px)] h-full pl-[10px] pr-9 lg:pr-7 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-9"
+              >
+                <input
+                  type="text"
+                  class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]"
+                  placeholder="Search for journals, resources, scholars"
+                />
+              </div>
+              <!-- .search-wrap -->
+
+              <button
+                class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5"
+              >
+                <img src="../images/search-ico-bl.png" alt="search" />
+              </button>
+            </div>
+            <!-- .h-search -->
+
+            <a
+              href="#"
+              class="hidden btn-login group items-center gap-2 text-[16px] hover:text-[#4B4DFF] lg:flex"
+            >
+              <span
+                class="w-[18px] h-[18px] bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')] 2xl:w-[19px] 2xl:h-[19px]"
+              ></span>
+              Login
+            </a>
+
+            <!-- 로그인시 xl사이즈에서 block로 보여져야함! 모바일에서는 무조건 안보이게 -->
+            <div href="#" class="h-profile after-log relative hidden xl:hidden">
+              <button class="profile flex items-center">
+                <div
+                  class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2"
+                >
+                  <img src="images/profile.png" alt="profile" />
+                </div>
+                <p class="name text-sm text-[#555555]">Kim, Minjun</p>
+                <span
+                  class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"
+                ></span>
+              </button>
+              <!-- .profile -->
+
+              <div
+                class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200"
+              >
+                <a
+                  href="#"
+                  class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Profile</a
+                >
+                <a
+                  href="#"
+                  class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Resources</a
+                >
+                <a
+                  href="#"
+                  class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >Saved Researcher</a
+                >
+              </div>
+              <!-- .profile-mybox -->
+            </div>
+            <!-- h-profile -->
+          </div>
+          <!-- .h-right -->
+
+          <button
+            class="btnM w-6 h-6 relative cursor-pointer order-2 lg:hidden"
+          >
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"
+            ></span>
+          </button>
+        </div>
+        <!-- .hBottom -->
+      </header>
+
+      <div
+        class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"
+      ></div>
+
+      <div
+        id="sideM"
+        class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300"
+      >
+        <div class="side-header flex justify-between mb-[30px]">
+          <a href="/" class="gomain">
+            <img src="images/home-icon.png" alt="go main" class="w-6" />
+          </a>
+
+          <button class="close-side cursor-pointer">
+            <img src="images/clear-icon.png" alt="close" class="w-[16px]" />
+          </button>
+        </div>
+        <!-- .side-header -->
+
+        <!-- 로그인 후 회원정보 -->
+        <div class="member">
+          <div class="profile flex items-center gap-[10px]">
+            <div
+              class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]"
+            >
+              <img src="images/profile.png" alt="photo" />
+            </div>
+
+            <div class="name">
+              <a
+                href="#"
+                class="flex items-center gap-2 text-[20px] font-bold leading-[140%]"
+                >Park, Minjun
+                <img
+                  src="images/chevron_right.png"
+                  class="w-[20px] h-[20px]"
+                  alt="arr"
+              /></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2"
+                >Department of Medicine</span
+              >
+            </div>
+          </div>
+          <!-- pfofile -->
+
+          <ul
+            class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]"
+          >
+            <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-myresources.png"
+                  class="w-[20px]"
+                  alt="resource icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">My Resources</span>
+              </a>
+            </li>
+            <li class="w-1/2 py-[16px]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-savedresearcher.png"
+                  class="w-[20px]"
+                  alt="saved researcher icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- .member -->
+
+        <nav class="pt-[38px]">
+          <ul class="text-[22px] font-bold space-y-8">
+            <li class="active"><a href="#">Resources</a></li>
+            <li><a href="#">Researcher</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Highlights</a></li>
+          </ul>
+        </nav>
+
+        <div
+          class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3"
+        >
+          <a
+            href="#"
+            class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl"
+          >
+            <img
+              src="images/header-login-ico-wh.png"
+              class="w-4 mr-1"
+              alt="login icon"
+            />
+            Login
+          </a>
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Notice</a
+          >
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Q&A</a
+          >
+          <a
+            href="#"
+            class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Research Guide
+            <img
+              src="images/launch-ico-gr.png"
+              class="w-3 ml-1"
+              alt="launch icon"
+          /></a>
+        </div>
+      </div>
+      <!-- #sideM -->
+
+      <div id="container">
+        <div class="departmentslistPage listPage mt-[127px] lg:mt-[120px] 2xl:px-[100px]">
+
+          <div class="w-full px-6 pt-[30px] 2xl:px-0">
+            <div class="bread mb-[27px] text-[#8D9AAF] text-[13px] flex items-center gap-1 lg:mb-[20px] lg:items-start">
+              <a href="/" class="flex items-center gap-[2px] shrink-0">
+                <img src="../images/home-ico.png" class="w-[13px]" alt="home"/>
+                Home
+              </a>
+              <img src="../images/chevron_right_8D9AAF.png" class="w-[12px] shrink-0 lg:translate-y-[4px]" alt="right"/>
+              <span class="current font-bold">Departments</span>
+            </div>
+            <!-- bread -->
+
+            <div class="tit-area w-full flex justify-between gap-3">
+              <h2 class="text-[26px] leading-[130%] font-black lg:text-[32px]">
+                Departments
+              </h2>
+            </div>
+            <!-- .tit-area -->
+
+            <div class="mt-[18px] bg-white rounded-xl border border-[#E4E8F1] lg:mt-[37px] lg:border-none">
+
+              <div class="journal-graph-toggle relative pt-[24px] pb-6 px-[20px] cursor-pointer lg:px-[25px] lg:pb-5 lg:pt-[20px]">
+                <div class="flex items-center gap-3 pr-[30px] text-[15px] font-bold leading-[130%] lg:text-[18px] lg:gap-[6px]">
+                  <div class="flex shrink-0 justify-center items-center w-[38px] h-[38px] rounded-lg bg-[#E4E8F1] lg:w-auto lg:h-auto lg:bg-transparent">
+                    <img src="../images/bar_chart_ico.png" class="w-[22px]" alt="chart icon"/>
+                  </div>
+                  Exploring Our College Research Trends
+                </div>
+                <img src="../images/expand_more_333.png" class="absolute right-[20px] top-[50%] w-[20px] translate-y-[-50%] rotate-180 transition-transform duration-300 lg:w-[24px]" alt="toggle"/>
+              </div>
+              <!-- .journal-graph-toggle -->
+
+              <div class="journal-graph-cont border-t border-t-[#E4E8F1] pt-5 px-[20px] lg:pt-[32px] lg:flex gap-[20px] lg:pb-[36px]">
+
+                <div class="chart-area p-4 border border-[#E4E8F1] rounded-xl mb-[20px] lg:w-[calc((100%-20px)/2)] lg:bg-[#F3F5F9] lg:p-8 lg:mb-0">
+                  <h3 class="mb-4 text-[15px] font-bold leading-[150%] text-[#6C7687] text-center lg:text-[16px]">
+                    Number of Resources by College in 2025
+                  </h3>
+                </div>
+                <!-- .chart-area -->
+
+                <div class="chart-area p-4 border border-[#E4E8F1] rounded-xl mb-[20px] lg:w-[calc((100%-20px)/2)] lg:bg-[#F3F5F9] lg:p-8 lg:mb-0">
+                  <h3 class="mb-4 text-[15px] font-bold leading-[150%] text-[#6C7687] text-center">
+                    Rate by College 2025
+                  </h3>
+                </div>
+                <!-- .chart-area -->
+
+                <div class="flex justify-center pb-5 lg:hidden">
+                  <button
+                    class="flex items-center gap-[2px] px-[10px] py-1 text-[13px] font-semibold text-[#8D9AAF]"
+                  >
+                    <img
+                      src="../images/expand_more_8D9AAF.png"
+                      class="w-[14px] rotate-180 cursor-pointer"
+                      alt="hide"
+                    />
+                    Hide Chart
+                  </button>
+                </div>
+              </div>
+              <!-- .journal-graph-cont -->
+            </div>
+
+            <div class="college-find mt-[40px] lg:bg-white lg:p-10 lg:rounded-[12px] lg:mt-5">
+              <p class="mb-3 text-[14px] font-bold">단대별로 찾기</p>
+
+              <div class="overflow-x-auto snap-x snap-mandatory lg:overflow-x-visible">
+                <ul class="flex flex-wrap gap-2 w-[1600px] text-[14px] text-[#6C7687] leading-[27px] snap-start lg:w-full">
+                  <li class="active px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Humanities</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Social Sciences</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Natural Sciences</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Engineering</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Education</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Pharmacy</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">School of Medicine</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Arts</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Nanoscience and Nanotechnology</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Natural Resource and Life Sciences</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Nursing</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Business</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Economics and International trade</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Human Ecology</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">College of Information and BioMedical Engineering</li>
+                  <li class="px-3 h-[27px] bg-[#E4E8F1] rounded-full cursor-pointer">University College</li>
+                </ul>
+              </div>
+               
+            </div>
+
+            <div class="flex flex-col gap-4 mt-[25px] lg:gap-5 lg:mt-5">
+
+              <div class="p-6 bg-white rounded-[12px] border border-[#E4E8F1] rounded-[12px] lg:border-none lg:p-10 xl:flex xl:gap-5">
+
+                <div class="pb-4 border-b border-b-[#E4E8F1] xl:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[400px] xl:shrink-0 xl:pb-0 xl:relative xl:overflow-hidden xl:rounded-[12px]">
+                  <a href="#">
+                    <div class="flex justify-between mb-[15px] xl:absolute top-0 left-0 xl:h-[60%] xl:w-full xl:bg-gradient-to-b from-[#F3F5F9] from-80% to-[rgba(243,245,249,0)] xl:mb-0 xl:p-10 xl:flex-col xl:justify-start">
+                      <p class="text-[16px] font-bold leading-[130%] lg:text-[20px]">College of Humanities</p>
+                      <p class="hidden xl:block text-[16px] text-[#6C7687] font-bold mt-[7px]">인문대학</p>
+                      <img src="../images/arr_right.png" class="w-4 h-4 xl:hidden" alt="arr">
+                    </div>
+
+                    <div class="w-full h-[82px] overflow-hidden rounded-[12px] xl:h-full">
+                      <img src="../images/college-humanity.png" class="w-full h-full object-cover" alt="college">
+                    </div>
+                  </a>
+                </div>
+
+                <ul class="flex flex-wrap gap-4 mt-6 md:gap-5 xl:mt-0">
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Dept of Korean Language and Literature</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">국어국문학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of English Language and Literature</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">영어영문학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Japanese Language and Literature</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">일어일문학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Chinese Language and Literature</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">중어중문학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of German Language and Literature</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">독어독문학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Russian Language and Literature</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">노어노문학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of French Language and Literature</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">불어불문학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of History</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">사학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Philosophy</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">철학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Korean Literature in Classical Chinese </p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Archaeology</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">고고학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Language and Information</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="p-6 bg-white rounded-[12px] border border-[#E4E8F1] rounded-[12px] lg:border-none lg:p-10 xl:flex xl:gap-5">
+
+                <div class="pb-4 border-b border-b-[#E4E8F1] xl:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[400px] xl:shrink-0 xl:pb-0 xl:relative xl:overflow-hidden xl:rounded-[12px]">
+                  <a href="#">
+                    <div class="flex justify-between mb-[15px] xl:absolute top-0 left-0 xl:h-[60%] xl:w-full xl:bg-gradient-to-b from-[#F3F5F9] from-80% to-[rgba(243,245,249,0)] xl:mb-0 xl:p-10 xl:flex-col xl:justify-start">
+                      <p class="text-[16px] font-bold leading-[130%] lg:text-[20px]">College of Social Sciences</p>
+                      <p class="hidden xl:block text-[16px] text-[#6C7687] font-bold mt-[7px]">사회과학대학</p>
+                      <img src="../images/arr_right.png" class="w-4 h-4 xl:hidden" alt="arr">
+                    </div>
+
+                    <div class="w-full h-[82px] overflow-hidden rounded-[12px] xl:h-full">
+                      <img src="../images/college-science.png" class="w-full h-full object-cover" alt="college">
+                    </div>
+                  </a>
+                </div>
+
+                <ul class="flex flex-wrap gap-4 mt-6 md:gap-5 xl:mt-0">
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Public Administration</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">행정학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Political Science and Diplomacy</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">정치외교학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Social Welfare</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">사회복지학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Sociology</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">사회학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Psychology</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">심리학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Library, Archive and Information Studies</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">문헌정보학과</p>
+                    </a>
+                  </li>
+                  
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">Department of Media and Communication</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">미디어커뮤니케이션학과</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="p-6 bg-white rounded-[12px] border border-[#E4E8F1] rounded-[12px] lg:border-none lg:p-10 xl:flex xl:gap-5">
+
+                <div class="pb-4 border-b border-b-[#E4E8F1] xl:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[400px] xl:shrink-0 xl:pb-0 xl:relative xl:overflow-hidden xl:rounded-[12px]">
+                  <a href="#">
+                    <div class="flex justify-between mb-[15px] xl:absolute top-0 left-0 xl:h-[60%] xl:w-full xl:bg-gradient-to-b from-[#F3F5F9] from-80% to-[rgba(243,245,249,0)] xl:mb-0 xl:p-10 xl:flex-col xl:justify-start">
+                      <p class="text-[16px] font-bold leading-[130%] lg:text-[20px]">College of Pharmacy</p>
+                      <p class="hidden xl:block text-[16px] text-[#6C7687] font-bold mt-[7px]">약학대학</p>
+                      <img src="../images/arr_right.png" class="w-4 h-4 xl:hidden" alt="arr">
+                    </div>
+
+                    <div class="w-full h-[82px] overflow-hidden rounded-[12px] xl:h-full">
+                      <img src="../images/college-pharmacy.png" class="w-full h-full object-cover" alt="college">
+                    </div>
+                  </a>
+                </div>
+
+                <ul class="flex flex-wrap gap-4 mt-6 md:gap-5 xl:mt-0">
+                  <li class="w-[calc((100%-16px)/2)] p-4 bg-[#F3F5F9] rounded-[12px] leading-[140%] font-bold md:w-[calc((100%-40px)/3)] lg:px-8 lg:py-6 lg:hover:shadow-[0px_4px_30px_0px_rgba(0,0,0,0.1)] transitionn-shadow duration-300 xl:w-[calc((100%-60px)/4)]">
+                    <a href="#">
+                      <p class="text-[14px] lg:text-[16px]">School of Pharmacy</p>
+                      <p class="mt-3 text-[12px] text-[#6C7687] lg:text-[13px]">약학과</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- #container -->
+
+      <footer
+        class="mt-[120px] px-6 text-sm pb-10 lg:pb-[34px] lg:px-[100px] lg:mt-40"
+      >
+        <div
+          class="border-t border-t-[#D1D5DF] pt-7 lg:flex lg:items-start lg:gap-[66px]"
+        >
+          <div class="flogo mb-10 shrink-0">
+            <img src="../images/logo-gr.png" alt="logo" class="w-[178px]" />
+          </div>
+          <!-- .flogo -->
+
+          <div class="fcont lg:pt-[14px]">
+            <div class="fmenu text-sm text-[#333] flex items-center gap-4">
+              <a href="#">Privacy Policy</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Notice</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">FAQ</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Need Help?</a>
+            </div>
+
+            <address class="mt-7 text-[#6C7687] not-italic lg:mt-9">
+              <div class="mb-[10px]">
+                (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
+              </div>
+              <div class="lg:flex">
+                <p
+                  class="mb-[10px] lg:after:content-[''] lg:after:inline-block lg:after:w-[1px] lg:after:h-[11px] lg:after:bg-[#888888] lg:after:ml-[8px] lg:after:mr-[10px]"
+                >
+                  Tel. 051-510-1817, 1040
+                </p>
+                <p>Fax. 051-513-9733</p>
+              </div>
+            </address>
+
+            <div class="copy mt-7 text-[#6C7687] lg:mt-4">
+              <p>
+                Copyright 2025 Pusan National University Library. All Rights
+                Reserved.
+              </p>
+              <p class="mt-7 lg:mt-[10px]">
+                PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
+                저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
+                형사 상의 책임을 질 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <!-- .fcont -->
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script></script>
+  </body>
+</html>
