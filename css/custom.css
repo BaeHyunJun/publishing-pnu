@@ -409,3 +409,179 @@ td {
   color: #fff;
   background-color: #555;
 }
+/* Departments Detail - researcher 탭내 카테고리 */
+.researcher-cate .active {
+  color: #fff;
+  background-color: #555;
+}
+
+/* 게시판 리스트 */
+.noti-table {}
+.noti-table table {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #E4E8F1;
+}
+.noti-table thead {
+  display: none;
+}
+.noti-table thead tr {}
+.noti-table thead th {}
+.noti-table tbody {}
+.noti-table tbody tr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 0;
+  cursor: pointer;
+}
+.noti-table tbody td {
+  padding: 0;
+  text-align: left;
+  white-space: wrap;
+}
+.noti-table .no {
+  display: none;
+}
+.noti-table .tit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.noti-table .tit .type {
+  height: 22px;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  border: 1px solid #E4E8F1;
+  border-radius: 4px;
+}
+.noti-table .tit .type.news {
+  color: #009944;
+}
+.noti-table .tit .type.notice {
+  color: #4B4DFF;
+}
+.noti-table .tit .tit-wrapper {
+  min-width: 0;
+  max-width: 100%;
+  line-height: 100%;
+  white-space: nowrap;
+}
+.noti-table .tit .tit-txt {
+  /* max-height: 30px; */
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  white-space: wrap;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden; */
+}
+.noti-table .tit .new {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+  text-align: center;
+  line-height: 12px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #F3652D;
+  border-radius: 50%;
+}
+.noti-table .date {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #b4bccc;
+}
+
+@media (min-width:1024px) {
+  .noti-table .no {
+    width: 60px;
+    text-align: center;
+  }
+  .noti-table .tit {
+    width: calc(100% - 160px);
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .noti-table .date {
+    width: 100px;
+    text-align: center;
+  }
+  .noti-table thead {
+    display: block;
+  }
+  .noti-table thead tr {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    background-color: #F3F5F9;
+  }
+  .noti-table thead th {
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+  }
+  .noti-table thead th.tit {
+    display: flex;
+    justify-content: center;
+  }
+  .noti-table thead th.date {
+    color: #555;
+  } 
+  .noti-table tbody {
+    display: block;
+  }
+  .noti-table tbody tr {
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    padding: 0;
+  }
+  .noti-table tbody td {}
+  .noti-table .no {
+    display: block;
+  }
+  .noti-table .tit {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+  .noti-table .tit .type {
+    flex-shrink: 0;
+    width: 55px;
+    height: 25px;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  .noti-table .tit .tit-txt {
+    
+  }
+  .noti-table .tit .tit-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .noti-table .tit .tit-txt {
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .noti-table .date {
+    margin-top: 0;
+  }
+}
