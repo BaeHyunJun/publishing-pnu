@@ -443,7 +443,7 @@ td {
 .noti-table .no {
   display: none;
 }
-.noti-table .tit {
+.noti-table .tit a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -506,11 +506,6 @@ td {
     width: 60px;
     text-align: center;
   }
-  .noti-table .tit {
-    width: calc(100% - 160px);
-    padding: 0 20px;
-    overflow: hidden;
-  }
   .noti-table .date {
     width: 100px;
     text-align: center;
@@ -552,6 +547,11 @@ td {
     display: block;
   }
   .noti-table .tit {
+    width: calc(100% - 160px);
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .noti-table .tit a {
     flex-direction: row;
     align-items: center;
     gap: 16px;
@@ -565,9 +565,7 @@ td {
     font-size: 14px;
     line-height: 23px;
   }
-  .noti-table .tit .tit-txt {
-    
-  }
+  .noti-table .tit .tit-txt {}
   .noti-table .tit .tit-wrapper {
     display: flex;
     align-items: center;
