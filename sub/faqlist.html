@@ -214,7 +214,7 @@
             </div>
             <!-- .tit-area -->
 
-            <div class="w-full mt-[18px] px-6 pt-[24px] bg-white rounded-[12px] lg:px-[60px] lg:py-[60px] lg:pt-[60px] lg:mt-[37px]">
+            <div class="w-full mt-[18px] px-6 pt-[24px] py-[60px] bg-white rounded-[12px] lg:px-[60px] lg:py-[100px] lg:pt-[60px] lg:mt-[37px]">
               <div class="lg:flex items-center justify-between lg:h-[115px] lg:px-10 lg:rounded-[12px] lg:bg-[#F3F5F9]">
                 <div class="px-5 py-8 bg-[#F3F5F9] rounded-[12px] lg:flex lg:items-center lg:gap-5 lg:w-full lg:px-0 lg:py-0 lg:bg-transparent lg:rounded-0">
                   <p class="hidden lg:block text-[13px] font-bold">Search</p>
@@ -246,29 +246,107 @@
                 <button class="h-[27px] px-3 bg-[#E4E8F1] rounded-full cursor-pointer">Category</button>
               </div>
 
-              <div class="faq-table border-t border-t-[#E4E8F1]">
-                <div class="border-b border-b-[#E4E8F1]">
+              <div class="faq-table border-t border-t-[#E4E8F1] lg:border-none lg:flex lg:flex-col lg:gap-3">
+
+                <div class="border-b border-b-[#E4E8F1] lg:border lg:border-[#E4E8F1] lg:rounded-[12px]">
                   <!-- 질문 -->
-                  <div class="q-box relative py-4">
-                    <span class="hidden lg:block">Q</span>
-                    <div class="inline-block px-2 mb-3 h-[22px] text-[12px] leading-[20px] font-semibold text-[#4B4DFF] border border-[#E4E8F1] rounded-[4px]">Category</div>
-                    <div class="tit pr-[42px] text-[14px] font-semibold leading-[100%]">Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024)</div>
-                    <span class="absolute top-[50%] right-3 translate-y-[-50%]"><img src="../images/expand_more_555.png" class="w-[24px]" alt="more"></span>
+                  <div class="q-box relative py-4 lg:p-8 lg:flex items-center gap-8 cursor-pointer">
+                    <span class="hidden lg:block shrink-0 text-[24px] font-semibold w-[30px] text-center">Q</span>
+
+                    <div class="inline-block px-2 mb-3 h-[22px] text-[12px] leading-[20px] font-semibold text-[#4B4DFF] border border-[#E4E8F1] rounded-[4px]
+                    lg:mb-0 lg:text-[14px] lg:shrink-0 lg:w-[84px] lg:px-[10px] lg:h-[25px] lg:leading-[23px]">Category</div>
+
+                    <div class="tit pr-[42px] text-[14px] font-semibold leading-[100%] lg:text-[18px]">Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024)</div>
+
+                    <span class="absolute top-[50%] right-3 translate-y-[-50%] lg:right-8"><img src="../images/expand_more_555.png" class="w-[24px]" alt="more"></span>
                   </div>
 
                   <!-- 답변 -->
-                  <div class="a-box hidden px-5 py-2 text-[14px] text-[#555] leading-[140%] font-semibold bg-[#F3F5F9] border-t border-t-[#E4E8F1]">
-                    <div class="my-3 lg:my-5">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </div>
+                  <div class="a-box hidden px-5 pt-5 pb-1 text-[14px] text-[#555] leading-[140%] font-semibold bg-[#F3F5F9] border-t border-t-[#E4E8F1] lg:p-8 lg:pb-1">
+                    <div class="lg:flex items-start">
+                      <p class="hidden lg:block shrink-0 text-[24px] font-semibold w-[30px] text-center">A</p>
 
-                    <div class="my-3 lg:my-5">
-                      <img src="../images/altmetric01.png" class="w-full max-w-[100%] md:w-auto" alt="image">
-                    </div>
+                      <div class="pl-[148px]">
+                        <div class="mb-7 lg:mb-10">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
 
-                    <div class="my-3 lg:my-5">
-                      <img src="../images/img_large.jpg" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/altmetric01.png" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/img_large.jpg" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+                      </div>
                     </div>
+                    
+
+                      <div class="pl-[148px]">
+                        <div class="mb-7 lg:mb-10">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/altmetric01.png" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/img_large.jpg" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+                      </div>
+                    
+                  </div>
+                </div>
+                
+                <div class="border-b border-b-[#E4E8F1] lg:border lg:border-[#E4E8F1] lg:rounded-[12px]">
+                  <!-- 질문 -->
+                  <div class="q-box relative py-4 lg:p-8 lg:flex items-center gap-8 cursor-pointer">
+                    <span class="hidden lg:block shrink-0 text-[24px] font-semibold w-[30px] text-center">Q</span>
+
+                    <div class="inline-block px-2 mb-3 h-[22px] text-[12px] leading-[20px] font-semibold text-[#4B4DFF] border border-[#E4E8F1] rounded-[4px]
+                    lg:mb-0 lg:text-[14px] lg:shrink-0 lg:w-[84px] lg:px-[10px] lg:h-[25px] lg:leading-[23px]">Category</div>
+
+                    <div class="tit pr-[42px] text-[14px] font-semibold leading-[100%] lg:text-[18px]">Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024) Release of the 2025 Journal Citation Reports (JCR 2024)</div>
+
+                    <span class="absolute top-[50%] right-3 translate-y-[-50%] lg:right-8"><img src="../images/expand_more_555.png" class="w-[24px]" alt="more"></span>
+                  </div>
+
+                  <!-- 답변 -->
+                  <div class="a-box hidden px-5 pt-5 pb-1 text-[14px] text-[#555] leading-[140%] font-semibold bg-[#F3F5F9] border-t border-t-[#E4E8F1] lg:p-8 lg:pb-1">
+                    <div class="lg:flex items-start">
+                      <p class="hidden lg:block shrink-0 text-[24px] font-semibold w-[30px] text-center">A</p>
+
+                      <div class="pl-[148px]">
+                        <div class="mb-7 lg:mb-10">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/altmetric01.png" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/img_large.jpg" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                      <div class="pl-[148px]">
+                        <div class="mb-7 lg:mb-10">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/altmetric01.png" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+
+                        <div class="mb-7 lg:mb-10">
+                          <img src="../images/img_large.jpg" class="w-full max-w-[100%] md:w-auto" alt="image">
+                        </div>
+                      </div>
+                    
                   </div>
                 </div>
               </div>
