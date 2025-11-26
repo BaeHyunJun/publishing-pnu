@@ -583,3 +583,12 @@ td {
     margin-top: 0;
   }
 }
+
+/* qna 토글시 활성화 */
+.q-box.active .btn-more img {
+  transform: rotate(180deg);
+}
+.a-box.open {
+  max-height: 2000px;
+  border-top: 1px solid #E4E8F1;
+}
