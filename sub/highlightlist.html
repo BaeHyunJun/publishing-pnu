@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PNU Scholar</title>
+
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"/>
+  </head>
+
+  <body>
+    <div id="wrap" class="bg-[#F3F5F9]">
+      <header class="fixed top-0 left-0 right-0 z-100 h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]">
+        <div class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block">
+          <div class="px-6 lg:px-[30px] 2xl:px-[100px] h-full flex justify-end items-center gap-5">
+            <a href="#">Notice</a>
+            <a href="#">Q&A</a>
+            <a href="#" class="flex items-center">Research Guide<img src="../images/launch-ico-gr.png" alt="launch icon" class="w-[12px] h-[12px] ml-[4px]"/></a>
+          </div>
+        </div>
+        <!-- .hTop -->
+
+        <div class="hBottom px-6 lg:px-[30px] 2xl:px-[100px] w-full h-full flex justify-between items-center flex-wrap lg:flex-nowrap lg:h-[78px]">
+          <div class="h-left flex items-center gap-10 order-1 pt-3 lg:pt-0 lg:gap-6 2xl:gap-[30px]">
+            <h1 id="logo" class="shrink-0">
+              <a href="/">
+                <img src="../images/logo.png" alt="logo-go to main" class="w-[136px] h-auto lg:hidden 2xl:block 2xl:h-10 2xl:w-auto"/>
+                <img src="../images/logo_symbol.png" class="hidden w-10 lg:block 2xl:hidden" alt="symbol logo"/>
+              </a>
+            </h1>
+
+            <nav class="hidden lg:block">
+              <ul class="flex items-center gap-[23px] text-[15px] font-bold 2xl:gap-8 2xl:text-[18px]">
+                <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
+                <li class="hover:text-[#4B4DFF]">
+                  <a href="#">Departments</a>
+                </li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Highlights</a></li>
+              </ul>
+              <!-- .d1 -->
+            </nav>
+          </div>
+          <!-- .h-left -->
+
+          <div class="h-right items-center gap-4 flex order-3 pb-3 w-full lg:w-auto lg:pb-0 lg:gap-[30px] 2xl:gap-6">
+            <div class="h-search flex items-center relative h-12 w-full bg-[#F3F5F9] rounded-lg lg:w-[286px] 2xl:w-[428px]">
+              <div class="relative inline-block h-full">
+                <!-- 버튼 -->
+                <button id="dropdownButton" class="flex items-center justify-between w-[120px] h-full text-[13px] text-[#6C7687] px-3 py-2 cursor-pointer relative z-[1] lg:w-[92px] lg:border-r lg:border-r-[#E4E8F1] 2xl:w-[109px]">
+                  <span id="dropdownText">All</span>
+                  <img src="../images/expand_more_8D9AAF.png" class="w-4 ml-2" alt="arr"/>
+                </button>
+
+                <!-- 옵션 목록 -->
+                <ul id="dropdownMenu" class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden">
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    All
+                  </li>
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    Journal
+                  </li>
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    Resource
+                  </li>
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    Scholar
+                  </li>
+                </ul>
+              </div>
+
+              <div class="search-wrap w-[calc(100%-95px)] h-full pl-[10px] pr-9 lg:pr-7 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-9">
+                <input type="text" class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]" placeholder="Search for journals, resources, scholars"/>
+              </div>
+              <!-- .search-wrap -->
+
+              <button class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5">
+                <img src="../images/search-ico-bl.png" alt="search" />
+              </button>
+            </div>
+            <!-- .h-search -->
+
+            <a href="#" class="hidden btn-login group items-center gap-2 text-[16px] hover:text-[#4B4DFF] lg:flex">
+              <span class="w-[18px] h-[18px] bg-[url('../images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('../images/header-login-ico-bl.png')] 2xl:w-[19px] 2xl:h-[19px]"></span>
+              Login
+            </a>
+
+            <!-- 로그인시 xl사이즈에서 block로 보여져야함! 모바일에서는 무조건 안보이게 -->
+            <div href="#" class="h-profile after-log relative hidden xl:hidden">
+              <button class="profile flex items-center">
+                <div class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2">
+                  <img src="../images/profile.png" alt="profile" />
+                </div>
+                <p class="name text-sm text-[#555555]">Kim, Minjun</p>
+                <span class="expand ml-1 w-4 h-4 bg-[url('../images/expand_more_555.png')] bg-contain bg-center]"></span>
+              </button>
+              <!-- .profile -->
+
+              <div class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200">
+                <a href="#" class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('../images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">My Profile</a>
+                <a href="#" class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('../images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">My Resources</a>
+                <a href="#" class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('../images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">Saved Researcher</a>
+              </div>
+              <!-- .profile-mybox -->
+            </div>
+            <!-- h-profile -->
+          </div>
+          <!-- .h-right -->
+
+          <button class="btnM w-6 h-6 relative cursor-pointer order-2 lg:hidden">
+            <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"></span>
+            <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"></span>
+            <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"></span>
+          </button>
+        </div>
+        <!-- .hBottom -->
+      </header>
+
+      <div class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"></div>
+
+      <div id="sideM" class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300">
+        <div class="side-header flex justify-between mb-[30px]">
+          <a href="/" class="gomain">
+            <img src="../images/home-icon.png" alt="go main" class="w-6" />
+          </a>
+
+          <button class="close-side cursor-pointer">
+            <img src="../images/clear-icon.png" alt="close" class="w-[16px]" />
+          </button>
+        </div>
+        <!-- .side-header -->
+
+        <!-- 로그인 후 회원정보 -->
+        <div class="member">
+          <div class="profile flex items-center gap-[10px]">
+            <div class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]">
+              <img src="../images/profile.png" alt="photo" />
+            </div>
+
+            <div class="name">
+              <a href="#" class="flex items-center gap-2 text-[20px] font-bold leading-[140%]">Park, Minjun
+                <img src="../images/chevron_right.png" class="w-[20px] h-[20px]" alt="arr"/></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2">Department of Medicine</span>
+            </div>
+          </div>
+          <!-- pfofile -->
+
+          <ul class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]">
+            <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="../images/profile-myresources.png" class="w-[20px]" alt="resource icon"/>
+                <span class="text-[14px] text-[#6C7687]">My Resources</span>
+              </a>
+            </li>
+            <li class="w-1/2 py-[16px]">
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="../images/profile-savedresearcher.png" class="w-[20px]" alt="saved researcher icon"/>
+                <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- .member -->
+
+        <nav class="pt-[38px]">
+          <ul class="text-[22px] font-bold space-y-8">
+            <li class="active"><a href="#">Resources</a></li>
+            <li><a href="#">Researcher</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Highlights</a></li>
+          </ul>
+        </nav>
+
+        <div class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3">
+          <a href="#" class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl">
+            <img src="../images/header-login-ico-wh.png" class="w-4 mr-1" alt="login icon"/>
+            Login
+          </a>
+          <a href="#" class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Notice</a>
+          <a href="#" class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Q&A</a>
+          <a href="#" class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Research Guide
+            <img src="../images/launch-ico-gr.png" class="w-3 ml-1" alt="launch icon"/></a>
+        </div>
+      </div>
+      <!-- #sideM -->
+
+      <div id="container">
+        <div class="highlightlistPage mt-[127px] lg:mt-[120px] 2xl:px-[100px]">
+
+          <div class="w-full px-6 pt-[30px] 2xl:px-0">
+            <div class="bread mb-[27px] text-[#8D9AAF] text-[13px] flex items-center gap-1 lg:mb-[20px] lg:items-start">
+              <a href="/" class="flex items-center gap-[2px] shrink-0">
+                <img src="../images/home-ico.png" class="w-[13px]" alt="home"/>
+                Home
+              </a>
+              <img src="../images/chevron_right_8D9AAF.png" class="w-[12px] shrink-0 lg:translate-y-[4px]" alt="right"/>
+              <span class="current font-bold">Highlights</span>
+            </div>
+            <!-- bread -->
+
+            <div class="tit-area w-full flex justify-between gap-3">
+              <h2 class="text-[26px] leading-[130%] font-black lg:text-[32px]">
+                Highlights
+              </h2>
+            </div>
+            <!-- .tit-area -->
+
+            <div class="research-highlight mt-[17px] lg:mt-[27px]">
+
+              <div class="swiper reserch-highlight-swiper w-full">
+                <div class="swiper-wrapper lg:px-0">
+                  <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+                    <div class="slide-inner lg:flex lg:justify-between">
+                      <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                        <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                          2025-09-04
+                        </p>
+                        <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                          How Uneven Ocean Warming is Altering Propagation of the
+                          Madden-Julian Oscillation
+                        </div>
+                        <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                          Uneven ocean warming reshapes the Madden-Julian
+                          Oscillation, altering rainfall patterns and challenging
+                          climate prediction
+                        </div>
+
+                        <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                          View Highlights
+                          <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                        </a>
+                      </div>
+                      <!-- .txt-info -->
+
+                      <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                        <img src="../images/research01.png" class="w-full rounded-xl" alt="research img"/>
+                      </div>
+
+                      <a href="#" class="btn-view btn-common lg:!hidden">
+                        View Highlights
+                        <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                      </a>
+
+                      <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                        <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                          Featured Researcher
+                        </h3>
+                        <div class="researcher-cont flex items-center lg:items-start">
+                          <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                            <img src="../images/profile.png" alt="profile photo" />
+                          </div>
+                          <!-- .researcher-photo -->
+                          <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                            <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                              Park, Min Jun
+                            </p>
+                            <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                              COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                            </p>
+                            <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                              Characterization of Fatigue Properties of
+                              Fiber-Reinforced the one...
+                            </div>
+                            <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                              <span class="hidden lg:block mr-2">View Researcher</span>
+                              <img src="../images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                          </div>
+                          <!-- .researcher-profile-txt -->
+                        </div>
+                        <!-- .researcher-cont -->
+                      </div>
+                      <!-- .researcher -->
+                    </div>
+                  </div>
+                  <!-- swiper-slide -->
+
+                  <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+                    <div class="slide-inner lg:flex lg:justify-between">
+                      <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                        <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                          2025-09-04
+                        </p>
+                        <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                          How Uneven Ocean Warming is Altering Propagation of the
+                          Madden-Julian Oscillation
+                        </div>
+                        <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                          Uneven ocean warming reshapes the Madden-Julian
+                          Oscillation, altering rainfall patterns and challenging
+                          climate prediction
+                        </div>
+
+                        <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                          View Highlights
+                          <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                        </a>
+                      </div>
+                      <!-- .txt-info -->
+
+                      <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                        <img src="../images/research01.png" class="w-full rounded-xl" alt="research img"/>
+                      </div>
+
+                      <a href="#" class="btn-view btn-common lg:!hidden">
+                        View Highlights
+                        <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                      </a>
+
+                      <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                        <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                          Featured Researcher
+                        </h3>
+                        <div class="researcher-cont flex items-center lg:items-start">
+                          <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                            <img src="../images/profile.png" alt="profile photo" />
+                          </div>
+                          <!-- .researcher-photo -->
+                          <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                            <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                              Park, Min Jun
+                            </p>
+                            <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                              COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                            </p>
+                            <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                              Characterization of Fatigue Properties of
+                              Fiber-Reinforced the one...
+                            </div>
+                            <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                              <span class="hidden lg:block mr-2">View Researcher</span>
+                              <img src="../images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                          </div>
+                          <!-- .researcher-profile-txt -->
+                        </div>
+                        <!-- .researcher-cont -->
+                      </div>
+                      <!-- .researcher -->
+                    </div>
+                  </div>
+                  <!-- swiper-slide -->
+                   
+                  <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+                    <div class="slide-inner lg:flex lg:justify-between">
+                      <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                        <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                          2025-09-04
+                        </p>
+                        <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                          How Uneven Ocean Warming is Altering Propagation of the
+                          Madden-Julian Oscillation
+                        </div>
+                        <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                          Uneven ocean warming reshapes the Madden-Julian
+                          Oscillation, altering rainfall patterns and challenging
+                          climate prediction
+                        </div>
+
+                        <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                          View Highlights
+                          <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                        </a>
+                      </div>
+                      <!-- .txt-info -->
+
+                      <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                        <img src="../images/research01.png" class="w-full rounded-xl" alt="research img"/>
+                      </div>
+
+                      <a href="#" class="btn-view btn-common lg:!hidden">
+                        View Highlights
+                        <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                      </a>
+
+                      <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                        <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                          Featured Researcher
+                        </h3>
+                        <div class="researcher-cont flex items-center lg:items-start">
+                          <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                            <img src="../images/profile.png" alt="profile photo" />
+                          </div>
+                          <!-- .researcher-photo -->
+                          <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                            <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                              Park, Min Jun
+                            </p>
+                            <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                              COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                            </p>
+                            <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                              Characterization of Fatigue Properties of
+                              Fiber-Reinforced the one...
+                            </div>
+                            <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                              <span class="hidden lg:block mr-2">View Researcher</span>
+                              <img src="../images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                          </div>
+                          <!-- .researcher-profile-txt -->
+                        </div>
+                        <!-- .researcher-cont -->
+                      </div>
+                      <!-- .researcher -->
+                    </div>
+                  </div>
+                  <!-- swiper-slide -->
+
+                  <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+                    <div class="slide-inner lg:flex lg:justify-between">
+                      <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                        <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                          2025-09-04
+                        </p>
+                        <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                          How Uneven Ocean Warming is Altering Propagation of the
+                          Madden-Julian Oscillation
+                        </div>
+                        <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                          Uneven ocean warming reshapes the Madden-Julian
+                          Oscillation, altering rainfall patterns and challenging
+                          climate prediction
+                        </div>
+
+                        <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                          View Highlights
+                          <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                        </a>
+                      </div>
+                      <!-- .txt-info -->
+
+                      <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                        <img src="../images/research01.png" class="w-full rounded-xl" alt="research img"/>
+                      </div>
+
+                      <a href="#" class="btn-view btn-common lg:!hidden">
+                        View Highlights
+                        <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                      </a>
+
+                      <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                        <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                          Featured Researcher
+                        </h3>
+                        <div class="researcher-cont flex items-center lg:items-start">
+                          <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                            <img src="../images/profile.png" alt="profile photo" />
+                          </div>
+                          <!-- .researcher-photo -->
+                          <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                            <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                              Park, Min Jun
+                            </p>
+                            <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                              COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                            </p>
+                            <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                              Characterization of Fatigue Properties of
+                              Fiber-Reinforced the one...
+                            </div>
+                            <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                              <span class="hidden lg:block mr-2">View Researcher</span>
+                              <img src="../images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                          </div>
+                          <!-- .researcher-profile-txt -->
+                        </div>
+                        <!-- .researcher-cont -->
+                      </div>
+                      <!-- .researcher -->
+                    </div>
+                  </div>
+                  <!-- swiper-slide -->
+                   
+                  <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+                    <div class="slide-inner lg:flex lg:justify-between">
+                      <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                        <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                          2025-09-04
+                        </p>
+                        <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                          How Uneven Ocean Warming is Altering Propagation of the
+                          Madden-Julian Oscillation
+                        </div>
+                        <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                          Uneven ocean warming reshapes the Madden-Julian
+                          Oscillation, altering rainfall patterns and challenging
+                          climate prediction
+                        </div>
+
+                        <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                          View Highlights
+                          <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                        </a>
+                      </div>
+                      <!-- .txt-info -->
+
+                      <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                        <img src="../images/research01.png" class="w-full rounded-xl" alt="research img"/>
+                      </div>
+
+                      <a href="#" class="btn-view btn-common lg:!hidden">
+                        View Highlights
+                        <img src="../images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                      </a>
+
+                      <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                        <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                          Featured Researcher
+                        </h3>
+                        <div class="researcher-cont flex items-center lg:items-start">
+                          <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                            <img src="../images/profile.png" alt="profile photo" />
+                          </div>
+                          <!-- .researcher-photo -->
+                          <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                            <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                              Park, Min Jun
+                            </p>
+                            <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                              COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                            </p>
+                            <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                              Characterization of Fatigue Properties of
+                              Fiber-Reinforced the one...
+                            </div>
+                            <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                              <span class="hidden lg:block mr-2">View Researcher</span>
+                              <img src="../images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                          </div>
+                          <!-- .researcher-profile-txt -->
+                        </div>
+                        <!-- .researcher-cont -->
+                      </div>
+                      <!-- .researcher -->
+                    </div>
+                  </div>
+                  <!-- swiper-slide -->
+                </div>
+
+                <div class="reserch-highlight-prev hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] left-[73px] z-10 2xl:left-[133px]">
+                  <img src="../images/chevron_left.png" class="w-6" alt="prev btn" />
+                </div>
+
+                <div class="reserch-highlight-next hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] right-[73px] z-10 2xl:right-[133px]">
+                  <img src="../images/chevron_right.png" class="w-6" alt="next btn" />
+                </div>
+              </div>
+              <!-- swiper -->
+
+              <div class="reserch-highlight-pagination static flex justify-center mt-6 lg:mt[22px]"></div>
+            </div>
+            <!-- .research-highlight -->
+
+            <div class="w-full mt-[18px] px-6 pt-[24px] py-[60px] bg-white rounded-[12px] lg:px-[60px] lg:py-[100px] lg:pt-[60px] lg:mt-[37px]">
+
+              <!-- search -->
+              <div class="px-5 py-8 bg-[#F3F5F9] rounded-[12px] lg:flex lg:justify-center lg:items-center lg:gap-5">
+                <p class="hidden lg:block text-[13px] font-bold">Search</p>
+                <div class="relative w-full h-[44px] lg:w-[80%] lg:max-w-[457px]">
+                  <input type="search" placeholder="Search for notice" class="w-full h-full pl-4 pr-8 bg-white rounded-[8px] border border-[#E4E8F1] text-[13px] placeholder-[#B4BCCC] outline-none">
+                  <button class="absolute top-[50%] right-4 translate-y-[-50%] w-4 cursor-pointer"><img src="../images/search-ico-8D9AAF.png" alt="search button"></button>
+                </div>
+              </div>
+
+              <!-- found -->
+              <div class="mt-6 mb-3 text-[14px] text-[#6C7687] lg:mt-9 lg:mb-4">
+                Found <strong>53,583</strong> results
+              </div>
+
+              <!-- list -->
+              <ul class="highlight-list border-t border-t-[#E4E8F1]">
+                <li class="highlight-list-item py-4">
+                  <a href="#" class="md:flex gap-4 md:gap-8 items-center">
+                    <div class="highlight-list-img w-full h-[165px] overflow-hidden rounded-[12px] md:w-[308px] md:h-[182px] md:shrink-0">
+                      <img src="../images/highlights-img01.png" class="w-full h-full object-cover transition-transform duration-300" alt="thum">
+                    </div>
+
+                    <div class="mt-4 md:mt-0 md:w-[calc(100%-324px)] lg:w-[calc(100%-340px)]">
+                      <p class="mb-2 lg:mb-[6px] text-[12px] lg:text-[14px] text-[#B4BCCC] font-semibold">2025.06.19</p>
+
+                      <h3 class="mb-2 lg:mb-3 text-[14px] lg:text-[18px] text-[#555] leading-[140%] font-semibold">Revealing How Sea Ice Decline Intensifies Ocean Mixing in Warming Polar Regions</h3>
+
+                      <div class="hidden lg:flex text-[14px] text-[#6C7687] mb-3 flex-wrap gap-x-3">
+                        <div class="flex items-center gap-1 pt-[4px] hover:text-[#376BDB] cursor-pointer">
+                          Yoon, Heijin(윤혜진)
+
+                          <!-- ID 마크 -->
+                          <div class="group relative">
+                            <img src="../images/id-mark.png" class="id-mark w-[18px] h-[18px]" alt="id mark"/>
+
+                            <!-- 마크호버시 -->
+                            <div class="id-hover flex hidden absolute bottom-[calc(100%+20px)] left-[50%] translate-x-[-50%] flex-col gap-[6px] bg-white border border-[#E4E8F1] shadow-[0px_4px_20px_rgba(0,0,0,0.1)] rounded-[12px] p-4 after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0 after:border-l-[8px] after:border-l-transparent after:border-r-[8px] after:border-r-transparent after:border-t-[8px] after:border-t-[#E4E8F1] before:content-[''] before:absolute before:top-[calc(100%-1px)] before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-0 before:border-l-[7px] before:border-l-transparent before:border-r-[7px] before:border-r-transparent before:border-t-[7px] before:border-t-white after:z-0 before:z-[1]">
+                              <div class="w-[158px] bg-[#ECF2FF] rounded-[12px] p-[6px]">
+                                <span class="flex items-center gap-[5px] ">
+                                  <img src="../images/pnu-page.png" class="w-[21px] h-[21px]" alt="pnu icon"/>
+                                  <span class="text-[12px] text-[#376BDB] font-semibold">PNU Scholar Page</span>
+                                </span>
+                              </div>
+
+                              <div class="relative w-[158px] bg-[#F3F5F9] rounded-[12px] p-[6px]">
+                                <span class="flex items-center gap-[5px] ">
+                                  <img src="../images/orcid-page.png" class="w-[21px] h-[21px]" alt="orcid icon"/>
+                                  <span class="text-[12px] text-[#555] font-semibold">ORCID</span>
+                                  <img src="../images/launch-ico-555.png" class="absolute right-[6px] top-[50%] translate-y-[-50%] w-[13px] h-[13px]" alt="link"/>
+                                </span>
+                              </div>
+
+                              <div class="relative w-[158px] bg-[#F3F5F9] rounded-[12px] p-[6px]">
+                                <span class="flex items-center gap-[5px] ">
+                                  <img src="../images/researcherid-page.png" class="w-[21px] h-[21px]" alt="orcid icon"/>
+                                  <span class="text-[12px] text-[#555] font-semibold">Researcher ID</span>
+                                  <img src="../images/launch-ico-555.png" class="absolute right-[6px] top-[50%] translate-y-[-50%] w-[13px] h-[13px]" alt="link"/>
+                                </span>
+                              </div>
+
+                              <div class="relative flex items-center gap-[5px] w-[158px] bg-[#F3F5F9] rounded-[12px] p-[6px]">
+                                <span class="flex items-center gap-[5px]">
+                                  <img src="../images/googlescholar-page.png" class="w-[21px] h-[21px]" alt="orcid icon"/>
+                                  <span class="text-[12px] text-[#555] font-semibold">Google Scholar</span>
+                                  <img src="../images/launch-ico-555.png" class="absolute right-[6px] top-[50%] translate-y-[-50%] w-[13px] h-[13px]" alt="link"/>
+                                </span>
+                              </div>
+
+                              <div class="relative flex items-center gap-[5px] w-[158px] bg-[#F3F5F9] rounded-[12px] p-[6px]">
+                                <span class="flex items-center gap-[5px]">
+                                  <img src="../images/isni-page.png" class="w-[21px] h-[21px]" alt="orcid icon"/>
+                                  <span class="text-[12px] text-[#555] font-semibold">ISNI</span>
+                                  <img src="../images/launch-ico-555.png" class="absolute right-[6px] top-[50%] translate-y-[-50%] w-[13px] h-[13px]" alt="link"/>
+                                </span>
+                              </div>
+                            </div>
+
+                          </div>
+                          
+                        </div>
+
+                        <div class="flex items-center gap-1 pt-[4px]">
+                          Kim, Su-jin(김수진)
+                        </div>
+                      </div>
+
+                      <p class="max-h-[60px] lg:max-h-[46px] text-line-3 text-[14px] lg:text-[16px] text-[#8D9AAF] leading-[140%]">Generative AI models, like ChatGPT and DALL-E, may help improve fashion design efficiency and reveal emerging and current fashion trends</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- #container -->
+
+      <footer
+        class="mt-[120px] px-6 text-sm pb-10 lg:pb-[34px] lg:px-[100px] lg:mt-40"
+      >
+        <div
+          class="border-t border-t-[#D1D5DF] pt-7 lg:flex lg:items-start lg:gap-[66px]"
+        >
+          <div class="flogo mb-10 shrink-0">
+            <img src="../images/logo-gr.png" alt="logo" class="w-[178px]" />
+          </div>
+          <!-- .flogo -->
+
+          <div class="fcont lg:pt-[14px]">
+            <div class="fmenu text-sm text-[#333] flex items-center gap-4">
+              <a href="#">Privacy Policy</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Notice</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">FAQ</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Need Help?</a>
+            </div>
+
+            <address class="mt-7 text-[#6C7687] not-italic lg:mt-9">
+              <div class="mb-[10px]">
+                (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
+              </div>
+              <div class="lg:flex">
+                <p
+                  class="mb-[10px] lg:after:content-[''] lg:after:inline-block lg:after:w-[1px] lg:after:h-[11px] lg:after:bg-[#888888] lg:after:ml-[8px] lg:after:mr-[10px]"
+                >
+                  Tel. 051-510-1817, 1040
+                </p>
+                <p>Fax. 051-513-9733</p>
+              </div>
+            </address>
+
+            <div class="copy mt-7 text-[#6C7687] lg:mt-4">
+              <p>
+                Copyright 2025 Pusan National University Library. All Rights
+                Reserved.
+              </p>
+              <p class="mt-7 lg:mt-[10px]">
+                PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
+                저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
+                형사 상의 책임을 질 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <!-- .fcont -->
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/swiper-bundle.min.js"></script>
+
+    <script>
+      let reserchHighlightSwiper = new Swiper(".reserch-highlight-swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        loop: true,
+        pagination: {
+          el: ".reserch-highlight-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".reserch-highlight-next",
+          prevEl: ".reserch-highlight-prev",
+        },
+        breakpoints: {
+          800: {
+            spaceBetween: 40,
+            centeredSlides: true,
+          },
+        },
+      });
+
+      document.querySelectorAll('.id-mark').forEach(mark => {
+        const parent = mark.closest('.relative');
+        const hoverBox = parent.querySelector('.id-hover');
+
+        let hideTimer = null;
+
+        function showPopup() {
+          clearTimeout(hideTimer);
+          hoverBox.classList.remove('hidden');
+        }
+
+        function hidePopup() {
+          hideTimer = setTimeout(() => {
+            hoverBox.classList.add('hidden');
+          }, 100);
+        }
+
+        mark.addEventListener('mouseenter', showPopup);
+
+        mark.addEventListener('mouseleave', hidePopup);
+
+        hoverBox.addEventListener('mouseenter', showPopup);
+
+        hoverBox.addEventListener('mouseleave', hidePopup);
+      });
+    </script>
+  </body>
+</html>

@@ -592,3 +592,37 @@ td {
   max-height: 2000px;
   border-top: 1px solid #E4E8F1;
 }
+
+/* Highlight List 2 - 리스트 호버시 이미지크기 */
+@media (min-width:1024px) {
+  .highlight-list-item:hover .highlight-list-img img {
+    transform: scale(1.1);
+  }
+}
+/* Highlight List 2 - 맨아래설명 pc에서 2줄 말줄임으로 변경 */
+@media (min-width:1024px) {
+  .highlight-list-item .text-line-3 {
+    -webkit-line-clamp: 2;
+  }
+}
+/* 말줄임 */
+/* 1줄 */
+.text-line-1 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 2줄 */
+.text-line-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+/* 3줄 */
+.text-line-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
