@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PNU Scholar</title>
+
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="wrap" class="bg-transparent lg:bg-[#F3F5F9]">
+      <header class="fixed top-0 left-0 right-0 z-100 h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]">
+        <div class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block">
+          <div class="px-6 lg:px-[30px] 2xl:px-[100px] h-full flex justify-end items-center gap-5">
+            <a href="#">Notice</a>
+            <a href="#">Q&A</a>
+            <a href="#" class="flex items-center">Research Guide<img src="../images/launch-ico-gr.png" alt="launch icon" class="w-[12px] h-[12px] ml-[4px]"/></a>
+          </div>
+        </div>
+        <!-- .hTop -->
+
+        <div class="hBottom px-6 lg:px-[30px] 2xl:px-[100px] w-full h-full flex justify-between items-center flex-wrap lg:flex-nowrap lg:h-[78px]">
+          <div class="h-left flex items-center gap-10 order-1 pt-3 lg:pt-0 lg:gap-6 2xl:gap-[30px]">
+            <h1 id="logo" class="shrink-0">
+              <a href="/">
+                <img src="../images/logo.png" alt="logo-go to main" class="w-[136px] h-auto lg:hidden 2xl:block 2xl:h-10 2xl:w-auto"/>
+                <img src="../images/logo_symbol.png" class="hidden w-10 lg:block 2xl:hidden" alt="symbol logo"/>
+              </a>
+            </h1>
+
+            <nav class="hidden lg:block">
+              <ul class="flex items-center gap-[23px] text-[15px] font-bold 2xl:gap-8 2xl:text-[18px]">
+                <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
+                <li class="hover:text-[#4B4DFF]">
+                  <a href="#">Departments</a>
+                </li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Highlights</a></li>
+              </ul>
+              <!-- .d1 -->
+            </nav>
+          </div>
+          <!-- .h-left -->
+
+          <div class="h-right items-center gap-4 flex order-3 pb-3 w-full lg:w-auto lg:pb-0 lg:gap-[30px] 2xl:gap-6">
+            <div class="h-search flex items-center relative h-12 w-full bg-[#F3F5F9] rounded-lg lg:w-[286px] 2xl:w-[428px]">
+              <div class="relative inline-block h-full">
+                <!-- 버튼 -->
+                <button id="dropdownButton" class="flex items-center justify-between w-[120px] h-full text-[13px] text-[#6C7687] px-3 py-2 cursor-pointer relative z-[1] lg:w-[92px] lg:border-r lg:border-r-[#E4E8F1] 2xl:w-[109px]">
+                  <span id="dropdownText">All</span>
+                  <img src="../images/expand_more_8D9AAF.png" class="w-4 ml-2" alt="arr"/>
+                </button>
+
+                <!-- 옵션 목록 -->
+                <ul id="dropdownMenu" class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden">
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    All
+                  </li>
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    Journal
+                  </li>
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    Resource
+                  </li>
+                  <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
+                    Scholar
+                  </li>
+                </ul>
+              </div>
+
+              <div class="search-wrap w-[calc(100%-95px)] h-full pl-[10px] pr-9 lg:pr-7 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-9">
+                <input type="text" class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]" placeholder="Search for journals, resources, scholars"/>
+              </div>
+              <!-- .search-wrap -->
+
+              <button class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5">
+                <img src="../images/search-ico-bl.png" alt="search" />
+              </button>
+            </div>
+            <!-- .h-search -->
+
+            <a href="#" class="hidden btn-login group items-center gap-2 text-[16px] hover:text-[#4B4DFF] lg:flex">
+              <span class="w-[18px] h-[18px] bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')] 2xl:w-[19px] 2xl:h-[19px]"></span>
+              Login
+            </a>
+
+            <!-- 로그인시 xl사이즈에서 block로 보여져야함! 모바일에서는 무조건 안보이게 -->
+            <div href="#" class="h-profile after-log relative hidden xl:hidden">
+              <button class="profile flex items-center">
+                <div class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2">
+                  <img src="images/profile.png" alt="profile" />
+                </div>
+                <p class="name text-sm text-[#555555]">Kim, Minjun</p>
+                <span class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"></span>
+              </button>
+              <!-- .profile -->
+
+              <div class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200">
+                <a href="#" class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">My Profile</a>
+                <a href="#" class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">My Resources</a>
+                <a href="#" class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">Saved Researcher</a>
+              </div>
+              <!-- .profile-mybox -->
+            </div>
+            <!-- h-profile -->
+          </div>
+          <!-- .h-right -->
+
+          <button class="btnM w-6 h-6 relative cursor-pointer order-2 lg:hidden">
+            <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"></span>
+            <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"></span>
+            <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"></span>
+          </button>
+        </div>
+        <!-- .hBottom -->
+      </header>
+
+      <div class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"></div>
+
+      <div id="sideM" class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300">
+        <div class="side-header flex justify-between mb-[30px]">
+          <a href="/" class="gomain">
+            <img src="images/home-icon.png" alt="go main" class="w-6" />
+          </a>
+
+          <button class="close-side cursor-pointer">
+            <img src="images/clear-icon.png" alt="close" class="w-[16px]" />
+          </button>
+        </div>
+        <!-- .side-header -->
+
+        <!-- 로그인 후 회원정보 -->
+        <div class="member">
+          <div class="profile flex items-center gap-[10px]">
+            <div class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]">
+              <img src="images/profile.png" alt="photo" />
+            </div>
+
+            <div class="name">
+              <a href="#" class="flex items-center gap-2 text-[20px] font-bold leading-[140%]">Park, Minjun
+                <img src="images/chevron_right.png" class="w-[20px] h-[20px]" alt="arr"/></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2">Department of Medicine</span>
+            </div>
+          </div>
+          <!-- pfofile -->
+
+          <ul class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]">
+            <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="images/profile-myresources.png" class="w-[20px]" alt="resource icon"/>
+                <span class="text-[14px] text-[#6C7687]">My Resources</span>
+              </a>
+            </li>
+            <li class="w-1/2 py-[16px]">
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="images/profile-savedresearcher.png" class="w-[20px]" alt="saved researcher icon"/>
+                <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- .member -->
+
+        <nav class="pt-[38px]">
+          <ul class="text-[22px] font-bold space-y-8">
+            <li class="active"><a href="#">Resources</a></li>
+            <li><a href="#">Researcher</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Highlights</a></li>
+          </ul>
+        </nav>
+
+        <div class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3">
+          <a href="#" class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl">
+            <img src="images/header-login-ico-wh.png" class="w-4 mr-1" alt="login icon"/>
+            Login
+          </a>
+          <a href="#" class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Notice</a>
+          <a href="#"  class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Q&A</a>
+          <a href="#" class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Research Guide
+            <img src="images/launch-ico-gr.png" class="w-3 ml-1" alt="launch icon"/></a>
+        </div>
+      </div>
+      <!-- #sideM -->
+
+      <div id="container">
+        <div class="detailPage flexPage !block lg:!flex w-full mt-[127px] lg:mt-[120px] lg:px-6 xl:px-[100px]">
+
+          <div class="w-full px-6 pt-[24px] lg:relative lg:w-[calc(100%-360px)] lg:px-[0] lg:pt-[23px] lg:mt-[105px] lg:bg-white lg:rounded-xl lg:px-[60px] lg:py-[60px] lg:pt-[60px]">
+            <a href="#" class="inline-flex items-center gap-[6px] bg-[#F3F5F9] mb-6 py-[10px] pl-[10px] pr-[16px] rounded-md lg:pl-0 lg:pr-0 lg:py-0 lg:bg-transparent lg:absolute lg:-top-[44px] lg:left-0">
+              <img src="../images/chevron_right_8D9AAF.png" class="w-3 rotate-180" alt="back"/>
+              <span class="text-[14px] text-[#6C7687] font-medium leading-[100%] lg:text-[16px] xxl:text-red-500">Back<span class="hidden lg:inline">
+                  to list</span></span>
+            </a>
+
+            <div class="bread hidden mb-[27px] text-[#8D9AAF] text-[13px] items-center gap-1 lg:flex lg:mb-[20px] lg:items-start">
+              <a href="/" class="flex items-center gap-[2px] shrink-0"><img src="../images/home-ico.png" class="w-[13px]" alt="home"/>Home</a>
+              <img src="../images/chevron_right_8D9AAF.png" class="w-[12px] shrink-0 lg:translate-y-[4px]" alt="right"/>
+              <a href="#" class="shrink-0">Highlights</a>
+              <img src="../images/chevron_right_8D9AAF.png" class="w-[12px] shrink-0 lg:translate-y-[4px]" alt="right"/>
+              <span class="current font-bold ">How Uneven Ocean Warming is Altering Propagation of the Madden-Julian Oscillation</span>
+            </div>
+            <!-- bread -->
+
+            <div class="tit-area w-full pb-6 lg:pb-[30px] mb-5 lg:mb-10 border-b border-b-[#E4E8F1]">
+              <h2 class="mb-5 lg:mb-[26px] text-[22px] lg:text-[26px] leading-[130%] font-black">
+                How Uneven Ocean Warming is Altering Propagation of the Madden-Julian Oscillation
+              </h2>
+
+              <div class="text-[14px] font-semibold text-[#8D9AAF] leading-[140%]">2025-06-19</div>
+            </div>
+            <!-- .tit-area -->
+
+            <div class="flex flex-col gap-6 lg:gap-10 pb-6 lg:pb-10 text-[14px] text-[#555] leading-[140%] border-b border-b-[#E4E8F1]">
+              <div>
+                <img src="../images/highlights-detail.png" class="max-w-[100%] mx-auto" alt="image">
+              </div>
+
+              <div>
+                <p class="mb-4 font-bold">[Abstract]</p>
+
+                <div>
+                  A research team at Pusan National University, led by Research Professor So Young Yoo from the Institute of Nano-Bio Convergence, has developed a “good virus” therapy that can block and control infections caused by the human coronavirus OC43—a cousin of COVID-19 that spreads like a cold but can lead to pneumonia or even brain inflammation.
+                  <br><br>
+                  The team engineered a bacteriophage (a harmless virus that targets bacteria) to display special sugar-like molecules called sialic acids, which OC43 normally uses to enter human cells. By mimicking these entry points, the modified phage tricks the virus into attaching to it instead of healthy cells—stopping infection before it begins.
+                  <br><br>
+                  The platform offers a promising strategy for future coronavirus outbreaks and other respiratory infections.
+                </div>
+              </div>
+
+              <ul class="pl-5 list-disc">
+                <li>
+                  <strong>Author</strong> (Pusan National University) : <a href="#" class="text-[#4B4DFF]">So Young Yoo</a> (Institute of Nanobio Convergence)
+                </li>
+                <li>
+                  <strong>Title of original paper</strong> : <a href="#" class="text-[#4B4DFF]">A multivalent 9-O-acetylated sialic acid-conjugated bacteriophage platform for antiviral and immunomodulatory therapy for human coronavirus OC43</a>
+                </li>
+                <li>
+                  <strong>Journal</strong> : <a href="#" class="text-[#4B4DFF]">Jounral of Controlled Release</a>
+                </li>
+                <li>
+                  <strong>Web link</strong> : <a href="#" class="text-[#4B4DFF]">https://doi.org/10.1016/j.jconrel.2025.113996</a>
+                </li>
+                <li>
+                  <strong>Contact e-mail</strong> : <a href="#" class="text-[#4B4DFF]">yoosy2@gmail.com</a>
+                </li>
+              </ul>
+
+              <div class="p-[30px] mt-[18px] border border-dashed border-[#E4E8F1] border-[5px]">
+                우리가 아는 감기 바이러스 중 일부는 코로나바이러스 계열이다. 그중 ‘OC43’은 코로나19의 친척 격으로, 감기 증상뿐 아니라 폐렴이나 뇌염까지 유발할 수 있어 면역이 약한 사람에겐 위험하다.
+                <br><br>
+                나노바이오융합연구소 유소영(사진) 연구교수팀이 성균관대와의 공동연구를 통해 흔히 생각하는 약이 아닌, ‘박테리오파지’라는 좋은 바이러스를 이용해 감기처럼 퍼지는 코로나바이러스 ‘OC43’의 감염을 차단하고 염증까지 억제할 수 있는 착한 바이러스 ‘Ac-SLPhage’ 치료제를 개발했다. 박테리오파지는 박테리아를 감염시키는 바이러스로, 사람에게는 무해하며 생명공학·의료 분야에서 다양하게 활용된다.
+                <br><br>
+                (A) 실험 설계도. 감기처럼 생긴 코로나 바이러스(OC43)를 쥐에 감염시키고, 감염 전후로 Ac-SLPhage를 주사해 효과를 비교함.<br>
+                (B) OC43의 감염은 폐, 비강, 신장 등에 축적되지만 Ac-Phage를 주사한 경우 OC43의 감염이 현저히 줄어듦.<br>
+                (C) 폐 조직 현미경 사진. 감염되면 폐가 망가지지만, Ac-SLPhage를 맞으면 건강한 폐처럼 구조가 유지됨.<br>
+                (D) 형광 염색 이미지. 감염된 폐에는 녹색 바이러스 단백질(N-protein)과 빨간색 염증 단백질(IL6)이 늘어나지만 Ac-SLPhage를 맞으면 확연히 줄어듦.<br>
+                (E) 유전자 발현 분석 결과. 면역세포 중 하나인 대식세포도 M2형으로 유도돼 염증을 완화하고 조직을 회복시키게 됨
+              </div>
+            </div>
+
+            <div class="text-center">
+              <a href="#" class="inline-block h-[45px] mt-6 lg:mt-10 px-9 text-[14px] leading-[43px] font-medium texxt-[#6C7687] bg-[#F3F5F9] border border-[#E4E8F1] rounded-[12px]">List</a>
+            </div>
+          
+          </div>
+
+          <div class="right-box w-full lg:w-[310px] mt-[54px] lg:mt-[105px] px-6 lg:p-8 lg:bg-white lg:rounded-[12px]">
+            
+            <h2 class="mb-[16px] lg:mb-8">
+              <span class="text-[18px] lg:text-[16px] font-bold leading-[100%]">Researchers</span>
+            </h2>
+
+            <ul class="w-full flex flex-wrap gap-4 lg:gap-8 lg:flex-col">
+
+              <li class="relative w-[calc((100%-16px)/2)] lg:w-full p-4 lg:p-0 bg-white border lg:border-none border-[#E4E8F1] rounded-xl lg:rounded-none lg:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer">
+                <a href="#">
+                  <div class="w-[61px] h-[61px] mx-auto lg:mx-0 mb-[10px] lg:mb-3 rounded-full overflow-hidden border border-[#E4E8F1]">
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[13px] lg:text-[15px] text-center lg:text-left font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+
+                  <div class="text-[11px] lg:text-[12px] text-[#8D9AAF] leading-[140%] text-center lg:text-left mt-[6px] lg:mt-1">
+                    Department of Medicine
+                  </div>
+
+                  <div class="flex flex-col items-center gap-1 mt-[10px] lg:flex-row lg:flex-wrap">
+                    <div class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#8D6DE2] bg-[#EDE7FF] rounded-full">
+                      <img src="../images/hcr-ico-purple.png" class="w-3" alt="hcr" />
+                      <span>HCR</span>
+                    </div>
+
+                    <div class="inline-flex items-center gap-x-1 px-[10px] py-[2px] text-[11px] leading-[140%] font-semibold text-[#F3652D] bg-[#FFE9E9] rounded-full">
+                      <img src="../images/world-top-ico-orange.png" class="w-3" alt="world top"/>
+                      <span>World Top 2%</span>
+                    </div>
+                  </div>
+
+                  <ul class="hidden lg:block mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]">
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] xl:py-[14px]">
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div class="intrest hidden lg:block w-[38px] h-[38px] cursor-pointer group absolute top-0 right-0">
+                    <img src="../images/intrest-default.png" class="interest-default group-hover:hidden" alt="interest-default"/>
+                    <img src="../images/intrest-hover.png" class="interest-hover hidden group-hover:block" alt="interest-hover"/>
+                    <img src="../images/intrest-active.png" class="interest-active hidden" alt="interest-active"/>
+                  </div>
+
+                  <div class="hidden lg:flex mt-6 justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]">
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="hidden lg:block w-full h-[1px] bg-[#E4E8F1]"></li>
+
+              <li class="relative w-[calc((100%-16px)/2)] lg:w-full p-4 lg:p-0 bg-white border lg:border-none border-[#E4E8F1] rounded-xl lg:rounded-none lg:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer">
+                <a href="#">
+                  <div class="w-[61px] h-[61px] mx-auto lg:mx-0 mb-[10px] lg:mb-3 rounded-full overflow-hidden border border-[#E4E8F1]">
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[13px] lg:text-[15px] text-center lg:text-left font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+
+                  <div class="text-[11px] lg:text-[12px] text-[#8D9AAF] leading-[140%] text-center lg:text-left mt-[6px] lg:mt-1">
+                    Department of Medicine
+                  </div>
+
+                  <ul class="hidden lg:block mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]">
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] xl:py-[14px]">
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div class="intrest hidden lg:block w-[38px] h-[38px] cursor-pointer group absolute top-0 right-0">
+                    <img src="../images/intrest-default.png" class="interest-default group-hover:hidden" alt="interest-default"/>
+                    <img src="../images/intrest-hover.png" class="interest-hover hidden group-hover:block" alt="interest-hover"/>
+                    <img src="../images/intrest-active.png" class="interest-active hidden" alt="interest-active"/>
+                  </div>
+
+                  <div class="hidden lg:flex mt-6 justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]">
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="hidden lg:block w-full h-[1px] bg-[#E4E8F1]"></li>
+
+              <li class="relative w-[calc((100%-16px)/2)] lg:w-full p-4 lg:p-0 bg-white border lg:border-none border-[#E4E8F1] rounded-xl lg:rounded-none lg:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer">
+                <a href="#">
+                  <div class="w-[61px] h-[61px] mx-auto lg:mx-0 mb-[10px] lg:mb-3 rounded-full overflow-hidden border border-[#E4E8F1]">
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[13px] lg:text-[15px] text-center lg:text-left font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+
+                  <div class="text-[11px] lg:text-[12px] text-[#8D9AAF] leading-[140%] text-center lg:text-left mt-[6px] lg:mt-1">
+                    Department of Medicine
+                  </div>
+                  
+                  <ul class="hidden lg:block mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]">
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] xl:py-[14px]">
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div class="intrest hidden lg:block w-[38px] h-[38px] cursor-pointer group absolute top-0 right-0">
+                    <img src="../images/intrest-default.png" class="interest-default group-hover:hidden" alt="interest-default"/>
+                    <img src="../images/intrest-hover.png" class="interest-hover hidden group-hover:block" alt="interest-hover"/>
+                    <img src="../images/intrest-active.png" class="interest-active hidden" alt="interest-active"/>
+                  </div>
+
+                  <div class="hidden lg:flex mt-6 justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]">
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="hidden lg:block w-full h-[1px] bg-[#E4E8F1]"></li>
+
+              <li class="relative w-[calc((100%-16px)/2)] lg:w-full p-4 lg:p-0 bg-white border lg:border-none border-[#E4E8F1] rounded-xl lg:rounded-none lg:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer">
+                <a href="#">
+                  <div class="w-[61px] h-[61px] mx-auto lg:mx-0 mb-[10px] lg:mb-3 rounded-full overflow-hidden border border-[#E4E8F1]">
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[13px] lg:text-[15px] text-center lg:text-left font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+
+                  <div class="text-[11px] lg:text-[12px] text-[#8D9AAF] leading-[140%] text-center lg:text-left mt-[6px] lg:mt-1">
+                    Department of Medicine
+                  </div>
+
+                  <ul class="hidden lg:block mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]">
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] xl:py-[14px]">
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div class="intrest hidden lg:block w-[38px] h-[38px] cursor-pointer group absolute top-0 right-0">
+                    <img src="../images/intrest-default.png" class="interest-default group-hover:hidden" alt="interest-default"/>
+                    <img src="../images/intrest-hover.png" class="interest-hover hidden group-hover:block" alt="interest-hover"/>
+                    <img src="../images/intrest-active.png" class="interest-active hidden" alt="interest-active"/>
+                  </div>
+
+                  <div class="hidden lg:flex mt-6 justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]">
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="hidden lg:block w-full h-[1px] bg-[#E4E8F1]"></li>
+
+              <li class="relative w-[calc((100%-16px)/2)] lg:w-full p-4 lg:p-0 bg-white border lg:border-none border-[#E4E8F1] rounded-xl lg:rounded-none lg:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.05)] tansition duration-300 cursor-pointer">
+                <a href="#">
+                  <div class="w-[61px] h-[61px] mx-auto lg:mx-0 mb-[10px] lg:mb-3 rounded-full overflow-hidden border border-[#E4E8F1]">
+                    <img src="../images/profile03.png" alt="photo" />
+                  </div>
+
+                  <div class="text-[13px] lg:text-[15px] text-center lg:text-left font-bold leading-[140%]">
+                    Kim, Kanghwa(김광하)
+                  </div>
+
+                  <div class="text-[11px] lg:text-[12px] text-[#8D9AAF] leading-[140%] text-center lg:text-left mt-[6px] lg:mt-1">
+                    Department of Medicine
+                  </div>
+
+                  <ul class="hidden lg:block mt-4 px-5 border border-[#E4E8F1] rounded-[12px] text-[14px] text-[#6C7687] font-bold leading-[140%]">
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Scholarly Output</span>
+                      <span class="text-[#333]">3</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] border-b border-b-[#E4E8F1] xl:py-[14px]">
+                      <span>Citation Count</span>
+                      <span class="text-[#333]">82</span>
+                    </li>
+                    <li class="flex justify-between items-center py-[10px] xl:py-[14px]">
+                      <span>H-Index</span>
+                      <span class="text-[#333]">1</span>
+                    </li>
+                  </ul>
+
+                  <div class="intrest hidden lg:block w-[38px] h-[38px] cursor-pointer group absolute top-0 right-0">
+                    <img src="../images/intrest-default.png" class="interest-default group-hover:hidden" alt="interest-default"/>
+                    <img src="../images/intrest-hover.png" class="interest-hover hidden group-hover:block" alt="interest-hover"/>
+                    <img src="../images/intrest-active.png" class="interest-active hidden" alt="interest-active"/>
+                  </div>
+
+                  <div class="hidden lg:flex mt-6 justify-center gap-[10px] text-[12px] text-[#8D9AAF] leading-[140%]">
+                    <div>2020</div>
+                    <div class="graph-area"></div>
+                    <div>2024</div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- .right-box -->
+        </div>
+      </div>
+      <!-- #container -->
+
+      <footer
+        class="mt-[120px] px-6 text-sm pb-10 lg:pb-[34px] lg:px-[100px] lg:mt-40"
+      >
+        <div
+          class="border-t border-t-[#D1D5DF] pt-7 lg:flex lg:items-start lg:gap-[66px]"
+        >
+          <div class="flogo mb-10 shrink-0">
+            <img src="../images/logo-gr.png" alt="logo" class="w-[178px]" />
+          </div>
+          <!-- .flogo -->
+
+          <div class="fcont lg:pt-[14px]">
+            <div class="fmenu text-sm text-[#333] flex items-center gap-4">
+              <a href="#">Privacy Policy</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Notice</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">FAQ</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Need Help?</a>
+            </div>
+
+            <address class="mt-7 text-[#6C7687] not-italic lg:mt-9">
+              <div class="mb-[10px]">
+                (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
+              </div>
+              <div class="lg:flex">
+                <p
+                  class="mb-[10px] lg:after:content-[''] lg:after:inline-block lg:after:w-[1px] lg:after:h-[11px] lg:after:bg-[#888888] lg:after:ml-[8px] lg:after:mr-[10px]"
+                >
+                  Tel. 051-510-1817, 1040
+                </p>
+                <p>Fax. 051-513-9733</p>
+              </div>
+            </address>
+
+            <div class="copy mt-7 text-[#6C7687] lg:mt-4">
+              <p>
+                Copyright 2025 Pusan National University Library. All Rights
+                Reserved.
+              </p>
+              <p class="mt-7 lg:mt-[10px]">
+                PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
+                저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
+                형사 상의 책임을 질 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <!-- .fcont -->
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script></script>
+  </body>
+</html>
