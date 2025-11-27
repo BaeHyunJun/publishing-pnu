@@ -600,6 +600,14 @@ td {
   }
 }
 /* Highlight List 2 - 맨아래설명 pc에서 2줄 말줄임으로 변경 */
+@media (min-width:768px) {
+  .highlight-list-item h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
 @media (min-width:1024px) {
   .highlight-list-item .text-line-3 {
     -webkit-line-clamp: 2;
