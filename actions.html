@@ -77,66 +77,30 @@
       <h2 class="font-bold">컴포넌트 : 토글버튼</h2>
       <label class="relative inline-flex items-center cursor-pointer">
         <input type="checkbox" class="sr-only peer" />
-        <div
-          class="w-[25px] h-[15px] bg-[#B4BCCC] rounded-full peer peer-checked:bg-[#4B4DFF] transition-colors duration-200"
-        ></div>
-        <div
-          class="absolute left-[2px] top-[2px] w-[11px] h-[11px] bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-[10px]"
-        ></div>
+        <div class="w-[25px] h-[15px] bg-[#B4BCCC] rounded-full peer peer-checked:bg-[#4B4DFF] transition-colors duration-200"></div>
+        <div class="absolute left-[2px] top-[2px] w-[11px] h-[11px] bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-[10px]"></div>
       </label>
 
       <h2 class="font-bold">
         컴포넌트 : 페이저 컴포넌트 - 동작없이 스타일만 넣은것
       </h2>
-      <div
-        class="flex items-center justify-center gap-2 font-[Pretendard] text-[15px] min-[800px]:mt-[40px]"
-      >
+      <div class="flex items-center justify-center gap-2 font-[Pretendard] text-[15px] min-[800px]:mt-[40px]">
         <!-- 이전 버튼 -->
-        <button
-          class="shrink-0 p-2 rounded-md cursor-pointer"
-          aria-label="prev"
-        >
+        <button class="shrink-0 p-2 rounded-md cursor-pointer" aria-label="prev">
           <img src="images/pager_prev.png" alt="prev" class="w-4 h-4" />
         </button>
 
         <!-- 페이지 숫자 -->
-        <button
-          class="px-[15px] py-2 rounded-md text-[#215BD8] bg-[#D7E2F9] font-medium cursor-pointer"
-        >
-          1
-        </button>
-        <button
-          class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer"
-        >
-          2
-        </button>
-        <button
-          class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer"
-        >
-          3
-        </button>
-        <button
-          class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer hidden min-[800px]:block"
-        >
-          4
-        </button>
-        <button
-          class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer hidden min-[800px]:block"
-        >
-          5
-        </button>
+        <button class="px-[15px] py-2 rounded-md text-[#215BD8] bg-[#D7E2F9] font-medium cursor-pointer">1</button>
+        <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer">2</button>
+        <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer">3</button>
+        <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer hidden min-[800px]:block">4</button>
+        <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer hidden min-[800px]:block">5</button>
         <button class="text-[#6C7687] select-none px-1">...</button>
-        <button
-          class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer"
-        >
-          1235
-        </button>
+        <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer">1235</button>
 
         <!-- 다음 버튼 -->
-        <button
-          class="shrink-0 p-2 rounded-md cursor-pointer"
-          aria-label="next"
-        >
+        <button class="shrink-0 p-2 rounded-md cursor-pointer" aria-label="next">
           <img src="images/pager_next.png" alt="next" class="w-4 h-4" />
         </button>
       </div>
@@ -145,51 +109,101 @@
 
       <div class="relative inline-block">
         <!-- 버튼 -->
-        <button
-          id="dropdownButton"
-          class="flex items-center justify-between w-[220px] border border-[#E4E8F1] text-[13px] text-[#6C7687] rounded-[8px] px-3 py-2 cursor-pointer bg-white relative z-[1]"
-        >
+        <button id="dropdownButton" class="flex items-center justify-between w-[220px] border border-[#E4E8F1] text-[13px] text-[#6C7687] rounded-[8px] px-3 py-2 cursor-pointer bg-white relative z-[1]">
           <span id="dropdownText">Ranking : highest first</span>
           <img src="images/expand_more_8D9AAF.png" class="w-4 ml-2" alt="arr" />
         </button>
 
         <!-- 옵션 목록 -->
-        <ul
-          id="dropdownMenu"
-          class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden"
-        >
-          <li
-            class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
-          >
+        <ul id="dropdownMenu" class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden">
+          <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
             Ranking : highest first
           </li>
-          <li
-            class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
-          >
+          <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
             Ranking : lowest first
           </li>
-          <li
-            class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
-          >
+          <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
             Journal Title : A to Z
           </li>
-          <li
-            class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
-          >
+          <li class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer">
             Journal Title : Z to A
           </li>
         </ul>
       </div>
 
+      <h2 class="font-bold">컴포넌트 : 입력상자(+제목)</h2>
+      
+      <div class="flex flex-col gap-[30px] w-full">
+        <!-- 기본 -->
+        <div class="flex flex-col lg:flex-row gap-[10px] lg:items-center w-full">
+          <span class="lg:w-[160px] text-[14px] font-medium lg:text-[#6C7687]">Title</span>
+          <div class="w-full lg:w-[calc(100%-160px)]">
+            <input type="text" placeholder="placeholder" class="w-full h-[44px] px-4 border border-[#E4E8F1] rounded-[8px] text-[13px] placeholder-[#B4BCCC] outline-none">
+          </div>
+        </div>
+        
+        <!-- 틀렸을때 -->
+        <div class="flex flex-col lg:flex-row gap-[10px] lg:items-center w-full">
+          <span class="lg:w-[160px] text-[14px] font-medium lg:text-[#6C7687]">Title</span>
+          <div class="w-full lg:w-[calc(100%-160px)]">
+            <input type="text" placeholder="placeholder" class="w-full h-[44px] px-4 border border-[#F3652D] rounded-[8px] text-[13px] placeholder-[#B4BCCC] outline-none">
+            <p class="mt-3 text-[13px] text-[#F3652D] leading-[100%]">Please enter a valid email address.</p>
+          </div>
+        </div>
+        
+        <!-- 비활성화 -->
+        <div class="flex flex-col lg:flex-row gap-[10px] lg:items-center w-full">
+          <span class="lg:w-[160px] text-[14px] font-medium lg:text-[#6C7687]">Title</span>
+          <div class="w-full lg:w-[calc(100%-160px)]">
+            <input type="text" placeholder="content" class="w-full h-[44px] px-4 border border-[#E4E8F1] rounded-[8px] text-[13px] placeholder-[#B4BCCC] outline-none bg-[#F3F5F9]" disabled>
+          </div>
+        </div>
+
+        <!-- 내용수정 - input -->
+        <div class="edit-field flex flex-col lg:flex-row gap-[10px] lg:items-center w-full" data-field="name">
+          <span class="lg:w-[160px] text-[14px] font-medium lg:text-[#6C7687]">Title</span>
+
+          <div class="w-full lg:w-[calc(100%-160px)]">
+            <p class="display-text w-full h-[44px] px-4 border border-[#E4E8F1] rounded-[8px] text-[13px] leading-[42px] cursor-pointer" data-value="내용입력중">
+              내용입력 중
+            </p>
+            <input type="text" class="edit-input w-full h-[44px] px-4 border border-[#E4E8F1] rounded-[8px] text-[13px] placeholder-[#B4BCCC] outline-none hidden" value="내용입력중" placeholder="placeholder">
+          </div>
+        </div>
+
+        <!-- 내용수정 - textarea -->
+        <div class="edit-field flex flex-col lg:flex-row gap-[10px] lg:items-center w-full" data-field="bio">
+          <span class="lg:w-[160px] text-[14px] font-medium lg:text-[#6C7687]">Title</span>
+
+          <div class="w-full lg:w-[calc(100%-160px)]">
+            <p class="display-text w-full h-[120px] px-4 py-[14px] border border-[#E4E8F1] rounded-[8px] text-[13px] cursor-pointer whitespace-pre-wrap overflow-y-auto" data-value="내용 수정중 입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit.">내용 수정중 입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+            <textarea class="edit-input w-full h-[120px] px-4 py-[14px] border border-[#E4E8F1] rounded-[8px] text-[13px] placeholder-[#B4BCCC] outline-none hidden"  placeholder="placeholder">내용 수정중 입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="font-bold">컴포넌트 : 사진추가</h2>
+
+      <div class="edit-field flex flex-col gap-[10px] w-full" data-field="bio">
+        <span class="text-[14px] font-medium lg:text-[#6C7687]">Additional Images</span>
+
+        <div class="image-uploader-container">
+          <div id="image-previews-container" class="flex flex-wrap gap-3">
+            <div id="add-image-label" class="relative w-[calc((100%-12px)/2)] md:w-[calc((100%-24px)/3)] xl:w-[calc((100%-36px)/4)] 2xl:w-[calc((100%-48px)/5)] aspect-square flex items-center justify-center border border-[#E4E8F1] rounded-[12px] cursor-pointer">
+              <span class="w-[44px] h-[44px] text-[#6C7687] text-[36px] leading-[40px] text-center font-light rounded-full bg-[#F3F5F9]">+</span>
+              <input type="file" id="multi-file-upload" accept="image/*" multiple class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+            </div>
+          </div>
+        </div>
+          
+      </div>
+
       <h1 class="text-[40px] font-bold mt-[100px]">동작</h1>
 
       <h2 class="font-bold">작동1 : 헤더 검색바</h2>
-      <div
-        class="h-search flex items-center relative h-12 w-full xl:w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]"
-      >
-        <div
-          class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] min-[800px]:w-[120px] 2xl:w-[120px]"
-        >
+      <div class="h-search flex items-center relative h-12 w-full xl:w-[350px] bg-[#F3F5F9] rounded-lg 2xl:w-[428px]">
+        <div class="relative shrink-0 w-[96px] h-full border-r border-r-[#E4E8F1] min-[800px]:w-[120px] 2xl:w-[120px]">
           <select id="realSelect" class="hidden">
             <option value="">All</option>
             <option value="option1">All</option>
@@ -199,60 +213,33 @@
           </select>
 
           <!-- 커스텀 셀렉트 버튼 -->
-          <button
-            id="customSelectBtn"
-            type="button"
-            class="w-full h-full px-3 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer 2xl:px-5"
-          >
+          <button id="customSelectBtn" type="button" class="w-full h-full px-3 hover:border-gray-400 focus:outline-none text-left text-[#8D9AAF] text-sm bg-[url('/images/expand_more_8D9AAF.png')] bg-no-repeat bg-size-[18px] bg-position-[95%] cursor-pointer 2xl:px-5">
             <span id="selectedText">All</span>
           </button>
 
           <!-- 드롭다운 목록 -->
-          <ul
-            id="customOptions"
-            class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px] 2xl:p-2"
-          >
-            <li
-              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-              data-value="option1"
-            >
+          <ul id="customOptions" class="absolute left-0 right-0 p-[6px] bg-white rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden z-10 text-[#6C7687] text-[13px] 2xl:p-2">
+            <li class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg" data-value="option1">
               All
             </li>
-            <li
-              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-              data-value="option2"
-            >
+            <li class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg" data-value="option2">
               Journal
             </li>
-            <li
-              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-              data-value="option3"
-            >
+            <li class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg" data-value="option3">
               Resource
             </li>
-            <li
-              class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg"
-              data-value="option3"
-            >
+            <li class="px-2 py-1 cursor-pointer hover:bg-[#F3F5F9] rounded-lg" data-value="option3">
               Scholar
             </li>
           </ul>
         </div>
 
-        <div
-          class="search-wrap w-full h-full pl-[10px] pr-9 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10"
-        >
-          <input
-            type="text"
-            class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]"
-            placeholder="Search for journals, resources, scholars"
-          />
+        <div class="search-wrap w-full h-full pl-[10px] pr-9 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-10">
+          <input type="text" class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]" placeholder="Search for journals, resources, scholars"/>
         </div>
         <!-- .search-wrap -->
 
-        <button
-          class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5"
-        >
+        <button class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5">
           <img src="images/search-ico-bl.png" alt="search" />
         </button>
       </div>
@@ -262,36 +249,18 @@
 
       <div href="#" class="h-profile after-log relative">
         <button class="profile flex items-center">
-          <div
-            class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2"
-          >
+          <div class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2">
             <img src="images/profile.png" alt="profile" />
           </div>
           <p class="name text-sm text-[#555555]">Kim, Minjun</p>
-          <span
-            class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"
-          ></span>
+          <span class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"></span>
         </button>
         <!-- .profile -->
 
-        <div
-          class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200"
-        >
-          <a
-            href="#"
-            class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
-            >My Profile</a
-          >
-          <a
-            href="#"
-            class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
-            >My Resources</a
-          >
-          <a
-            href="#"
-            class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
-            >Saved Researcher</a
-          >
+        <div class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200">
+          <a href="#" class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">My Profile</a>
+          <a href="#" class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">My Resources</a>
+          <a href="#" class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]">Saved Researcher</a>
         </div>
         <!-- .profile-mybox -->
       </div>
@@ -300,25 +269,14 @@
       <h2 class="font-bold">작동3 : 모바일 사이드메뉴 열기</h2>
 
       <button class="btnM w-6 h-6 relative cursor-pointer">
-        <span
-          class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
-        ></span>
-        <span
-          class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"
-        ></span>
-        <span
-          class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"
-        ></span>
+        <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"></span>
+        <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"></span>
+        <span class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"></span>
       </button>
 
-      <div
-        class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"
-      ></div>
+      <div class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"></div>
 
-      <div
-        id="sideM"
-        class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300"
-      >
+      <div id="sideM" class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300">
         <div class="side-header flex justify-between mb-[30px]">
           <a href="/" class="gomain">
             <img src="images/home-icon.png" alt="go main" class="w-6" />
@@ -333,55 +291,28 @@
         <!-- 로그인 후 회원정보 -->
         <div class="member">
           <div class="profile flex items-center gap-[10px]">
-            <div
-              class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]"
-            >
+            <div class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]">
               <img src="images/profile.png" alt="photo" />
             </div>
 
             <div class="name">
-              <a
-                href="#"
-                class="flex items-center gap-2 text-[20px] font-bold leading-[140%]"
-                >Park, Minjun
-                <img
-                  src="images/chevron_right.png"
-                  class="w-[20px] h-[20px]"
-                  alt="arr"
-              /></a>
-              <span class="block text-[13px] text-[#8D9AAF] mt-2"
-                >Department of Medicine</span
-              >
+              <a href="#" class="flex items-center gap-2 text-[20px] font-bold leading-[140%]">Park, Minjun
+                <img src="images/chevron_right.png" class="w-[20px] h-[20px]" alt="arr"/></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2">Department of Medicine</span>
             </div>
           </div>
           <!-- pfofile -->
 
-          <ul
-            class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]"
-          >
+          <ul class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]">
             <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
-              <a
-                href="#"
-                class="flex flex-col justify-center items-center gap-[6px]"
-              >
-                <img
-                  src="images/profile-myresources.png"
-                  class="w-[20px]"
-                  alt="resource icon"
-                />
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="images/profile-myresources.png" class="w-[20px]" alt="resource icon"/>
                 <span class="text-[14px] text-[#6C7687]">My Resources</span>
               </a>
             </li>
             <li class="w-1/2 py-[16px]">
-              <a
-                href="#"
-                class="flex flex-col justify-center items-center gap-[6px]"
-              >
-                <img
-                  src="images/profile-savedresearcher.png"
-                  class="w-[20px]"
-                  alt="saved researcher icon"
-                />
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="images/profile-savedresearcher.png" class="w-[20px]" alt="saved researcher icon"/>
                 <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
               </a>
             </li>
@@ -399,71 +330,32 @@
           </ul>
         </nav>
 
-        <div
-          class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3"
-        >
-          <a
-            href="#"
-            class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl"
-          >
-            <img
-              src="images/header-login-ico-wh.png"
-              class="w-4 mr-1"
-              alt="login icon"
-            />
+        <div class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3">
+          <a href="#" class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl">
+            <img src="images/header-login-ico-wh.png" class="w-4 mr-1" alt="login icon"/>
             Login
           </a>
-          <a
-            href="#"
-            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
-            >Notice</a
-          >
-          <a
-            href="#"
-            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
-            >Q&A</a
-          >
-          <a
-            href="#"
-            class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
-            >Research Guide
-            <img
-              src="images/launch-ico-gr.png"
-              class="w-3 ml-1"
-              alt="launch icon"
-          /></a>
+          <a href="#" class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Notice</a>
+          <a href="#" class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Q&A</a>
+          <a href="#" class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]">Research Guide
+            <img src="images/launch-ico-gr.png" class="w-3 ml-1" alt="launch icon"/></a>
         </div>
       </div>
       <!-- #sideM -->
 
       <h2 class="font-bold">작동4 : 탭메뉴</h2>
 
-      <ul
-        id="customOptions"
-        class="p-[6px] bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] flex text-[15px] gap-[5px]"
-      >
-        <li
-          class="active w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
-          data-value="option1"
-        >
+      <ul id="customOptions" class="p-[6px] bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] flex text-[15px] gap-[5px]">
+        <li class="active w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer" data-value="option1">
           All
         </li>
-        <li
-          class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
-          data-value="option2"
-        >
+        <li class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer" data-value="option2">
           Journal
         </li>
-        <li
-          class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
-          data-value="option3"
-        >
+        <li class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer" data-value="option3">
           Resource
         </li>
-        <li
-          class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer"
-          data-value="option3"
-        >
+        <li class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer" data-value="option3">
           Scholar
         </li>
       </ul>
@@ -472,49 +364,28 @@
 
       <div class="swiper reserch-highlight-swiper w-full">
         <div class="swiper-wrapper px-6 lg:px-0">
-          <div
-            class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
-          >
+          <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
             <div class="slide-inner lg:flex lg:justify-between">
               <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
-                <p
-                  class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
-                >
+                <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
                   2025-09-04
                 </p>
-                <div
-                  class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
-                >
-                  How Uneven Ocean Warming is Altering Propagation of the
-                  Madden-Julian Oscillation
+                <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                  How Uneven Ocean Warming is Altering Propagation of the Madden-Julian Oscillation
                 </div>
-                <div
-                  class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
-                >
-                  Uneven ocean warming reshapes the Madden-Julian Oscillation,
-                  altering rainfall patterns and challenging climate prediction
+                <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                  Uneven ocean warming reshapes the Madden-Julian Oscillation, altering rainfall patterns and challenging climate prediction
                 </div>
 
-                <a
-                  href="#"
-                  class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
-                >
+                <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
                   View Highlights
-                  <img
-                    src="images/arr-right-bar-bl.png"
-                    class="arr"
-                    alt="arr"
-                  />
+                  <img src="images/arr-right-bar-bl.png" class="arr" alt="arr"/>
                 </a>
               </div>
               <!-- .txt-info -->
 
               <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
-                <img
-                  src="images/research01.png"
-                  class="w-full rounded-xl"
-                  alt="research img"
-                />
+                <img src="images/research01.png" class="w-full rounded-xl" alt="research img"/>
               </div>
 
               <a href="#" class="btn-view btn-common lg:!hidden">
@@ -522,49 +393,211 @@
                 <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
               </a>
 
-              <div
-                class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
-              >
-                <h3
-                  class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
-                >
+              <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
                   Featured Researcher
                 </h3>
                 <div class="researcher-cont flex items-center lg:items-start">
-                  <div
-                    class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
-                  >
+                  <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
                     <img src="images/profile.png" alt="profile photo" />
                   </div>
                   <!-- .researcher-photo -->
-                  <div
-                    class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
-                  >
-                    <p
-                      class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
-                    >
+                  <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                    <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
                       Park, Min Jun
                     </p>
-                    <p
-                      class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
-                    >
+                    <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
                       COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
                     </p>
-                    <div
-                      class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
-                    >
-                      Characterization of Fatigue Properties of Fiber-Reinforced
-                      the one...
+                    <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                      Characterization of Fatigue Properties of Fiber-Reinforced the one...
                     </div>
-                    <a
-                      href="#"
-                      class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
-                    >
+                    <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
                       <span class="hidden lg:block mr-2">View Researcher</span>
-                      <img
-                        src="images/arr-right-bar-gr.png"
-                        class="w-[11px]"
-                        alt="arr"
+                      <img src="images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                  </div>
+                  <!-- .researcher-profile-txt -->
+                </div>
+                <!-- .researcher-cont -->
+              </div>
+              <!-- .researcher -->
+            </div>
+          </div>
+          <!-- swiper-slide -->
+
+          <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+            <div class="slide-inner lg:flex lg:justify-between">
+              <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                  2025-09-04
+                </p>
+                <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                  How Uneven Ocean Warming is Altering Propagation of the Madden-Julian Oscillation
+                </div>
+                <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                  Uneven ocean warming reshapes the Madden-Julian Oscillation, altering rainfall patterns and challenging climate prediction
+                </div>
+
+                <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                  View Highlights
+                  <img src="images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                </a>
+              </div>
+              <!-- .txt-info -->
+
+              <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                <img src="images/research01.png" class="w-full rounded-xl" alt="research img"/>
+              </div>
+
+              <a href="#" class="btn-view btn-common lg:!hidden">
+                View Highlights
+                <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
+              </a>
+
+              <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                  Featured Researcher
+                </h3>
+                <div class="researcher-cont flex items-center lg:items-start">
+                  <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                    <img src="images/profile.png" alt="profile photo" />
+                  </div>
+                  <!-- .researcher-photo -->
+                  <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                    <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                      Park, Min Jun
+                    </p>
+                    <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                      COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                    </p>
+                    <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                      Characterization of Fatigue Properties of Fiber-Reinforced the one...
+                    </div>
+                    <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                      <span class="hidden lg:block mr-2">View Researcher</span>
+                      <img src="images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                  </div>
+                  <!-- .researcher-profile-txt -->
+                </div>
+                <!-- .researcher-cont -->
+              </div>
+              <!-- .researcher -->
+            </div>
+          </div>
+          <!-- swiper-slide -->
+
+          <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+            <div class="slide-inner lg:flex lg:justify-between">
+              <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                  2025-09-04
+                </p>
+                <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                  How Uneven Ocean Warming is Altering Propagation of the Madden-Julian Oscillation
+                </div>
+                <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                  Uneven ocean warming reshapes the Madden-Julian Oscillation, altering rainfall patterns and challenging climate prediction
+                </div>
+
+                <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                  View Highlights
+                  <img src="images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                </a>
+              </div>
+              <!-- .txt-info -->
+
+              <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                <img src="images/research01.png" class="w-full rounded-xl" alt="research img"/>
+              </div>
+
+              <a href="#" class="btn-view btn-common lg:!hidden">
+                View Highlights
+                <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
+              </a>
+
+              <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                  Featured Researcher
+                </h3>
+                <div class="researcher-cont flex items-center lg:items-start">
+                  <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                    <img src="images/profile.png" alt="profile photo" />
+                  </div>
+                  <!-- .researcher-photo -->
+                  <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                    <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                      Park, Min Jun
+                    </p>
+                    <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                      COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                    </p>
+                    <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                      Characterization of Fatigue Properties of Fiber-Reinforced the one...
+                    </div>
+                    <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                      <span class="hidden lg:block mr-2">View Researcher</span>
+                      <img src="images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
+                  </div>
+                  <!-- .researcher-profile-txt -->
+                </div>
+                <!-- .researcher-cont -->
+              </div>
+              <!-- .researcher -->
+            </div>
+          </div>
+          <!-- swiper-slide -->
+
+          <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
+            <div class="slide-inner lg:flex lg:justify-between">
+              <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
+                <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
+                  2025-09-04
+                </p>
+                <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                  How Uneven Ocean Warming is Altering Propagation of the Madden-Julian Oscillation
+                </div>
+                <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
+                  Uneven ocean warming reshapes the Madden-Julian Oscillation, altering rainfall patterns and challenging climate prediction
+                </div>
+
+                <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
+                  View Highlights
+                  <img src="images/arr-right-bar-bl.png" class="arr" alt="arr"/>
+                </a>
+              </div>
+              <!-- .txt-info -->
+
+              <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
+                <img src="images/research01.png" class="w-full rounded-xl" alt="research img"/>
+              </div>
+
+              <a href="#" class="btn-view btn-common lg:!hidden">
+                View Highlights
+                <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
+              </a>
+
+              <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
+                  Featured Researcher
+                </h3>
+                <div class="researcher-cont flex items-center lg:items-start">
+                  <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
+                    <img src="images/profile.png" alt="profile photo" />
+                  </div>
+                  <!-- .researcher-photo -->
+                  <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                    <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
+                      Park, Min Jun
+                    </p>
+                    <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
+                      COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
+                    </p>
+                    <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
+                      Characterization of Fatigue Properties of Fiber-Reinforced the one...
+                    </div>
+                    <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
+                      <span class="hidden lg:block mr-2">View Researcher</span>
+                      <img src="images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"
                     /></a>
                   </div>
                   <!-- .researcher-profile-txt -->
@@ -576,49 +609,29 @@
           </div>
           <!-- swiper-slide -->
 
-          <div
-            class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
-          >
+          <div class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10">
             <div class="slide-inner lg:flex lg:justify-between">
               <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
-                <p
-                  class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
-                >
+                <p class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]">
                   2025-09-04
                 </p>
-                <div
-                  class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
-                >
-                  How Uneven Ocean Warming is Altering Propagation of the
-                  Madden-Julian Oscillation
+                <div class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]">
+                  How Uneven Ocean Warming is Altering Propagation of the Madden-Julian Oscillation
                 </div>
-                <div
-                  class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
-                >
+                <div class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block">
                   Uneven ocean warming reshapes the Madden-Julian Oscillation,
                   altering rainfall patterns and challenging climate prediction
                 </div>
 
-                <a
-                  href="#"
-                  class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
-                >
+                <a href="#" class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0">
                   View Highlights
-                  <img
-                    src="images/arr-right-bar-bl.png"
-                    class="arr"
-                    alt="arr"
-                  />
+                  <img src="images/arr-right-bar-bl.png" class="arr" alt="arr"/>
                 </a>
               </div>
               <!-- .txt-info -->
 
               <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
-                <img
-                  src="images/research01.png"
-                  class="w-full rounded-xl"
-                  alt="research img"
-                />
+                <img src="images/research01.png" class="w-full rounded-xl" alt="research img"/>
               </div>
 
               <a href="#" class="btn-view btn-common lg:!hidden">
@@ -626,362 +639,29 @@
                 <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
               </a>
 
-              <div
-                class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
-              >
-                <h3
-                  class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
-                >
+              <div class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8">
+                <h3 class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]">
                   Featured Researcher
                 </h3>
                 <div class="researcher-cont flex items-center lg:items-start">
-                  <div
-                    class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
-                  >
+                  <div class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6">
                     <img src="images/profile.png" alt="profile photo" />
                   </div>
                   <!-- .researcher-photo -->
-                  <div
-                    class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
-                  >
-                    <p
-                      class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
-                    >
+                  <div class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block">
+                    <p class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]">
                       Park, Min Jun
                     </p>
-                    <p
-                      class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
-                    >
+                    <p class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]">
                       COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
                     </p>
-                    <div
-                      class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
-                    >
+                    <div class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]">
                       Characterization of Fatigue Properties of Fiber-Reinforced
                       the one...
                     </div>
-                    <a
-                      href="#"
-                      class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
-                    >
+                    <a href="#" class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full">
                       <span class="hidden lg:block mr-2">View Researcher</span>
-                      <img
-                        src="images/arr-right-bar-gr.png"
-                        class="w-[11px]"
-                        alt="arr"
-                    /></a>
-                  </div>
-                  <!-- .researcher-profile-txt -->
-                </div>
-                <!-- .researcher-cont -->
-              </div>
-              <!-- .researcher -->
-            </div>
-          </div>
-          <!-- swiper-slide -->
-
-          <div
-            class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
-          >
-            <div class="slide-inner lg:flex lg:justify-between">
-              <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
-                <p
-                  class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
-                >
-                  2025-09-04
-                </p>
-                <div
-                  class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
-                >
-                  How Uneven Ocean Warming is Altering Propagation of the
-                  Madden-Julian Oscillation
-                </div>
-                <div
-                  class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
-                >
-                  Uneven ocean warming reshapes the Madden-Julian Oscillation,
-                  altering rainfall patterns and challenging climate prediction
-                </div>
-
-                <a
-                  href="#"
-                  class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
-                >
-                  View Highlights
-                  <img
-                    src="images/arr-right-bar-bl.png"
-                    class="arr"
-                    alt="arr"
-                  />
-                </a>
-              </div>
-              <!-- .txt-info -->
-
-              <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
-                <img
-                  src="images/research01.png"
-                  class="w-full rounded-xl"
-                  alt="research img"
-                />
-              </div>
-
-              <a href="#" class="btn-view btn-common lg:!hidden">
-                View Highlights
-                <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
-              </a>
-
-              <div
-                class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
-              >
-                <h3
-                  class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
-                >
-                  Featured Researcher
-                </h3>
-                <div class="researcher-cont flex items-center lg:items-start">
-                  <div
-                    class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
-                  >
-                    <img src="images/profile.png" alt="profile photo" />
-                  </div>
-                  <!-- .researcher-photo -->
-                  <div
-                    class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
-                  >
-                    <p
-                      class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
-                    >
-                      Park, Min Jun
-                    </p>
-                    <p
-                      class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
-                    >
-                      COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
-                    </p>
-                    <div
-                      class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
-                    >
-                      Characterization of Fatigue Properties of Fiber-Reinforced
-                      the one...
-                    </div>
-                    <a
-                      href="#"
-                      class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
-                    >
-                      <span class="hidden lg:block mr-2">View Researcher</span>
-                      <img
-                        src="images/arr-right-bar-gr.png"
-                        class="w-[11px]"
-                        alt="arr"
-                    /></a>
-                  </div>
-                  <!-- .researcher-profile-txt -->
-                </div>
-                <!-- .researcher-cont -->
-              </div>
-              <!-- .researcher -->
-            </div>
-          </div>
-          <!-- swiper-slide -->
-
-          <div
-            class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
-          >
-            <div class="slide-inner lg:flex lg:justify-between">
-              <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
-                <p
-                  class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
-                >
-                  2025-09-04
-                </p>
-                <div
-                  class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
-                >
-                  How Uneven Ocean Warming is Altering Propagation of the
-                  Madden-Julian Oscillation
-                </div>
-                <div
-                  class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
-                >
-                  Uneven ocean warming reshapes the Madden-Julian Oscillation,
-                  altering rainfall patterns and challenging climate prediction
-                </div>
-
-                <a
-                  href="#"
-                  class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
-                >
-                  View Highlights
-                  <img
-                    src="images/arr-right-bar-bl.png"
-                    class="arr"
-                    alt="arr"
-                  />
-                </a>
-              </div>
-              <!-- .txt-info -->
-
-              <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
-                <img
-                  src="images/research01.png"
-                  class="w-full rounded-xl"
-                  alt="research img"
-                />
-              </div>
-
-              <a href="#" class="btn-view btn-common lg:!hidden">
-                View Highlights
-                <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
-              </a>
-
-              <div
-                class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
-              >
-                <h3
-                  class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
-                >
-                  Featured Researcher
-                </h3>
-                <div class="researcher-cont flex items-center lg:items-start">
-                  <div
-                    class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
-                  >
-                    <img src="images/profile.png" alt="profile photo" />
-                  </div>
-                  <!-- .researcher-photo -->
-                  <div
-                    class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
-                  >
-                    <p
-                      class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
-                    >
-                      Park, Min Jun
-                    </p>
-                    <p
-                      class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
-                    >
-                      COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
-                    </p>
-                    <div
-                      class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
-                    >
-                      Characterization of Fatigue Properties of Fiber-Reinforced
-                      the one...
-                    </div>
-                    <a
-                      href="#"
-                      class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
-                    >
-                      <span class="hidden lg:block mr-2">View Researcher</span>
-                      <img
-                        src="images/arr-right-bar-gr.png"
-                        class="w-[11px]"
-                        alt="arr"
-                    /></a>
-                  </div>
-                  <!-- .researcher-profile-txt -->
-                </div>
-                <!-- .researcher-cont -->
-              </div>
-              <!-- .researcher -->
-            </div>
-          </div>
-          <!-- swiper-slide -->
-
-          <div
-            class="swiper-slide group max-w-[280px] p-6 bg-white rounded-xl shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.05)] min-[800px]:max-w-[400px] lg:p-9 lg:max-w-[calc(100%-200px)] 2xl:max-w-[calc(100%-320px)] 2xl:p-10"
-          >
-            <div class="slide-inner lg:flex lg:justify-between">
-              <div class="txt-info relative mb-3 lg:w-[24%] lg:mb-0">
-                <p
-                  class="date mb-[6px] text-[13px] text-[#B4BCCC] lg:text-[14px]"
-                >
-                  2025-09-04
-                </p>
-                <div
-                  class="tit text-[15px] font-medium leading-[140%] group-hover:underline underline-offset-4 lg:text-[16px] xl:text-[18px]"
-                >
-                  How Uneven Ocean Warming is Altering Propagation of the
-                  Madden-Julian Oscillation
-                </div>
-                <div
-                  class="sub-txt hidden mt-3 text-base leading-[140%] text-[#8D9AAF] 2xl:block"
-                >
-                  Uneven ocean warming reshapes the Madden-Julian Oscillation,
-                  altering rainfall patterns and challenging climate prediction
-                </div>
-
-                <a
-                  href="#"
-                  class="btn-view btn-common !hidden lg:!flex lg:mt-5 min-[1120px]:absolute min-[1120px]:bottom-0 min-[1120px]:mt-0"
-                >
-                  View Highlights
-                  <img
-                    src="images/arr-right-bar-bl.png"
-                    class="arr"
-                    alt="arr"
-                  />
-                </a>
-              </div>
-              <!-- .txt-info -->
-
-              <div class="img-info mb-3 lg:w-[34%] lg:mb-0">
-                <img
-                  src="images/research01.png"
-                  class="w-full rounded-xl"
-                  alt="research img"
-                />
-              </div>
-
-              <a href="#" class="btn-view btn-common lg:!hidden">
-                View Highlights
-                <img src="images/arr-right-bar-bl.png" class="arr" alt="arr" />
-              </a>
-
-              <div
-                class="researcher relative px-5 py-4 mt-5 bg-[#F3F5F9] rounded-xl lg:w-[34%] lg:mt-0 lg:p-6 2xl:p-8"
-              >
-                <h3
-                  class="text-[12px] leading-[140%] text-[#B4BCCC] mb-2 lg:hidden 2xl:block 2xl:text-[18px] 2xl:text-[#333] 2xl:font-bold 2xl:mb-[26px]"
-                >
-                  Featured Researcher
-                </h3>
-                <div class="researcher-cont flex items-center lg:items-start">
-                  <div
-                    class="researcher-photo shrink-0 w-[35px] h-[35px] rounded-full overflow-hidden border border-[#E4E8F1] mr-2 lg:hidden xl:block xl:w-[78px] xl:h-[78px] 2xl:w-[104px] 2xl:h-[104px] 2xl:mr-6"
-                  >
-                    <img src="images/profile.png" alt="profile photo" />
-                  </div>
-                  <!-- .researcher-photo -->
-                  <div
-                    class="researcher-profile-txt flex justify-between items-center gap-2 w-full lg:block"
-                  >
-                    <p
-                      class="name text-sm text-[#333] font-bold lg:text-[15px] lg:mb-2 xl:text-[16px]"
-                    >
-                      Park, Min Jun
-                    </p>
-                    <p
-                      class="univ hidden text-sm leading-[140%] text-[#8D9AAF] font-bold mb-2 lg:block lg:text-[12px] lg:font-[medium] xl:text-[14px]"
-                    >
-                      COLL. OF ENGINEERING SCHOOL OF MECHANICAL ENGINEERING
-                    </p>
-                    <div
-                      class="research-content hidden text-sm leading-[140%] text-[#8D9AAF] xl:text-[14px]"
-                    >
-                      Characterization of Fatigue Properties of Fiber-Reinforced
-                      the one...
-                    </div>
-                    <a
-                      href="#"
-                      class="flex justify-center items-center shrink-0 w-[26px] h-[26px] border border-[#B4BCCC] rounded-full text-sm leading-[140%] txt-gray2 lg:mt-4 lg:h-[38px] lg:w-full min-[1120px]:absolute min-[1120px]:bottom-6 min-[1120px]:!w-[calc(100%-48px)] xl:static xl:!w-full"
-                    >
-                      <span class="hidden lg:block mr-2">View Researcher</span>
-                      <img
-                        src="images/arr-right-bar-gr.png"
-                        class="w-[11px]"
-                        alt="arr"
-                    /></a>
+                      <img src="images/arr-right-bar-gr.png" class="w-[11px]" alt="arr"/></a>
                   </div>
                   <!-- .researcher-profile-txt -->
                 </div>
@@ -993,99 +673,61 @@
           <!-- swiper-slide -->
         </div>
 
-        <div
-          class="reserch-highlight-prev hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] left-[73px] z-10 2xl:left-[133px]"
-        >
+        <div class="reserch-highlight-prev hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] left-[73px] z-10 2xl:left-[133px]">
           <img src="images/chevron_left.png" class="w-6" alt="prev btn" />
         </div>
-        <div
-          class="reserch-highlight-next hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] right-[73px] z-10 2xl:right-[133px]"
-        >
+        <div class="reserch-highlight-next hidden lg:flex w-[54px] h-[54px] border border-[#EEF1F8] rounded-full bg-white justify-center items-center cursor-pointer hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300 absolute top-[50%] translate-y-[-50%] right-[73px] z-10 2xl:right-[133px]">
           <img src="images/chevron_right.png" class="w-6" alt="next btn" />
         </div>
       </div>
       <!-- swiper -->
 
-      <div
-        class="reserch-highlight-pagination static flex justify-center mt-6 min-[800px]:mt[22px]"
-      ></div>
+      <div class="reserch-highlight-pagination static flex justify-center mt-6 min-[800px]:mt[22px]"></div>
 
       <h2 class="font-bold">작동6 : 숫자 애니메이션</h2>
 
-      <div
-        class="num-data px-6 mt-[46px] flex flex-wrap gap-4 lg:px-[100px] lg:flex-nowrap lg:gap-0 lg:mt-[60px]"
-      >
-        <div
-          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:mr-[20px] lg:h-[200px] lg:py-8 lg:w-[25%] 2xl:px-10 2xl:mr-[30px]"
-        >
-          <div
-            class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3"
-          >
+      <div class="num-data px-6 mt-[46px] flex flex-wrap gap-4 lg:px-[100px] lg:flex-nowrap lg:gap-0 lg:mt-[60px]">
+        <div class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:mr-[20px] lg:h-[200px] lg:py-8 lg:w-[25%] 2xl:px-10 2xl:mr-[30px]">
+          <div class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3">
             <p class="mb-1 text-[17px] font-bold lg:text-[18px] lg:mb-0">
               Publications
             </p>
-            <span class="text-[13px] text-[#8D9AAF] lg:text-[15px]"
-              >2010 ~ 2025</span
-            >
+            <span class="text-[13px] text-[#8D9AAF] lg:text-[15px]">2010 ~ 2025</span>
           </div>
-          <div
-            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]"
-            data-target="23456"
-          >
+          <div class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]"
+            data-target="23456">
             0
           </div>
         </div>
         <!-- .num-data-cont -->
 
-        <div
-          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:rounded-[12px_0_0_12px] lg:border-r border-r-[#EEF1F8] lg:w-[25%] lg:h-[200px] lg:py-8 2xl:px-10"
-        >
-          <div
-            class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3"
-          >
+        <div class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:rounded-[12px_0_0_12px] lg:border-r border-r-[#EEF1F8] lg:w-[25%] lg:h-[200px] lg:py-8 2xl:px-10">
+          <div class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3">
             <p class="mb-1 text-[17px] font-bold lg:text-[18px]">Researcher</p>
           </div>
-          <div
-            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]"
-            data-target="23456"
-          >
+          <div class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]"
+            data-target="23456">
             0
           </div>
         </div>
         <!-- .num-data-cont -->
 
-        <div
-          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:rounded-none lg:border-r border-r-[#EEF1F8] lg:w-[25%] lg:h-[200px] lg:py-8 2xl:px-10"
-        >
-          <div
-            class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3"
-          >
+        <div class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:rounded-none lg:border-r border-r-[#EEF1F8] lg:w-[25%] lg:h-[200px] lg:py-8 2xl:px-10">
+          <div class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3">
             <p class="mb-1 text-[17px] font-bold lg:text-[18px]">Cited Count</p>
           </div>
-          <div
-            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]"
-            data-target="123456"
-          >
+          <div class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]" data-target="123456">
             0
           </div>
         </div>
         <!-- .num-data-cont -->
 
-        <div
-          class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:rounded-[0_12px_12px_0] lg:w-[25%] lg:h-[200px] lg:py-8 2xl:px-10"
-        >
-          <div
-            class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3 lg:mb-0"
-          >
+        <div class="num-data-cont relative w-[calc(50%-8px)] h-[148px] bg-white rounded-xl p-6 lg:rounded-[0_12px_12px_0] lg:w-[25%] lg:h-[200px] lg:py-8 2xl:px-10">
+          <div class="tit leading-[100%] lg:flex flex-wrap items-center gap-x-3 lg:mb-0">
             <p class="mb-1 text-[17px] font-bold lg:text-[18px]">QS Ranking</p>
-            <span class="text-[13px] text-[#8D9AAF] lg:text-[15px]"
-              >in the world</span
-            >
+            <span class="text-[13px] text-[#8D9AAF] lg:text-[15px]">in the world</span>
           </div>
-          <div
-            class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]"
-            data-target="400"
-          >
+          <div class="count absolute left-1/2 translate-x-[-50%] bottom-10 text-2xl font-bold text-center text-[#4B4DFF] lg:bottom-[56px] lg:text-[36px]" data-target="400">
             0
           </div>
         </div>
@@ -1097,15 +739,8 @@
 
       <div class="relative w-[400px] mx-auto mt-10">
         <!-- 그래프 배경 -->
-        <svg
-          viewBox="0 0 400 80"
-          class="absolute top-[-80px] left-0 w-full h-[80px] z-0"
-        >
-          <path
-            d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z"
-            fill="#4B4DFF1A"
-            stroke="none"
-          />
+        <svg viewBox="0 0 400 80" class="absolute top-[-80px] left-0 w-full h-[80px] z-0">
+          <path d="M0,60 Q100,10 200,40 T400,60 L400,80 L0,80 Z" fill="#4B4DFF1A" stroke="none"/>
         </svg>
 
         <!-- 슬라이더 -->
@@ -1113,49 +748,26 @@
 
         <!-- 입력값 -->
         <div class="flex items-center gap-2 mt-6">
-          <input
-            id="input-min"
-            type="number"
-            class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
-          />
+          <input id="input-min" type="number" class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"/>
           <span class="text-[#8D9AAF]">~</span>
-          <input
-            id="input-max"
-            type="number"
-            class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"
-          />
+          <input id="input-max" type="number" class="w-full h-[36px] px-2 border border-[#E4E8F1] rounded-lg text-[13px] text-[#333]"/>
         </div>
       </div>
 
       <h2 class="font-bold">작동8 : 필터</h2>
 
       <div class="flex items-center gap-2">
-        <button
-          class="btn-highlight-resource flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:hidden"
-        >
-          <img
-            src="../images/link-ico-6C7687.png"
-            class="w-[20px]"
-            alt="filter"
-          />
+        <button class="btn-highlight-resource flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:hidden">
+          <img src="../images/link-ico-6C7687.png" class="w-[20px]" alt="filter"/>
         </button>
         
-        <button
-          class="btn-filter flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:hidden"
-        >
-          <img
-            src="../images/filter-ico.png"
-            class="w-[20px]"
-            alt="filter"
-          />
+        <button class="btn-filter flex items-center justify-center w-[38px] h-[38px] bg-[#E4E8F1] rounded-[8px] cursor-pointer lg:hidden">
+          <img src="../images/filter-ico.png" class="w-[20px]" alt="filter"/>
         </button>
       </div>
-              
 
       <!-- filter -->
-      <div
-        class="lg:w-[310px] lg:mt-[45px]"
-      >
+      <div class="lg:w-[310px] lg:mt-[45px]">
         <div class="highlight-resource-box fixed top-[100%] right-0 z-[101] w-full h-full transition-top duration-300  w-full mb-8 p-8 bg-white rounded-xl lg:static">
           <h2 class="flex items-center gap-[6px] mb-5">
             <span class="text-[18px] font-bold">Highlights Resource</span>
@@ -5926,6 +5538,30 @@
         </div>
       </div>
 
+      <h2 class="font-bold">작동17 : 프로필사진등록</h2>
+      <div class="flex items-center gap-4 relative">
+
+        <div class="photo-preview-area w-[96px] h-[96px] border border-[#E4E8F1] rounded-full overflow-hidden flex-shrink-0">
+          <img id="profile-photo" src="../images/no-profile-gy.png" alt="프로필 사진 미리보기" class="profile-photo w-full h-full object-contain block">
+        </div>
+
+        <button id="delete-photo-btn" class="delete-photo-btn absolute top-0 left-[70px] w-[26px] h-[26px] rounded-full bg-[#333] text-white text-[12px] font-bold flex items-center justify-center cursor-pointer border border-[#fff]" style="display: none;">X</button>
+
+        <div>
+          <div class="upload-controls">
+            <input type="file" id="file-upload" accept=".jpg, .jpeg, .png, .gif" class="hidden">
+            <button id="upload-btn" class="upload-btn h-[42px] px-[28px] text-[14px] font-semibold text-[#828293] bg-white rounded-[12px] border border-[#E4E8F1] focus:outline-none cursor-pointer">
+              File upload
+            </button>
+          </div>
+
+          <p class="upload-info mt-[10px] text-[12px] text-[#8D9AAF] leading-[140%]">
+            5MB 이하의 JPG, GIF, PNG 파일을 지원합니다.
+          </p>
+        </div>
+          
+      </div>
+
     </div>
 
     <script src="js/swiper-bundle.min.js"></script>
@@ -5953,6 +5589,76 @@
         if (!dropdownButton.contains(e.target)) {
           dropdownMenu.classList.add("hidden");
         }
+      });
+
+      // 컴포넌트 : 프로필정보 수정
+      document.addEventListener('DOMContentLoaded', () => {
+        const editFields = document.querySelectorAll('.edit-field');
+        const saveButton = document.getElementById('save-btn');
+
+        editFields.forEach(field => {
+          const displayText = field.querySelector('.display-text');
+          const editInput = field.querySelector('.edit-input');
+
+          displayText.addEventListener('click', () => {
+            editInput.value = displayText.dataset.value; 
+
+            displayText.classList.add('hidden');
+            editInput.classList.remove('hidden');
+            
+            editInput.focus();
+          });
+
+          editInput.addEventListener('blur', () => {
+            const newValue = editInput.value.trim();
+            const originalValue = displayText.dataset.value;
+
+            if (newValue !== originalValue) {
+              displayText.textContent = newValue;
+              displayText.dataset.value = newValue;
+            }
+            
+            editInput.classList.add('hidden');
+            displayText.classList.remove('hidden');
+          });
+        });
+      });
+
+      // 컴포넌트 : 사진추가
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('image-previews-container');
+        const fileInput = document.getElementById('multi-file-upload');
+        const addImageLabel = document.getElementById('add-image-label');
+
+        fileInput.addEventListener('change', (event) => {
+          const files = Array.from(event.target.files);
+        
+          files.forEach(file => {
+            if (file.size > 5 * 1024 * 1024) {
+              alert(`${file.name}은 5MB를 초과합니다.`);
+              return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              // 썸네일
+              const div = document.createElement('div');
+              div.className = "relative w-[calc((100%-12px)/2)] md:w-[calc((100%-24px)/3)] xl:w-[calc((100%-36px)/4)] 2xl:w-[calc((100%-48px)/5)] aspect-square border border-[#E4E8F1] rounded-[12px] overflow-hidden group image-thumbnail";
+                
+              div.innerHTML = `
+                <img src="${e.target.result}" class="w-full h-full object-cover">
+                <button type="button" class="delete-btn absolute top-3 right-3 w-[26] lg:w-[23px] w-[26] lg:-[23px] bg-[#333] text-white rounded-full text-[12px] flex items-center justify-center border border-white cursor-pointer">✕</button>
+                `;
+
+              // 삭제
+              div.querySelector('.delete-btn').onclick = () => div.remove();
+              container.insertBefore(div, addImageLabel);
+            };
+            reader.readAsDataURL(file);
+          });
+
+          event.target.value = '';
+        });
       });
 
       // 작동1
@@ -6555,6 +6261,50 @@
               aBox.classList.add("open");
             }
           });
+        });
+      });
+
+      // 작동17
+      document.addEventListener('DOMContentLoaded', () => {
+        const defaultImagePath = '../images/no-profile-gy.png'; 
+        const fileUpload = document.getElementById('file-upload');
+        const uploadBtn = document.getElementById('upload-btn');
+        const profilePhoto = document.getElementById('profile-photo');
+        const deletePhotoBtn = document.getElementById('delete-photo-btn');
+        const maxFileSizeMB = 5;
+        const maxFileSizeByte = maxFileSizeMB * 1024 * 1024; // 5MB
+
+        if (profilePhoto.src === "") {
+          profilePhoto.src = defaultImagePath; 
+        }
+
+        uploadBtn.addEventListener('click', () => {
+          fileUpload.click();
+        });
+
+        fileUpload.addEventListener('change', (event) => {
+          const file = event.target.files[0];
+
+          if (file) {
+            if (file.size > maxFileSizeByte) {
+              alert(`파일 크기가 ${maxFileSizeMB}MB를 초과합니다. (${file.name})`);
+              fileUpload.value = '';
+              return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              profilePhoto.src = e.target.result;
+              deletePhotoBtn.style.display = 'flex';
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        deletePhotoBtn.addEventListener('click', () => {
+          profilePhoto.src = defaultImagePath;
+          fileUpload.value = '';
+          deletePhotoBtn.style.display = 'none';
         });
       });
     </script>

@@ -634,3 +634,11 @@ td {
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
+
+/* 마이페이지 왼쪽 메뉴바 활성화 */
+.mypage-left-menu li.active {
+  background-color: #F3F5F9;
+}
+.mypage-left-menu li.active .arr {
+  display: block;
+}
