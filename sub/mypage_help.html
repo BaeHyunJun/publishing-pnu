@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PNU Scholar</title>
+
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="wrap" class="lg:bg-[#F3F5F9]">
+      <header class="fixed top-0 left-0 right-0 z-100 h-[127px] bg-white border-b border-b-[#E4E8F1] lg:h-[120px]">
+        <div class="hTop hidden h-[42px] border-b border-b-[#F3F5F9] text-[#8D9AAF] text-[13px] lg:block">
+          <div class="px-6 lg:px-[30px] 2xl:px-[100px] h-full flex justify-end items-center gap-5">
+            <a href="#">Notice</a>
+            <a href="#">Q&A</a>
+            <a href="#" class="flex items-center"
+              >Research Guide<img
+                src="../images/launch-ico-gr.png"
+                alt="launch icon"
+                class="w-[12px] h-[12px] ml-[4px]"
+            /></a>
+          </div>
+        </div>
+        <!-- .hTop -->
+
+        <div
+          class="hBottom px-6 lg:px-[30px] 2xl:px-[100px] w-full h-full flex justify-between items-center flex-wrap lg:flex-nowrap lg:h-[78px]"
+        >
+          <div
+            class="h-left flex items-center gap-10 order-1 pt-3 lg:pt-0 lg:gap-6 2xl:gap-[30px]"
+          >
+            <h1 id="logo" class="shrink-0">
+              <a href="/">
+                <img
+                  src="../images/logo.png"
+                  alt="logo-go to main"
+                  class="w-[136px] h-auto lg:hidden 2xl:block 2xl:h-10 2xl:w-auto"
+                />
+                <img
+                  src="../images/logo_symbol.png"
+                  class="hidden w-10 lg:block 2xl:hidden"
+                  alt="symbol logo"
+                />
+              </a>
+            </h1>
+
+            <nav class="hidden lg:block">
+              <ul
+                class="flex items-center gap-[23px] text-[15px] font-bold 2xl:gap-8 2xl:text-[18px]"
+              >
+                <li class="hover:text-[#4B4DFF]"><a href="#">Resources</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Researcher</a></li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Journals</a></li>
+                <li class="hover:text-[#4B4DFF]">
+                  <a href="#">Departments</a>
+                </li>
+                <li class="hover:text-[#4B4DFF]"><a href="#">Highlights</a></li>
+              </ul>
+              <!-- .d1 -->
+            </nav>
+          </div>
+          <!-- .h-left -->
+
+          <div
+            class="h-right items-center gap-4 flex order-3 pb-3 w-full lg:w-auto lg:pb-0 lg:gap-[30px] 2xl:gap-6"
+          >
+            <div
+              class="h-search flex items-center relative h-12 w-full bg-[#F3F5F9] rounded-lg lg:w-[286px] 2xl:w-[428px]"
+            >
+              <div class="relative inline-block h-full">
+                <!-- 버튼 -->
+                <button
+                  id="dropdownButton"
+                  class="flex items-center justify-between w-[120px] h-full text-[13px] text-[#6C7687] px-3 py-2 cursor-pointer relative z-[1] lg:w-[92px] lg:border-r lg:border-r-[#E4E8F1] 2xl:w-[109px]"
+                >
+                  <span id="dropdownText">All</span>
+                  <img
+                    src="../images/expand_more_8D9AAF.png"
+                    class="w-4 ml-2"
+                    alt="arr"
+                  />
+                </button>
+
+                <!-- 옵션 목록 -->
+                <ul
+                  id="dropdownMenu"
+                  class="absolute left-0 mt-[3px] w-full text-[13px] border border-[#E4E8F1] rounded-[8px] bg-white p-3 space-y-[10px] shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] hidden"
+                >
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    All
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Journal
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Resource
+                  </li>
+                  <li
+                    class="text-[#6C7687] hover:bg-[#F3F5F9] rounded-[6px] px-2 py-1 cursor-pointer"
+                  >
+                    Scholar
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="search-wrap w-[calc(100%-95px)] h-full pl-[10px] pr-9 lg:pr-7 2xl:w-[calc(100%-120px)] 2xl:pl-[14px] 2xl:pr-9"
+              >
+                <input
+                  type="text"
+                  class="w-full h-full text-sm outline-none placeholder-[#B4BCCC]"
+                  placeholder="Search for journals, resources, scholars"
+                />
+              </div>
+              <!-- .search-wrap -->
+
+              <button
+                class="btn-search absolute right-2 top-[50%] w-4 translate-y-[-50%] cursor-pointer 2xl:right-5"
+              >
+                <img src="../images/search-ico-bl.png" alt="search" />
+              </button>
+            </div>
+            <!-- .h-search -->
+
+            <a
+              href="#"
+              class="hidden btn-login group items-center gap-2 text-[16px] hover:text-[#4B4DFF] lg:flex"
+            >
+              <span
+                class="w-[18px] h-[18px] bg-[url('/images/header-login-ico.png')] bg-contain bg-center group-hover:bg-[url('/images/header-login-ico-bl.png')] 2xl:w-[19px] 2xl:h-[19px]"
+              ></span>
+              Login
+            </a>
+
+            <!-- 로그인시 xl사이즈에서 block로 보여져야함! 모바일에서는 무조건 안보이게 -->
+            <div href="#" class="h-profile after-log relative hidden xl:hidden">
+              <button class="profile flex items-center">
+                <div
+                  class="photo w-8 h-8 rounded-full overflow-hidden border border-[#E4E8F1] mr-2"
+                >
+                  <img src="images/profile.png" alt="profile" />
+                </div>
+                <p class="name text-sm text-[#555555]">Kim, Minjun</p>
+                <span
+                  class="expand ml-1 w-4 h-4 bg-[url('/images/expand_more_555.png')] bg-contain bg-center]"
+                ></span>
+              </button>
+              <!-- .profile -->
+
+              <div
+                class="profile-mybox absolute top-[calc(100%+10px)] left-1/2 w-[182px] -translate-x-1/2 text-sm text-[#6C7687] bg-white px-[10px] py-[16px] border border-[#E4E8F1] rounded-lg shadow-[0px_4px_20px_0px_rgba(0,_0,_0,_0.1)] before:content-[''] before:absolute before:top-[-15px] before:left-0 before:w-full before:h-[15px] before:bg-transparent after:content-[''] after:absolute after:top-[-7px] after:left-[calc(50%-6px)] after:w-3 after:h-3 after:bg-white after:border-t after:border-l after:border-[#E4E8F1] after:rotate-45 hidden group-hover:block transition-all duration-200"
+              >
+                <a
+                  href="#"
+                  class="myprofile block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myprofile.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Profile</a
+                >
+                <a
+                  href="#"
+                  class="myresources block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-myresources.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >My Resources</a
+                >
+                <a
+                  href="#"
+                  class="savedreserach block h-[33px] pl-[36px] leading-[33px] bg-[url('/images/profile-savedresearcher.png')] bg-size-[20px] bg-position-[8px] bg-no-repeat rounded-lg hover:bg-[#F3F5F9]"
+                  >Saved Researcher</a
+                >
+              </div>
+              <!-- .profile-mybox -->
+            </div>
+            <!-- h-profile -->
+          </div>
+          <!-- .h-right -->
+
+          <button
+            class="btnM w-6 h-6 relative cursor-pointer order-2 lg:hidden"
+          >
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[-7px]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333]"
+            ></span>
+            <span
+              class="absolute top-[50%] left-[50%] w-[18px] h-[2px] translate-x-[-50%] translate-y-[-50%] bg-[#333] mt-[7px]"
+            ></span>
+          </button>
+        </div>
+        <!-- .hBottom -->
+      </header>
+
+      <div class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"></div>
+
+      <div id="sideM" class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300">
+        <div class="side-header flex justify-between mb-[30px]">
+          <a href="/" class="gomain">
+            <img src="images/home-icon.png" alt="go main" class="w-6" />
+          </a>
+
+          <button class="close-side cursor-pointer">
+            <img src="images/clear-icon.png" alt="close" class="w-[16px]" />
+          </button>
+        </div>
+        <!-- .side-header -->
+
+        <!-- 로그인 후 회원정보 -->
+        <div class="member">
+          <div class="profile flex items-center gap-[10px]">
+            <div
+              class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]"
+            >
+              <img src="images/profile.png" alt="photo" />
+            </div>
+
+            <div class="name">
+              <a
+                href="#"
+                class="flex items-center gap-2 text-[20px] font-bold leading-[140%]"
+                >Park, Minjun
+                <img
+                  src="images/chevron_right.png"
+                  class="w-[20px] h-[20px]"
+                  alt="arr"
+              /></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2"
+                >Department of Medicine</span
+              >
+            </div>
+          </div>
+          <!-- pfofile -->
+
+          <ul
+            class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]"
+          >
+            <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-myresources.png"
+                  class="w-[20px]"
+                  alt="resource icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">My Resources</span>
+              </a>
+            </li>
+            <li class="w-1/2 py-[16px]">
+              <a
+                href="#"
+                class="flex flex-col justify-center items-center gap-[6px]"
+              >
+                <img
+                  src="images/profile-savedresearcher.png"
+                  class="w-[20px]"
+                  alt="saved researcher icon"
+                />
+                <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- .member -->
+
+        <nav class="pt-[38px]">
+          <ul class="text-[22px] font-bold space-y-8">
+            <li class="active"><a href="#">Resources</a></li>
+            <li><a href="#">Researcher</a></li>
+            <li><a href="#">Journals</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Highlights</a></li>
+          </ul>
+        </nav>
+
+        <div
+          class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3"
+        >
+          <a
+            href="#"
+            class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl"
+          >
+            <img
+              src="images/header-login-ico-wh.png"
+              class="w-4 mr-1"
+              alt="login icon"
+            />
+            Login
+          </a>
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Notice</a
+          >
+          <a
+            href="#"
+            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Q&A</a
+          >
+          <a
+            href="#"
+            class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
+            >Research Guide
+            <img
+              src="images/launch-ico-gr.png"
+              class="w-3 ml-1"
+              alt="launch icon"
+          /></a>
+        </div>
+      </div>
+      <!-- #sideM -->
+
+      <div id="container">
+        
+        <div class="flexPage flex-col lg:flex-row mt-[127px] lg:mt-[120px] lg:px-6 2xl:px-[100px]">
+          
+          <!-- 마이페이지는 margin-top값이 다름 -->
+          <div class="w-full lg:w-[310px] mt-[30px] lg:mt-[68px] px-6 lg:px-0">
+
+            <div class="bread mb-[27px] lg:mb-[20px] text-[#8D9AAF] text-[13px] flex items-center gap-1 lg:items-start">
+              <a href="/" class="flex items-center gap-[2px] shrink-0">
+                <img src="../images/home-ico.png" class="w-[13px]" alt="home"/>
+                Home
+              </a>
+              <img src="../images/chevron_right_8D9AAF.png" class="w-[12px] shrink-0 lg:translate-y-[4px]" alt="right"/>
+              <a href="/" class="flex items-center gap-[2px] shrink-0">
+                My page
+              </a>
+              <img src="../images/chevron_right_8D9AAF.png" class="w-[12px] shrink-0 lg:translate-y-[4px]" alt="right"/>
+              <span class="current font-bold">Help & Support</span>
+            </div>
+            <!-- bread -->
+
+            <div class="tit-area hidden lg:flex w-full justify-between gap-3">
+              <h2 class="text-[26px] leading-[130%] font-black lg:text-[32px]">My page</h2>
+            </div>
+            <!-- .tit-area -->
+
+            <!-- mypage menu -->
+            <div class="hidden lg:block bg-white rounded-[12px] mt-8 px-6 py-10 lg:pb-6">
+              <!-- 회원 프로필 -->
+              <div>
+                <div class="w-[96px] h-[96px] mx-auto mb-4 rounded-full overflow-hidden border border-[#E4E8F1]">
+                  <img src="../images/profile.png" class="w-full h-full object-contain" alt="photo">
+                </div>
+
+                <div class="mb-[10px] text-[16px] leading-[140%] font-bold text-center">Kim, Tae-woo(김태우)</div>
+
+                <div class="flex flex-col gap-1 text-[12px] text-[#8D9AAF] text-center leading-[140%]">
+                  <p>Department of Medicine</p>
+                  <p>Professor</p>
+                </div>
+
+                <div class="flex gap-2 mt-5">
+                  <a href="#" class="w-[calc((100%-8px)/2)] h-[42px] text-[14px] text-[#828293] font-semibold text-center leading-[40px] border border-[#E4E8F1] rounded-[12px]">View profile</a>
+                  <a href="#" class="w-[calc((100%-8px)/2)] h-[42px] text-[14px] text-[#828293] font-semibold text-center leading-[40px] border border-[#E4E8F1] rounded-[12px]">Edit profile</a>
+                </div>
+              </div>
+
+              <!-- 사이드 메뉴 -->
+              <div class="mypage-left-menu mt-8">
+
+                <!-- Profile -->
+                <div class="mb-3 pb-3 border-b border-b-[#E4E8F1]">
+                  <p class="mb-[10px] text-[12px] text-[#8D9AAF] leading-[100%] font-bold">Profile</p>
+                  <ul>
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/profile-myprofile.png" class="w-5" alt="my profile">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">My Profile</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/profile-chpw.png" class="w-5" alt="Change Password">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">Change Password</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/profile-researcherid.png" class="w-5" alt="Researcher ID">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">Researcher ID</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/profile-savedresearcher-star.png" class="w-5" alt="Saved Researcher">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">Saved Researcher</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/profile-myresources.png" class="w-5" alt="Saved Researcher">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">Publications</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Setting -->
+                <div class="mb-3 pb-3 border-b border-b-[#E4E8F1]">
+                  <p class="mb-[10px] text-[12px] text-[#8D9AAF] leading-[100%] font-bold">Setting</p>
+                  <ul>
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/setting-noti.png" class="w-5" alt="Notification">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">Notification</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- SettiSupportng -->
+                <div>
+                  <p class="mb-[10px] text-[12px] text-[#8D9AAF] leading-[100%] font-bold">Support</p>
+                  <ul>
+                    <li class="active relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/support-help.png" class="w-5" alt="Help & Support">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">Help & Support</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+                    
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/support-noti.png" class="w-5" alt="Notice">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">Notice</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+                    
+                    <li class="relative h-10 px-3 rounded-[8px]">
+                      <a href="#" class="flex gap-4 items-center w-full h-full">
+                        <img src="../images/support-faq.png" class="w-5" alt="FAQ">
+                        <span class="text-[14px] leading-[100%] font-medium text-[#6C7687]">FAQ</span>
+                        <img src="../images/chevron_right_6C7687.png" class="arr hidden absolute top-[50%] right-3 w-4 translate-y-[-50%] rotate-180" alt="arr">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+              
+            </div>
+
+          </div>
+
+          <div class="w-full px-6 lg:px-[0] lg:pt-[0] lg:w-[calc(100%-360px)] lg:mt-[174px]">
+
+            <div>
+              <div class="flex justify-between items-center w-full">
+                <h3 class="text-[26px] lg:text-[24px] font-black lg:font-bold leading-[130%] lg:leading-[100%]">Help & Support</h3>
+
+                <div class="hidden lg:flex gap-2 items-center">
+                  <a href="#" class="btn-edit flex rounded-[12px] items-center justify-center gap-2 px-4 py-3 text-[14px] text-white font-semibold leading-[100%] bg-[#333]">
+                    <img src="../images/contact-ico-wh.png" class="w-[18px]" alt="edit">
+                    <span>1:1 문의하기</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-[40px] lg:mt-6 lg:p-[60px] bg-white rounded-[12px]">
+
+                <!-- 내가 보낸 1:1 문의 -->
+                <p class="mb-4 text-[18px] lg:text-[20px] font-bold">내가 보낸 1:1 문의</p>
+
+                <div class="help-table">
+                  <table class="border-t border-t-[#E4E8F1]">
+                    <thead class="hidden xl:table-header-group">
+                      <tr>
+                        <th class="state">State</th>
+                        <th class="cate">Category</th>
+                        <th class="tit">Title</th>
+                        <th class="date">Date</th>
+                        <th class="btns">Edit/Delete</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td class="state wait">답변 대기</td>
+                        <td class="cate"><span>내 논문 문의</span></td>
+                        <td class="tit">
+                          <div>논문 저자 수정 부탁드립니다.</div>
+                        </td>
+                        <td class="date">2025-12-02</td>
+                        <td class="btns">
+                          <div>
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="state complete">답변 완료</td>
+                        <td class="cate"><span>내 아이디 문의</span></td>
+                        <td class="tit">
+                          <div>1:1 문의 내용이 보여집니다. 길어질 경우 한 줄에서 말줄임이 됩니다. 1:1 문의 내용이 보여집니다. 길어질 경우 한 줄에서 말줄임이 됩니다.1:1 문의 내용이 보여집니다. 길어질 경우 한 줄에서 말줄임이 됩니다.1:1 문의 내용이 보여집니다. 길어질 경우 한 줄에서 말줄임이 됩니다.1:1 문의 내용이 보여집니다. 길어질 경우 한 줄에서 말줄임이 됩니다.</div>
+                        </td>
+                        <td class="date">2025-12-02</td>
+                        <td class="btns">
+                          <div>
+                            <button class="delete">Delete</button>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="state complete">답변 완료</td>
+                        <td class="cate"><span>기타 문의</span></td>
+                        <td class="tit">
+                          <div>JCR 2024 리스트 요청</div>
+                        </td>
+                        <td class="date">2025-12-02</td>
+                        <td class="btns">
+                          <div>
+                            <button class="delete">Delete</button>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="noresult flex justify-center !h-auto !cursor-default !pl-0">
+                      <td colspan="5" class="w-full !py-[72px] lg:!py-[158px] text-center">No results found</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- 페이저 -->
+                <div class="flex items-center justify-center gap-2 font-[Pretendard] text-[15px] mt-[50px] lg:mt-[40px]">
+                  <!-- 이전 버튼 -->
+                  <button class="shrink-0 p-2 rounded-md cursor-pointer" aria-label="prev">
+                    <img src="../images/pager_prev.png" alt="prev" class="w-4 h-4"/>
+                  </button>
+
+                  <!-- 페이지 숫자 -->
+                  <button class="px-[15px] py-2 rounded-md text-[#215BD8] bg-[#D7E2F9] font-medium cursor-pointer">1</button>
+                  <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer">2</button>
+                  <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer">3</button>
+                  <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer hidden lg:block">4</button>
+                  <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer hidden lg:block">5</button>
+                  <button class="text-[#6C7687] select-none px-1">...</button>
+                  <button class="px-[15px] py-2 rounded-md text-[#6C7687] text-[15px] hover:bg-[#E4E8F1] font-medium cursor-pointer">1235</button>
+
+                  <!-- 다음 버튼 -->
+                  <button class="shrink-0 p-2 rounded-md cursor-pointer" aria-label="next">
+                    <img src="../images/pager_next.png" alt="next" class="w-4 h-4"/>
+                  </button>
+                </div>
+                  
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- #container -->
+
+      <footer class="mt-[120px] px-6 text-sm pb-10 lg:pb-[34px] lg:px-[100px] lg:mt-40">
+        <div class="border-t border-t-[#D1D5DF] pt-7 lg:flex lg:items-start lg:gap-[66px]">
+          <div class="flogo mb-10 shrink-0">
+            <img src="../images/logo-gr.png" alt="logo" class="w-[178px]" />
+          </div>
+          <!-- .flogo -->
+
+          <div class="fcont lg:pt-[14px]">
+            <div class="fmenu text-sm text-[#333] flex items-center gap-4">
+              <a href="#">Privacy Policy</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Notice</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">FAQ</a>
+              <span class="w-[2px] h-[2px] bg-[#333] max-[801px]:hidden"></span>
+              <a href="#">Need Help?</a>
+            </div>
+
+            <address class="mt-7 text-[#6C7687] not-italic lg:mt-9">
+              <div class="mb-[10px]">
+                (46241) 부산광역시 금정구 부산대학로 63번길 2 (장전동)
+              </div>
+              <div class="lg:flex">
+                <p class="mb-[10px] lg:after:content-[''] lg:after:inline-block lg:after:w-[1px] lg:after:h-[11px] lg:after:bg-[#888888] lg:after:ml-[8px] lg:after:mr-[10px]">
+                  Tel. 051-510-1817, 1040
+                </p>
+                <p>Fax. 051-513-9733</p>
+              </div>
+            </address>
+
+            <div class="copy mt-7 text-[#6C7687] lg:mt-4">
+              <p>
+                Copyright 2025 Pusan National University Library. All Rights
+                Reserved.
+              </p>
+              <p class="mt-7 lg:mt-[10px]">
+                PNU Scholar에서 제공하는 콘텐츠를 무단 복제, 전송, 배포, 기타
+                저작권법에 위반되는 방법으로 이용할 경우, 관련 법령에 따라 민,
+                형사 상의 책임을 질 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <!-- .fcont -->
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script>
+      
+    </script>
+  </body>
+</html>

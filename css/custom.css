@@ -642,3 +642,164 @@ td {
 .mypage-left-menu li.active .arr {
   display: block;
 }
+
+/* Help & Support 페이지 테이블 */
+.help-table {}
+.help-table table {
+  table-layout: fixed;
+}
+.help-table thead {}
+.help-table tbody {}
+.help-table tbody tr {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 16px 0 16px 84px;
+  text-align: left;
+}
+.help-table th {}
+.help-table tbody td {
+  padding: 0;
+}
+.help-table tbody .state {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.help-table .state.wait {
+  color: #8D9AAF;
+}
+.help-table .state.complete {
+  color: #37B293;
+}
+.help-table tbody .cate {
+  margin-bottom: 8px;
+}
+.help-table tbody .cate span {
+  display: inline-block;
+  height: 22px;
+  padding: 0 8px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #6C7687;
+  font-weight: 600;
+  border: 1px solid #E4E8F1;
+  border-radius: 4px;
+}
+.help-table tbody .tit {
+  margin-bottom: 12px;
+}
+.help-table tbody .tit div {
+  max-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  line-height: 140%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+}
+.help-table tbody .date {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #B4BCCC;
+  font-weight: 600;
+}
+.help-table tbody .btns {}
+.help-table .btns div {
+  display: flex;
+  gap: 8px;
+}
+.help-table .btns button {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.help-table .btns .edit {
+  color: #4B4DFF;
+}
+.help-table .btns .delete {
+  color: #F3652D;
+}
+
+@media (min-width:768px) {
+  .help-table tbody tr {
+    padding: 16px 0 16px 120px;
+  }
+  .help-table tbody .state {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width:1280px) {
+  .help-table table tr .state {
+    width: 80px;
+    padding-left: 0;
+  }
+  .help-table table tr .cate {
+    width: 120px;
+  }
+  .help-table table tr .tit {
+    padding: 10px;
+  }
+  .help-table table tr .date {
+    width: 110px;
+  }
+  .help-table table tr .btns {
+    width: 100px;
+  }
+  .help-table tbody tr {
+    display: table-row;
+    padding: 0;
+  }
+  .help-table th {
+    padding: 10px 0;
+  }
+  .help-table tbody td {
+    padding: 10px 0;
+  }
+  .help-table tbody .state {
+    position: static;
+    transform: translateY(0);
+    padding-left: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .help-table tbody .cate {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .help-table tbody .cate span {
+    height: 25px;
+    padding: 0 9px;
+    line-height: 23px;
+    font-size: 14px;
+  }
+  .help-table tbody .tit {
+    margin-bottom: 0;
+  }
+  .help-table tbody .tit div {
+    max-height: none;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .help-table tbody .date {
+    margin-bottom: 0;
+    color: #555;
+    text-align: center;
+  }
+  .help-table .btns div {
+    justify-content: center;
+  }
+}
