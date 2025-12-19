@@ -803,3 +803,89 @@ td {
     justify-content: center;
   }
 }
+
+/* 문의내용/답변 */
+.help-cont-wrap {}
+.help-cont-wrap .contact-cont-wrap {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 24px 20px;
+  background-color: #F3F5F9;
+}
+.help-cont-wrap .contact-cont-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 1px;
+  background-color: #E4E8F1;
+}
+.help-cont-wrap .tit {
+  flex-shrink: 0;
+  width: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+.help-cont-wrap .contact-cont {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 14px;
+  color: #555;
+}
+.help-cont-wrap .contact-cont .txt-wrap {}
+.help-cont-wrap .contact-cont .img-wrap {}
+.help-cont-wrap .contact-cont .img-wrap img {
+  width: 100%;
+}
+.help-cont-wrap .contact-cont .small-img {}
+.help-cont-wrap .contact-cont .large-img {}
+.help-cont-wrap .contact-cont .date {
+  color: #B4BCCC;
+}
+
+@media (min-width:620px) {
+.help-cont-wrap .contact-cont .small-img img {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .help-cont-wrap .contact-cont-wrap {
+    padding: 40px 32px;
+  }
+  .help-cont-wrap .contact-cont-wrap::after {
+    left: 32px;
+    width: calc(100% - 64px);
+  }
+  .help-cont-wrap .tit {
+    width: 60px;
+  }
+  .help-cont-wrap .contact-cont {
+    row-gap: 32px;
+  }
+  .help-cont-wrap .contact-cont .small-img img {
+    width: 100%;
+  }
+}
+
+@media (min-width:1200px) {
+  .help-cont-wrap .contact-cont .small-img img {
+    width: auto;
+  }
+}
+
+@media (min-width:1280px) {
+  .help-cont-wrap .contact-cont-wrap {
+    gap: 10px;
+    padding-left: 0;
+  }
+  .help-cont-wrap .tit {
+    width: 80px;
+  }
+}
