@@ -212,14 +212,9 @@
         <!-- .hBottom -->
       </header>
 
-      <div
-        class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"
-      ></div>
+      <div class="bkbg fixed top-0 right-0 w-full h-full bg-black/50 z-[98] transition-all duration-300 opacity-0 invisible"></div>
 
-      <div
-        id="sideM"
-        class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300"
-      >
+      <div id="sideM" class="fixed top-0 right-[-100%] bg-white w-[90%] max-w-[500px] h-full z-[100] px-6 py-5 transition-all duration-300 overflow-y-auto">
         <div class="side-header flex justify-between mb-[30px]">
           <a href="/" class="gomain">
             <img src="images/home-icon.png" alt="go main" class="w-6" />
@@ -234,55 +229,28 @@
         <!-- 로그인 후 회원정보 -->
         <div class="member">
           <div class="profile flex items-center gap-[10px]">
-            <div
-              class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]"
-            >
+            <div class="photo w-[48px] h-[48px] overflow-hidden rounded-full border border-[#E4E8F1]">
               <img src="images/profile.png" alt="photo" />
             </div>
 
             <div class="name">
-              <a
-                href="#"
-                class="flex items-center gap-2 text-[20px] font-bold leading-[140%]"
-                >Park, Minjun
-                <img
-                  src="images/chevron_right.png"
-                  class="w-[20px] h-[20px]"
-                  alt="arr"
-              /></a>
-              <span class="block text-[13px] text-[#8D9AAF] mt-2"
-                >Department of Medicine</span
-              >
+              <a href="#" class="flex items-center gap-2 text-[20px] font-bold leading-[140%]">Park, Minjun
+                <img src="images/chevron_right.png" class="w-[20px] h-[20px]" alt="arr"/></a>
+              <span class="block text-[13px] text-[#8D9AAF] mt-2">Department of Medicine</span>
             </div>
           </div>
           <!-- pfofile -->
 
-          <ul
-            class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]"
-          >
+          <ul class="mypage mt-[26px] mx-[-24px] flex bg-[#F3F5F9] border-y border-y-[#E4E8F1]">
             <li class="w-1/2 py-[16px] border-r border-r-[#E4E8F1]">
-              <a
-                href="#"
-                class="flex flex-col justify-center items-center gap-[6px]"
-              >
-                <img
-                  src="images/profile-myresources.png"
-                  class="w-[20px]"
-                  alt="resource icon"
-                />
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="images/profile-myresources.png" class="w-[20px]" alt="resource icon"/>
                 <span class="text-[14px] text-[#6C7687]">My Resources</span>
               </a>
             </li>
             <li class="w-1/2 py-[16px]">
-              <a
-                href="#"
-                class="flex flex-col justify-center items-center gap-[6px]"
-              >
-                <img
-                  src="images/profile-savedresearcher.png"
-                  class="w-[20px]"
-                  alt="saved researcher icon"
-                />
+              <a href="#" class="flex flex-col justify-center items-center gap-[6px]">
+                <img src="images/profile-savedresearcher.png" class="w-[20px]" alt="saved researcher icon"/>
                 <span class="text-[14px] text-[#6C7687]">Saved Researcher</span>
               </a>
             </li>
@@ -291,48 +259,45 @@
         <!-- .member -->
 
         <nav class="pt-[38px]">
-          <ul class="text-[22px] font-bold space-y-8">
-            <li class="active"><a href="#">Resources</a></li>
+          <ul class="text-[22px] font-bold space-y-6">
+            <li class="active"><a href="#">Publications</a></li>
             <li><a href="#">Researcher</a></li>
             <li><a href="#">Journals</a></li>
             <li><a href="#">Departments</a></li>
             <li><a href="#">Highlights</a></li>
+            <!-- 로그인시 나타남 -->
+            <li>
+              <a class="spa-link flex justify-between items-center" href="#">
+                My Page <img src="images/expand_more_333.png" class="w-5 transition-transform duration-200" alt="more">
+              </a>
+
+              <div class="flex flex-col gap-5 mt-[22px] -mx-6 px-6 py-5 text-[18px] font-semibold text-[#6C7687] bg-[#F3F5F9] hidden">
+                <a href="#">My Profile</a>
+                <a href="#">Change Password</a>
+                <a href="#">Researcher ID</a>
+                <a href="#">Saved Researcher</a>
+                <a href="#">Publications</a>
+                <a href="#">Notification</a>
+              </div>
+            </li>
           </ul>
         </nav>
 
-        <div
-          class="util absolute bottom-5 flex flex-wrap w-[calc(100%-48px)] gap-3"
-        >
-          <a
-            href="#"
-            class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl"
-          >
-            <img
-              src="images/header-login-ico-wh.png"
-              class="w-4 mr-1"
-              alt="login icon"
-            />
+        <div class="util flex flex-col gap-5 pt-9 mt-9 border-t border-t-[#E4E8F1]">
+          <a href="#" class="text-[18px] text-[#8D9AAF]">Notice</a>
+          <a href="#" class="text-[18px] text-[#8D9AAF]">Q&A</a>
+          <a href="#" class="text-[18px] text-[#8D9AAF]">Research Guide
+            <!-- <img src="images/launch-ico-gr.png" class="w-3 ml-1" alt="launch icon"/> -->
+          </a>
+          <!-- 로그인시 나타남 -->
+          <a href="#" class="text-[18px] text-[#8D9AAF]">Logout</a>
+        </div>
+
+        <div class="absolute bottom-5 w-[calc(100%-48px)]">
+          <a href="#" class="login flex items-center justify-center w-full h-[54px] text-center bg-[#4B4DFF] text-white text-base rounded-xl">
+            <img src="images/header-login-ico-wh.png" class="w-4 mr-1" alt="login icon"/>
             Login
           </a>
-          <a
-            href="#"
-            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
-            >Notice</a
-          >
-          <a
-            href="#"
-            class="w-[calc(50%-6px)] h-[46px] border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
-            >Q&A</a
-          >
-          <a
-            href="#"
-            class="w-full h-[46px] flex justify-center items-center border border-[#E4E8F1] rounded-xl leading-[44px] text-center text-[#8D9AAF]"
-            >Research Guide
-            <img
-              src="images/launch-ico-gr.png"
-              class="w-3 ml-1"
-              alt="launch icon"
-          /></a>
         </div>
       </div>
       <!-- #sideM -->

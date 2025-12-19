@@ -5717,17 +5717,17 @@
       btnM.addEventListener("click", function () {
         sideM.classList.add("open");
         bkbg.classList.add("open");
+        document.body.style.overflow = "hidden";
       });
 
-      btnSideClose.addEventListener("click", function () {
+      function closeMenu() {
         sideM.classList.remove("open");
         bkbg.classList.remove("open");
-      });
+        document.body.style.overflow = "auto"; 
+      }
 
-      bkbg.addEventListener("click", function () {
-        sideM.classList.remove("open");
-        this.classList.remove("open");
-      });
+      btnSideClose.addEventListener("click", closeMenu);
+      bkbg.addEventListener("click", closeMenu);
 
       // 작동4
       document.addEventListener("DOMContentLoaded", () => {

@@ -336,9 +336,9 @@
       <!-- #sideM -->
 
       <div id="container">
-        <div class="flexPage mt-[127px] lg:mt-[120px] lg:px-6 xl:px-[100px]">
+        <div class="flexPage mt-[127px] lg:mt-[120px] px-6 2xl:px-[100px]">
 
-          <div class="w-full px-6 pt-[24px] lg:relative lg:w-[calc(100%-360px)] lg:mt-[105px] lg:bg-white lg:rounded-xl lg:px-[60px] lg:py-[60px] lg:pt-[60px]">
+          <div class="w-full pt-[24px] lg:relative lg:w-[calc(100%-360px)] lg:mt-[105px] lg:bg-white lg:rounded-xl lg:px-[60px] lg:py-[60px] lg:pt-[60px]">
             <a href="#" class="inline-flex items-center gap-[6px] bg-[#F3F5F9] mb-6 py-[10px] pl-[10px] pr-[16px] rounded-md lg:pl-0 lg:pr-0 lg:py-0 lg:bg-transparent lg:absolute lg:-top-[44px] lg:left-0">
               <img src="../images/chevron_right_8D9AAF.png" class="w-3 rotate-180" alt="back"/>
               <span class="text-[14px] text-[#6C7687] font-medium leading-[100%] lg:text-[16px] xxl:text-red-500">Back<span class="hidden lg:inline"> to Journal list</span></span>
@@ -455,20 +455,20 @@
                 </div>
               </div>
 
-              <div class="chart-area flex flex-col gap-y-4 mt-[45px] lg:mt-[50px] lg:flex-row lg:gap-10">
-                <div class="p-6 border border-[#E4E8F1] rounded-xl lg:w-[32%] lg:p-[32px]">
+              <div class="chart-area flex flex-col gap-y-4 gap-x-5 2xl:gap-x-10 w-full mt-[45px] lg:mt-[50px] md:flex-row lg:flex-col xl:flex-row">
+                <div class="flex-1 p-6 border border-[#E4E8F1] rounded-xl md:w-[calc((100%-40px)/3)] lg:w-full xl:w-w-[calc((100%-80px)/3)] lg:p-[32px]">
                   <h3 class="mb-6 text-[16px] font-bold leading-[150%] text-center lg:mb-[28px]">
                     Number of Publications by Year
                   </h3>
                 </div>
 
-                <div class="p-6 border border-[#E4E8F1] rounded-xl lg:w-[32%] lg:p-[32px]">
+                <div class="flex-1 p-6 border border-[#E4E8F1] rounded-xl md:w-[calc((100%-40px)/3)] lg:w-full xl:w-w-[calc((100%-80px)/3)] lg:p-[32px]">
                   <h3 class="mb-6 text-[16px] font-bold leading-[150%] text-center">
                     Collaboration 2025
                   </h3>
                 </div>
 
-                <div class="p-6 border border-[#E4E8F1] rounded-xl lg:w-[32%] lg:p-[32px]">
+                <div class="flex-1 p-6 border border-[#E4E8F1] rounded-xl md:w-[calc((100%-40px)/3)] lg:w-full xl:w-w-[calc((100%-80px)/3)] lg:p-[32px]">
                   <h3 class="mb-6 text-[16px] font-bold leading-[150%] text-center">
                     Academic Corporate Collaboration 2025
                   </h3>
@@ -503,6 +503,7 @@
                 </div>
               </div>
 
+              <!-- 로그인 했을때 -->
               <div class="journal-citation-metrics mt-[50px] lg:mt-[80px]">
                 <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
                   Journal Citation Metrics
@@ -563,6 +564,75 @@
                 </div>
               </div>
 
+              <!-- 로그인 안했을때 -->
+              <div class="journal-citation-metrics mt-[50px] lg:mt-[80px]">
+                <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
+                  Journal Citation Metrics
+                </h2>
+
+                <div class="relative flex flex-col gap-y-[8px] mb-4 p-6 pl-[48px] bg-[#F3F5F9] text-[14px] text-[#6C7687] font-medium rounded-xl list-disc lg:mb-6">
+                  <img src="../images/warning-ico-6C7687.png" class="absolute top-[25px] left-6 w-[17px]" alt="error">
+
+                  <p class="font-bold">Journal metrics are available after <a href="#" class="text-[#4B4DFF]">login</a>.</p>
+
+                  <div>If you are not logged in, some metric values will be masked for access control purposes.<br>Please log in to view the full journal impact indicators.</div>
+                </div>
+
+                <ul id="customOptions" class="mb-4 p-[6px] bg-[#F3F5F9] rounded-lg z-10 text-[#8D9AAF] inline-flex text-[15px] gap-[5px]">
+                  <li class="active w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer" data-value="option1">JCR</li>
+                  <li class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer" data-value="option2">Scopus</li>
+                  <li class="w-[104px] text-center leading-[38px] hover:bg-white rounded-lg cursor-pointer" data-value="option3">KCI</li>
+                </ul>
+
+                <div class="overflow-x-auto">
+                  <table class="min-w-[800px]">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Total Cites</th>
+                        <th>JIF</th>
+                        <th>5 year JIF</th>
+                        <th>Immediacy Index</th>
+                        <th>Article Influence Score</th>
+                        <th>Eigenfactor Score</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>2023</td>
+                        <td>3xxxx</td>
+                        <td>4x.x</td>
+                        <td>4x.x</td>
+                        <td>1x.x</td>
+                        <td>2x.xxx</td>
+                        <td>0.3xxxx</td>
+                      </tr>
+
+                      <tr>
+                        <td>2023</td>
+                        <td>3xxxx</td>
+                        <td>4x.x</td>
+                        <td>4x.x</td>
+                        <td>1x.x</td>
+                        <td>2x.xxx</td>
+                        <td>0.3xxxx</td>
+                      </tr>
+
+                      <tr>
+                        <td>2023</td>
+                        <td>3xxxx</td>
+                        <td>4x.x</td>
+                        <td>4x.x</td>
+                        <td>1x.x</td>
+                        <td>2x.xxx</td>
+                        <td>0.3xxxx</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
               <div class="journal-indexing-info mt-[60px] lg:mt-[80px]">
                 <h2 class="text-[18px] font-bold mb-5 lg:text-[20px] lg:mb-6">
                   Journal Indexing Information
@@ -579,33 +649,63 @@
                   </li>
                 </ul>
 
-                <div class="flex flex-wrap gap-4 text-[14px] font-bold text-center lg:flex-nowrap lg:gap-[30px] lg:text-[16px]">
-                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl lg:w-[calc((100%-90px)/4)] lg:p-3 lg:h-[140px] lg:flex lg:flex-col items-start">
+                <div class="flex flex-wrap gap-4 text-[14px] font-bold text-center md:flex-nowrap lg:flex-wrap xl:flex-nowrap xl:gap-[30px] lg:text-[16px]">
+                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl xl:w-[calc((100%-90px)/4)] lg:p-3 lg:min-h-[140px] lg:flex lg:flex-col items-start">
                     <div class="mb-5 py-2 px-[14px] text-[12px] text-[#532EB3] rounded-lg bg-[#EDE7FF] leading-[100%] lg:mb-[34px] lg:text-[15px] lg:px-[20px] lg:py-[10px]">
                       Web of Science
                     </div>
-                    <div class="lg:w-full">등재 - 1947.01</div>
+
+                    <div class="flex flex-col gap-1 w-full lg:px-3">
+                      <div class="flex justify-between items-center w-full">
+                        <span class="text-[#8D6DE2]">SCIE</span>
+                        <span>등재 - 1947.01</span>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl lg:w-[calc((100%-90px)/4)] lg:p-3 lg:h-[140px] lg:flex lg:flex-col items-start">
+                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl xl:w-[calc((100%-90px)/4)] lg:p-3 lg:min-h-[140px] lg:flex lg:flex-col items-start">
                     <div class="mb-5 py-2 px-[14px] text-[12px] text-[#F68B3F] rounded-lg bg-[#FFE4D1] leading-[100%] lg:mb-[34px] lg:text-[15px] lg:px-[20px] lg:py-[10px]">
                       Scopus
                     </div>
-                    <div class="lg:w-full">등재 - 1947.01</div>
+
+                    <div class="flex flex-col gap-1 w-full lg:px-3">
+                      <div class="flex justify-between items-center w-full">
+                        <div class="lg:w-full">등재 - 1947.01</div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl lg:w-[calc((100%-90px)/4)] lg:p-3 lg:h-[140px] lg:flex lg:flex-col items-start">
+                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl xl:w-[calc((100%-90px)/4)] lg:p-3 lg:min-h-[140px] lg:flex lg:flex-col items-start opacity-50">
                     <div class="mb-5 py-2 px-[14px] text-[12px] text-[#555555] rounded-lg bg-[#F3F5F9] leading-[100%] lg:mb-[34px] lg:text-[15px] lg:px-[20px] lg:py-[10px]">
                       Nature Index
                     </div>
-                    <div class="lg:w-full">등재 - 1947.01</div>
+
+                    <div class="flex flex-col gap-1 w-full lg:px-3">
+                      <div class="flex justify-between items-center w-full">
+                        <div class="lg:w-full">등재 이력이 없습니다.</div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl opacity-50 lg:w-[calc((100%-90px)/4)] lg:p-3 lg:h-[140px] lg:flex lg:flex-col items-start">
+                  <div class="w-[calc(50%-8px)] p-5 border border-[#E4E8F1] rounded-xl xl:w-[calc((100%-90px)/4)] lg:p-3 lg:min-h-[140px] lg:flex lg:flex-col items-start">
                     <div class="mb-5 py-2 px-[14px] text-[12px] text-[#376BDB] rounded-lg bg-[#ECF2FF] leading-[100%] lg:mb-[34px] lg:text-[15px] lg:px-[20px] lg:py-[10px]">
                       KCI
                     </div>
-                    <div class="lg:w-full">등재 이력이 없습니다.</div>
+                    
+                    <div class="flex flex-col gap-1 w-full lg:px-3">
+                      <div class="flex justify-between items-center w-full">
+                        <span class="text-[#8D6DE2]">KCI우수</span>
+                        <span>등재 - 1947.01</span>
+                      </div>
+                      <div class="flex justify-between items-center w-full">
+                        <span class="text-[#8D6DE2]">KCI</span>
+                        <span>등재 - 1947.01</span>
+                      </div>
+                      <div class="flex justify-between items-center w-full">
+                        <span class="text-[#8D6DE2]">KCI후보</span>
+                        <span>등재 - 1947.01</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

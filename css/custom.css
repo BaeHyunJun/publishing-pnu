@@ -265,6 +265,14 @@
   color: #8d6de2;
   background-color: #ede7ff;
 }
+.regist-tpye-ahci {
+  color: #8d6de2;
+  background-color: #ede7ff;
+}
+.regist-tpye-esci {
+  color: #8d6de2;
+  background-color: #ede7ff;
+}
 .regist-tpye-scopus {
   color: #f3652d;
   background-color: #ffe9e9;
@@ -276,6 +284,10 @@
 .regist-tpye-ssci {
   color: #8d6de2;
   background-color: #ede7ff;
+}
+.regist-tpye-naturalindex {
+  color: #555;
+  background-color: #F5F5F5;
 }
 
 /* 저널리스트 그래프 열고닫기 */
