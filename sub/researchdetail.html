@@ -494,7 +494,10 @@
                         <span class="xl:hidden">Lab</span>
                       </div>
                       
-                      <div class="xl:text-[#555]">심혈관계 연구실</div>
+                      <div class="flex items-center gap-2 xl:text-[#555]">
+                        심혈관계 연구실
+                        <a href="#" class="flex items-center justify-center w-[26px] h-[26px] border border-[#E4E8F1] rounded-[8px]"><img src="../images/launch-ico-gr.png" class="w-[18px]" alt="link"></a>
+                      </div>
                     </div>
                   </div>
 
@@ -568,19 +571,19 @@
                 <!-- 탭메뉴 -->
                 <div class="researcher-cont-tabM tabM mt-[30px] mx-[-24px] text-[15px] font-medium text-[#8D9AAF] text-center overflow-x-auto sm:overflow-x-hidden lg:mx-[-60px] lg:mt-[52px]">
                   <div class="tab-wrapper w-max sm:w-full">
-                    <div class="tab-intro active relative border-b border-b-[#E4E8F1] sm:w-[25%] lg:hover:text-[#333] lg:hover:border-b-[#333]">
+                    <div class="tab-intro active border-b border-b-[#E4E8F1]  relative sm:w-[25%] lg:hover:text-[#333]">
                       <button id="introBtn" class="h-[52px] px-6 cursor-pointer">Introduction</button>
                     </div>
                     
-                    <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:hover:text-[#333] lg:hover:border-b-[#333]">
+                    <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:hover:text-[#333]">
                       <button class="h-[52px] px-6 cursor-pointer">Scholar Metrics</button>
                     </div>
                     
-                    <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:hover:text-[#333] lg:hover:border-b-[#333]">
+                    <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:hover:text-[#333]">
                       <button class="h-[52px] px-6 cursor-pointer">Co-Researchers</button>
                     </div>
                     
-                    <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:hover:text-[#333] lg:hover:border-b-[#333]">
+                    <div class="border-b border-b-[#E4E8F1] sm:w-[25%] lg:hover:text-[#333]">
                       <button class="h-[52px] px-6 cursor-pointer">Resources</button>
                     </div>
                   </div>
@@ -636,6 +639,7 @@
                       <h3 class="mb-4 text-[18px] font-bold leading-[100%] lg:mb-6">Additional Images</h3>
 
                       <ul class="additional-img flex flex-wrap gap-3">
+                        
                         <li class="group w-[calc((100%-12px)/2)] aspect-square border border-[#E4E8F1] rounded-[12px] overflow-hidden cursor-pointer sm:w-[calc((100%-24px)/3)] xl:w-[calc((100%-36px)/4)] 2xl:w-[calc((100%-48px)/5)]">
                           <img src="../images/add_img01.png" class="w-full h-full object-cover group-hover:scale-[1.1] transition duration-300" alt="img">
                         </li>
@@ -653,16 +657,28 @@
                         </li>
                       </ul>
 
+                      <!-- 추가된 이미지 없을때  -->
+                      <div class="noresult py-9 text-center text-[13px] font-semibold leading-[100%] border border-[#E4E8F1] rounded-[12px]">
+                        <div>등록된 이미지가 없습니다.</div>
+                      </div>
+
                       <div id="view-img-bkbg" class="hidden fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] z-100"></div>
 
-                      <div id="additional-img-view" class="hidden fixed top-[100px] left-[50%] translate-x-[-50%] w-[80%] max-w-[808px] max-h-[calc(100vh-200px)] overflow-y-auto flex flex-col items-start px-[40px] pb-[40px] pt-[30px] bg-white rounded-[12px] z-100 lg:top-[230px] lg:max-h-[565px] lg:px-[60px] lg:pb-[60px]">
+                      <div id="additional-img-view" class="hidden fixed top-[100px] lg:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[80%] max-w-[808px] p-6 lg:p-10 bg-white rounded-[12px] z-100">
 
-                        <button id="view-img-close" class="self-end w-[18px] mb-[10px] cursor-pointer lg:mb-[14px]">
-                          <img src="../images/clear-icon-333.png" class="" alt="close">
-                        </button>
+                        <div class="add-img-header flex items-center justify-between mb-4 lg:mb-[26px]">
+                          <div class="flex items-center gap-[10px] lg:gap-4 flex-wrap">
+                            <span class="text-[16px] lg:text-[18px] font-bold leading-[100%]">Additional Images</span>
+                            <a href="#" class="flex items-center gap-1 px-[6px] lg:px-[16px] py-1 lg:py-2 text-[12px] lg:text-[14px] font-semibold text-[#8D9AAF] border border-[#E4E8F1] rounded-[4px] lg:rounded-[12px]"><img src="../images/launch-ico-gr.png" class="w-[14px] lg:w-[16px]" alt="link"> Open in new tab</a>
+                          </div>
 
-                        <div id="additional-img-box" class="max-h-[calc(100vh-298px)] overflow-y-auto lg:max-h-[443px]">
-                          <img src="../images/add_img04.png" class="w-full object-contain" alt="img">
+                          <button id="view-img-close" class="w-[18px] lg:w-6 h-[18px] lg:h-6 text-center cursor-pointer">
+                            <img src="../images/clear-icon-333.png" class="w-[14px] lg:w-[18px]" alt="close">
+                          </button>
+                        </div>
+
+                        <div id="additional-img-box" class="lg:max-h-[663px] overflow-y-auto">
+                          <img src="../images/add_img01.png" class="w-full object-contain" alt="img">
                         </div>
                       </div>
                     </div>
@@ -682,7 +698,7 @@
                               <th></th>
                               <th>Resources</th>
                               <th>Avg · Citation</th>
-                              <th>Resources<br>In Top 10 Journal</th>
+                              <th>Publications<br>In Top 10 Journal</th>
                               <th>Single</th>
                               <th>International</th>
                               <th>SCI</th>
@@ -1170,7 +1186,7 @@
                             </div>
 
                             <div class="shrink-0 w-[68px] text-center">
-                              <p class="text-[12px] text-[#6C7687]">논문 수</p>
+                              <p class="text-[12px] text-[#6C7687]">Publications</p>
                               <p class="text-[20px] font-bold">15</p>
                             </div>
                           </a>
@@ -1184,21 +1200,7 @@
                             </div>
 
                             <div class="shrink-0 w-[68px] text-center">
-                              <p class="text-[12px] text-[#6C7687]">논문 수</p>
-                              <p class="text-[20px] font-bold">15</p>
-                            </div>
-                          </a>
-                        </li>
-                        
-                        <li class="px-6 py-[22px] leading-[140%] border border-[#E4E8F1] rounded-[12px] md:w-[calc((100%-8px)/2)] lg:w-[calc((100%-12px)/2)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-shadow duration-300">
-                          <a href="#" class="flex items-center justify-between gap-[10px]">
-                            <div>
-                              <p class="text-[14px] font-bold">Lee, Hayoung</p>
-                              <p class="mt-[5px] text-[13px] text-[#6C7687]">Seoul National University</p>
-                            </div>
-
-                            <div class="shrink-0 w-[68px] text-center">
-                              <p class="text-[12px] text-[#6C7687]">논문 수</p>
+                              <p class="text-[12px] text-[#6C7687]">Publications</p>
                               <p class="text-[20px] font-bold">15</p>
                             </div>
                           </a>
@@ -1212,7 +1214,7 @@
                             </div>
 
                             <div class="shrink-0 w-[68px] text-center">
-                              <p class="text-[12px] text-[#6C7687]">논문 수</p>
+                              <p class="text-[12px] text-[#6C7687]">Publications</p>
                               <p class="text-[20px] font-bold">15</p>
                             </div>
                           </a>
@@ -1226,7 +1228,7 @@
                             </div>
 
                             <div class="shrink-0 w-[68px] text-center">
-                              <p class="text-[12px] text-[#6C7687]">논문 수</p>
+                              <p class="text-[12px] text-[#6C7687]">Publications</p>
                               <p class="text-[20px] font-bold">15</p>
                             </div>
                           </a>
@@ -1240,7 +1242,21 @@
                             </div>
 
                             <div class="shrink-0 w-[68px] text-center">
-                              <p class="text-[12px] text-[#6C7687]">논문 수</p>
+                              <p class="text-[12px] text-[#6C7687]">Publications</p>
+                              <p class="text-[20px] font-bold">15</p>
+                            </div>
+                          </a>
+                        </li>
+                        
+                        <li class="px-6 py-[22px] leading-[140%] border border-[#E4E8F1] rounded-[12px] md:w-[calc((100%-8px)/2)] lg:w-[calc((100%-12px)/2)] hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition-shadow duration-300">
+                          <a href="#" class="flex items-center justify-between gap-[10px]">
+                            <div>
+                              <p class="text-[14px] font-bold">Lee, Hayoung</p>
+                              <p class="mt-[5px] text-[13px] text-[#6C7687]">Seoul National University</p>
+                            </div>
+
+                            <div class="shrink-0 w-[68px] text-center">
+                              <p class="text-[12px] text-[#6C7687]">Publications</p>
                               <p class="text-[20px] font-bold">15</p>
                             </div>
                           </a>
@@ -1273,7 +1289,7 @@
                   <!-- Co-Researchers -->
 
                   <div class="active pt-[50px] lg:pt-[60px]">
-                    <h3 class="mb-4 text-[18px] font-bold leading-[100%] lg:mb-6">Resources published by the author</h3>
+                    <h3 class="mb-4 text-[18px] font-bold leading-[100%] lg:mb-6">Author's Publications</h3>
 
                     <ul class="flex flex-col gap-4">
                       <li class="p-8 bg-white border border-[#E4E8F1] rounded-xl hover:shadow-[0px_4px_20px_rgba(0,0,0,0.1)] transition durarion-300">
